@@ -31,11 +31,11 @@
     position: relative;
   }
 
-  &__link.open + &__link__dropdown {
+  &__link.open + &__link-dropdown {
     display: initial;
   }
 
-  &__link__dropdown {
+  &__link-dropdown {
     position: absolute;
     background-color: #cce;
     display: none;
