@@ -1,0 +1,38 @@
+.grid-container {
+  display: grid;
+  grid-template-rows: 50vh 100vh 40vw repeat(3, min-content);
+  grid-template-columns:
+    [full-start] 7rem [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] 7rem
+    [full-end];
+
+  .bg-red-first {
+    background-color: firebrick;
+    grid-column: center-start / center-end;
+  }
+
+  .bg-blue-second {
+    background-color: blue;
+    grid-column: full-start / col-end 5;
+  }
+
+  .bg-yellow-third {
+    background-color: yellow;
+    grid-column: col-end 5 / full-end;
+  }
+
+  .bg-red {
+    background-color: red;
+  }
+
+  .bg-yellow {
+    background-color: yellow;
+  }
+
+  .bg-blue {
+    background-color: blue;
+  }
+}

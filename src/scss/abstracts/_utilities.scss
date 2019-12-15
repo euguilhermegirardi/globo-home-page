@@ -1,0 +1,42 @@
+// Divider
+.divider {
+  border-top: 1px solid #ccc;
+}
+
+// Helper classes.
+.mb-sm {
+  margin-bottom: 2rem;
+}
+
+.mb-md {
+  margin-bottom: 3rem;
+}
+
+.mb-lg {
+  margin-bottom: 4rem;
+}
+
+.mb-hg {
+  margin-bottom: 5rem;
+}
+
+// Colorful classes
+.red {
+  color: var(--color-red);
+}
+
+.green {
+  color: var(--color-green);
+}
+
+.orange {
+  color: var(--color-orange);
+}
+
+.gray {
+  color: var(--color-gray);
+}
+
+.blue {
+  color: var(--color-blue);
+}

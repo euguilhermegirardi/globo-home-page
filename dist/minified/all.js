@@ -1,0 +1,1 @@
+function openDropdown(o){o.srcElement.parentElement.classList.add("open")}function closeDropdown(){document.getElementsByClassName("open")[0].classList.remove("open")}console.log("Hello, Gulp 4!!!!"),console.log("Hello, Gulp 4!!!!"),console.log("Hello, Gulp 4!!!!");
