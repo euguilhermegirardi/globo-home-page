@@ -1,4 +1,5 @@
 var { src, dest, watch, series, parallel } = require('gulp'),
+  gulp = require('gulp'),
   autoprefixer = require('autoprefixer'),
   cssnano = require('cssnano'),
   concat = require('gulp-concat'),
@@ -34,14 +35,16 @@ function jsTask() {
   return src(files.jsPath)
     .pipe(concat('all.js'))
     .pipe(uglify())
-    .pipe(dest('dist/minified'));
+    .pipe(dest('dist/minified'))
+    .pipe(browserSync.stream());
 }
 
 // IMG task
 function imgTask() {
   return src(files.imgPath)
     .pipe(imagemin())
-    .pipe(dest('dist/minified/assets'));
+    .pipe(dest('dist/minified/assets'))
+    .pipe(browserSync.stream());
 }
 
 // Cachebusting TextTrackList
@@ -53,11 +56,23 @@ function cachBustTask() {
     .pipe(dest('.'));
 }
 
-// Watch task
+//Watch task
 function watchTask() {
   watch([files.scssPath, files.jsPath, files.imgPath],
     parallel(scssTask, jsTask, imgTask));
 }
+
+// function watchTask() {
+//   browserSync.init({
+//     server: {
+//       baseDir: './'
+//     }
+//   });
+//   gulp.watch('src/scss/**/*.scss', scssTask);
+//   gulp.watch('./*.html').on('change', browserSync.reload);
+//   gulp.watch('src/js/**/*.js').on('change', browserSync.reload);
+// }
+
 
 // Default task
 exports.default = series(
