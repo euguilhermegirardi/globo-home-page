@@ -1,6 +1,6 @@
 .grid-container {
   display: grid;
-  grid-template-rows: 30vh min-content 30vh min-content min-content 20vh 55vh 50vh 35vh 100vh 50vh 50vh 20vh;
+  grid-template-rows: 30vh min-content 30vh repeat (7, min-content);
   grid-template-columns:
     [full-start] minmax(6rem, 1fr) [center-start] repeat(
       9,

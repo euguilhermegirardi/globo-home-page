@@ -62,18 +62,6 @@ function watchTask() {
     parallel(scssTask, jsTask, imgTask));
 }
 
-// function watchTask() {
-//   browserSync.init({
-//     server: {
-//       baseDir: './'
-//     }
-//   });
-//   gulp.watch('src/scss/**/*.scss', scssTask);
-//   gulp.watch('./*.html').on('change', browserSync.reload);
-//   gulp.watch('src/js/**/*.js').on('change', browserSync.reload);
-// }
-
-
 // Default task
 exports.default = series(
   parallel(scssTask, jsTask, imgTask),

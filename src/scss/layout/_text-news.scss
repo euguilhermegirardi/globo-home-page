@@ -1,0 +1,25 @@
+.grid-container__text-news {
+  grid-column: full-start/full-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-column-gap: 3rem;
+  font-size: 18px;
+
+  &--g1 {
+    color: var(--color-red-text);
+  }
+
+  &--ge {
+    color: var(--color-green-text);
+  }
+
+  &--gshow {
+    color: var(--color-orange-text);
+  }
+
+  &--g1:hover,
+  &--ge:hover,
+  &--gshow:hover {
+    filter: brightness(140%);
+  }
+}
