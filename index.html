@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link rel="stylesheet" href="dist/minified/main.css?cb=1576437224894">
+  <link rel="stylesheet" href="dist/minified/main.css?cb=1576879536502">
   <link rel="shortcut icon" type="image/png" href="src/assets/favicon.ico">
   <title>globo.com - Absolutamente tudo sobre noticias, esportes e entretenimento</title>
 </head>
@@ -30,7 +30,7 @@
                   <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
                 </svg>
               </a>
-              <ul class="navbar__link-dropdown">
+              <ul class="navbar__dropdown">
                 <li><a href="#">link 1</a></li>
                 <li><a href="#">link 2</a></li>
                 <li><a href="#">link 3</a></li>
@@ -40,13 +40,13 @@
 
           <li class="navbar__list" onmouseleave="closeDropdown()">
             <div>
-              <a href="#" class="navbar__link green" onclick="openDropdown(event)">
+              <a href="#" class="navbar__link" onclick="openDropdown(event)">
                 <span class="green">ge</span>
                 <svg class="navbar__icon navbar__icon--green">
                   <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
                 </svg>
               </a>
-              <ul class="navbar__link-dropdown">
+              <ul class="navbar__dropdown">
                 <li><a href="#">link 1</a></li>
                 <li><a href="#">link 2</a></li>
                 <li><a href="#">link 3</a></li>
@@ -54,7 +54,7 @@
             </div>
           </li>
 
-          <li class="navbar__list navbar__icon--orange" onmouseleave="closeDropdown()">
+          <li class="navbar__list" onmouseleave="closeDropdown()">
             <div>
               <a href="#" class="navbar__link" onclick="openDropdown(event)">
                 <span class="orange">gshow</span>
@@ -62,7 +62,7 @@
                   <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
                 </svg>
               </a>
-              <ul class="navbar__link-dropdown">
+              <ul class="navbar__dropdown">
                 <li><a href="#">link 1</a></li>
                 <li><a href="#">link 2</a></li>
                 <li><a href="#">link 3</a></li>
@@ -72,7 +72,7 @@
 
           <li class="navbar__list">
             <div>
-              <a href="#" class="navbar__link gray">
+              <a href="#" class="navbar__link">
                 <span class="gray">tech</span>
               </a>
             </div>
@@ -80,13 +80,13 @@
 
           <li class="navbar__list" onmouseleave="closeDropdown()">
             <div>
-              <a href="#" class="navbar__link blue" onclick="openDropdown(event)">
+              <a href="#" class="navbar__link" onclick="openDropdown(event)">
                 <span class="blue">videos</span>
                 <svg class="navbar__icon navbar__icon--blue">
                   <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
                 </svg>
               </a>
-              <ul class="navbar__link-dropdown">
+              <ul class="navbar__dropdown">
                 <li><a href="#">link 1</a></li>
                 <li><a href="#">link 2</a></li>
                 <li><a href="#">link 3</a></li>
@@ -115,25 +115,25 @@
                 <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
               </svg>
             </a>
-            <div class="navbar__dropdown-content">
+            <div class="navbar__menu-item--dropdown-content">
               <a href="#">globomail free</a>
                 <a href="#">globomail pro</a>
             </div>
           </div>
 
-          <div class="navbar__test">
+          <div class="navbar__input">
             <label for="#" class="navbar__label"></label>
-            <form action="#" class="navbar__search">
-              <input type="text" class="navbar__input" placeholder="find on globo.com" onfocus="this.placeholder = ''" onblur="this.placeholder = 'find on globo.com'" >
+            <form action="#">
+              <input type="text" class="navbar__placeholder" placeholder="find on globo.com" onfocus="this.placeholder = ''" onblur="this.placeholder = 'find on globo.com'" >
             </form>
           </div>
-            <div class="navbar__iconlogin">
-              <a href="#">
-                <svg class="navbar__user-icon">
-                  <use xlink:href="dist/minified/assets/sprite.svg#icon-user"></use>
-                </svg>
-              </a>
-            </div>
+          <div class="navbar__icon-login">
+            <a href="#">
+              <svg class="navbar__user-icon">
+                <use xlink:href="dist/minified/assets/sprite.svg#icon-user"></use>
+              </svg>
+            </a>
+          </div>
 
         </div>
         <!-- SEARCH ENDS -->
@@ -199,16 +199,16 @@
       <div class="grid-container__right-top">
 
         <div class="grid-container__right-top--left">
-          <div class="grid-container__news--left">
+          <div class="grid-container__right-top--news-left">
             <img src="dist/minified/assets/camelos.jpg" alt="camelos">
             <h4>Em Doha, corrida de camelos deixa o Mundial em 2º plano</h4>
           </div>
 
-          <div class="grid-container__text">
+          <div class="grid-container__right-top--text">
           <h4>Jesus conta dica do ídolo Cruyff: 'Ganhar e dar espetáculo'</h4>
           </div>
 
-          <div class="grid-container__news--left">
+          <div class="grid-container__right-top--news-left">
             <img src="dist/minified/assets/luxa.jpg" alt="Luxemburgo">
             <h4>Luxa fala à torcida do Verdão: 'Para ganhar'</h4>
             <p>Leila deseja sorte; veja a reação da torcida na web</p>
@@ -216,16 +216,16 @@
         </div>
 
         <div class="grid-container__right-top--right">
-          <div class="grid-container__news--right">
+          <div class="grid-container__right-top--news-right">
             <img src="dist/minified/assets/faustao.jpeg" alt="faustao">
             <h4>Veja a lista completa com os ganhadores do 'Troféu Domingão'</h4>
           </div>
           
-          <div class="grid-container__text">
+          <div class="grid-container__right-top--text">
           <h4>Grazi evitar falar de relação com Caio</h4>
           </div>
 
-          <div class="grid-container__news--right">
+          <div class="grid-container__right-top--news-right">
             <img src="dist/minified/assets/looks.jpg" alt="Modelos">
             <h4>Qual look de famosas mais bate contigo?</h4>
             <p>Raia dedica a Jorge Fernando</p>
@@ -240,17 +240,17 @@
 
       <!-- 3 NEWS -->
       <div class="grid-container__three-news">
-        <div class="grid-container__g1">
+        <div class="grid-container__three-news--g1">
           <img src="dist/minified/assets/feministas.jpg" alt="feministas">
           <h4>França deve adotar pulseira 'anti-aproximação' contra feminicídio</h4>
         </div>
 
-        <div class="grid-container__ge">
+        <div class="grid-container__three-news--ge">
           <img src="dist/minified/assets/players.jpg" alt="players">
           <h4>Com time no Catar, Liverpool usa só garotos e cai com goleada</h4>
         </div>
 
-        <div class="grid-container__gshow">
+        <div class="grid-container__three-news--gshow">
           <img src="dist/minified/assets/family.jpg" alt="family">
           <h4>Giovanna Ewbank anuncia que está grávida: 'Agora somos cinco'</h4>
         </div>
@@ -405,51 +405,50 @@
       <!-- ANALYTICS -->
       <div class="grid-container__analytics">
 
-        <div class="grid-container__economics">
-
-          <div class="grid-container__economics--container">
+        <div class="grid-container__analytics-economics">
+          <div class="grid-container__analytics-economics--container">
             
-            <div class="grid-container__finance">
+            <div class="grid-container__analytics-finance">
               <a href="#">
                 <h6>IBOVESPA</h6>
-                <div class="grid-container__finance--value">
-                  <div class="grid-container__finance--icon">+</div>
-                  <span class="grid-container__finance--number">0,45</span>
-                  <sup class="grid-container__finance--percent">%</sup>
+                <div class="grid-container__analytics-finance--value">
+                  <div class="grid-container__analytics-finance--icon">+</div>
+                  <span class="grid-container__analytics-finance--number">0,45</span>
+                  <sup class="grid-container__analytics-finance--percent">%</sup>
                 </div>
-                <span class="grid-container__points">113.165pts (+549,71)</span>
+                <span class="grid-container__analytics-finance--points">113.165pts (+549,71)</span>
               </a>
             </div>
 
-            <div class="grid-container__currencies">
-            <table celspacing="0" celpadding="0">
-              <thead>
-                <tr>
-                  <th class="grid-container__currencies--left">MOEDAS</th>
-                  <th class="grid-container__currencies--right">COMPRA</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="xua">Dolar</td>
-                  <td   class="bua">
-                    R$
-                    <span>4,049</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="xua">Euro</td>
-                  <td class="bua">
-                    R$
-                    <span>4,543</span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+            <div class="grid-container__analytics-currencies">
+              <table celspacing="0" celpadding="0">
+                <thead>
+                  <tr>
+                    <th class="grid-container__analytics-currencies--left">MOEDAS</th>
+                    <th class="grid-container__analytics-currencies--right">COMPRA</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="grid-container__analytics-currencies--coin">Dolar</td>
+                    <td   class="grid-container__analytics-currencies--value">
+                      R$
+                      <span>4,049</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="grid-container__analytics-currencies--coin">Euro</td>
+                    <td class="grid-container__analytics-currencies--value">
+                      R$
+                      <span>4,543</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
-          <div class="grid-container__economics--footer">
+          <div class="grid-container__analytics-economics--footer">
             <span class="grid-container__logo"></span>
             <div class="grid-container__datetime-container">
               atualizado
@@ -458,39 +457,36 @@
           </div>
         </div>
 
-        <div class="grid-container__sports">
-          <div class="grid-container__sports--container">
+        <div class="grid-container__analytics-sports">
+          <div class="grid-container__analytics-sports--container">
             <a href="#">
               <h6>AGENDA</h6>
               <h4>Confira a programacao dos jogos e os ultimos resultados</h4>
             </a>
           </div>
-          <div class="grid-container__sports--footer">
+          <div class="grid-container__analytics-sports--footer">
             <a href="#">globoesporte.com</a>
           </div>
         </div>
 
-        <div class="grid-container__entertainment">
-          <div>
+        <div class="grid-container__analytics-entertainment">
+          <div class="grid-container__analytics-entertainment--container">
             <a href="#">
               <h6>AGENDA</h6>
               <h4>Confira a programacao dos jogos e os ultimos resultados</h4>
             </a>
           </div>
-          <div class="grid-container__economics--footer">
-            globoesporte.com
+          <div class="grid-container__analytics-entertainment--footer">
+            <a href="#">globoesporte.com</a>
           </div>
         </div>
 
       </div>
       <!-- ANALYTICS ENDS -->
-
-
-
     </div>
   </div>
   <!-- MAIN CONTAINER GRID ENDS -->
 
-  <script src="dist/minified/all.js?cb=1576437224894"></script>
+  <script src="dist/minified/all.js?cb=1576879536502"></script>
 </body>
 </html>
