@@ -9,7 +9,7 @@
   margin-right: 0.4rem;
 }
 
-.grid-container__right-top {
+.right-top {
   grid-column: 7 / full-end;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));

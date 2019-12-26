@@ -14,7 +14,7 @@
   filter: brightness(140%);
 }
 
-.grid-container__left-top {
+.left-top {
   grid-column: full-start/col-start 6;
   padding-right: 1rem;
 
@@ -23,7 +23,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     width: 100%;
 
     & > * {
