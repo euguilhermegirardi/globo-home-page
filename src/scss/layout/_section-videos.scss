@@ -1,0 +1,66 @@
+.section__videos {
+  grid-column: full-start/full-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-column-gap: 1.5rem;
+
+  &-left {
+    position: relative;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+      transition: all 1s ease;
+    }
+
+    &:hover {
+      img {
+        filter: brightness(60%);
+      }
+
+      .button {
+        filter: brightness(60%);
+      }
+    }
+  }
+
+  .figure-header {
+    position: absolute;
+    bottom: 65px;
+    left: 16px;
+    font-size: 1.5rem;
+  }
+
+  &-text {
+    position: absolute;
+    bottom: 35px;
+    left: 16px;
+    font-size: 1.7rem;
+  }
+
+  &-span {
+    position: absolute;
+    bottom: 35px;
+    right: 50px;
+    font-size: 2rem;
+  }
+
+  &-right {
+    background-color: yellowgreen;
+  }
+
+  .button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    cursor: pointer;
+    border-color: transparent transparent transparent var(--color-grey-light-3);
+    border-width: 37px 0 37px 60px;
+    transition: all 1s ease;
+  }
+}
