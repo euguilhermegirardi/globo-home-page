@@ -1,7 +1,74 @@
 .globo-play {
+  grid-column: full-start/full-end;
+  display: grid;
+
   &__header {
+    display: flex;
+    justify-content: space-between;
+
+    & > div {
+      display: flex;
+    }
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  max-width: 1320px;
+  margin: 0 auto;
+  grid-column-gap: 5px;
+}
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem; /* Firefox */
+  position: relative;
+  height: 100%;
+
+  &__side {
+    color: #fff;
+    font-size: 2rem;
+    height: 100%;
+    transition: all 0.8s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(black, 0.15);
+
+    &--front {
+      background-color: #fff;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+    }
   }
 
-  &__cards {
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0deg);
+  }
+
+  // FRONT SIDE STYLING
+  &__picture {
+    background-size: cover;
+    height: 30rem;
+    background-blend-mode: screen;
+    //clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    // -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    &--1 {
+      background-image: url(../../../dist/minified/assets/compadecida.jpeg);
+    }
   }
 }
