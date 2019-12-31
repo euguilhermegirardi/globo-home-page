@@ -1,6 +1,7 @@
 .globo-play {
   grid-column: full-start/full-end;
   display: grid;
+  margin-bottom: 1.2rem;
 
   &__header {
     display: flex;
@@ -8,67 +9,135 @@
 
     & > div {
       display: flex;
+      align-items: center;
+
+      h3 {
+        font-size: 1.5rem;
+        margin-left: 3.5rem;
+      }
+    }
+
+    &--link {
+      color: var(--color-blue);
+      font-size: 3rem;
+    }
+
+    &--button {
+      background-color: var(--color-blue);
+      font-size: 1.5rem;
+      padding: 2rem 3rem;
+      border-radius: 3px;
+      color: var(--color-grey-light-1);
     }
   }
 }
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
   max-width: 1320px;
   margin: 0 auto;
-  grid-column-gap: 5px;
+  grid-column-gap: 1rem;
 }
 
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem; /* Firefox */
   position: relative;
-  height: 100%;
+  height: 38rem;
 
   &__side {
-    color: #fff;
-    font-size: 2rem;
-    height: 100%;
-    transition: all 0.8s;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border-radius: 3px;
-    box-shadow: 0 1.5rem 4rem rgba(black, 0.15);
+    transition: all 0.8s;
 
-    &--front {
-      background-color: #fff;
+    img {
+      width: 100%;
+      border-radius: 3px;
     }
 
     &--back {
       transform: rotateY(180deg);
+
+      img {
+        opacity: 0.1;
+        border-radius: 3px;
+      }
     }
   }
 
   &:hover &__side--front {
     transform: rotateY(-180deg);
+    cursor: pointer;
   }
 
   &:hover &__side--back {
     transform: rotateY(0deg);
   }
 
-  // FRONT SIDE STYLING
-  &__picture {
-    background-size: cover;
-    height: 30rem;
-    background-blend-mode: screen;
-    //clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    // -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    text-align: center;
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+  }
 
-    &--1 {
-      background-image: url(../../../dist/minified/assets/compadecida.jpeg);
+  &__info {
+    margin-bottom: 6rem;
+    text-transform: uppercase;
+
+    &--only,
+    &--price {
+      color: var(--color-blue);
+    }
+
+    &--only {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    &--price {
+      font-size: 4.5rem;
+    }
+
+    &--btn,
+    &:link,
+    &:visited {
+      background-color: var(--color-blue);
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 1.5rem 4rem;
+      display: inline-block; /* set the button as a block in another line.  */
+      border-radius: 10rem;
+      position: relative; /* To set the after behind the button. */
+      transition: all 0.2s; /* Set the after transition. */
+
+      //Change for the <button> element
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba(black, 0.2);
+
+        &::after {
+          transform: scaleX(1.4) scaleY(1.6); /* Increase the element. */
+          opacity: 0; /* Hide the 'transform' after it is executed. */
+        }
+      }
+
+      &:active,
+      &:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 0.5rem 1rem rgba(black, 0.2);
+      }
     }
   }
 }
