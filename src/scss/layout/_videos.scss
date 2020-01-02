@@ -22,7 +22,7 @@
 .videos {
   grid-column: full-start/full-end;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(42rem, 1fr));
   grid-column-gap: 1.5rem;
 
   /* LEFT SIDE */
