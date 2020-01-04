@@ -31,7 +31,7 @@
 
   &__dropdown {
     position: absolute;
-    background-color: #cce;
+    background-color: #faf9f9;
     display: none;
 
     li {
@@ -96,7 +96,18 @@
     width: 2rem;
     fill: var(--color-gray);
   }
+  /* NAVBAR LEFT ENDS */
 
+  /* NAVBAR RIGHT */
+  &__right {
+    display: flex;
+    flex: 0 0 25%;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 5px;
+  }
+
+  /* EMAIL DROPDOWN */
   .dropdown-content {
     display: none;
     background-color: #f1f1f1;
@@ -120,40 +131,40 @@
     }
 
     &__item {
+      position: relative;
       padding: 12px 16px;
       display: block;
-      transition: all 0.2s;
 
-      a:hover {
-        color: var(--color-blue);
-
-        &::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          width: 0;
-          height: 38px;
-          border: solid;
-          border-color: var(--color-blue);
-          z-index: 99999;
-        }
+      &:not(:last-child) {
+        margin-bottom: 1.5px;
       }
+    }
+
+    &__item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 5px;
+      background-color: var(--color-blue);
+      transform: scaleY(0);
+      transition: transform 0.8s;
+    }
+
+    &__item:hover::before {
+      transform: scaleY(1);
+    }
+
+    &__item:hover a {
+      color: var(--color-blue);
     }
   }
 
   &__menu-item--dropdown:hover .dropdown-content {
     display: block;
   }
-  /* NAVBAR LEFT ENDS */
-
-  /* NAVBAR RIGHT */
-  &__right {
-    display: flex;
-    flex: 0 0 25%;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: 5px;
-  }
+  /* EMAIL DROPDOWN ENDS */
 
   &__input {
     display: flex;
