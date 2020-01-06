@@ -40,10 +40,11 @@
 
     .navbar__gshow {
       display: flex;
+    }
 
-      &-list--gshow {
-        display: none;
-      }
+    #link-2,
+    #link-3 {
+      display: none;
     }
 
     &--videos {
