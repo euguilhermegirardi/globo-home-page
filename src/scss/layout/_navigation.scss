@@ -34,17 +34,56 @@
     background-color: #faf9f9;
     display: none;
 
-    &--gshow {
-      display: block;
-    }
-
     .navbar__gshow {
       display: flex;
+      padding: 2rem;
     }
 
     #link-2,
-    #link-3 {
+    #link-3,
+    #link-4,
+    #link-5,
+    #link-6,
+    #link-7,
+    #link-8,
+    #link-9,
+    #link-10,
+    #link-11 {
       display: none;
+    }
+
+    .gshow-list {
+      font-family: var(--font-primary);
+      font-size: 1.5rem;
+
+      li:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      a {
+        color: var(--color-orange-text);
+      }
+    }
+
+    .gshow-links {
+      font-family: var(--font-primary);
+      font-size: 1.1rem;
+      width: 15rem;
+      margin-left: 2rem;
+
+      li:first-child {
+        color: var(--color-gray);
+        margin-bottom: 1.5rem;
+      }
+
+      li:not(:first-child) {
+        color: var(--color-orange-text);
+        margin-bottom: 0.5rem;
+      }
+
+      li:last-child {
+        margin-bottom: 0;
+      }
     }
 
     &--videos {
