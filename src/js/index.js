@@ -10,7 +10,7 @@ function closeDropdown() {
 
 /* MULTI LEVEL DROPDOWNS */
 function showsOne(item) {
-  $('.gshow-links').each(function (index) {
+  $('.links').each(function (index) {
     if ($(this).attr("id") == item) {
       $(this).show();
     }

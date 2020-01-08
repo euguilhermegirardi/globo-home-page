@@ -1,13 +1,24 @@
+/* EXTEND OR UTILITY CLASS? */
+%dropdown {
+  padding: 2rem 0rem;
+  border-right: 1px solid var(--color-grey-dark-2);
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  width: 21rem;
+}
+
+%li {
+  position: relative;
+  padding: 0.5rem 0;
+  cursor: pointer;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   padding: 2.5rem;
 
   /* NAVBAR LEFT */
-  &__left {
-    display: flex;
-  }
-
   &__logo {
     align-self: center;
     margin-right: 2.5rem;
@@ -34,58 +45,284 @@
     background-color: #faf9f9;
     display: none;
 
-    .navbar__gshow {
-      display: flex;
-      padding: 2rem;
-    }
+    /* G1 DROPDOWN */
+    /* FIRST COLUMN */
+    .g1-list {
+      @extend %dropdown;
 
-    #link-2,
-    #link-3,
-    #link-4,
-    #link-5,
-    #link-6,
-    #link-7,
-    #link-8,
-    #link-9,
-    #link-10,
-    #link-11 {
-      display: none;
-    }
+      li {
+        @extend %li;
+      }
 
-    .gshow-list {
-      font-family: var(--font-primary);
-      font-size: 1.5rem;
+      li:hover {
+        border-left: 5px solid var(--color-red);
+        border-top: 0.1px solid var(--color-grey-dark-2);
+        border-bottom: 0.1px solid var(--color-grey-dark-2);
+        border-right: none;
+        background-color: var(--color-gray-light-5);
 
-      li:not(:last-child) {
-        margin-bottom: 1rem;
+        a {
+          padding-left: -5px;
+          filter: brightness(115%);
+        }
+
+        &:after,
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 100%;
+          border-style: solid;
+        }
+
+        /* this border color controlls the outside, thin border */
+        &:before {
+          top: 0;
+          border-color: transparent transparent transparent
+            var(--color-grey-dark-2);
+          border-width: 15px;
+        }
+
+        /* this border color controlls the color of the triangle (what looks like the fill of the triangle) */
+        &:after {
+          top: 1.4px;
+          border-color: transparent transparent transparent
+            var(--color-gray-light-5);
+          border-width: 14px;
+        }
       }
 
       a {
-        color: var(--color-orange-text);
+        margin-left: 1.5rem;
+        color: var(--color-red-text);
+        padding: 5px;
       }
     }
 
-    .gshow-links {
+    /* SECOND COLUMN */
+    .g1-links {
       font-family: var(--font-primary);
       font-size: 1.1rem;
+      border-right: 1px solid var(--color-grey-dark-2);
       width: 15rem;
       margin-left: 2rem;
-
-      li:first-child {
-        color: var(--color-gray);
-        margin-bottom: 1.5rem;
-      }
+      padding: 2rem 0rem;
+      height: 40rem;
 
       li:not(:first-child) {
-        color: var(--color-orange-text);
         margin-bottom: 0.5rem;
       }
 
       li:last-child {
         margin-bottom: 0;
       }
+
+      a {
+        color: var(--color-red-text);
+
+        &:hover {
+          text-decoration: underline var(--color-red-text);
+          filter: brightness(115%);
+        }
+      }
+    }
+    /* G1 DROPDOWN ENDS */
+
+    /* GE DROPDOWN */
+    .ge-list {
+      @extend %dropdown;
+
+      li {
+        @extend %li;
+      }
+
+      li:hover {
+        border-left: 5px solid var(--color-green);
+        border-top: 0.1px solid var(--color-grey-dark-2);
+        border-bottom: 0.1px solid var(--color-grey-dark-2);
+        border-right: none;
+        background-color: var(--color-gray-light-5);
+
+        a {
+          padding-left: -5px;
+          filter: brightness(115%);
+        }
+
+        &:after,
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 100%;
+          border-style: solid;
+        }
+
+        /* this border color controlls the outside, thin border */
+        &:before {
+          top: 0;
+          border-color: transparent transparent transparent
+            var(--color-grey-dark-2);
+          border-width: 15px;
+        }
+
+        /* this border color controlls the color of the triangle (what looks like the fill of the triangle) */
+        &:after {
+          top: 1.4px;
+          border-color: transparent transparent transparent
+            var(--color-gray-light-5);
+          border-width: 14px;
+        }
+      }
+
+      a {
+        margin-left: 1.5rem;
+        color: var(--color-green-text);
+        padding: 5px;
+      }
     }
 
+    /* SECOND COLUMN */
+    .ge-links {
+      font-family: var(--font-primary);
+      font-size: 1.1rem;
+      border-right: 1px solid var(--color-grey-dark-2);
+      width: 15rem;
+      margin-left: 2rem;
+      padding: 2rem 0rem;
+      height: 40rem;
+
+      li:not(:first-child) {
+        margin-bottom: 0.5rem;
+      }
+
+      li:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        color: var(--color-green-text);
+
+        &:hover {
+          text-decoration: underline var(--color-green-text);
+          filter: brightness(115%);
+        }
+      }
+    }
+    /* GE DROPDOWN ENDS */
+
+    /* GSHOW DROPDDOWN */
+    /* FIRST COLUMN */
+    .gshow-list {
+      @extend %dropdown;
+
+      li {
+        @extend %li;
+      }
+
+      li:hover {
+        border-left: 5px solid var(--color-orange);
+        border-top: 0.1px solid var(--color-grey-dark-2);
+        border-bottom: 0.1px solid var(--color-grey-dark-2);
+        border-right: none;
+        background-color: var(--color-gray-light-5);
+
+        a {
+          padding-left: -5px;
+          filter: brightness(115%);
+        }
+
+        &:after,
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 100%;
+          border-style: solid;
+        }
+
+        /* this border color controlls the outside, thin border */
+        &:before {
+          top: 0;
+          border-color: transparent transparent transparent
+            var(--color-grey-dark-2);
+          border-width: 15px;
+        }
+
+        /* this border color controlls the color of the triangle (what looks like the fill of the triangle) */
+        &:after {
+          top: 1.4px;
+          border-color: transparent transparent transparent
+            var(--color-gray-light-5);
+          border-width: 14px;
+        }
+      }
+
+      a {
+        margin-left: 1.5rem;
+        color: var(--color-orange-text);
+        padding: 5px;
+      }
+    }
+
+    /* SECOND COLUMN */
+    .gshow-links {
+      font-family: var(--font-primary);
+      font-size: 1.1rem;
+      border-right: 1px solid var(--color-grey-dark-2);
+      width: 15rem;
+      margin-left: 2rem;
+      padding: 2rem 0rem;
+
+      li:not(:first-child) {
+        margin-bottom: 0.5rem;
+      }
+
+      li:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        color: var(--color-orange-text);
+
+        &:hover {
+          text-decoration: underline var(--color-orange-text);
+          filter: brightness(115%);
+        }
+      }
+    }
+
+    /* THIRD COLUMN */
+    .gshow-series {
+      padding: 2rem 0rem;
+      background-color: var(--color-gray-light-5);
+      padding-left: 2rem;
+      width: 21rem;
+
+      a {
+        display: flex;
+
+        &:hover {
+          img {
+            outline: 3.5px solid var(--color-orange-text);
+            outline-offset: -3px;
+          }
+
+          .name {
+            text-decoration: underline var(--color-orange-text);
+            filter: brightness(115%);
+          }
+        }
+
+        .name {
+          align-self: center;
+          color: var(--color-orange-text);
+          margin-left: 1rem;
+        }
+      }
+    }
+    /* GSHOW DROPDDOWN ENDS */
+
+    /* VIDEOS DROPDDOWN */
     &--videos {
       background-color: #f1f1f1;
       border-radius: 3px;
@@ -135,7 +372,33 @@
         }
       }
     }
+    /* VIDEOS DROPDDOWN ENDS */
   }
+
+  /* LEFT MENU - CONTAINER DROPDOWN */
+  .container-dropdown {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: -1px -3px 16px 5px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 7rem;
+    min-width: 160px;
+    z-index: 99999;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: -10px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 10px 10px 10px;
+      border-color: transparent transparent #f1f1f1 transparent;
+      z-index: 9999;
+    }
+  }
+  /* LEFT MENU - CONTAINER DROPDOWN ENDS */
 
   &__icon {
     height: 2rem;
