@@ -1,4 +1,4 @@
-/* EXTEND OR UTILITY CLASS? */
+/* DROPDOWN - FIRST COLUMN */
 %dropdown {
   padding: 2rem 0rem;
   border-right: 1px solid var(--color-grey-dark-2);
@@ -7,6 +7,7 @@
   width: 21rem;
 }
 
+/* li OF FIRST COLUMN */
 %li {
   position: relative;
   padding: 0.5rem 0;
@@ -98,6 +99,7 @@
         padding: 5px;
       }
     }
+    /* FIRST COLUMN ENDS */
 
     /* SECOND COLUMN */
     .g1-links {
@@ -126,6 +128,73 @@
         }
       }
     }
+    /* SECOND COLUMN ENDS */
+
+    /* THIRD COLUMN */
+    .g1-states {
+      padding: 2rem;
+      background-color: var(--color-gray-light-5);
+    }
+
+    .states-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 4rem);
+      grid-row-gap: 1.3rem;
+    }
+
+    .states {
+      perspective: 150rem;
+      -moz-perspective: 150rem; /* Firefox */
+      position: relative;
+      height: 2rem;
+      width: 3rem;
+
+      &:hover .states__side--front {
+        transform: rotateY(-180deg);
+        cursor: pointer;
+      }
+
+      &:hover .states__side--back {
+        transform: rotateY(0deg);
+      }
+
+      &__side {
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transition: all 0.2s;
+
+        img {
+          border-radius: 2px;
+        }
+
+        &--front {
+          height: 2rem;
+          width: 3rem;
+          cursor: pointer;
+        }
+
+        &--back {
+          background-color: white;
+          transform: rotateY(180deg);
+          height: 2rem;
+          width: 3rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 2px;
+          cursor: pointer;
+
+          p {
+            font-weight: bold;
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+    /* THIRD COLUMN */
     /* G1 DROPDOWN ENDS */
 
     /* GE DROPDOWN */
