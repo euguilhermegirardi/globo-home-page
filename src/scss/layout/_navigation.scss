@@ -14,6 +14,43 @@
   cursor: pointer;
 }
 
+/* ACTIVE ITEM - li */
+%active {
+  border-left: 5px solid var(--color-red);
+  border-top: 0.1px solid var(--color-grey-dark-2);
+  border-bottom: 0.1px solid var(--color-grey-dark-2);
+  border-right: none;
+  background-color: var(--color-gray-light-5);
+
+  a {
+    padding-left: -5px;
+    filter: brightness(115%);
+  }
+
+  &:after,
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 100%;
+    border-style: solid;
+  }
+
+  /* this border color controlls the outside, thin border */
+  &:before {
+    top: 0;
+    border-color: transparent transparent transparent var(--color-grey-dark-2);
+    border-width: 15px;
+  }
+
+  /* this border color controlls the color of the triangle (what looks like the fill of the triangle) */
+  &:after {
+    top: 1.4px;
+    border-color: transparent transparent transparent var(--color-gray-light-5);
+    border-width: 14px;
+  }
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -51,46 +88,16 @@
     .g1-list {
       @extend %dropdown;
 
+      .active-item {
+        @extend %active;
+      }
+
       li {
         @extend %li;
       }
 
       li:hover {
-        border-left: 5px solid var(--color-red);
-        border-top: 0.1px solid var(--color-grey-dark-2);
-        border-bottom: 0.1px solid var(--color-grey-dark-2);
-        border-right: none;
-        background-color: var(--color-gray-light-5);
-
-        a {
-          padding-left: -5px;
-          filter: brightness(115%);
-        }
-
-        &:after,
-        &:before {
-          content: "";
-          display: block;
-          position: absolute;
-          left: 100%;
-          border-style: solid;
-        }
-
-        /* this border color controlls the outside, thin border */
-        &:before {
-          top: 0;
-          border-color: transparent transparent transparent
-            var(--color-grey-dark-2);
-          border-width: 15px;
-        }
-
-        /* this border color controlls the color of the triangle (what looks like the fill of the triangle) */
-        &:after {
-          top: 1.4px;
-          border-color: transparent transparent transparent
-            var(--color-gray-light-5);
-          border-width: 14px;
-        }
+        @extend %active;
       }
 
       a {
@@ -201,6 +208,16 @@
     .ge-list {
       @extend %dropdown;
 
+      .active-item2 {
+        border-left: 5px solid var(--color-green);
+        border-top: 0.1px solid var(--color-grey-dark-2);
+        border-bottom: 0.1px solid var(--color-grey-dark-2);
+        border-right: none;
+        background-color: var(--color-gray-light-5);
+
+        @extend %active;
+      }
+
       li {
         @extend %li;
       }
@@ -212,35 +229,7 @@
         border-right: none;
         background-color: var(--color-gray-light-5);
 
-        a {
-          padding-left: -5px;
-          filter: brightness(115%);
-        }
-
-        &:after,
-        &:before {
-          content: "";
-          display: block;
-          position: absolute;
-          left: 100%;
-          border-style: solid;
-        }
-
-        /* this border color controlls the outside, thin border */
-        &:before {
-          top: 0;
-          border-color: transparent transparent transparent
-            var(--color-grey-dark-2);
-          border-width: 15px;
-        }
-
-        /* this border color controlls the color of the triangle (what looks like the fill of the triangle) */
-        &:after {
-          top: 1.4px;
-          border-color: transparent transparent transparent
-            var(--color-gray-light-5);
-          border-width: 14px;
-        }
+        @extend %active;
       }
 
       a {
@@ -277,12 +266,72 @@
         }
       }
     }
+    /* SECOND COLUMN ENDS */
+
+    /* THIRD COLUMN - TEAMS */
+    .ge-teams {
+      padding: 2rem;
+      background-color: var(--color-gray-light-5);
+      width: 21rem;
+
+      .buttons {
+        justify-content: center;
+        justify-content: space-around;
+        margin-bottom: 1.2rem;
+
+        .active {
+          background-color: #ccc;
+          outline: none;
+          border-radius: 3px;
+          color: white;
+        }
+
+        button {
+          cursor: pointer;
+          padding: 3px 1.5rem;
+
+          &:focus {
+            outline: none;
+          }
+
+          &:hover {
+            background-color: #ccc;
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+
+    .teams__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      img {
+        padding: 5px;
+      }
+
+      img:hover {
+        background-color: #ccc;
+        border-radius: 5px;
+      }
+    }
+    /* THIRD COLUMN - TEAMS ENDS */
     /* GE DROPDOWN ENDS */
 
     /* GSHOW DROPDDOWN */
     /* FIRST COLUMN */
     .gshow-list {
       @extend %dropdown;
+
+      .active-item3 {
+        @extend %active;
+
+        border-left: 5px solid var(--color-orange);
+        border-top: 0.1px solid var(--color-grey-dark-2);
+        border-bottom: 0.1px solid var(--color-grey-dark-2);
+        border-right: none;
+        background-color: var(--color-gray-light-5);
+      }
 
       li {
         @extend %li;
@@ -295,35 +344,7 @@
         border-right: none;
         background-color: var(--color-gray-light-5);
 
-        a {
-          padding-left: -5px;
-          filter: brightness(115%);
-        }
-
-        &:after,
-        &:before {
-          content: "";
-          display: block;
-          position: absolute;
-          left: 100%;
-          border-style: solid;
-        }
-
-        /* this border color controlls the outside, thin border */
-        &:before {
-          top: 0;
-          border-color: transparent transparent transparent
-            var(--color-grey-dark-2);
-          border-width: 15px;
-        }
-
-        /* this border color controlls the color of the triangle (what looks like the fill of the triangle) */
-        &:after {
-          top: 1.4px;
-          border-color: transparent transparent transparent
-            var(--color-gray-light-5);
-          border-width: 14px;
-        }
+        @extend %active;
       }
 
       a {

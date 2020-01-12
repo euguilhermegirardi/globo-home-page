@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link rel="stylesheet" href="dist/minified/main.css?cb=1578550637526">
+  <link rel="stylesheet" href="dist/minified/main.css?cb=1578637798594">
   <link rel="shortcut icon" type="image/png" href="src/assets/favicon.ico">
   <title>globo.com - Absolutamente tudo sobre noticias, esportes e entretenimento</title>
 </head>
@@ -26,7 +26,7 @@
           <!-- G1 DROPDOWN -->
           <li onmouseleave="closeDropdown()">
             <div>
-              <a href="#" class="navbar__link" onclick="openDropdown(event)">
+              <a href="#" class="navbar__link" onclick="openDropdown(event)" >
                 <p class="red">g1</p>
                 <svg class="navbar__icon navbar__icon--red">
                   <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
@@ -36,16 +36,16 @@
                 <div class="flex">
                   
                   <!-- FIRST COLUMN -->
-                  <div class="g1-list">
-                    <li onmouseover="showsOne('link-1')"><a href="#">top paginas</a></li>
-                    <li onmouseover="showsOne('link-2');"><a href="#">g1</a></li>
-                    <li onmouseover="showsOne('link-3');"><a href="#">na TV</a></li>
-                    <li onmouseover="showsOne('link-4');"><a href="#">jornais, revistas e radio</a></li>
+                  <div class="g1-list" id="myList">
+                    <li class="li active-item" onmouseover="showsOne('link-1');"><a href="#">top paginas</a></li>
+                    <li class="li" onmouseover="showsOne('link-2');"><a href="#">g1</a></li>
+                    <li class="li" onmouseover="showsOne('link-3');"><a href="#">na TV</a></li>
+                    <li class="li" onmouseover="showsOne('link-4');"><a href="#">jornais, revistas e radio</a></li>
                   </div>
                   <!-- FIRST COLUMN ENDS -->
 
                   <!-- SECOND COLUMN -->
-                  <div class="g1-links links" id="link-1">
+                  <div class="g1-links showAndHide" id="link-1">
                     <ul>
                       <li class="dropdown-title">top páginas</li>
                       <li><a href="#">G1</a></li>
@@ -61,7 +61,7 @@
                     </ul>
                   </div>
 
-                  <div class="g1-links none links" id="link-2">
+                  <div class="g1-links none showAndHide" id="link-2">
                     <ul>
                       <li class="dropdown-title">g1</li>
                       <li><a href="#">Agro</a></li>
@@ -84,7 +84,7 @@
                     </ul>
                   </div>
 
-                  <div class="g1-links none links" id="link-3">
+                  <div class="g1-links none showAndHide" id="link-3">
                     <ul>
                       <li class="dropdown-title">programas</li>
                       <li><a href="#">Altas Horas</a></li>
@@ -103,7 +103,7 @@
                     </ul>
                   </div>
 
-                  <div class="g1-links none links" id="link-4">
+                  <div class="g1-links none showAndHide" id="link-4">
                     <ul>
                       <li class="dropdown-title">na tv</li>
                       <li><a href="#">Auto Esporte</a></li>
@@ -124,14 +124,239 @@
                   </div>
                   <!-- SECOND COLUMN ENDS -->
                   
-                  <!-- THIRD COLUMN -->
+                  <!-- THIRD COLUMN - STATES -->
                   <div class="g1-states">
                     <p class="dropdown-title">seu estado</p>
                     <div class="states-grid">
 
                       <div class="states">
                         <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/sp.png" alt="state">
+                          <img src="dist/minified/assets/acre.png" alt="acre">
+                        </div>
+                        <div class="states__side states__side--back">
+                          <p>AC</p>
+                        </div>
+                      </div>
+
+                      <div class="states">
+                        <div class="states__side states__side--front">
+                          <img src="dist/minified/assets/alagoas.png" alt="alagoas">
+                        </div>
+                        <div class="states__side states__side--back">
+                          <p>AL</p>
+                        </div>
+                      </div>
+
+                      <div class="states">
+                        <div class="states__side states__side--front">
+                          <img src="dist/minified/assets/amapa.jpg" alt="amapa">
+                        </div>
+                        <div class="states__side states__side--back">
+                          <p>AP</p>
+                        </div>
+                      </div>
+
+                      <div class="states">
+                        <div class="states__side states__side--front">
+                          <img src="dist/minified/assets/amazonas.jpg" alt="amazonas">
+                        </div>
+                        <div class="states__side states__side--back">
+                          <p>AM</p>
+                        </div>
+                      </div>
+
+                      <div class="states">
+                        <div class="states__side states__side--front">
+                          <img src="dist/minified/assets/bahia.jpg" alt="bahia">
+                        </div>
+                        <div class="states__side states__side--back">
+                          <p>BA</p>
+                        </div>
+                      </div>
+
+                      <div class="states">
+                        <div class="states__side states__side--front">
+                          <img src="dist/minified/assets/ceara.png" alt="ceara">
+                        </div>
+                        <div class="states__side states__side--back">
+                          <p>CE</p>
+                        </div>
+                      </div>
+
+                      <div class="states">
+                        <div class="states__side states__side--front">
+                          <img src="dist/minified/assets/distrito-federal.jpg" alt="distrito-federal">
+                        </div>
+                        <div class="states__side states__side--back">
+                          <p>DF</p>
+                        </div>
+                      </div>
+
+                      <div class="states">
+                        <div class="states__side states__side--front">
+                          <img src="dist/minified/assets/espirito-santo.jpeg" alt="espirito-santo">
+                        </div>
+                        <div class="states__side states__side--back">
+                          <p>ES</p>
+                        </div>
+                      </div>
+
+                      <div class="states">
+                        <div class="states__side states__side--front">
+                          <img src="dist/minified/assets/goias.jpg" alt="goias">
+                        </div>
+                        <div class="states__side states__side--back">
+                          <p>GO</p>
+                        </div>
+                      </div>
+
+                      <div class="states">
+                        <div class="states__side states__side--front">
+                          <img src="dist/minified/assets/maranhao.png" alt="maranhao">
+                        </div>
+                        <div class="states__side states__side--back">
+                          <p>MA</p>
+                        </div>
+                      </div>
+
+                      <div class="states">
+                        <div class="states__side states__side--front">
+                          <img src="dist/minified/assets/minas-gerais.jpg" alt="minas-gerais">
+                        </div>
+                        <div class="states__side states__side--back">
+                          <p>MG</p>
+                        </div>
+                      </div>
+
+                      <div class="states">
+                        <div class="states__side states__side--front">
+                          <img src="dist/minified/assets/ms.jpg" alt="mato-grosso-do-sul">
+                        </div>
+                        <div class="states__side states__side--back">
+                          <p>MS</p>
+                        </div>
+                      </div>
+
+                      <div class="states">
+                        <div class="states__side states__side--front">
+                          <img src="dist/minified/assets/mato-grosso.png" alt="mato-grosso">
+                        </div>
+                        <div class="states__side states__side--back">
+                          <p>MT</p>
+                        </div>
+                      </div>
+
+                      <div class="states">
+                        <div class="states__side states__side--front">
+                          <img src="dist/minified/assets/para.jpg" alt="para">
+                        </div>
+                        <div class="states__side states__side--back">
+                          <p>PA</p>
+                        </div>
+                      </div>
+
+                      <div class="states">
+                        <div class="states__side states__side--front">
+                          <img src="dist/minified/assets/paraiba.jpg" alt="paraiba">
+                        </div>
+                        <div class="states__side states__side--back">
+                          <p>PB</p>
+                        </div>
+                      </div>
+
+                      <div class="states">
+                        <div class="states__side states__side--front">
+                          <img src="dist/minified/assets/pernambuco.jpg" alt="pernambuco">
+                        </div>
+                        <div class="states__side states__side--back">
+                          <p>PE</p>
+                        </div>
+                      </div>
+
+                      <div class="states">
+                        <div class="states__side states__side--front">
+                          <img src="dist/minified/assets/piaui.png" alt="piaui">
+                        </div>
+                        <div class="states__side states__side--back">
+                          <p>PI</p>
+                        </div>
+                      </div>
+
+                      <div class="states">
+                        <div class="states__side states__side--front">
+                          <img src="dist/minified/assets/parana.png" alt="parana">
+                        </div>
+                        <div class="states__side states__side--back">
+                          <p>PR</p>
+                        </div>
+                      </div>
+
+                      <div class="states">
+                        <div class="states__side states__side--front">
+                          <img src="dist/minified/assets/rj.jpg" alt="rio-de-janeiro">
+                        </div>
+                        <div class="states__side states__side--back">
+                          <p>RJ</p>
+                        </div>
+                      </div>
+
+                      <div class="states">
+                        <div class="states__side states__side--front">
+                          <img src="dist/minified/assets/rio-grande-do-norte.jpg" alt="rio-grande-do-norte">
+                        </div>
+                        <div class="states__side states__side--back">
+                          <p>RN</p>
+                        </div>
+                      </div>
+
+                      <div class="states">
+                        <div class="states__side states__side--front">
+                          <img src="dist/minified/assets/rondonia.png" alt="rondonia">
+                        </div>
+                        <div class="states__side states__side--back">
+                          <p>RO</p>
+                        </div>
+                      </div>
+
+                      <div class="states">
+                        <div class="states__side states__side--front">
+                          <img src="dist/minified/assets/roraima.png" alt="roraima">
+                        </div>
+                        <div class="states__side states__side--back">
+                          <p>RR</p>
+                        </div>
+                      </div>
+
+                      <div class="states">
+                        <div class="states__side states__side--front">
+                          <img src="dist/minified/assets/rs.png" alt="rio-grande-do-sul">
+                        </div>
+                        <div class="states__side states__side--back">
+                          <p>RS</p>
+                        </div>
+                      </div>
+
+                      <div class="states">
+                        <div class="states__side states__side--front">
+                          <img src="dist/minified/assets/sc.png" alt="santa-catarina">
+                        </div>
+                        <div class="states__side states__side--back">
+                          <p>SC</p>
+                        </div>
+                      </div>
+
+                      <div class="states">
+                        <div class="states__side states__side--front">
+                          <img src="dist/minified/assets/sergipe.png" alt="sergipe">
+                        </div>
+                        <div class="states__side states__side--back">
+                          <p>SE</p>
+                        </div>
+                      </div>
+
+                      <div class="states">
+                        <div class="states__side states__side--front">
+                          <img src="dist/minified/assets/sp.png" alt="sao-paulo">
                         </div>
                         <div class="states__side states__side--back">
                           <p>SP</p>
@@ -140,133 +365,16 @@
 
                       <div class="states">
                         <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/sp.png" alt="state">
+                          <img src="dist/minified/assets/tocantins.png" alt="tocantins">
                         </div>
                         <div class="states__side states__side--back">
-                          <p>SP</p>
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/sp.png" alt="state">
-                        </div>
-                        <div class="states__side states__side--back">
-                          <p>SP</p>
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/sp.png" alt="state">
-                        </div>
-                        <div class="states__side states__side--back">
-                          <p>SP</p>
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/sp.png" alt="state">
-                        </div>
-                        <div class="states__side states__side--back">
-                          <p>SP</p>
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/sp.png" alt="state">
-                        </div>
-                        <div class="states__side states__side--back">
-                          <p>SP</p>
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/sp.png" alt="state">
-                        </div>
-                        <div class="states__side states__side--back">
-                          <p>SP</p>
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/sp.png" alt="state">
-                        </div>
-                        <div class="states__side states__side--back">
-                          <p>SP</p>
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/sp.png" alt="state">
-                        </div>
-                        <div class="states__side states__side--back">
-                          <p>SP</p>
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/sp.png" alt="state">
-                        </div>
-                        <div class="states__side states__side--back">
-                          <p>SP</p>
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/sp.png" alt="state">
-                        </div>
-                        <div class="states__side states__side--back">
-                          <p>SP</p>
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/sp.png" alt="state">
-                        </div>
-                        <div class="states__side states__side--back">
-                          <p>SP</p>
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/sp.png" alt="state">
-                        </div>
-                        <div class="states__side states__side--back">
-                          <p>SP</p>
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/sp.png" alt="state">
-                        </div>
-                        <div class="states__side states__side--back">
-                          <p>SP</p>
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/sp.png" alt="state">
-                        </div>
-                        <div class="states__side states__side--back">
-                          <p>SP</p>
+                          <p>TO</p>
                         </div>
                       </div>
 
                     </div>
                   </div>
-                  <!-- THIRD COLUMN ENDS -->
+                  <!-- THIRD COLUMN - STATES ENDS -->
                 </div>
               </ul>
             </div>
@@ -274,9 +382,9 @@
           <!-- G1 DROPDOWN ENDS -->
 
           <!-- GE DROPDOWN -->
-          <li onmouseleave="closeDropdown()">
+          <li onclick="openDropdown(event)" onmouseleave="closeDropdown()">
             <div>
-              <a href="#" class="navbar__link" onclick="openDropdown(event)">
+              <a href="#" class="navbar__link">
                 <span class="green">ge</span>
                 <svg class="navbar__icon navbar__icon--green">
                   <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
@@ -286,17 +394,17 @@
                 <div class="flex">
                   
                   <!-- FIRST COLUMN -->
-                  <div class="ge-list">
-                    <li onmouseover="showsOne('link-1')"><a href="#">top paginas</a></li>
-                    <li onmouseover="showsOne('link-2');"><a href="#">globoesporte.com</a></li>
-                    <li onmouseover="showsOne('link-3');"><a href="#">futebol</a></li>
-                    <li onmouseover="showsOne('link-4');"><a href="#">na tv</a></li>
-                    <li onmouseover="showsOne('link-5');"><a href="#">sportv</a></li>
+                  <div class="ge-list" id="myList2">
+                    <li class="li-2 active-item2" onmouseover="showsOne('link-1');"><a href="#">top paginas</a></li>
+                    <li class="li-2" onmouseover="showsOne('link-2');"><a href="#">globoesporte.com</a></li>
+                    <li class="li-2" onmouseover="showsOne('link-3');"><a href="#">futebol</a></li>
+                    <li class="li-2" onmouseover="showsOne('link-4');"><a href="#">na tv</a></li>
+                    <li class="li-2" onmouseover="showsOne('link-5');"><a href="#">sportv</a></li>
                   </div>
                   <!-- FIRST COLUMN ENDS -->
 
                   <!-- SECOND COLUMN -->
-                  <div class="ge-links links" id="link-1">
+                  <div class="ge-links showAndHide" id="link-1">
                     <ul>
                       <li class="dropdown-title">top páginas</li>
                       <li><a href="#">Globo Esporte</a></li>
@@ -312,7 +420,7 @@
                     </ul>
                   </div>
 
-                  <div class="ge-links none links" id="link-2">
+                  <div class="ge-links none showAndHide" id="link-2">
                     <ul>
                       <li class="dropdown-title">globoesporte.com</li>
                       <li><a href="#">Agenda</a></li>
@@ -328,7 +436,7 @@
                     </ul>
                   </div>
 
-                  <div class="ge-links none links" id="link-3">
+                  <div class="ge-links none showAndHide" id="link-3">
                     <ul>
                       <li class="dropdown-title">futebol</li>
                       <li><a href="#">Brasileirão Série A</a></li>
@@ -346,7 +454,7 @@
                     </ul>
                   </div>
 
-                  <div class="ge-links none links" id="link-4">
+                  <div class="ge-links none showAndHide" id="link-4">
                     <ul>
                       <li class="dropdown-title">na tv</li>
                       <li><a href="#">Combate Programação</a></li>
@@ -358,7 +466,7 @@
                     </ul>
                   </div>
 
-                  <div class="ge-links none links" id="link-5">
+                  <div class="ge-links none showAndHide" id="link-5">
                     <ul>
                       <li class="dropdown-title">sportv</li>
                       <li><a href="#">Acabou a Brincadeira</a></li>
@@ -374,55 +482,66 @@
                   </div>
                   <!-- SECOND COLUMN ENDS -->
                   
-                  <!-- THIRD COLUMN -->
-                  <div class="gshow-series">
-                    <li class="dropdown-title">novelas</li>
-                    <li>
-                      <a href="#">
-                        <span>
-                          <img src="dist/minified/assets/amor-de-mae.jpeg" alt="amor-de-mae">
-                        </span>
-                        <span class="name">Amor de Mae</span>
-                      </a>
-                    </li>
+                  <!-- THIRD COLUMN - TEAMS -->
+                  <div class="ge-teams">
 
-                    <li>
-                      <a href="#">
-                        <span>
-                          <img src="dist/minified/assets/bom-sucesso.png" alt="bom-sucesso">
-                        </span>
-                        <span class="name">Bom Sucesso</span>
-                      </a>
-                    </li>
+                    <div class="buttons flex" id="myDIV">
+                      <button class="btn active" onclick=teams('teamsA')>SERIE A</button>
+                      <button class="btn" onclick=teams('teamsB')>SERIE B</button>
+                    </div>
 
-                    <li>
-                      <a href="#">
-                        <span>
-                          <img src="dist/minified/assets/eramos-seis.jpeg" alt="eramos-seis">
-                        </span>
-                        <span class="name">Éramos Seis</span>
-                      </a>
-                    </li>
+                    <div class="showTeams" id="teamsA">
+                      <div class="teams__grid">
+                        <div><img src="dist/minified/assets/palmeiras.png" alt="Palmeiras" /></div>
+                        <div><img src="dist/minified/assets/saopaulo.png" alt="Sao-Paulo" /></div>
+                        <div><img src="dist/minified/assets/goias.png" alt="Goias" /></div>
+                        <div><img src="dist/minified/assets/vasco.png" alt="Vasco" /></div>
+                        <div><img src="dist/minified/assets/joinville.png" alt="Joinville" /></div>
+                        <div><img src="dist/minified/assets/atlprn.png" alt="Atletico-Paranense" /></div>
+                        <div><img src="dist/minified/assets/sport.png" alt="Sport" /></div>
+                        <div><img src="dist/minified/assets/bahia.png" alt="Bahia" /></div>
+                        <div><img src="dist/minified/assets/gremio.png" alt="Gremio" /></div>
+                        <div><img src="dist/minified/assets/fluminense.png" alt="Fluminense" /></div>
+                        <div><img src="dist/minified/assets/botafogoribeirao.png" alt="Botafogo-Ribeirao" /></div>
+                        <div><img src="dist/minified/assets/internacional.png" alt="Internacional" /></div>
+                        <div><img src="dist/minified/assets/chapecoense.png" alt="Chapecoense" /></div>
+                        <div><img src="dist/minified/assets/amrmin.png" alt="America-Mineiro" /></div>
+                        <div><img src="dist/minified/assets/flamengo.png" alt="Flamengo" /></div>
+                        <div><img src="dist/minified/assets/bragantino.png" alt="Brangantino" /></div>
+                        <div><img src="dist/minified/assets/santos.png" alt="Santos" /></div>
+                        <div><img src="dist/minified/assets/redbull.png" alt="Red-Bull" /></div>
+                        <div><img src="dist/minified/assets/riobranco.png" alt="Rio-Branco" /></div>
+                        <div><img src="dist/minified/assets/atlmin.png" alt="Atletico-Mineiro" /></div>
+                      </div>
+                    </div>
 
-                    <li>
-                      <a href="#">
-                        <span>
-                          <img src="dist/minified/assets/toda-forma-de-amar.jpg" alt="toda-forma-de-amar">
-                        </span>
-                        <span class="name">Malhação – Toda Forma de Amar</span>
-                      </a>
-                    </li>
-
-                    <li>
-                      <a href="#">
-                        <span>
-                          <img src="dist/minified/assets/avenida-brasil.jpg" alt="avenida-brasil">
-                        </span>
-                        <span class="name">Avenida Brasil</span>
-                      </a>
-                    </li>
+                    <div class="showTeams none" id="teamsB">
+                      <div class="teams__grid">
+                        <div><img src="dist/minified/assets/corinthians.png" alt="Corinthians"></div>
+                        <div><img src="dist/minified/assets/santos.png" alt="Santos" /></div>
+                        <div><img src="dist/minified/assets/redbull.png" alt="Red-Bull" /></div>
+                        <div><img src="dist/minified/assets/chapecoense.png" alt="Chapecoense" /></div>
+                        <div><img src="dist/minified/assets/internacional.png" alt="Corinthians"></div>
+                        <div><img src="dist/minified/assets/gremio.png" alt="Corinthians"></div>
+                        <div><img src="dist/minified/assets/botafogoribeirao.png" alt="Botafogo-Ribeirao" /></div>
+                        <div><img src="dist/minified/assets/sport.png" alt="Sport" /></div>
+                        <div><img src="dist/minified/assets/bahia.png" alt="Bahia" /></div>
+                        <div><img src="dist/minified/assets/saopaulo.png" alt="Sao-Paulo" /></div>
+                        <div><img src="dist/minified/assets/goias.png" alt="Goias" /></div>
+                        <div><img src="dist/minified/assets/saopaulo.png" alt="Sao-Paulo" /></div>
+                        <div><img src="dist/minified/assets/goias.png" alt="Goias" /></div>
+                        <div><img src="dist/minified/assets/vasco.png" alt="Vasco" /></div>
+                        <div><img src="dist/minified/assets/joinville.png" alt="Joinville" /></div>
+                        <div><img src="dist/minified/assets/botafogoribeirao.png" alt="Botafogo-Ribeirao" /></div>
+                        <div><img src="dist/minified/assets/internacional.png" alt="Internacional" /></div>
+                        <div><img src="dist/minified/assets/chapecoense.png" alt="Chapecoense" /></div>
+                        <div><img src="dist/minified/assets/amrmin.png" alt="America-Mineiro" /></div>
+                        <div><img src="dist/minified/assets/flamengo.png" alt="Flamengo" /></div>
+                      </div>
+                    </div>
+                  
                   </div>
-                  <!-- THIRD COLUMN ENDS -->
+                  <!-- THIRD COLUMN - TEAMS ENDS -->
                 </div>
               </ul>
             </div>
@@ -430,9 +549,9 @@
           <!-- GE DROPDOWN ENDS -->
 
           <!-- GSHOW DROPDOWN -->
-          <li onmouseleave="closeDropdown()">
+          <li onclick="openDropdown(event)" onmouseleave="closeDropdown()">
             <div>
-              <a href="#" class="navbar__link" onclick="openDropdown(event)">
+              <a href="#" class="navbar__link">
                 <span class="orange">gshow</span>
                 <svg class="navbar__icon navbar__icon--orange">
                   <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
@@ -442,23 +561,23 @@
                 <div class="flex">
                   
                   <!-- FIRST COLUMN -->
-                  <div class="gshow-list">
-                    <li onmouseover="showsOne('link-1')"><a href="#">top paginas</a></li>
-                    <li onmouseover="showsOne('link-2');"><a href="#">gshow</a></li>
-                    <li onmouseover="showsOne('link-3');"><a href="#">programas</a></li>
-                    <li onmouseover="showsOne('link-4');"><a href="#">series</a></li>
-                    <li onmouseover="showsOne('link-5');"><a href="#">series originais</a></li>
-                    <li onmouseover="showsOne('link-6');"><a href="#">famosos</a></li>
-                    <li onmouseover="showsOne('link-7');"><a href="#">moda & estilo</a></li>
-                    <li onmouseover="showsOne('link-8');"><a href="#">bem-estar & saude </a></li>
-                    <li onmouseover="showsOne('link-9');"><a href="#">casa e decoracao</a></li>
-                    <li onmouseover="showsOne('link-10');"><a href="#">gastronomia</a></li>
-                    <li onmouseover="showsOne('link-11');"><a href="#">na tv</a></li>
+                  <div class="gshow-list" id="myList3">
+                    <li class="li-3 active-item3" onmouseover="showsOne('link-1')"><a href="#">top paginas</a></li>
+                    <li class="li-3" onmouseover="showsOne('link-2');"><a href="#">gshow</a></li>
+                    <li class="li-3" onmouseover="showsOne('link-3');"><a href="#">programas</a></li>
+                    <li class="li-3" onmouseover="showsOne('link-4');"><a href="#">series</a></li>
+                    <li class="li-3" onmouseover="showsOne('link-5');"><a href="#">series originais</a></li>
+                    <li class="li-3" onmouseover="showsOne('link-6');"><a href="#">famosos</a></li>
+                    <li class="li-3" onmouseover="showsOne('link-7');"><a href="#">moda & estilo</a></li>
+                    <li class="li-3" onmouseover="showsOne('link-8');"><a href="#">bem-estar & saude </a></li>
+                    <li class="li-3" onmouseover="showsOne('link-9');"><a href="#">casa e decoracao</a></li>
+                    <li class="li-3" onmouseover="showsOne('link-10');"><a href="#">gastronomia</a></li>
+                    <li class="li-3" onmouseover="showsOne('link-11');"><a href="#">na tv</a></li>
                   </div>
                   <!-- FIRST COLUMN ENDS -->
 
                   <!-- SECOND COLUMN -->
-                  <div class="gshow-links links" id="link-1">
+                  <div class="gshow-links showAndHide" id="link-1">
                     <ul>
                       <li class="dropdown-title">top páginas</li>
                       <li><a href="#">Caldeirão do Huck</a></li>
@@ -474,7 +593,7 @@
                     </ul>
                   </div>
 
-                  <div class="gshow-links none links" id="link-2">
+                  <div class="gshow-links none showAndHide" id="link-2">
                     <ul>
                       <li class="dropdown-title">gshow</li>
                       <li><a href="#">Famosos</a></li>
@@ -483,7 +602,7 @@
                     </ul>
                   </div>
 
-                  <div class="gshow-links none links" id="link-3">
+                  <div class="gshow-links none showAndHide" id="link-3">
                     <ul>
                       <li class="dropdown-title">programas</li>
                       <li><a href="#">Altas Horas</a></li>
@@ -502,7 +621,7 @@
                     </ul>
                   </div>
 
-                  <div class="gshow-links none links" id="link-4">
+                  <div class="gshow-links none showAndHide" id="link-4">
                     <ul>
                       <li class="dropdown-title">séries</li>
                       <li><a href="#">Aruanas</a></li>
@@ -513,7 +632,7 @@
                     </ul>
                   </div>
 
-                  <div class="gshow-links none links" id="link-5">
+                  <div class="gshow-links none showAndHide" id="link-5">
                     <ul>
                       <li class="dropdown-title">séries originais</li>
                       <li><a href="#">Bichos</a></li>
@@ -531,7 +650,7 @@
                     </ul>
                   </div>
 
-                  <div class="gshow-links none links" id="link-6">
+                  <div class="gshow-links none showAndHide" id="link-6">
                     <ul>
                       <li class="dropdown-title">famosos</li>
                       <li><a href="#">patricia kogut</a></li>
@@ -540,7 +659,7 @@
                     </ul>
                   </div>
 
-                  <div class="gshow-links none links" id="link-7">
+                  <div class="gshow-links none showAndHide" id="link-7">
                     <ul>
                       <li class="dropdown-title">moda & estilo</li>
                       <li><a href="#">Ela no Globo</a></li>
@@ -553,7 +672,7 @@
                     </ul>
                   </div>
 
-                  <div class="gshow-links none links" id="link-8">
+                  <div class="gshow-links none showAndHide" id="link-8">
                     <ul>
                       <li class="dropdown-title">bem-estar e saúde</li>
                       <li><a href="#">Beleza no GNT</a></li>
@@ -566,7 +685,7 @@
                     </ul>
                   </div>
 
-                  <div class="gshow-links none links" id="link-9">
+                  <div class="gshow-links none showAndHide" id="link-9">
                     <ul>
                       <li class="dropdown-title">casa e decoração</li>
                       <li><a href="#">Revista Casa e Jardim</a></li>
@@ -576,7 +695,7 @@
                     </ul>
                   </div>
 
-                  <div class="gshow-links none links" id="link-10">
+                  <div class="gshow-links none showAndHide" id="link-10">
                     <ul>
                       <li class="dropdown-title">gastronomia</li>
                       <li><a href="#">Receitas no GNT</a></li>
@@ -585,7 +704,7 @@
                     </ul>
                   </div>
 
-                  <div class="gshow-links none links" id="link-11">
+                  <div class="gshow-links none showAndHide" id="link-11">
                     <ul>
                       <li class="dropdown-title">na tv</li>
                       <li><a href="#">Rede Globo</a></li>
@@ -665,9 +784,10 @@
             </div>
           </li>
 
-          <li onmouseleave="closeDropdown()">
+          <!-- VIDEOS -->
+          <li onclick="openDropdown(event)" onmouseleave="closeDropdown()">
             <div>
-              <a href="#" class="navbar__link" onclick="openDropdown(event)">
+              <a href="#" class="navbar__link">
                 <span class="blue">videos</span>
                 <svg class="navbar__icon navbar__icon--blue">
                   <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
@@ -679,6 +799,7 @@
               </ul>
             </div>
           </li>
+          <!-- VIDEOS ENDS -->
         </ul>
         <!-- MENU ENDS -->
       </div>
@@ -1244,6 +1365,6 @@
   <!-- MAIN CONTAINER GRID ENDS -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="dist/minified/all.js?cb=1578550637526"></script>
+  <script src="dist/minified/all.js?cb=1578637798594"></script>
 </body>
 </html>
