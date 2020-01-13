@@ -1,0 +1,35 @@
+.post-slider {
+  position: relative;
+
+  .post-wrapper {
+    width: 85%;
+    height: 350px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid red;
+  }
+
+  .prev {
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    cursor: pointer;
+  }
+
+  .next {
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    cursor: pointer;
+  }
+}
+
+.post {
+  margin: 0 10px;
+  display: inline-block;
+  height: 350px;
+  width: 300px;
+  background-color: yellowgreen;
+}

@@ -16,7 +16,6 @@
 
 /* ACTIVE ITEM - li */
 %active {
-  border-left: 5px solid var(--color-red);
   border-top: 0.1px solid var(--color-grey-dark-2);
   border-bottom: 0.1px solid var(--color-grey-dark-2);
   border-right: none;
@@ -89,6 +88,7 @@
       @extend %dropdown;
 
       .active-item {
+        border-left: 5px solid var(--color-red);
         @extend %active;
       }
 
@@ -97,6 +97,7 @@
       }
 
       li:hover {
+        border-left: 5px solid var(--color-red);
         @extend %active;
       }
 
@@ -210,11 +211,6 @@
 
       .active-item2 {
         border-left: 5px solid var(--color-green);
-        border-top: 0.1px solid var(--color-grey-dark-2);
-        border-bottom: 0.1px solid var(--color-grey-dark-2);
-        border-right: none;
-        background-color: var(--color-gray-light-5);
-
         @extend %active;
       }
 
@@ -224,11 +220,6 @@
 
       li:hover {
         border-left: 5px solid var(--color-green);
-        border-top: 0.1px solid var(--color-grey-dark-2);
-        border-bottom: 0.1px solid var(--color-grey-dark-2);
-        border-right: none;
-        background-color: var(--color-gray-light-5);
-
         @extend %active;
       }
 
@@ -324,13 +315,8 @@
       @extend %dropdown;
 
       .active-item3 {
-        @extend %active;
-
         border-left: 5px solid var(--color-orange);
-        border-top: 0.1px solid var(--color-grey-dark-2);
-        border-bottom: 0.1px solid var(--color-grey-dark-2);
-        border-right: none;
-        background-color: var(--color-gray-light-5);
+        @extend %active;
       }
 
       li {
@@ -339,11 +325,6 @@
 
       li:hover {
         border-left: 5px solid var(--color-orange);
-        border-top: 0.1px solid var(--color-grey-dark-2);
-        border-bottom: 0.1px solid var(--color-grey-dark-2);
-        border-right: none;
-        background-color: var(--color-gray-light-5);
-
         @extend %active;
       }
 

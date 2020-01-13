@@ -46,6 +46,7 @@ for (var i = 0; i < btns.length; i++) {
 }
 /* Teams active button ends */
 
+
 /* li active item */
 var header = document.getElementById("myList");
 var items = header.getElementsByClassName("li");
@@ -56,9 +57,9 @@ for (var i = 0; i < items.length; i++) {
     this.className += " active-item";
   });
 }
-/* li active item ends */
+// /* li active item ends */
 
-/* li active item */
+// /* li active item */
 var header2 = document.getElementById("myList2");
 var items2 = header2.getElementsByClassName("li-2");
 for (var i = 0; i < items2.length; i++) {
@@ -68,9 +69,9 @@ for (var i = 0; i < items2.length; i++) {
     this.className += " active-item2";
   });
 }
-/* li active item ends */
+// /* li active item ends */
 
-/* li active item */
+// /* li active item */
 var header3 = document.getElementById("myList3");
 var items3 = header3.getElementsByClassName("li-3");
 for (var i = 0; i < items3.length; i++) {
@@ -81,3 +82,18 @@ for (var i = 0; i < items3.length; i++) {
   });
 }
 /* li active item ends */
+
+/* Slider */
+$(document).ready(function () {
+  $('.post-wrapper').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    nextArrow: $('.next'),
+    prevArrow: $('.prev'),
+  });
+});
+
+
+/* Slider ends */
