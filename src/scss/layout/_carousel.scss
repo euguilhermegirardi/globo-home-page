@@ -1,27 +1,30 @@
+.slider {
+  max-width: 1320px;
+  margin: 10rem auto;
+}
+
 .post-slider {
   position: relative;
 
   .post-wrapper {
     width: 85%;
-    height: 350px;
     margin: 0 auto;
     overflow: hidden;
-    border: 1px solid red;
   }
 
   .prev {
     font-size: 2rem;
     position: absolute;
-    top: 50%;
-    right: 30px;
+    top: 25%;
+    left: 65px;
     cursor: pointer;
   }
 
   .next {
     font-size: 2rem;
     position: absolute;
-    top: 50%;
-    left: 30px;
+    top: 25%;
+    right: 65px;
     cursor: pointer;
   }
 }
@@ -29,7 +32,9 @@
 .post {
   margin: 0 10px;
   display: inline-block;
-  height: 350px;
-  width: 300px;
-  background-color: yellowgreen;
+}
+
+.slick-slide {
+  width: 9rem;
+  padding-left: 1.4rem;
 }

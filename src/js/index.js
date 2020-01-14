@@ -86,12 +86,12 @@ for (var i = 0; i < items3.length; i++) {
 /* Slider */
 $(document).ready(function () {
   $('.post-wrapper').slick({
+    infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
     nextArrow: $('.next'),
     prevArrow: $('.prev'),
+    variableWidth: true,
   });
 });
 
