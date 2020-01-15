@@ -1,0 +1,39 @@
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem 0;
+  background-color: var(--color-strong-blue);
+
+  .footer__left {
+    display: flex;
+    align-items: center;
+    font-family: Helvetica, sans-serif;
+
+    h1 {
+      color: white;
+      cursor: pointer;
+    }
+
+    p {
+      color: var(--color-blue-text);
+      font-size: 1.2rem;
+      padding-left: 1.8rem;
+      font-weight: normal;
+    }
+  }
+
+  .footer__right {
+    align-self: center;
+
+    a {
+      border-left: 0;
+      color: #fff;
+      font-size: 14px;
+      letter-spacing: -0.2px;
+
+      &:not(:first-child) {
+        margin-left: 1.5rem;
+      }
+    }
+  }
+}
