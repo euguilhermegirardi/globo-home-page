@@ -5,6 +5,10 @@
   grid-column-gap: 3rem;
   font-size: 18px;
 
+  @include respond(bp-between-largest-large) {
+    grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+  }
+
   &--g1 {
     color: var(--color-red-text);
   }

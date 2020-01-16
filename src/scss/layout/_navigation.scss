@@ -55,14 +55,30 @@
   justify-content: space-between;
   padding: 2.5rem;
 
+  @include respond(bp-between-largest-large) {
+    padding: 1rem 0;
+  }
+
   /* NAVBAR LEFT */
   &__logo {
     align-self: center;
     margin-right: 2.5rem;
+
+    @include respond(bp-large-medium) {
+      margin-right: 1.8rem;
+    }
+
+    @include respond(bp-between-largest-large) {
+      margin-right: 1rem;
+    }
   }
 
   &__logo img {
     height: 5rem;
+
+    @include respond(bp-between-largest-large) {
+      height: 3.5rem;
+    }
   }
 
   &__link {
@@ -71,10 +87,25 @@
     padding: 0 1rem;
     display: flex;
     position: relative;
+
+    @include respond(bp-large-medium) {
+      padding: 0 10px;
+    }
+
+    @include respond(bp-between-largest-large) {
+      font-size: 1.4rem;
+    }
   }
 
   &__link.open + &__dropdown {
     display: initial;
+  }
+
+  &__icon {
+    @include respond(bp-large-medium) {
+      display: none;
+      width: 0;
+    }
   }
 
   &__dropdown {
@@ -506,6 +537,17 @@
     font-size: 11px;
     width: 80px;
     text-align: center;
+
+    &:not(:first-child) {
+      @include respond(bp-large-medium) {
+        display: none;
+        width: 0;
+      }
+    }
+
+    @include respond(bp-between-largest-large) {
+      font-size: 10px;
+    }
   }
 
   &__menu-item a {
@@ -623,6 +665,10 @@
     top: 9px;
     height: 20px;
     transition: all 0.3s;
+
+    @include respond(bp-between-largest-large) {
+      background-size: 12px;
+    }
   }
 
   &__placeholder {
@@ -634,9 +680,21 @@
     width: 250px;
     transition: all 0.2s;
 
+    @include respond(bp-between-largest-large) {
+      width: 215px;
+    }
+
     &:focus {
       outline: none;
       width: 280px;
+
+      @include respond(bp-large-medium) {
+        width: 270px;
+      }
+
+      @include respond(bp-between-largest-large) {
+        width: 215px;
+      }
     }
   }
 
@@ -647,6 +705,10 @@
   &__user-icon {
     height: 2.5rem;
     width: 2.5rem;
+
+    @include respond(bp-between-largest-large) {
+      width: 2rem;
+    }
   }
 }
 /* NAVBAR RIGHT ENDS */

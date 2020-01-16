@@ -31,12 +31,21 @@
       width: 100%;
       border-radius: 4px;
       transition: all 1s ease;
+
+      @include respond(bp-between-largest-large) {
+        align-self: center;
+      }
     }
 
     h4 {
       align-self: center;
       font-size: 15px;
+
+      @include respond(bp-between-largest-large) {
+        font-size: 14px;
+      }
     }
+
     &:hover {
       img {
         filter: brightness(70%);

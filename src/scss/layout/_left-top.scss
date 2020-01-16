@@ -20,10 +20,22 @@
   display: grid;
   grid-template-columns: auto;
 
+  @include respond(bp-large-medium) {
+    grid-column: full-start/full-end;
+  }
+
   &--first-box {
     display: grid;
     grid-template-columns: 1fr;
     font-size: 3.5rem;
+
+    @include respond(bp-large-medium) {
+      font-size: 3rem;
+    }
+
+    @include respond(bp-between-largest-large) {
+      font-size: 2.5rem;
+    }
 
     & > * {
       margin-bottom: 2.5rem;
@@ -54,6 +66,12 @@
     font-weight: bold;
     margin-bottom: 1rem;
 
+    @include respond(bp-large-medium) {
+      grid-template-columns: 1fr;
+      grid-row-gap: 2rem;
+      font-size: 1.6rem;
+    }
+
     p:hover {
       @extend %hover;
     }
@@ -70,16 +88,32 @@
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
 
+    @include respond(bp-large-medium) {
+      grid-template-columns: repeat(auto-fit, minmax(29rem, auto));
+    }
+
+    @include respond(bp-between-largest-large) {
+      grid-template-columns: repeat(auto-fit, minmax(16rem, auto));
+    }
+
     img {
       width: 100%;
       border-radius: 4px;
       transition: all 1s ease;
+
+      @include respond(bp-large-medium) {
+        height: 15rem;
+      }
     }
 
     h4 {
       color: var(--color-red-text);
       font-size: 18px;
       margin-bottom: 1.5rem;
+
+      @include respond(bp-large-medium) {
+        margin-bottom: 1rem;
+      }
     }
 
     &-boxes:hover {

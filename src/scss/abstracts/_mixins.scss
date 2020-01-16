@@ -1,0 +1,32 @@
+/* MEDIA QUERIES */
+@mixin respond($breakpoint) {
+  @if $breakpoint == bp-small {
+    @media only screen and (max-width: 37.5em) {
+      @content; // 600px / 16px (default browsers) = 37.5em
+    }
+  }
+
+  @if $breakpoint == bp-medium {
+    @media only screen and (max-width: 50em) {
+      @content; // 800px / 16px (default browsers) = 37.5em
+    }
+  }
+
+  @if $breakpoint == bp-large-medium {
+    @media only screen and (min-width: 56.25em) and (max-width: 62.4375em) {
+      @content; // 900px and 999px / 16px (default browsers)
+    }
+  }
+
+  @if $breakpoint == bp-between-largest-large {
+    @media only screen and (min-width: 62.5em) and (max-width: 71.25em) {
+      @content; // 1000px and 1140 / 16px (default browsers)
+    }
+  }
+
+  @if $breakpoint == bp-largest {
+    @media only screen and (max-width: 75em) {
+      @content; // 1200px / 16px (default browsers)
+    }
+  }
+}

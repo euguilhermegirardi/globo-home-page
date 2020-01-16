@@ -19,6 +19,10 @@ footer {
       font-size: 1.2rem;
       padding-left: 1.8rem;
       font-weight: normal;
+
+      @include respond(bp-between-largest-large) {
+        font-size: 1rem;
+      }
     }
   }
 
@@ -30,6 +34,10 @@ footer {
       color: #fff;
       font-size: 14px;
       letter-spacing: -0.2px;
+
+      @include respond(bp-between-largest-large) {
+        font-size: 12px;
+      }
 
       &:not(:first-child) {
         margin-left: 1.5rem;

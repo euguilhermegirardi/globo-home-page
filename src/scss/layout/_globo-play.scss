@@ -35,9 +35,19 @@
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  grid-column-gap: 1rem;
   max-width: 1320px;
   margin: 0 auto;
-  grid-column-gap: 1rem;
+  padding: 0 2rem;
+
+  @include respond(bp-largest) {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    margin: 0 3rem;
+  }
+
+  @include respond(bp-between-largest-large) {
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  }
 }
 
 .card {
@@ -100,10 +110,18 @@
     &--only {
       font-size: 3rem;
       margin-bottom: 1rem;
+
+      @include respond(bp-between-largest-large) {
+        font-size: 2rem;
+      }
     }
 
     &--price {
       font-size: 4.5rem;
+
+      @include respond(bp-between-largest-large) {
+        font-size: 3rem;
+      }
     }
 
     &--btn,
@@ -123,6 +141,10 @@
       //Change for the <button> element
       border: none;
       cursor: pointer;
+
+      @include respond(bp-between-largest-large) {
+        font-size: 1.2rem;
+      }
 
       &:hover {
         transform: translateY(-3px);

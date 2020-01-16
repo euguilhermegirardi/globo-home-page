@@ -16,10 +16,19 @@
   grid-gap: 1rem;
   border-left: 1px solid #ccc;
 
+  @include respond(bp-large-medium) {
+    grid-column: full-start/full-end;
+  }
+
   &--left {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 2rem;
+
+    @include respond(bp-large-medium) {
+      display: flex;
+      flex-direction: column;
+    }
 
     h4 {
       color: var(--color-green-text);
@@ -55,6 +64,16 @@
     grid-column: 1/-1;
     align-content: baseline;
 
+    @include respond(bp-large-medium) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:nth-child(3) {
+        margin-top: 3rem;
+      }
+    }
+
     img {
       width: 100%;
       border-radius: 4px;
@@ -65,6 +84,12 @@
     h4 {
       font-size: 18px;
       grid-column: 1/-1;
+
+      @include respond(bp-large-medium) {
+        margin-left: 2rem;
+        margin-bottom: 1.5rem;
+        font-size: 16px;
+      }
     }
 
     &:hover {
@@ -79,6 +104,11 @@
 
     p {
       font-size: 14px;
+
+      @include respond(bp-large-medium) {
+        font-size: 12px;
+        margin-left: 2rem;
+      }
 
       &:hover {
         filter: brightness(140%);
@@ -101,5 +131,9 @@
   &--text {
     margin: 2rem 0;
     grid-column: 1/-1;
+
+    @include respond(bp-large-medium) {
+      order: 3;
+    }
   }
 }

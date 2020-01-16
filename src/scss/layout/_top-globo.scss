@@ -1,11 +1,10 @@
 .container__top-globo {
   max-width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 5rem auto;
+  padding: 0 2rem;
   border-top: 1px solid var(--color-grey-light-4);
   border-bottom: 1px solid var(--color-grey-light-4);
   background-color: var(--color-gray-light-5);
-
-  margin-bottom: 5rem;
 }
 
 .title {
@@ -64,6 +63,11 @@
       padding: 2rem 0;
       min-height: 18rem;
       align-items: initial;
+
+      @include respond(bp-between-largest-large) {
+        font-size: 1.5rem;
+        min-height: 15rem;
+      }
     }
 
     &:not(:first-child) {
