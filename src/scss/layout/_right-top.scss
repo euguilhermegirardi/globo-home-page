@@ -16,6 +16,10 @@
   grid-gap: 1rem;
   border-left: 1px solid #ccc;
 
+  @include respond(bp-medium-small) {
+    grid-column: full-start/full-end;
+  }
+
   @include respond(bp-large-medium) {
     grid-column: full-start/full-end;
   }
@@ -24,6 +28,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 2rem;
+
+    @include respond(bp-medium-small) {
+      display: flex;
+      flex-direction: column;
+    }
 
     @include respond(bp-large-medium) {
       display: flex;
@@ -64,6 +73,19 @@
     grid-column: 1/-1;
     align-content: baseline;
 
+    @include respond(bp-medium-small) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      order: 3;
+
+      &:nth-child(1) {
+        margin-bottom: 2.5rem;
+      }
+    }
+
     @include respond(bp-large-medium) {
       display: flex;
       justify-content: center;
@@ -79,6 +101,11 @@
       border-radius: 4px;
       transition: all 1s ease;
       grid-column: 1/-1;
+
+      @include respond(bp-medium-small) {
+        height: 10rem;
+        width: 25rem;
+      }
 
       @include respond(bp-large-medium) {
         height: 10rem;
@@ -136,6 +163,10 @@
   &--text {
     margin: 2rem 0;
     grid-column: 1/-1;
+
+    @include respond(bp-medium-small) {
+      text-align: center;
+    }
 
     @include respond(bp-large-medium) {
       order: 3;

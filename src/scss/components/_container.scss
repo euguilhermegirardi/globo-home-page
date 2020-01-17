@@ -3,6 +3,10 @@
   margin: 0 auto;
   padding: 0 3rem;
 
+  @include respond(bp-medium-small) {
+    padding: 5px;
+  }
+
   @include respond(bp-large-medium) {
     padding: 0 1.5rem;
   }
