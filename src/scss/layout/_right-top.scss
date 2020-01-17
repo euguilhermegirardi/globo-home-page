@@ -79,6 +79,11 @@
       border-radius: 4px;
       transition: all 1s ease;
       grid-column: 1/-1;
+
+      @include respond(bp-large-medium) {
+        height: 10rem;
+        width: 20rem;
+      }
     }
 
     h4 {

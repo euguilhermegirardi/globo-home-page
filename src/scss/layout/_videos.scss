@@ -6,6 +6,11 @@
 
   h4 {
     font-size: 3rem;
+
+    @include respond(bp-large-medium) {
+      font-size: 2.5rem;
+      margin-top: 5px;
+    }
   }
 
   span::after {
@@ -81,6 +86,10 @@
       border-width: 37px 0 37px 60px;
       transition: all 1s ease;
     }
+
+    @include respond(bp-large-medium) {
+      display: none;
+    }
   }
   /* LEFT SIDE ENDS */
 
@@ -131,6 +140,10 @@
           filter: brightness(60%);
         }
       }
+
+      @include respond(bp-large-medium) {
+        grid-column: 1/4;
+      }
     }
 
     &--videos2,
@@ -143,6 +156,10 @@
         img {
           filter: brightness(60%);
         }
+      }
+
+      @include respond(bp-large-medium) {
+        grid-column: 4/7;
       }
     }
 
@@ -157,6 +174,16 @@
         var(--color-grey-light-3);
       border-width: 18px 0 18px 25px;
       transition: all 1s ease;
+    }
+
+    @include respond(bp-large-medium) {
+      top: 2rem;
+      position: relative;
+      grid-gap: 5px;
+
+      img {
+        height: 20rem;
+      }
     }
   }
   /* RIGHT SIDE ENDS */

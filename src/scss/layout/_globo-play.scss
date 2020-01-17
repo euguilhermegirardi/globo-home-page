@@ -3,9 +3,19 @@
   display: grid;
   margin: 2.5rem 0 1.2rem 0;
 
+  @include respond(bp-large-medium) {
+    margin-top: 6rem;
+  }
+
   &__header {
     display: flex;
     justify-content: space-between;
+
+    a {
+      @include respond(bp-large-medium) {
+        display: none;
+      }
+    }
 
     & > div {
       display: flex;
@@ -40,13 +50,16 @@
   margin: 0 auto;
   padding: 0 2rem;
 
-  @include respond(bp-largest) {
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    margin: 0 3rem;
+  @include respond(bp-large-medium) {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   }
 
   @include respond(bp-between-largest-large) {
-    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  }
+
+  @include respond(bp-largest) {
+    grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
   }
 }
 
@@ -55,6 +68,18 @@
   -moz-perspective: 150rem; /* Firefox */
   position: relative;
   height: 38rem;
+
+  @include respond(bp-large-medium) {
+    height: 30rem;
+  }
+
+  @include respond(bp-between-largest-large) {
+    height: 34rem;
+  }
+
+  @include respond(bp-largest) {
+    height: 36rem;
+  }
 
   &__side {
     position: absolute;
@@ -163,5 +188,15 @@
         box-shadow: 0 0.5rem 1rem rgba(black, 0.2);
       }
     }
+  }
+}
+
+.btn {
+  display: none;
+  text-align: center;
+
+  @include respond(bp-large-medium) {
+    display: block;
+    margin-bottom: 10rem;
   }
 }

@@ -4,6 +4,10 @@
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-column-gap: 3rem;
 
+  @include respond(bp-large-medium) {
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  }
+
   @include respond(bp-between-largest-large) {
     grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
   }
@@ -19,6 +23,10 @@
       padding: 1.4rem;
       margin: 1rem;
       grid-column-gap: 2rem;
+
+      @include respond(bp-large-medium) {
+        margin-bottom: 2.1rem;
+      }
     }
 
     &--footer {
@@ -29,6 +37,16 @@
       font-size: 12px;
       color: var(--color-grey-dark-1);
       text-align: end;
+
+      .datetime-container {
+        @include respond(bp-large-medium) {
+          font-size: 1rem;
+        }
+      }
+
+      @include respond(bp-large-medium) {
+        margin-top: 10px;
+      }
     }
   }
 
@@ -41,6 +59,10 @@
       color: var(--color-grey-dark-3);
       font-size: 12px;
       border-bottom: 1px solid var(--color-grey-light-4);
+
+      @include respond(bp-large-medium) {
+        font-size: 9px;
+      }
     }
 
     &--value {
@@ -56,19 +78,39 @@
 
     &--icon {
       font-size: 2.5rem;
+
+      @include respond(bp-large-medium) {
+        font-size: 1.5rem;
+      }
     }
 
     &--number {
       font-size: 4rem;
+
+      @include respond(bp-large-medium) {
+        font-size: 3rem;
+      }
     }
 
     &--percent {
       font-size: 18px;
+
+      @include respond(bp-large-medium) {
+        font-size: 1.5rem;
+      }
     }
 
     &--points {
       font-size: 15px;
       color: var(--color-grey-dark-1);
+
+      @include respond(bp-large-medium) {
+        font-size: 13px;
+      }
+    }
+
+    @include respond(bp-large-medium) {
+      margin-top: 2px;
     }
   }
 
@@ -89,6 +131,10 @@
 
         tr {
           margin: 5px;
+
+          @include respond(bp-large-medium) {
+            font-size: 9px;
+          }
         }
       }
     }
@@ -110,6 +156,10 @@
       text-align: initial;
       color: #666;
       font-size: 13px;
+
+      @include respond(bp-large-medium) {
+        font-size: 11px;
+      }
     }
 
     &--value {
@@ -117,6 +167,10 @@
       text-align: end;
       color: var(--color-grey-dark-1);
       font-weight: 100;
+
+      @include respond(bp-large-medium) {
+        font-size: 11px;
+      }
     }
   }
   /* ECONOMICS ENDS */
@@ -131,6 +185,11 @@
       color: var(--color-grey-dark-3);
       font-size: 12px;
       padding: 2rem 1.5rem;
+
+      @include respond(bp-large-medium) {
+        padding: 2rem 1.5rem 0 1.5rem;
+        font-size: 1.2rem;
+      }
     }
 
     h4 {
@@ -139,16 +198,27 @@
 
       @include respond(bp-largest) {
         padding: 0 0rem 2rem 1.5rem;
+        font-size: 1.4rem;
+      }
+
+      @include respond(bp-large-medium) {
+        padding: 2rem 1rem 1rem 1rem;
+        font-size: 1.4rem;
       }
 
       @include respond(bp-between-largest-large) {
         padding: 1rem 0 1rem 1rem;
+        font-size: 1.4rem;
       }
     }
 
     &--container {
       display: grid;
       grid-template-columns: 1fr;
+
+      @include respond(bp-large-medium) {
+        margin-bottom: 4.6rem;
+      }
     }
 
     &--footer {
@@ -165,7 +235,7 @@
       }
 
       @include respond(bp-largest) {
-        margin-top: 17px;
+        margin-top: 25px;
       }
 
       @include respond(bp-between-largest-large) {

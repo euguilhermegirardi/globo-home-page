@@ -89,7 +89,7 @@
     margin-bottom: 1.5rem;
 
     @include respond(bp-large-medium) {
-      grid-template-columns: repeat(auto-fit, minmax(29rem, auto));
+      grid-template-columns: repeat(auto-fit, minmax(27rem, auto));
     }
 
     @include respond(bp-between-largest-large) {
@@ -113,6 +113,8 @@
 
       @include respond(bp-large-medium) {
         margin-bottom: 1rem;
+        padding: 0 1rem;
+        text-align: center;
       }
     }
 
@@ -129,6 +131,10 @@
     p {
       color: var(--color-red-text);
       font-size: 14px;
+
+      @include respond(bp-large-medium) {
+        text-align: center;
+      }
 
       &:hover {
         @extend %hover;

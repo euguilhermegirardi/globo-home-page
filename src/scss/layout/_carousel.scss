@@ -2,6 +2,10 @@
   max-width: 1320px;
   margin: 10rem auto;
 
+  @include respond(bp-large-medium) {
+    margin: 1rem auto;
+  }
+
   @include respond(bp-between-largest-large) {
     margin: 0 auto 5rem auto;
   }

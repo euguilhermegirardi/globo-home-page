@@ -1,14 +1,8 @@
 /* MEDIA QUERIES */
 @mixin respond($breakpoint) {
-  @if $breakpoint == bp-small {
-    @media only screen and (max-width: 37.5em) {
-      @content; // 600px / 16px (default browsers) = 37.5em
-    }
-  }
-
-  @if $breakpoint == bp-medium {
-    @media only screen and (max-width: 50em) {
-      @content; // 800px / 16px (default browsers) = 37.5em
+  @if $breakpoint == bp-medium-small {
+    @media only screen and (max-width: 56.25em) and (min-width: 37.5em) {
+      @content; // 800px and 600px / 16px (default browsers)
     }
   }
 
@@ -25,7 +19,7 @@
   }
 
   @if $breakpoint == bp-largest {
-    @media only screen and (max-width: 75em) {
+    @media only screen and (max-width: 75em) and (min-width: 71.25em) {
       @content; // 1200px / 16px (default browsers)
     }
   }

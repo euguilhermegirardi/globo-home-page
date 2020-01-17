@@ -9,4 +9,8 @@
     [center-end] minmax(6rem, 1fr) [full-end];
   grid-row-gap: 3rem;
   justify-content: center;
+
+  @include respond(bp-large-medium) {
+    grid-row-gap: 1.2rem;
+  }
 }

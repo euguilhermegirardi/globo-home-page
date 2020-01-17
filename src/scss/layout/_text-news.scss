@@ -5,6 +5,10 @@
   grid-column-gap: 3rem;
   font-size: 18px;
 
+  @include respond(bp-large-medium) {
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  }
+
   @include respond(bp-between-largest-large) {
     grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
   }
@@ -25,5 +29,11 @@
   &--ge:hover,
   &--gshow:hover {
     filter: brightness(140%);
+  }
+
+  h4 {
+    @include respond(bp-large-medium) {
+      text-align: center;
+    }
   }
 }

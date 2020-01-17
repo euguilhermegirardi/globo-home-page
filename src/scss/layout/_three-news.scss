@@ -4,6 +4,10 @@
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-column-gap: 3rem;
 
+  @include respond(bp-large-medium) {
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  }
+
   @include respond(bp-between-largest-large) {
     grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
   }
@@ -15,12 +19,24 @@
       width: 100%;
       border-radius: 4px;
       transition: all 1s ease;
+
+      @include respond(bp-large-medium) {
+        height: 13rem;
+      }
     }
 
     h4 {
       font-size: 22px;
       margin-bottom: 1.5rem;
       line-height: 2.8rem;
+
+      @include respond(bp-large-medium) {
+        margin-top: 5px;
+        margin-bottom: 0;
+        font-size: 15px;
+        text-align: center;
+        line-height: 18px;
+      }
     }
 
     &:hover {

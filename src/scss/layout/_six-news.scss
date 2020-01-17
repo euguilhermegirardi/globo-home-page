@@ -7,6 +7,11 @@
   &--container {
     display: grid;
     grid-template-rows: repeat(2, 13rem);
+
+    @include respond(bp-large-medium) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &--g1,
@@ -16,6 +21,12 @@
     grid-template-columns: repeat(auto-fit, minmax(1rem, auto));
     grid-column-gap: 1rem;
     padding: 1rem 0;
+
+    @include respond(bp-large-medium) {
+      display: flex;
+      flex-direction: column;
+      height: 20rem;
+    }
 
     &:not(:last-child) {
       border-top: 2px solid #ccc;
@@ -32,6 +43,10 @@
       border-radius: 4px;
       transition: all 1s ease;
 
+      @include respond(bp-large-medium) {
+        height: 13rem;
+      }
+
       @include respond(bp-between-largest-large) {
         align-self: center;
       }
@@ -40,6 +55,14 @@
     h4 {
       align-self: center;
       font-size: 15px;
+
+      @include respond(bp-large-medium) {
+        margin-top: 5px;
+        margin-bottom: 0;
+        font-size: 15px;
+        text-align: center;
+        line-height: 18px;
+      }
 
       @include respond(bp-between-largest-large) {
         font-size: 14px;
