@@ -4,6 +4,11 @@
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-column-gap: 3rem;
 
+  @include respond(bp-medium-small) {
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    margin: 1.5rem 0;
+  }
+
   @include respond(bp-large-medium) {
     grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
   }
@@ -15,6 +20,10 @@
   &--g1,
   &--ge,
   &--gshow {
+    @include respond(bp-medium-small) {
+      height: 100%;
+    }
+
     img {
       width: 100%;
       border-radius: 4px;
@@ -30,10 +39,18 @@
       margin-bottom: 1.5rem;
       line-height: 2.8rem;
 
+      @include respond(bp-medium-small) {
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-top: 5px;
+        margin-bottom: 0;
+      }
+
       @include respond(bp-large-medium) {
         margin-top: 5px;
         margin-bottom: 0;
-        font-size: 15px;
+        font-size: 1.5rem;
         text-align: center;
         line-height: 18px;
       }

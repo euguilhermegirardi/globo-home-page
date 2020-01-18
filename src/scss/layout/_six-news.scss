@@ -4,9 +4,23 @@
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   grid-column-gap: 3rem;
 
+  @include respond(bp-medium-small) {
+    display: flex;
+  }
+
   &--container {
     display: grid;
     grid-template-rows: repeat(2, 13rem);
+
+    @include respond(bp-medium-small) {
+      display: flex;
+      flex-direction: column;
+      width: 33.333%;
+
+      &:not(:last-child) {
+        margin: 0 3rem 0 0;
+      }
+    }
 
     @include respond(bp-large-medium) {
       display: flex;
@@ -21,6 +35,12 @@
     grid-template-columns: repeat(auto-fit, minmax(1rem, auto));
     grid-column-gap: 1rem;
     padding: 1rem 0;
+
+    @include respond(bp-medium-small) {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
 
     @include respond(bp-large-medium) {
       display: flex;
@@ -43,6 +63,10 @@
       border-radius: 4px;
       transition: all 1s ease;
 
+      @include respond(bp-medium-small) {
+        height: 10.2rem;
+      }
+
       @include respond(bp-large-medium) {
         height: 13rem;
       }
@@ -55,6 +79,10 @@
     h4 {
       align-self: center;
       font-size: 15px;
+
+      @include respond(bp-medium-small) {
+        text-align: center;
+      }
 
       @include respond(bp-large-medium) {
         margin-top: 5px;
