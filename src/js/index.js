@@ -84,16 +84,59 @@ for (var i = 0; i < items3.length; i++) {
 /* li active item ends */
 
 /* Slider */
-$(document).ready(function () {
-  $('.post-wrapper').slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    nextArrow: $('.next'),
-    prevArrow: $('.prev'),
-    variableWidth: true,
-  });
-});
-
-
+// $(document).ready(function () {
+//   $('.post-wrapper').slick({
+//     infinite: true,
+//     slidesToShow: 3,
+//     slidesToScroll: 1,
+//     nextArrow: $('.next'),
+//     prevArrow: $('.prev'),
+//     variableWidth: true,
+//   });
+// });
 /* Slider ends */
+
+// responsive: [
+//   {
+//     breakpoint: 1500,
+//     settings: {
+//       slidesToShow: 2,
+//       slidesToScroll: 1,
+//     }
+//   },
+//   {
+//     breakpoint: 1000,
+//     settings: {
+//       slidesToShow: 1,
+//       slidesToScroll: 1,
+//     }
+//   }]
+
+$(document).ready(function () {
+
+  var slider = $(".carousel");
+
+  slider.each(function () {
+
+    if ($(this).is(".post-wrapper")) {
+      $(this).slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        nextArrow: $('.next'),
+        prevArrow: $('.prev'),
+        variableWidth: true,
+      });
+    }
+    else if ($(this).is(".top-globo-slider__post-wrapper")) {
+      $(this).slick({
+        dots: true,
+        arrows: false,
+      });
+    }
+    else {
+      $(this).slick();
+    }
+  });
+}); // end of os-carousel.js
+

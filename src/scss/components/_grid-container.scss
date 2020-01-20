@@ -10,8 +10,16 @@
   grid-row-gap: 3rem;
   justify-content: center;
 
+  @include respond(bp-smallest) {
+    grid-row-gap: 0.8rem;
+  }
+
+  @include respond(bp-small-smallest) {
+    grid-row-gap: 0.8rem;
+  }
+
   @include respond(bp-medium-small) {
-    grid-row-gap: 0rem;
+    grid-row-gap: 0.8rem;
   }
 
   @include respond(bp-large-medium) {

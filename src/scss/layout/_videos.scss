@@ -4,8 +4,25 @@
   height: 4.7rem;
   margin-bottom: -2.2rem;
 
+  @include respond(bp-smallest) {
+    margin-bottom: 0.6rem;
+  }
+
+  @include respond(bp-small-smallest) {
+    margin-bottom: 0.8rem;
+  }
+
+  @include respond(bp-medium-small) {
+    margin-bottom: 1rem;
+  }
+
   h4 {
     font-size: 3rem;
+
+    @include respond(bp-medium-small) {
+      font-size: 3rem;
+      margin-top: 0rem;
+    }
 
     @include respond(bp-large-medium) {
       font-size: 2.5rem;
@@ -36,6 +53,22 @@
     text-align: center;
     color: white;
     cursor: pointer;
+
+    @include respond(bp-smallest) {
+      display: none;
+    }
+
+    @include respond(bp-small-smallest) {
+      display: none;
+    }
+
+    @include respond(bp-medium-small) {
+      display: none;
+    }
+
+    @include respond(bp-large-medium) {
+      display: none;
+    }
 
     &:hover {
       img {
@@ -86,10 +119,6 @@
       border-width: 37px 0 37px 60px;
       transition: all 1s ease;
     }
-
-    @include respond(bp-large-medium) {
-      display: none;
-    }
   }
   /* LEFT SIDE ENDS */
 
@@ -98,10 +127,39 @@
     display: grid;
     grid-gap: 1px;
 
+    @include respond(bp-smallest) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @include respond(bp-small-smallest) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include respond(bp-medium-small) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     img {
       width: 100%;
       border-radius: 8px;
       transition: all 1s ease;
+
+      @include respond(bp-small-smallest) {
+        height: 13rem;
+      }
+
+      @include respond(bp-small-smallest) {
+        height: 15rem;
+      }
+
+      @include respond(bp-medium-small) {
+        height: 22rem;
+      }
     }
 
     &--container {
@@ -110,14 +168,27 @@
       text-align: initial;
       left: 1.2rem;
 
+      @include respond(bp-medium-small) {
+        left: 2rem;
+        bottom: 3rem;
+      }
+
       h4 {
         font-size: 1.2rem;
         margin-bottom: 0.7rem;
+
+        @include respond(bp-medium-small) {
+          font-size: 2.5rem;
+        }
       }
 
       p {
         font-size: 1.5rem;
         width: 80%;
+
+        @include respond(bp-medium-small) {
+          font-size: 1.8rem;
+        }
       }
 
       span::before {
@@ -126,6 +197,10 @@
         right: 10px;
         bottom: 0;
         font-size: 1.2rem;
+
+        @include respond(bp-medium-small) {
+          display: none;
+        }
       }
     }
 
@@ -135,14 +210,24 @@
       position: relative;
       color: white;
 
-      &:hover {
-        img {
-          filter: brightness(60%);
-        }
+      @include respond(bp-small-smallest) {
+        width: 48%;
+        margin: 0 10px 10px 0;
+      }
+
+      @include respond(bp-medium-small) {
+        width: 48%;
+        margin: 0 10px 10px 0;
       }
 
       @include respond(bp-large-medium) {
         grid-column: 1/4;
+      }
+
+      &:hover {
+        img {
+          filter: brightness(60%);
+        }
       }
     }
 
@@ -152,14 +237,24 @@
       position: relative;
       color: white;
 
-      &:hover {
-        img {
-          filter: brightness(60%);
-        }
+      @include respond(bp-small-smallest) {
+        width: 48%;
+        margin: 0 10px 10px 0;
+      }
+
+      @include respond(bp-medium-small) {
+        width: 48%;
+        margin: 0 10px 10px 0;
       }
 
       @include respond(bp-large-medium) {
         grid-column: 4/7;
+      }
+
+      &:hover {
+        img {
+          filter: brightness(60%);
+        }
       }
     }
 

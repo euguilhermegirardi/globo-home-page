@@ -11,7 +11,27 @@
     display: flex;
     justify-content: space-between;
 
+    @include respond(bp-small-smallest) {
+      margin: 2rem auto 0 auto;
+    }
+
+    @include respond(bp-medium-small) {
+      margin: 2rem auto 0 auto;
+    }
+
     a {
+      @include respond(bp-smallest) {
+        display: none;
+      }
+
+      @include respond(bp-small-smallest) {
+        display: none;
+      }
+
+      @include respond(bp-medium-small) {
+        display: none;
+      }
+
       @include respond(bp-large-medium) {
         display: none;
       }
@@ -24,6 +44,14 @@
       h3 {
         font-size: 1.5rem;
         margin-left: 3.5rem;
+
+        @include respond(bp-small-smallest) {
+          font-size: 1.3rem;
+        }
+
+        @include respond(bp-medium-small) {
+          font-size: 1.4rem;
+        }
       }
     }
 
@@ -50,6 +78,21 @@
   margin: 0 auto;
   padding: 0 2rem;
 
+  @include respond(bp-smallest) {
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+    height: 10rem;
+  }
+
+  @include respond(bp-small-smallest) {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    height: 20rem;
+  }
+
+  @include respond(bp-medium-small) {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    height: 20rem;
+  }
+
   @include respond(bp-large-medium) {
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   }
@@ -68,6 +111,14 @@
   -moz-perspective: 150rem; /* Firefox */
   position: relative;
   height: 38rem;
+
+  @include respond(bp-smallest) {
+    height: 10em;
+  }
+
+  @include respond(bp-medium-small) {
+    height: 15.6rem;
+  }
 
   @include respond(bp-large-medium) {
     height: 30rem;
@@ -162,7 +213,6 @@
       border-radius: 10rem;
       position: relative; /* To set the after behind the button. */
       transition: all 0.2s; /* Set the after transition. */
-
       //Change for the <button> element
       border: none;
       cursor: pointer;
@@ -194,6 +244,24 @@
 .globo-btn {
   display: none;
   text-align: center;
+
+  @include respond(bp-smallest) {
+    display: block;
+    margin-top: 7.2rem;
+    margin-bottom: 0;
+  }
+
+  @include respond(bp-small-smallest) {
+    display: block;
+    margin-top: 3.8rem;
+    margin-bottom: 0;
+  }
+
+  @include respond(bp-medium-small) {
+    display: block;
+    margin-top: 6rem;
+    margin-bottom: 0;
+  }
 
   @include respond(bp-large-medium) {
     display: block;

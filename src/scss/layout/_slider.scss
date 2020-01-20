@@ -1,0 +1,82 @@
+.slider {
+  max-width: 1320px;
+  margin: 10rem auto;
+
+  @include respond(bp-smallest) {
+    margin: 7rem auto 2rem auto;
+    max-width: 90%;
+  }
+
+  @include respond(bp-small-smallest) {
+    margin: 7rem auto 2rem auto;
+    max-width: 90%;
+  }
+
+  @include respond(bp-medium-small) {
+    margin: 7rem auto 2rem auto;
+    max-width: 90%;
+  }
+
+  @include respond(bp-large-medium) {
+    margin: 1rem auto;
+  }
+
+  @include respond(bp-between-largest-large) {
+    margin: 0 auto 5rem auto;
+  }
+}
+
+.post-slider {
+  position: relative;
+
+  .post-wrapper {
+    width: 85%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .prev {
+    font-size: 2rem;
+    position: absolute;
+    top: 25%;
+    left: 65px;
+    cursor: pointer;
+
+    @include respond(bp-smallest) {
+      left: 10px;
+    }
+
+    @include respond(bp-small-smallest) {
+      left: 0;
+    }
+
+    @include respond(bp-medium-small) {
+      left: 15px;
+    }
+  }
+
+  .next {
+    font-size: 2rem;
+    position: absolute;
+    top: 25%;
+    right: 65px;
+    cursor: pointer;
+
+    @include respond(bp-smallest) {
+      right: 1px;
+    }
+
+    @include respond(bp-small-smallest) {
+      right: 0;
+    }
+
+    @include respond(bp-medium-small) {
+      right: 15px;
+    }
+  }
+}
+
+.post {
+  margin: 0 10px;
+  display: inline-block;
+}

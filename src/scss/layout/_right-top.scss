@@ -16,6 +16,16 @@
   grid-gap: 1rem;
   border-left: 1px solid #ccc;
 
+  @include respond(bp-smallest) {
+    grid-column: full-start/full-end;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    border-left: none;
+  }
+
+  @include respond(bp-small-smallest) {
+    grid-column: full-start/full-end;
+  }
+
   @include respond(bp-medium-small) {
     grid-column: full-start/full-end;
   }
@@ -28,6 +38,17 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 2rem;
+
+    @include respond(bp-smallest) {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+    }
+
+    @include respond(bp-small-smallest) {
+      display: flex;
+      flex-direction: column;
+    }
 
     @include respond(bp-medium-small) {
       display: flex;
@@ -56,6 +77,10 @@
     border-left: 1px solid #ccc;
     padding: 2rem;
 
+    @include respond(bp-smallest) {
+      border-left: none;
+    }
+
     h4 {
       color: var(--color-orange);
       font-size: 18px;
@@ -72,6 +97,32 @@
     display: grid;
     grid-column: 1/-1;
     align-content: baseline;
+
+    @include respond(bp-smallest) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      order: 3;
+
+      &:nth-child(1) {
+        margin-bottom: 0rem;
+      }
+    }
+
+    @include respond(bp-small-smallest) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      order: 3;
+
+      &:nth-child(1) {
+        margin-bottom: 2.5rem;
+      }
+    }
 
     @include respond(bp-medium-small) {
       display: flex;
@@ -102,6 +153,16 @@
       transition: all 1s ease;
       grid-column: 1/-1;
 
+      @include respond(bp-smallest) {
+        height: 10rem;
+        width: 20rem;
+      }
+
+      @include respond(bp-small-smallest) {
+        height: 8rem;
+        width: 21rem;
+      }
+
       @include respond(bp-medium-small) {
         height: 10rem;
         width: 25rem;
@@ -116,6 +177,18 @@
     h4 {
       font-size: 18px;
       grid-column: 1/-1;
+
+      @include respond(bp-smallest) {
+        width: 20rem;
+        margin: 1rem;
+        font-size: 15px;
+      }
+
+      @include respond(bp-small-smallest) {
+        margin-left: 1.5rem;
+        margin-bottom: 1.3rem;
+        font-size: 14px;
+      }
 
       @include respond(bp-large-medium) {
         margin-left: 2rem;
@@ -136,6 +209,17 @@
 
     p {
       font-size: 14px;
+
+      @include respond(bp-smallest) {
+        width: 20rem;
+        font-size: 12px;
+        margin-left: 1.5rem;
+      }
+
+      @include respond(bp-small-smallest) {
+        font-size: 10px;
+        margin-left: 1.8rem;
+      }
 
       @include respond(bp-large-medium) {
         font-size: 12px;
@@ -163,6 +247,15 @@
   &--text {
     margin: 2rem 0;
     grid-column: 1/-1;
+
+    @include respond(bp-smallest) {
+      text-align: center;
+      min-height: 5rem;
+    }
+
+    @include respond(bp-small-smallest) {
+      text-align: center;
+    }
 
     @include respond(bp-medium-small) {
       text-align: center;

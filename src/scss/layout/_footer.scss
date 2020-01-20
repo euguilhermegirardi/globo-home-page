@@ -4,6 +4,24 @@ footer {
   padding: 1.5rem 0;
   background-color: var(--color-strong-blue);
 
+  @include respond(bp-smallest) {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 2px;
+  }
+
+  @include respond(bp-small-smallest) {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+  }
+
+  @include respond(bp-medium-small) {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+  }
+
   @include respond(bp-large-medium) {
     padding: 1rem;
   }
@@ -12,6 +30,29 @@ footer {
     display: flex;
     align-items: center;
     font-family: Helvetica, sans-serif;
+
+    @include respond(bp-smallest) {
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    @include respond(bp-small-smallest) {
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    @include respond(bp-medium-small) {
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    @include respond(bp-large-medium) {
+      font-size: 1rem;
+    }
+
+    @include respond(bp-between-largest-large) {
+      font-size: 1.2rem;
+    }
 
     h1 {
       color: white;
@@ -24,12 +65,8 @@ footer {
       padding-left: 1.8rem;
       font-weight: normal;
 
-      @include respond(bp-large-medium) {
-        font-size: 1rem;
-      }
-
-      @include respond(bp-between-largest-large) {
-        font-size: 1rem;
+      @include respond(bp-smallest) {
+        font-size: 0.8rem;
       }
     }
   }
@@ -43,12 +80,16 @@ footer {
       font-size: 14px;
       letter-spacing: -0.2px;
 
+      @include respond(bp-smallest) {
+        font-size: 1rem;
+      }
+
       @include respond(bp-large-medium) {
         font-size: 1.2rem;
       }
 
       @include respond(bp-between-largest-large) {
-        font-size: 12px;
+        font-size: 1.4rem;
       }
 
       &:not(:first-child) {

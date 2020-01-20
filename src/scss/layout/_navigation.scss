@@ -91,10 +91,6 @@
     @include respond(bp-large-medium) {
       padding: 0 10px;
     }
-
-    @include respond(bp-between-largest-large) {
-      font-size: 1.4rem;
-    }
   }
 
   &__link.open + &__dropdown {
@@ -102,10 +98,6 @@
   }
 
   &__icon {
-    @include respond(bp-large-medium) {
-      display: none;
-      width: 0;
-    }
   }
 
   &__dropdown {
@@ -543,6 +535,11 @@
         display: none;
         width: 0;
       }
+
+      @include respond(bp-between-largest-large) {
+        display: none;
+        width: 0;
+      }
     }
 
     @include respond(bp-between-largest-large) {
@@ -680,21 +677,9 @@
     width: 250px;
     transition: all 0.2s;
 
-    @include respond(bp-between-largest-large) {
-      width: 215px;
-    }
-
     &:focus {
       outline: none;
       width: 280px;
-
-      @include respond(bp-large-medium) {
-        width: 270px;
-      }
-
-      @include respond(bp-between-largest-large) {
-        width: 215px;
-      }
     }
   }
 

@@ -1,0 +1,57 @@
+.top-globo-slider {
+  display: none;
+  max-width: 1320px;
+  margin: 2rem auto;
+  background-color: var(--color-gray-light-5);
+
+  @include respond(bp-smallest) {
+    display: block;
+  }
+
+  @include respond(bp-small-smallest) {
+    display: block;
+  }
+
+  @include respond(bp-medium-small) {
+    display: block;
+  }
+
+  &__post-wrapper {
+    width: 85%;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .items {
+      margin: 0 10px;
+      display: inline-block;
+    }
+  }
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem 0;
+  list-style-type: none;
+
+  li {
+    margin: 0 1rem;
+  }
+
+  button {
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    padding: 0;
+    border: none;
+    border-radius: 100%;
+    background-color: var(--color-grey-light-4);
+    text-indent: -9999px;
+    outline: none;
+  }
+
+  li.slick-active button {
+    background-color: var(--color-grey-dark-4);
+  }
+}

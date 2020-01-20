@@ -4,6 +4,11 @@
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-column-gap: 3rem;
 
+  @include respond(bp-medium-small) {
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    margin: 5rem 0;
+  }
+
   @include respond(bp-large-medium) {
     grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
   }
@@ -16,6 +21,18 @@
   &-economics {
     border: 1px solid var(--color-grey-light-4);
     border-radius: 5px;
+
+    @include respond(bp-smallest) {
+      margin: 2rem;
+    }
+
+    @include respond(bp-small-smallest) {
+      margin: 5rem 8.5rem;
+    }
+
+    @include respond(bp-medium-small) {
+      margin: 0 8rem;
+    }
 
     &--container {
       display: grid;
@@ -180,6 +197,18 @@
   &-entertainment {
     border: 1px solid var(--color-grey-light-4);
     border-radius: 5px;
+
+    @include respond(bp-smallest) {
+      display: none;
+    }
+
+    @include respond(bp-small-smallest) {
+      display: none;
+    }
+
+    @include respond(bp-medium-small) {
+      display: none;
+    }
 
     h6 {
       color: var(--color-grey-dark-3);
