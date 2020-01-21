@@ -7,7 +7,7 @@
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="dist/minified/main.css?cb=1579418947852">
+  <link rel="stylesheet" href="dist/minified/main.css?cb=1579617107030">
   <link rel="shortcut icon" type="image/png" href="src/assets/favicon.ico">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <title>globo.com - Absolutamente tudo sobre noticias, esportes e entretenimento</title>
@@ -21,10 +21,14 @@
         <div class="navbar__logo">
           <img src="dist/minified/assets/logo.png" alt="Logo.png">
         </div>
+        <div class="navbar__logo--horizontal">
+          <img src="dist/minified/assets/globo-horizontal.png" alt="Logo.png">
+        </div>
         <!-- LOGO ENDS -->
 
         <!-- MENU -->
-        <ul id="navbar__menu">
+
+        <ul class="navbar__menu">
 
           <!-- G1 DROPDOWN -->
           <li onmouseleave="closeDropdown()">
@@ -552,9 +556,9 @@
           <!-- GE DROPDOWN ENDS -->
 
           <!-- GSHOW DROPDOWN -->
-          <li onclick="openDropdown(event)" onmouseleave="closeDropdown()">
+          <li onmouseleave="closeDropdown()">
             <div>
-              <a href="#" class="navbar__link">
+              <a href="#" class="navbar__link" onclick="openDropdown(event)">
                 <span class="orange">gshow</span>
                 <svg class="navbar__icon navbar__icon--orange">
                   <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
@@ -788,9 +792,9 @@
           </li>
 
           <!-- VIDEOS -->
-          <li onclick="openDropdown(event)" onmouseleave="closeDropdown()">
+          <li onmouseleave="closeDropdown()">
             <div>
-              <a href="#" class="navbar__link">
+              <a href="#" class="navbar__link" onclick="openDropdown(event)">
                 <span class="blue">videos</span>
                 <svg class="navbar__icon navbar__icon--blue">
                   <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
@@ -1607,6 +1611,6 @@
   <!-- MAIN CONTAINER GRID ENDS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="dist/minified/all.js?cb=1579418947852"></script>
+  <script src="dist/minified/all.js?cb=1579617107030"></script>
 </body>
 </html>

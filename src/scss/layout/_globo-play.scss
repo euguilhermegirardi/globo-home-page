@@ -178,6 +178,22 @@
     margin-bottom: 6rem;
     text-transform: uppercase;
 
+    @include respond(bp-smallest) {
+      margin-bottom: 1.6rem;
+    }
+
+    @include respond(bp-small-smallest) {
+      margin-bottom: 1.8rem;
+    }
+
+    @include respond(bp-medium-small) {
+      margin-bottom: 2rem;
+    }
+
+    @include respond(bp-large-medium) {
+      margin-bottom: 2rem;
+    }
+
     &--only,
     &--price {
       color: var(--color-blue);
@@ -187,6 +203,26 @@
       font-size: 3rem;
       margin-bottom: 1rem;
 
+      @include respond(bp-smallest) {
+        font-size: 1.3rem;
+        margin-bottom: 0.3rem;
+      }
+
+      @include respond(bp-small-smallest) {
+        font-size: 1.3rem;
+        margin-bottom: 0.3rem;
+      }
+
+      @include respond(bp-medium-small) {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      @include respond(bp-large-medium) {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
       @include respond(bp-between-largest-large) {
         font-size: 2rem;
       }
@@ -194,6 +230,22 @@
 
     &--price {
       font-size: 4.5rem;
+
+      @include respond(bp-smallest) {
+        font-size: 2rem;
+      }
+
+      @include respond(bp-small-smallest) {
+        font-size: 2rem;
+      }
+
+      @include respond(bp-medium-small) {
+        font-size: 3.2rem;
+      }
+
+      @include respond(bp-large-medium) {
+        font-size: 3.8rem;
+      }
 
       @include respond(bp-between-largest-large) {
         font-size: 3rem;
@@ -216,6 +268,25 @@
       //Change for the <button> element
       border: none;
       cursor: pointer;
+
+      @include respond(bp-smallest) {
+        font-size: 0.8rem;
+        padding: 0.8rem 2rem;
+      }
+
+      @include respond(bp-small-smallest) {
+        font-size: 0.8rem;
+        padding: 0.8rem 2rem;
+      }
+
+      @include respond(bp-medium-small) {
+        font-size: 1.1rem;
+        padding: 1.2rem 3rem;
+      }
+
+      @include respond(bp-large-medium) {
+        font-size: 1.2rem;
+      }
 
       @include respond(bp-between-largest-large) {
         font-size: 1.2rem;

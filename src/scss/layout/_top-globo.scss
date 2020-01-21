@@ -80,6 +80,16 @@
       min-height: 18rem;
       align-items: initial;
 
+      @include respond(bp-smallest) {
+        font-size: 1.5rem;
+        min-height: 11rem;
+      }
+
+      @include respond(bp-small-smallest) {
+        font-size: 1.5rem;
+        min-height: 11rem;
+      }
+
       @include respond(bp-medium-small) {
         min-height: 10rem;
       }

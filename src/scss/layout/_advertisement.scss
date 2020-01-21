@@ -5,4 +5,12 @@
   background-size: cover;
   background-position: center;
   margin-top: 2rem;
+
+  @include respond(iphoneX) {
+    display: none;
+  }
+
+  @include respond(ipad-pro) {
+    height: 15vh;
+  }
 }

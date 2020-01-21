@@ -55,8 +55,29 @@
   justify-content: space-between;
   padding: 2.5rem;
 
+  @include respond(iphoneX) {
+    padding: 2rem 0 1rem 0;
+    justify-content: center;
+  }
+
+  @include respond(bp-smallest) {
+    padding: 1rem;
+    justify-content: center;
+  }
+
+  @include respond(bp-small-smallest) {
+    padding: 1rem;
+  }
+
   @include respond(bp-between-largest-large) {
     padding: 1rem 0;
+  }
+
+  .flex {
+    @include respond(iphoneX) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   /* NAVBAR LEFT */
@@ -64,21 +85,68 @@
     align-self: center;
     margin-right: 2.5rem;
 
+    &--horizontal {
+      display: none;
+
+      @include respond(iphoneX) {
+        display: block;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    @include respond(iphoneX) {
+      display: none;
+    }
+
+    @include respond(bp-smallest) {
+      margin-right: 1.5rem;
+    }
+
+    @include respond(bp-small-smallest) {
+      margin-right: 1rem;
+    }
+
+    @include respond(bp-medium-small) {
+      margin-right: 1rem;
+    }
+
     @include respond(bp-large-medium) {
       margin-right: 1.8rem;
     }
 
     @include respond(bp-between-largest-large) {
-      margin-right: 1rem;
+      margin-right: 2rem;
     }
   }
 
   &__logo img {
     height: 5rem;
 
+    @include respond(bp-smallest) {
+      height: 2rem;
+    }
+
+    @include respond(bp-small-smallest) {
+      height: 2.5rem;
+    }
+
+    @include respond(bp-medium-small) {
+      height: 3.1rem;
+    }
+
+    @include respond(bp-large-medium) {
+      height: 3.3rem;
+    }
+
     @include respond(bp-between-largest-large) {
       height: 3.5rem;
     }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
   }
 
   &__link {
@@ -87,6 +155,25 @@
     padding: 0 1rem;
     display: flex;
     position: relative;
+
+    @include respond(iphoneX) {
+      font-size: 1.8rem;
+    }
+
+    @include respond(bp-smallest) {
+      font-size: 1.5rem;
+      padding: 0 1rem;
+    }
+
+    @include respond(bp-small-smallest) {
+      font-size: 1.5rem;
+      padding: 0 0.5rem;
+    }
+
+    @include respond(bp-medium-small) {
+      font-size: 1.5rem;
+      padding: 0 0.5rem;
+    }
 
     @include respond(bp-large-medium) {
       padding: 0 10px;
@@ -98,6 +185,26 @@
   }
 
   &__icon {
+    @include respond(iphoneX) {
+      display: none;
+    }
+
+    @include respond(ipad-pro) {
+      display: block;
+    }
+
+    @include respond(bp-smallest) {
+      display: none;
+    }
+    @include respond(bp-small-smallest) {
+      display: none;
+    }
+    @include respond(bp-medium-small) {
+      display: none;
+    }
+    @include respond(bp-large-medium) {
+      display: none;
+    }
   }
 
   &__dropdown {
@@ -531,6 +638,16 @@
     text-align: center;
 
     &:not(:first-child) {
+      @include respond(bp-small-smallest) {
+        display: none;
+        width: 0;
+      }
+
+      @include respond(bp-medium-small) {
+        display: none;
+        width: 0;
+      }
+
       @include respond(bp-large-medium) {
         display: none;
         width: 0;
@@ -576,6 +693,14 @@
     justify-content: flex-end;
     align-items: center;
     margin-top: 5px;
+
+    @include respond(iphoneX) {
+      display: none;
+    }
+
+    @include respond(bp-smallest) {
+      display: none;
+    }
   }
 
   /* EMAIL DROPDOWN */
@@ -649,6 +774,10 @@
     transition: all 0.3s;
     top: -4px;
     z-index: 120;
+
+    @include respond(bp-smallest) {
+      display: none;
+    }
   }
 
   &__label {
@@ -677,19 +806,39 @@
     width: 250px;
     transition: all 0.2s;
 
+    @include respond(bp-small-smallest) {
+      width: 120px;
+    }
+
     &:focus {
       outline: none;
       width: 280px;
+
+      @include respond(bp-small-smallest) {
+        width: 120px;
+      }
+
+      @include respond(bp-medium-small) {
+        width: 250px;
+      }
     }
   }
 
   &__icon-login {
     margin: 0 0 6px 15px;
+
+    @include respond(bp-small-smallest) {
+      margin: 0 0 6px 8px;
+    }
   }
 
   &__user-icon {
     height: 2.5rem;
     width: 2.5rem;
+
+    @include respond(bp-small-smallest) {
+      width: 1.8rem;
+    }
 
     @include respond(bp-between-largest-large) {
       width: 2rem;

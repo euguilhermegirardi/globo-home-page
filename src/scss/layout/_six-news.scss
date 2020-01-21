@@ -4,6 +4,12 @@
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   grid-column-gap: 3rem;
 
+  @include respond(iphoneX) {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1.1rem;
+  }
+
   @include respond(bp-smallest) {
     display: flex;
   }
@@ -91,6 +97,10 @@
     &:not(:last-child) {
       border-top: 2px solid #ccc;
       border-bottom: 2px solid #ccc;
+
+      @include respond(iphoneX) {
+        border-top: 0px;
+      }
     }
 
     &:last-child {

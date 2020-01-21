@@ -1,5 +1,22 @@
 /* MEDIA QUERIES */
 @mixin respond($breakpoint) {
+  /* MOBILE MEDIA QUERIES */
+  @if $breakpoint == iphoneX {
+    @media only screen and (min-width: 23.4375em) and (min-height: 50.75em) and (-webkit-device-pixel-ratio: 3) {
+      @content; // 375px and 812px / 16px (default browsers)
+    }
+  }
+  /* MOBILE MEDIA QUERIES ENDS */
+
+  /*IPAD MEDIA QUERIES */
+  @if $breakpoint == ipad-pro {
+    @media only screen and (min-width: 1024px) and (min-height: 1366px) {
+      @content; // 1024px to 1366px / 16px (default browsers)
+    }
+  }
+  /*IPAD MEDIA QUERIES ENDS */
+
+  /* DESKTOP MEDIA QUERIES */
   @if $breakpoint == bp-smallest {
     @media only screen and (max-width: 37.5em) and (min-width: 25em) {
       @content; // 600px and 400px / 16px (default browsers)
@@ -35,4 +52,5 @@
       @content; // 1200px and 1140px / 16px (default browsers)
     }
   }
+  /* DESKTOP MEDIA QUERIES ENDS */
 }

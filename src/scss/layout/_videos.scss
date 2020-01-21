@@ -4,6 +4,10 @@
   height: 4.7rem;
   margin-bottom: -2.2rem;
 
+  @include respond(iphoneX) {
+    margin-bottom: 0.5rem;
+  }
+
   @include respond(bp-smallest) {
     margin-bottom: 0.6rem;
   }
@@ -53,6 +57,10 @@
     text-align: center;
     color: white;
     cursor: pointer;
+
+    @include respond(iphoneX) {
+      display: none;
+    }
 
     @include respond(bp-smallest) {
       display: none;
@@ -127,6 +135,11 @@
     display: grid;
     grid-gap: 1px;
 
+    @include respond(iphoneX) {
+      display: flex;
+      flex-direction: column;
+    }
+
     @include respond(bp-smallest) {
       display: flex;
       flex-wrap: wrap;
@@ -148,6 +161,10 @@
       width: 100%;
       border-radius: 8px;
       transition: all 1s ease;
+
+      @include respond(iphoneX) {
+        width: 85%;
+      }
 
       @include respond(bp-small-smallest) {
         height: 13rem;
@@ -210,6 +227,10 @@
       position: relative;
       color: white;
 
+      @include respond(iphoneX) {
+        margin-left: 1rem;
+      }
+
       @include respond(bp-small-smallest) {
         width: 48%;
         margin: 0 10px 10px 0;
@@ -236,6 +257,10 @@
       grid-column: 4/6;
       position: relative;
       color: white;
+
+      @include respond(iphoneX) {
+        margin-left: 1rem;
+      }
 
       @include respond(bp-small-smallest) {
         width: 48%;
@@ -269,6 +294,11 @@
         var(--color-grey-light-3);
       border-width: 18px 0 18px 25px;
       transition: all 1s ease;
+
+      @include respond(iphoneX) {
+        left: 46%;
+        top: 48%;
+      }
     }
 
     @include respond(bp-large-medium) {

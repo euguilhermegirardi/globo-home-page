@@ -8,6 +8,20 @@ function closeDropdown() {
   element.classList.remove('open')
 }
 
+// $(window).resize(function () {
+//   var viewportWidth = $(window).width();
+//   if (viewportWidth <= 700) {
+//     $('#removeOnClick, #removeOnClick-4').removeAttr('onclick');
+//   }
+// });
+
+$(window).resize(function () {
+  var viewportWidth = $(window).width();
+  if (viewportWidth <= 700) {
+    $(".navbar__link").prop("onclick", null).off("click");
+  }
+});
+
 /* SHOW AND HIDE ITEM */
 function showsOne(item) {
   $('.showAndHide').each(function (index) {
@@ -83,41 +97,10 @@ for (var i = 0; i < items3.length; i++) {
 }
 /* li active item ends */
 
-/* Slider */
-// $(document).ready(function () {
-//   $('.post-wrapper').slick({
-//     infinite: true,
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     nextArrow: $('.next'),
-//     prevArrow: $('.prev'),
-//     variableWidth: true,
-//   });
-// });
-/* Slider ends */
-
-// responsive: [
-//   {
-//     breakpoint: 1500,
-//     settings: {
-//       slidesToShow: 2,
-//       slidesToScroll: 1,
-//     }
-//   },
-//   {
-//     breakpoint: 1000,
-//     settings: {
-//       slidesToShow: 1,
-//       slidesToScroll: 1,
-//     }
-//   }]
-
 $(document).ready(function () {
 
   var slider = $(".carousel");
-
   slider.each(function () {
-
     if ($(this).is(".post-wrapper")) {
       $(this).slick({
         infinite: true,
@@ -138,5 +121,7 @@ $(document).ready(function () {
       $(this).slick();
     }
   });
-}); // end of os-carousel.js
+});
+/* Slider ends */
+
 

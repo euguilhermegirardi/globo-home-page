@@ -20,6 +20,10 @@
   display: grid;
   grid-template-columns: auto;
 
+  @include respond(iphoneX) {
+    grid-column: full-start/full-end;
+  }
+
   @include respond(bp-smallest) {
     grid-column: full-start/full-end;
   }
@@ -40,6 +44,24 @@
     display: grid;
     grid-template-columns: 1fr;
     font-size: 3.5rem;
+
+    h1 {
+      @include respond(iphoneX) {
+        margin-bottom: 1rem;
+        font-size: 3rem;
+      }
+    }
+
+    p {
+      @include respond(iphoneX) {
+        margin-bottom: 0;
+        font-size: 2rem;
+      }
+    }
+
+    @include respond(iphoneX) {
+      padding: 1rem;
+    }
 
     @include respond(bp-smallest) {
       font-size: 1.8rem;
@@ -93,6 +115,10 @@
     font-weight: bold;
     margin-bottom: 1rem;
 
+    @include respond(iphoneX) {
+      display: none;
+    }
+
     @include respond(bp-smallest) {
       text-align: center;
       font-size: 1rem;
@@ -130,6 +156,10 @@
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
 
+    @include respond(iphoneX) {
+      display: none;
+    }
+
     @include respond(bp-smallest) {
       grid-template-columns: repeat(auto-fit, minmax(10rem, auto));
     }
@@ -146,10 +176,32 @@
       grid-template-columns: repeat(auto-fit, minmax(16rem, auto));
     }
 
+    &-boxes {
+      @include respond(iphoneX) {
+        display: flex;
+        padding: 1rem;
+      }
+    }
+
+    &-boxes:hover {
+      img {
+        filter: brightness(70%);
+      }
+
+      h4 {
+        @extend %hover;
+      }
+    }
+
     img {
       width: 100%;
       border-radius: 4px;
       transition: all 1s ease;
+
+      @include respond(iphoneX) {
+        height: 11rem;
+        width: 50%;
+      }
 
       @include respond(bp-smallest) {
         height: 8rem;
@@ -169,6 +221,13 @@
       font-size: 18px;
       margin-bottom: 1.5rem;
       height: 5rem;
+
+      @include respond(iphoneX) {
+        margin-bottom: 0;
+        align-self: center;
+        margin-left: 1rem;
+        height: 6rem;
+      }
 
       @include respond(bp-smallest) {
         text-align: center;
@@ -197,19 +256,13 @@
       }
     }
 
-    &-boxes:hover {
-      img {
-        filter: brightness(70%);
-      }
-
-      h4 {
-        @extend %hover;
-      }
-    }
-
     p {
       color: var(--color-red-text);
       font-size: 14px;
+
+      @include respond(iphoneX) {
+        display: none;
+      }
 
       @include respond(bp-smallest) {
         text-align: center;

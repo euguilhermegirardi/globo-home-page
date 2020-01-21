@@ -16,6 +16,10 @@
   grid-gap: 1rem;
   border-left: 1px solid #ccc;
 
+  @include respond(iphoneX){
+    display: none;
+  }
+
   @include respond(bp-smallest) {
     grid-column: full-start/full-end;
     grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));

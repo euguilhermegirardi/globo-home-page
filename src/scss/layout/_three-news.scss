@@ -4,6 +4,10 @@
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-column-gap: 3rem;
 
+  @include respond(iphoneX) {
+    display: none;
+  }
+
   @include respond(bp-smallest) {
     grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
   }

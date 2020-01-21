@@ -5,6 +5,10 @@
   grid-column-gap: 3rem;
   font-size: 18px;
 
+  @include respond(iphoneX) {
+    display: none;
+  }
+
   @include respond(bp-smallest) {
     grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
     padding: 1rem;
