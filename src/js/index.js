@@ -122,6 +122,13 @@ $(document).ready(function () {
     }
   });
 });
+
+$(window).resize(function () {
+  var viewportWidth2 = $(window).width();
+  if (viewportWidth2 <= 375) {
+    $(".prev, .next").remove();
+  }
+});
 /* Slider ends */
 
 

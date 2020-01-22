@@ -2,6 +2,10 @@
   max-width: 1320px;
   margin: 10rem auto;
 
+  @include respond(iphoneX) {
+    margin: 5rem auto;
+  }
+
   @include respond(bp-smallest) {
     margin: 7rem auto 2rem auto;
     max-width: 90%;
@@ -29,10 +33,28 @@
 .post-slider {
   position: relative;
 
+  .slick-slider {
+    @include respond(iphoneX) {
+      touch-action: auto;
+      -ms-touch-action: auto;
+    }
+  }
+
   .post-wrapper {
     width: 85%;
     margin: 0 auto;
     overflow: hidden;
+
+    .post {
+      margin: 0 10px;
+      display: inline-block;
+
+      img {
+        @include respond(iphoneX) {
+          height: 4.8rem;
+        }
+      }
+    }
   }
 
   .prev {
@@ -74,9 +96,4 @@
       right: 15px;
     }
   }
-}
-
-.post {
-  margin: 0 10px;
-  display: inline-block;
 }

@@ -4,6 +4,11 @@
   margin: 2rem auto;
   background-color: var(--color-gray-light-5);
 
+  @include respond(iphoneX) {
+    display: block;
+    margin: 2rem auto;
+  }
+
   @include respond(bp-smallest) {
     display: block;
   }

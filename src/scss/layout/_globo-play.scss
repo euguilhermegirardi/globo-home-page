@@ -20,6 +20,10 @@
     }
 
     a {
+      @include respond(iphoneX) {
+        display: none;
+      }
+
       @include respond(bp-smallest) {
         display: none;
       }
@@ -41,9 +45,24 @@
       display: flex;
       align-items: center;
 
+      @include respond(iphoneX) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      h2 {
+        @include respond(iphoneX) {
+          margin-bottom: 1.5rem;
+        }
+      }
+
       h3 {
         font-size: 1.5rem;
         margin-left: 3.5rem;
+
+        @include respond(iphoneX) {
+          font-size: 1.6rem;
+        }
 
         @include respond(bp-small-smallest) {
           font-size: 1.3rem;
