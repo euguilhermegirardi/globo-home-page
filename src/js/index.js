@@ -101,6 +101,7 @@ $(document).ready(function () {
 
   var slider = $(".carousel");
   slider.each(function () {
+
     if ($(this).is(".post-wrapper")) {
       $(this).slick({
         infinite: true,
@@ -117,9 +118,13 @@ $(document).ready(function () {
         arrows: false,
       });
     }
+    else if ($(this).is(".cards-slider__post-wrapper")) {
+      $(this).slick();
+    }
     else {
       $(this).slick();
     }
+
   });
 });
 

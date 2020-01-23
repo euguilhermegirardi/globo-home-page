@@ -1,0 +1,35 @@
+.cards-slider {
+  display: none;
+  max-width: 1320px;
+  margin: 0 auto;
+
+  @include respond(iphoneX) {
+    display: block;
+  }
+
+  &__post-wrapper {
+    @include respond(iphoneX) {
+      width: 80%;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .items {
+      @include respond(iphoneX) {
+        display: inline-block;
+        margin: 0 1rem;
+      }
+
+      img {
+        @include respond(iphoneX) {
+          width: 15rem;
+        }
+      }
+    }
+  }
+}
+
+.slick-slider {
+  touch-action: auto;
+  -ms-touch-action: auto;
+}
