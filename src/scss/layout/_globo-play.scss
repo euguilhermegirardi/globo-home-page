@@ -3,6 +3,10 @@
   display: grid;
   margin: 2.5rem 0 1.2rem 0;
 
+  @include respond(iphoneX) {
+    margin: 2.5rem auto 0 auto;
+  }
+
   @include respond(bp-large-medium) {
     margin-top: 6rem;
   }
@@ -96,6 +100,10 @@
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 2rem;
+
+  @include respond(iphoneX) {
+    display: none;
+  }
 
   @include respond(bp-smallest) {
     grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
@@ -288,6 +296,10 @@
       border: none;
       cursor: pointer;
 
+      @include respond(iphoneX) {
+        padding: 1.5rem 10rem;
+      }
+
       @include respond(bp-smallest) {
         font-size: 0.8rem;
         padding: 0.8rem 2rem;
@@ -334,6 +346,11 @@
 .globo-btn {
   display: none;
   text-align: center;
+
+  @include respond(iphoneX) {
+    display: block;
+    margin-top: 2.5rem;
+  }
 
   @include respond(bp-smallest) {
     display: block;

@@ -119,7 +119,12 @@ $(document).ready(function () {
       });
     }
     else if ($(this).is(".cards-slider__post-wrapper")) {
-      $(this).slick();
+      $(this).slick({
+        infinite: true,
+        dots: false,
+        arrows: false,
+        variableWidth: true,
+      });
     }
     else {
       $(this).slick();

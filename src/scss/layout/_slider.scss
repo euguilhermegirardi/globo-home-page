@@ -28,6 +28,11 @@
   @include respond(bp-between-largest-large) {
     margin: 0 auto 5rem auto;
   }
+
+  .slick-slider {
+    touch-action: auto;
+    -ms-touch-action: auto;
+  }
 }
 
 .post-slider {
