@@ -141,4 +141,14 @@ $(window).resize(function () {
 });
 /* Slider ends */
 
+/* Mobile Navbar */
+function openNavMobile() {
+  document.getElementById("navbar-mobile").style.width = "250px";
+}
+
+function closeNavMobile() {
+  document.getElementById("navbar-mobile").style.width = "0";
+}
+/* Mobile Navbar ends */
+
 
