@@ -55,11 +55,6 @@
   justify-content: space-between;
   padding: 2.5rem;
 
-  @include respond(iphoneX) {
-    padding: 2rem 0 1rem 0;
-    justify-content: center;
-  }
-
   @include respond(bp-smallest) {
     padding: 1rem;
     justify-content: center;
@@ -73,26 +68,10 @@
     padding: 1rem 0;
   }
 
-  .flex {
-    @include respond(iphoneX) {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
   /* NAVBAR LEFT */
   &__logo {
     align-self: center;
     margin-right: 2.5rem;
-
-    &--horizontal {
-      display: none;
-
-      @include respond(iphoneX) {
-        display: block;
-        margin-bottom: 1.5rem;
-      }
-    }
 
     @include respond(iphoneX) {
       display: none;
@@ -147,6 +126,10 @@
     display: flex;
     align-items: center;
     margin-left: 2rem;
+
+    @include respond(iphoneX) {
+      display: none;
+    }
   }
 
   &__link {
@@ -847,7 +830,7 @@
 }
 /* NAVBAR RIGHT ENDS */
 
-#navbar__menu {
-  display: flex;
-  align-items: center;
-}
+// #navbar__menu {
+//   display: flex;
+//   align-items: center;
+// }

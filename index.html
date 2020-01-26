@@ -21,21 +21,28 @@
         <div class="navbar__logo">
           <img src="dist/minified/assets/logo.png" alt="Logo.png">
         </div>
-        <div class="navbar__logo--horizontal">
-          <img src="dist/minified/assets/globo-horizontal.png" alt="Logo.png">
-        </div>
         <!-- LOGO ENDS -->
 
         <!-- MOBILE MENU -->
-        <div id="navbar-mobile" class="navbar-mobile">
-          <a href="javascript:void(0)" class="navbar-mobile__close" onclick="closeNavMobile()">&times;</a>
-          <a href="#">About</a>
-          <a href="#">Services</a>
-          <a href="#">Clients</a>
-          <a href="#">Contact</a>
-        </div>
+        <nav class="navbar-mobile">
+          <div id="navbar-mobile__menu" class="navbar-mobile__menu">
+            <a href="javascript:void(0)" class="navbar-mobile__menu--close" onclick="closeNavMobile()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+          </div>
 
-        <span class="navbar-mobile__open" onclick="openNavMobile()">&#9776;</span>
+          <span class="navbar-mobile__menu--open" onclick="openNavMobile()">&#9776;</span>
+
+          <div class="navbar-mobile__logo-horizontal">
+            <img src="dist/minified/assets/globo-horizontal.png" alt="Logo.png">
+          </div>
+
+          <svg class="navbar-mobile__icon">
+            <use xlink:href="dist/minified/assets/sprite.svg#icon-lupa"></use>
+          </svg>
+        </nav>
         <!-- MOBILE MENU ENDS -->
 
         <!-- MENU -->

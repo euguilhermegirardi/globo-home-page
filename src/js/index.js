@@ -143,11 +143,11 @@ $(window).resize(function () {
 
 /* Mobile Navbar */
 function openNavMobile() {
-  document.getElementById("navbar-mobile").style.width = "250px";
+  document.getElementById("navbar-mobile__menu").style.width = "250px";
 }
 
 function closeNavMobile() {
-  document.getElementById("navbar-mobile").style.width = "0";
+  document.getElementById("navbar-mobile__menu").style.width = "0";
 }
 /* Mobile Navbar ends */
 
