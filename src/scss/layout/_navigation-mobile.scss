@@ -13,26 +13,13 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: var(--color-grey-light-1);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
 
     @include respond(iphoneX) {
       display: block;
-    }
-
-    a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: 25px;
-      color: #818181;
-      display: block;
-      transition: 0.3s;
-
-      &:hover {
-        color: #f1f1f1;
-      }
     }
 
     &--close {
@@ -74,6 +61,36 @@
       height: 2rem;
       width: 2rem;
       fill: var(--color-blue);
+    }
+  }
+
+  // MENU
+  &__logos {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+
+    img {
+      height: 4rem;
+      width: 4rem;
+      border-radius: 8px;
+    }
+  }
+
+  &__links {
+    margin-top: 2rem;
+
+    a {
+      padding: 8px 8px 8px 1rem;
+      text-decoration: none;
+      font-size: 2rem;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+
+      &:hover {
+        color: #f1f1f1;
+      }
     }
   }
 }
