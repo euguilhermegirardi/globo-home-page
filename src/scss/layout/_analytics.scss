@@ -22,7 +22,7 @@
   }
 
   /* ECONOMICS */
-  &-economics {
+  .analytics-economics {
     border: 1px solid var(--color-grey-light-4);
     border-radius: 5px;
 
@@ -38,7 +38,7 @@
       margin: 0 8rem;
     }
 
-    &--container {
+    .analytics-economics--container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       padding: 1.4rem;
@@ -50,7 +50,7 @@
       }
     }
 
-    &--footer {
+    .analytics-economics--footer {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       padding: 1rem 2rem;
@@ -71,7 +71,7 @@
     }
   }
 
-  &-finance {
+  .analytics-finance {
     a {
       color: var(--color-grey-dark-3);
     }
@@ -86,18 +86,18 @@
       }
     }
 
-    &--value {
+    .analytics-finance--value {
       display: flex;
       padding: 4px;
     }
 
-    &--icon,
-    &--number,
-    &--percent {
+    .analytics-finance--icon,
+    .analytics-finance--number,
+    .analytics-finance--percent {
       color: var(--color-green-text);
     }
 
-    &--icon {
+    .analytics-finance--icon {
       font-size: 2.5rem;
 
       @include respond(bp-large-medium) {
@@ -105,7 +105,7 @@
       }
     }
 
-    &--number {
+    .analytics-finance--number {
       font-size: 4rem;
 
       @include respond(bp-large-medium) {
@@ -113,7 +113,7 @@
       }
     }
 
-    &--percent {
+    .analytics-finance--percent {
       font-size: 18px;
 
       @include respond(bp-large-medium) {
@@ -121,7 +121,7 @@
       }
     }
 
-    &--points {
+    .analytics-finance--points {
       font-size: 15px;
       color: var(--color-grey-dark-1);
 
@@ -135,7 +135,7 @@
     }
   }
 
-  &-currencies {
+  .analytics-currencies {
     table {
       border-collapse: collapse;
       width: 100%;
@@ -160,20 +160,20 @@
       }
     }
 
-    &--left,
-    &--right {
+    .analytics-currencies--left,
+    .analytics-currencies--right {
       border-bottom: 1px solid var(--color-grey-light-4);
     }
 
-    &--left {
+    .analytics-currencies--left {
       text-align: initial;
     }
 
-    &--right {
+    .analytics-currencies--right {
       text-align: end;
     }
 
-    &--coin {
+    .analytics-currencies--coin {
       text-align: initial;
       color: #666;
       font-size: 13px;
@@ -183,7 +183,7 @@
       }
     }
 
-    &--value {
+    .analytics-currencies--value {
       padding: 8px 0;
       text-align: end;
       color: var(--color-grey-dark-1);
@@ -197,14 +197,14 @@
   /* ECONOMICS ENDS */
 
   /* SPORTS/ENTERTAINMENT */
-  &-sports {
+  .analytics-sports {
     @include respond(iphoneX) {
       margin: 2rem 0;
     }
   }
 
-  &-sports,
-  &-entertainment {
+  .analytics-sports,
+  .analytics-entertainment {
     border: 1px solid var(--color-grey-light-4);
     border-radius: 5px;
 
@@ -287,11 +287,11 @@
     }
   }
 
-  &-sports h4 {
+  .analytics-sports h4 {
     color: var(--color-green-text);
   }
 
-  &-entertainment h4 {
+  .analytics-entertainment h4 {
     color: var(--color-orange-text);
   }
   /* SPORTS/ENTERTAINMENT ENDS */

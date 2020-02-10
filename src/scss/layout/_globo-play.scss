@@ -159,7 +159,7 @@
     height: 36rem;
   }
 
-  &__side {
+  .card__side {
     position: absolute;
     top: 0;
     left: 0;
@@ -171,14 +171,14 @@
       width: 100%;
       border-radius: 3px;
     }
+  }
 
-    &--back {
-      transform: rotateY(180deg);
+  .card__side--back {
+    transform: rotateY(180deg);
 
-      img {
-        opacity: 0.1;
-        border-radius: 3px;
-      }
+    img {
+      opacity: 0.1;
+      border-radius: 3px;
     }
   }
 
@@ -191,7 +191,7 @@
     transform: rotateY(0deg);
   }
 
-  &__cta {
+  .card__cta {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -201,7 +201,7 @@
     transform: translate(-50%, -50%);
   }
 
-  &__info {
+  .card__info {
     margin-bottom: 6rem;
     text-transform: uppercase;
 
