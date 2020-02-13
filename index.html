@@ -25,7 +25,7 @@
 
         <!-- MOBILE MENU -->
         <nav class="navbar-mobile">
-          <span class="navbar-mobile__menu--open" onclick="openNavMobile()">&#9776;</span>
+          <span class="navbar-mobile__menu--open" >&#9776;</span>
 
           <div class="navbar-mobile__logo-horizontal">
             <img src="dist/minified/assets/globo-horizontal.png" alt="Logo.png">
@@ -49,7 +49,7 @@
             <hr>
 
             <div class="navbar-mobile__links">
-              <a href="#">Lorem</a>
+              <a href="#" onclick="openSubNav()">Lorem</a>
               <a href="#">Lorem</a>
               <a href="#">Lorem</a>
               <a href="#">Lorem</a>
@@ -81,7 +81,19 @@
               <a href="#">Lorem</a>
               <a href="#">Lorem</a>
             </div>
+
+            <div id="navbar-mobile__subSidebar" class="navbar-mobile__subSidebar">
+              <a href="javascript:void(0)" class="navbar-mobile__subSidebar--close" onclick="closeSubNav()">&times;</a>
+
+              <div class="navbar-mobile__links">
+                <a href="#">Lorem</a>
+                <a href="#">Lorem</a>
+                <a href="#">Lorem</a>
+                <a href="#">Lorem</a>
+              </div>
+            </div>
           </div>
+
         </nav>
         <!-- MOBILE MENU ENDS -->
 

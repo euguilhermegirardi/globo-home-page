@@ -1,26 +1,30 @@
 .navbar-mobile {
   margin: 0 auto;
+  display: none; // for desktops
 
   @include respond(iphoneX) {
     display: flex;
   }
 
   &__menu {
-    display: none; // for desktops
+    left: 0;
+  }
+
+  &__subSidebar {
+    right: 172px;
+  }
+
+  &__menu,
+  &__subSidebar {
     height: 100%;
     width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
-    left: 0;
     background-color: var(--color-grey-light-1);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-
-    @include respond(iphoneX) {
-      display: block;
-    }
 
     &--close {
       position: absolute;

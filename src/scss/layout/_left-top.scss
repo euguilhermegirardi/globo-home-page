@@ -45,10 +45,10 @@
     grid-template-columns: 1fr;
     font-size: 3.5rem;
 
-    h1 {
+    h2 {
       @include respond(iphoneX) {
         margin-bottom: 1rem;
-        font-size: 3rem;
+        font-size: 2rem;
       }
     }
 
