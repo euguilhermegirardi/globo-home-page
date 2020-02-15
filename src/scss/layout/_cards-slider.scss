@@ -3,6 +3,11 @@
   max-width: 1320px;
   margin: 0 auto;
 
+  @include respond(iphone6to8P) {
+    display: block;
+    margin: 2rem auto;
+  }
+
   @include respond(iphoneX) {
     display: block;
     margin: 2rem auto;

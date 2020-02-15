@@ -227,6 +227,11 @@
       position: relative;
       color: white;
 
+      @include respond(iphone6to8P) {
+        width: 95%;
+        margin-left: 3px;
+      }
+
       @include respond(iphoneX) {
         margin-left: 1rem;
       }
@@ -257,6 +262,11 @@
       grid-column: 4/6;
       position: relative;
       color: white;
+
+      @include respond(iphone6to8P) {
+        width: 95%;
+        margin-left: 3px;
+      }
 
       @include respond(iphoneX) {
         margin-left: 1rem;

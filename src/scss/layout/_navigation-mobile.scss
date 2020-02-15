@@ -2,6 +2,10 @@
   margin: 0 auto;
   display: none; // for desktops
 
+  @include respond(iphone6to8P) {
+    display: flex;
+  }
+
   @include respond(iphoneX) {
     display: flex;
   }
@@ -37,6 +41,15 @@
     &--open {
       display: none;
 
+      @include respond(iphone6to8P) {
+        display: block;
+        position: absolute;
+        top: 2.1rem;
+        left: 2rem;
+        font-size: 2rem;
+        color: var(--color-blue);
+      }
+
       @include respond(iphoneX) {
         display: block;
         position: absolute;
@@ -51,6 +64,11 @@
   &__logo-horizontal {
     display: none;
 
+    @include respond(iphone6to8P) {
+      display: block;
+      margin: 0 8rem 0 10rem;
+    }
+
     @include respond(iphoneX) {
       display: block;
       margin: 0 8rem 0 10rem;
@@ -59,6 +77,13 @@
 
   &__icon {
     display: none;
+
+    @include respond(iphone6to8P) {
+      display: block;
+      height: 2rem;
+      width: 2rem;
+      fill: var(--color-blue);
+    }
 
     @include respond(iphoneX) {
       display: block;

@@ -2,6 +2,10 @@
   max-width: 1320px;
   margin: 10rem auto;
 
+  @include respond(iphone6to8P) {
+    margin: 5rem auto;
+  }
+
   @include respond(iphoneX) {
     margin: 5rem auto;
   }
@@ -33,22 +37,33 @@
     touch-action: auto;
     -ms-touch-action: auto;
   }
+
+  .slick-arrow {
+    @include respond(iphone6to8P) {
+      display: none;
+    }
+
+    @include respond(iphoneX) {
+      display: none;
+    }
+  }
 }
 
 .post-slider {
   position: relative;
 
-  .slick-slider {
-    @include respond(iphoneX) {
-      touch-action: auto;
-      -ms-touch-action: auto;
-    }
-  }
-
   .post-wrapper {
     width: 85%;
     margin: 0 auto;
     overflow: hidden;
+
+    @include respond(iphone6to8P) {
+      width: 95%;
+    }
+
+    @include respond(iphoneX) {
+      width: 95%;
+    }
 
     .post {
       margin: 0 10px;

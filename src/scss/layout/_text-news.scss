@@ -5,6 +5,11 @@
   grid-column-gap: 3rem;
   font-size: 18px;
 
+  @include respond(iphone6to8P) {
+    display: flex;
+    flex-direction: column;
+  }
+
   @include respond(iphoneX) {
     display: none;
   }
@@ -37,6 +42,11 @@
   &--g1,
   &--ge,
   &--gshow {
+    @include respond(iphone6to8P) {
+      margin: 2.2rem;
+      font-size: 2rem;
+    }
+
     @include respond(bp-smallest) {
       text-align: center;
       display: flex;

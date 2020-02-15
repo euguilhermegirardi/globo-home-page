@@ -16,7 +16,11 @@
   grid-gap: 1rem;
   border-left: 1px solid #ccc;
 
-  @include respond(iphoneX){
+  @include respond(iphone6to8P) {
+    display: none;
+  }
+
+  @include respond(iphoneX) {
     display: none;
   }
 

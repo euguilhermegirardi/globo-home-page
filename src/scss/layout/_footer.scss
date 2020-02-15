@@ -31,6 +31,11 @@ footer {
     align-items: center;
     font-family: Helvetica, sans-serif;
 
+    @include respond(iphone6to8P) {
+      display: flex;
+      flex-direction: column;
+    }
+
     @include respond(iphoneX) {
       display: flex;
       flex-direction: column;
@@ -63,6 +68,11 @@ footer {
       color: white;
       cursor: pointer;
 
+      @include respond(iphone6to8P) {
+        margin-bottom: 1.5rem;
+        font-size: 2.3rem;
+      }
+
       @include respond(iphoneX) {
         margin-bottom: 1.5rem;
       }
@@ -75,13 +85,17 @@ footer {
       font-weight: normal;
 
       @include respond(bp-smallest) {
-        font-size: 0.8rem;
+        font-size: 1.3rem;
       }
     }
   }
 
   .footer__right {
     align-self: center;
+
+    @include respond(iphone6to8P) {
+      display: none;
+    }
 
     @include respond(iphoneX) {
       display: none;

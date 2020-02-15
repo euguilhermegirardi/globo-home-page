@@ -3,6 +3,10 @@
   display: grid;
   margin: 2.5rem 0 1.2rem 0;
 
+  @include respond(iphone6to8P) {
+    margin: 2.5rem auto 0 auto;
+  }
+
   @include respond(iphoneX) {
     margin: 2.5rem auto 0 auto;
   }
@@ -100,6 +104,10 @@
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 2rem;
+
+  @include respond(iphone6to8P) {
+    display: none;
+  }
 
   @include respond(iphoneX) {
     display: none;

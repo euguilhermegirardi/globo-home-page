@@ -6,6 +6,10 @@
   background-position: center;
   margin-top: 2rem;
 
+  @include respond(iphone6to8P) {
+    display: none;
+  }
+
   @include respond(iphoneX) {
     display: none;
   }
