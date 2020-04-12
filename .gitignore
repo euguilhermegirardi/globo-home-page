@@ -3,3 +3,6 @@ node_modules
 
 # Ignore dist folder with all the minified files
 dist/*
+
+# Ignore .editorconfig folder
+.editorconfig

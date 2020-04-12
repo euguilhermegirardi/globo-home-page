@@ -56,15 +56,8 @@ function cachBustTask() {
     .pipe(dest('.'));
 }
 
-//Watch task
-function watchTask() {
-  watch([files.scssPath, files.jsPath, files.imgPath],
-    parallel(scssTask, jsTask, imgTask));
-}
-
 // Default task
 exports.default = series(
   parallel(scssTask, jsTask, imgTask),
   cachBustTask,
-  watchTask
 )
