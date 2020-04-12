@@ -72,61 +72,46 @@
     padding: 1rem 0;
   }
 
-  /* NAVBAR LEFT */
-  &__logo {
-    align-self: center;
-    margin-right: 2.5rem;
+  .navbar__left {
+    display: flex;
 
-    @include respond(iphone6to8P) {
-      display: none;
-    }
+    .navbar__logo {
+      align-self: center;
+      margin-right: 2.5rem;
+      height: 5rem;
 
-    @include respond(iphoneX) {
-      display: none;
-    }
+      @include respond(iphone6to8P) {
+        display: none;
+      }
 
-    @include respond(bp-smallest) {
-      margin-right: 1.5rem;
-    }
+      @include respond(iphoneX) {
+        display: none;
+      }
 
-    @include respond(bp-small-smallest) {
-      margin-right: 1rem;
-    }
+      @include respond(bp-smallest) {
+        margin-right: 1.5rem;
+        height: 2rem;
+      }
 
-    @include respond(bp-medium-small) {
-      margin-right: 1rem;
-    }
+      @include respond(bp-small-smallest) {
+        margin-right: 1rem;
+        height: 2.5rem;
+      }
 
-    @include respond(bp-large-medium) {
-      margin-right: 1.8rem;
-    }
+      @include respond(bp-medium-small) {
+        margin-right: 1rem;
+        height: 3.1rem;
+      }
 
-    @include respond(bp-between-largest-large) {
-      margin-right: 2rem;
-    }
-  }
+      @include respond(bp-large-medium) {
+        margin-right: 1.8rem;
+        height: 3.3rem;
+      }
 
-  &__logo img {
-    height: 5rem;
-
-    @include respond(bp-smallest) {
-      height: 2rem;
-    }
-
-    @include respond(bp-small-smallest) {
-      height: 2.5rem;
-    }
-
-    @include respond(bp-medium-small) {
-      height: 3.1rem;
-    }
-
-    @include respond(bp-large-medium) {
-      height: 3.3rem;
-    }
-
-    @include respond(bp-between-largest-large) {
-      height: 3.5rem;
+      @include respond(bp-between-largest-large) {
+        margin-right: 2rem;
+        height: 3.5rem;
+      }
     }
   }
 
