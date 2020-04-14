@@ -46,7 +46,7 @@
   perspective: 150rem;
   -moz-perspective: 150rem; /* Firefox */
   position: relative;
-  height: 38rem;
+  height: 32.8rem;
 
   @include respond(bp-smallest) {
     height: 10em;
@@ -61,7 +61,7 @@
   }
 
   @include respond(bp-between-largest-large) {
-    height: 34rem;
+    height: 26.7rem;
   }
 
   @include respond(bp-largest) {

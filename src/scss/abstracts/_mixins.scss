@@ -24,31 +24,31 @@
 
   /* DESKTOP MEDIA QUERIES */
   @if $breakpoint == bp-smallest {
-    @media only screen and (max-width: 37.5em) and (min-width: 25em) {
+    @media only screen and (max-width: 37.49em) and (min-width: 25em) {
       @content; // 600px and 400px / 16px (default browsers)
     }
   }
 
   @if $breakpoint == bp-small-smallest {
-    @media only screen and (max-width: 49.75em) and (min-width: 37.5em) {
+    @media only screen and (max-width: 49.99em) and (min-width: 37.5em) {
       @content; // 800px and 600px / 16px (default browsers)
     }
   }
 
   @if $breakpoint == bp-medium-small {
-    @media only screen and (max-width: 56em) and (min-width: 50em) {
+    @media only screen and (max-width: 56.24em) and (min-width: 50em) {
       @content; // 900px and 800px / 16px (default browsers)
     }
   }
 
   @if $breakpoint == bp-large-medium {
-    @media only screen and (max-width: 62.25em) and (min-width: 56.25em) {
+    @media only screen and (max-width: 62.49em) and (min-width: 56.25em) {
       @content; // 999px and 900px / 16px (default browsers)
     }
   }
 
   @if $breakpoint == bp-between-largest-large {
-    @media only screen and (max-width: 71em) and (min-width: 62.5em) {
+    @media only screen and (max-width: 71.24em) and (min-width: 62.5em) {
       @content; // 1140px and 1000 / 16px (default browsers)
     }
   }
