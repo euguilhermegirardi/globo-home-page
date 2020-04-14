@@ -40,6 +40,7 @@
 
   @include respond(bp-large-medium) {
     grid-column: full-start/full-end;
+    border-left: none;
   }
 
   &--left {
@@ -173,11 +174,6 @@
       @include respond(bp-medium-small) {
         height: 10rem;
         width: 25rem;
-      }
-
-      @include respond(bp-large-medium) {
-        height: 10rem;
-        width: 20rem;
       }
     }
 

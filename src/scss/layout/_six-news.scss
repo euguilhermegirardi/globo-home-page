@@ -133,10 +133,6 @@
         height: 10.2rem;
       }
 
-      @include respond(bp-large-medium) {
-        height: 13rem;
-      }
-
       @include respond(bp-between-largest-large) {
         align-self: center;
       }

@@ -230,10 +230,6 @@
       @include respond(bp-small-smallest) {
         height: 10rem;
       }
-
-      @include respond(bp-large-medium) {
-        height: 15rem;
-      }
     }
 
     h4 {

@@ -246,6 +246,8 @@
 
       @include respond(bp-large-medium) {
         grid-column: 1/4;
+        display: flex;
+        justify-content: center;
       }
 
       &:hover {
@@ -282,6 +284,8 @@
 
       @include respond(bp-large-medium) {
         grid-column: 4/7;
+        display: flex;
+        justify-content: center;
       }
 
       &:hover {
@@ -313,10 +317,6 @@
       top: 2rem;
       position: relative;
       grid-gap: 5px;
-
-      img {
-        height: 20rem;
-      }
     }
   }
   /* RIGHT SIDE ENDS */
