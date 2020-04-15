@@ -15,17 +15,17 @@
   }
 
   @include respond(bp-smallest) {
-    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
-    height: 10rem;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    height: 45rem;
   }
 
   @include respond(bp-small-smallest) {
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    height: 20rem;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    grid-row-gap: 1rem;
   }
 
   @include respond(bp-medium-small) {
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     height: 20rem;
   }
 
@@ -49,7 +49,11 @@
   height: 32.8rem;
 
   @include respond(bp-smallest) {
-    height: 10em;
+    height: 22em;
+  }
+
+  @include respond(bp-small-smallest) {
+    height: 22rem;
   }
 
   @include respond(bp-medium-small) {

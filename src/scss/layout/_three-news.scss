@@ -21,8 +21,9 @@
   }
 
   @include respond(bp-medium-small) {
-    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
     margin: 1.5rem 0;
+    grid-column-gap: 1.4rem;
   }
 
   @include respond(bp-large-medium) {
@@ -37,10 +38,6 @@
   &--g1,
   &--ge,
   &--gshow {
-    @include respond(bp-medium-small) {
-      height: 100%;
-    }
-
     @include respond(bp-large-medium) {
       display: flex;
       flex-direction: column;
@@ -50,10 +47,6 @@
     img {
       border-radius: 4px;
       transition: all 1s ease;
-
-      @include respond(bp-small-smallest) {
-        height: 10rem;
-      }
     }
 
     h4 {

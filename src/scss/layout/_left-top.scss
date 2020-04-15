@@ -226,10 +226,6 @@
       @include respond(bp-smallest) {
         height: 8rem;
       }
-
-      @include respond(bp-small-smallest) {
-        height: 10rem;
-      }
     }
 
     h4 {
