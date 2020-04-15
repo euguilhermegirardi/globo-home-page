@@ -160,16 +160,6 @@
       border-radius: 4px;
       transition: all 1s ease;
       grid-column: 1/-1;
-
-      @include respond(bp-smallest) {
-        height: 10rem;
-        width: 20rem;
-      }
-
-      @include respond(bp-small-smallest) {
-        height: 8rem;
-        width: 21rem;
-      }
     }
 
     h4 {
