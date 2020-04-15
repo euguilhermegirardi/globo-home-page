@@ -163,18 +163,6 @@
       @include respond(iphoneX) {
         width: 85%;
       }
-
-      @include respond(bp-small-smallest) {
-        height: 13rem;
-      }
-
-      @include respond(bp-small-smallest) {
-        height: 15rem;
-      }
-
-      @include respond(bp-medium-small) {
-        height: 22rem;
-      }
     }
 
     &--container {
@@ -235,13 +223,13 @@
       }
 
       @include respond(bp-small-smallest) {
-        width: 48%;
-        margin: 0 10px 10px 0;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
       }
 
       @include respond(bp-medium-small) {
-        width: 48%;
-        margin: 0 10px 10px 0;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
       }
 
       @include respond(bp-large-medium) {
@@ -270,16 +258,6 @@
 
       @include respond(iphoneX) {
         margin-left: 1rem;
-      }
-
-      @include respond(bp-small-smallest) {
-        width: 48%;
-        margin: 0 10px 10px 0;
-      }
-
-      @include respond(bp-medium-small) {
-        width: 48%;
-        margin: 0 10px 10px 0;
       }
 
       @include respond(bp-large-medium) {

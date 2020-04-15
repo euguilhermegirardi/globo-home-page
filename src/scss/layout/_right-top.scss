@@ -170,11 +170,6 @@
         height: 8rem;
         width: 21rem;
       }
-
-      @include respond(bp-medium-small) {
-        height: 10rem;
-        width: 25rem;
-      }
     }
 
     h4 {
