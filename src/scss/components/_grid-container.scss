@@ -15,7 +15,8 @@
   }
 
   @include respond(bp-smallest) {
-    grid-row-gap: 0.8rem;
+    display: flex;
+    flex-direction: column;
   }
 
   @include respond(bp-small-smallest) {

@@ -4,12 +4,6 @@
   grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
   grid-column-gap: 3rem;
 
-  @include respond(iphone6to8P) {
-    display: flex;
-    flex-direction: column;
-    margin: 0 1rem;
-  }
-
   @include respond(iphoneX) {
     display: flex;
     flex-direction: column;
@@ -18,6 +12,7 @@
 
   @include respond(bp-smallest) {
     display: flex;
+    flex-direction: column;
   }
 
   @include respond(bp-small-smallest) {
@@ -38,6 +33,10 @@
 
       &:not(:last-child) {
         margin: 0 2.5rem 0 0;
+
+        @include respond(bp-smallest) {
+          margin: 0;
+        }
       }
     }
 
@@ -113,6 +112,11 @@
     &:last-child {
       border-bottom: 2px solid #ccc;
       margin-top: -2px;
+
+      @include respond(bp-smallest) {
+      }
+      border-bottom: none;
+      margin-top: 0;
     }
 
     img {

@@ -1,25 +1,31 @@
 /* MEDIA QUERIES */
 @mixin respond($breakpoint) {
   /* MOBILE MEDIA QUERIES */
-  @if $breakpoint == iphone6to8P {
-    @media only screen and (min-width: 25.875em) and (min-height: 46em) and (-webkit-device-pixel-ratio: 3) {
-      @content; // 414px and 736px / 16px (default browsers)
-    }
-  }
+  // @if $breakpoint == iphone6to8P {
+  //   @media only screen and (min-width: 25.875em) and (min-height: 46em) and (-webkit-device-pixel-ratio: 3) {
+  //     @content; // 414px and 736px / 16px (default browsers)
+  //   }
+  // }
+
+  // @if $breakpoint == iphoneX {
+  //   @media only screen and (min-width: 23.4375em) and (min-height: 50.75em) and (-webkit-device-pixel-ratio: 3) {
+  //     @content; // 375px and 812px / 16px (default browsers)
+  //   }
+  // }
 
   @if $breakpoint == iphoneX {
-    @media only screen and (min-width: 23.4375em) and (min-height: 50.75em) and (-webkit-device-pixel-ratio: 3) {
-      @content; // 375px and 812px / 16px (default browsers)
+    @media only screen and (max-width: 400px) and (-webkit-device-pixel-ratio: 3) {
+      @content;
     }
   }
   /* MOBILE MEDIA QUERIES ENDS */
 
   /*IPAD MEDIA QUERIES */
-  @if $breakpoint == ipad-pro {
-    @media only screen and (min-width: 1024px) and (min-height: 1366px) {
-      @content; // 1024px to 1366px / 16px (default browsers)
-    }
-  }
+  // @if $breakpoint == ipad-pro {
+  //   @media only screen and (min-width: 1024px) and (min-height: 1366px) {
+  //     @content; // 1024px to 1366px / 16px (default browsers)
+  //   }
+  // }
   /*IPAD MEDIA QUERIES ENDS */
 
   /* DESKTOP MEDIA QUERIES */

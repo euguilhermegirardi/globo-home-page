@@ -6,15 +6,21 @@
   background-position: center;
   margin-top: 2rem;
 
-  @include respond(iphone6to8P) {
-    display: none;
-  }
-
   @include respond(iphoneX) {
     display: none;
   }
 
+  @include respond(bp-smallest) {
+    height: 25vh;
+  }
+
   @include respond(ipad-pro) {
     height: 15vh;
+  }
+
+  &:first-child {
+    @include respond(bp-smallest) {
+      display: none;
+    }
   }
 }

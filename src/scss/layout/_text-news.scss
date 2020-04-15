@@ -5,19 +5,17 @@
   grid-column-gap: 3rem;
   font-size: 18px;
 
-  @include respond(iphone6to8P) {
-    display: flex;
-    flex-direction: column;
-  }
-
   @include respond(iphoneX) {
     display: none;
   }
 
   @include respond(bp-smallest) {
-    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
-    font-size: 11px;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    border-top: 2px solid var(--color-grey-light-4);
   }
 
   @include respond(bp-small-smallest) {
@@ -42,16 +40,9 @@
   &--g1,
   &--ge,
   &--gshow {
-    @include respond(iphone6to8P) {
-      margin: 2.2rem;
-      font-size: 2rem;
-    }
-
     @include respond(bp-smallest) {
       text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      margin: 1rem 0;
     }
 
     @include respond(bp-small-smallest) {

@@ -6,17 +6,12 @@
   margin: 0 auto;
   padding: 0 2rem;
 
-  @include respond(iphone6to8P) {
-    display: none;
-  }
-
   @include respond(iphoneX) {
     display: none;
   }
 
   @include respond(bp-smallest) {
-    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
-    height: 45rem;
+    display: none;
   }
 
   @include respond(bp-small-smallest) {

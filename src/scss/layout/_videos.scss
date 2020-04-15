@@ -51,6 +51,11 @@
   grid-template-columns: repeat(auto-fit, minmax(42rem, 1fr));
   grid-column-gap: 1.5rem;
 
+  @include respond(bp-smallest) {
+    display: flex;
+    justify-content: center;
+  }
+
   /* LEFT SIDE */
   &-left {
     position: relative;
@@ -141,7 +146,7 @@
 
     @include respond(bp-smallest) {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
     }
 
     @include respond(bp-small-smallest) {
