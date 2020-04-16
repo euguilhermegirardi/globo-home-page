@@ -1,25 +1,54 @@
 .navbar-mobile {
   margin: 0 auto;
-  display: none; // for desktops
-
-  @include respond(iphone6to8P) {
-    display: flex;
-  }
+  display: none;
 
   @include respond(iphoneX) {
     display: flex;
   }
 
-  &__menu {
+  .navbar-mobile__menu--open {
+    display: none;
+
+    @include respond(iphoneX) {
+      display: block;
+      position: absolute;
+      top: 2.1rem;
+      left: 2rem;
+      font-size: 2rem;
+      color: var(--color-blue);
+    }
+  }
+
+  .navbar-mobile__logo-horizontal {
+    display: none;
+
+    @include respond(iphoneX) {
+      display: block;
+      margin: 0 8rem 0 10rem;
+    }
+  }
+
+  .navbar-mobile__icon {
+    display: none;
+
+    @include respond(iphoneX) {
+      display: block;
+      height: 2rem;
+      width: 2rem;
+      fill: var(--color-blue);
+    }
+  }
+
+  .navbar-mobile__menu {
     left: 0;
   }
 
-  &__subSidebar {
+  .navbar-mobile__subSidebar {
     right: 172px;
   }
 
-  &__menu,
-  &__subSidebar {
+  .navbar-mobile__menu,
+  .navbar-mobile__sub-sidebar {
     height: 100%;
     width: 0;
     position: fixed;
@@ -30,7 +59,7 @@
     transition: 0.5s;
     padding-top: 60px;
 
-    &--close {
+    .navbar-mobile__menu--close {
       position: absolute;
       top: 0;
       right: 25px;
@@ -38,87 +67,32 @@
       margin-left: 50px;
     }
 
-    &--open {
-      display: none;
+    .navbar-mobile__icons-container {
+      display: flex;
+      justify-content: space-around;
+      margin: 1rem;
 
-      @include respond(iphone6to8P) {
-        display: block;
-        position: absolute;
-        top: 2.1rem;
-        left: 2rem;
-        font-size: 2rem;
-        color: var(--color-blue);
-      }
-
-      @include respond(iphoneX) {
-        display: block;
-        position: absolute;
-        top: 2.1rem;
-        left: 2rem;
-        font-size: 2rem;
-        color: var(--color-blue);
+      .navbar-mobile__icon {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 8px;
       }
     }
-  }
 
-  &__logo-horizontal {
-    display: none;
+    .navbar-mobile__links {
+      margin-top: 2rem;
 
-    @include respond(iphone6to8P) {
-      display: block;
-      margin: 0 8rem 0 10rem;
-    }
+      .navbar-mobile__link {
+        padding: 8px 8px 8px 1rem;
+        text-decoration: none;
+        font-size: 2rem;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
 
-    @include respond(iphoneX) {
-      display: block;
-      margin: 0 8rem 0 10rem;
-    }
-  }
-
-  &__icon {
-    display: none;
-
-    @include respond(iphone6to8P) {
-      display: block;
-      height: 2rem;
-      width: 2rem;
-      fill: var(--color-blue);
-    }
-
-    @include respond(iphoneX) {
-      display: block;
-      height: 2rem;
-      width: 2rem;
-      fill: var(--color-blue);
-    }
-  }
-
-  // MENU
-  &__logos {
-    display: flex;
-    justify-content: space-around;
-    margin: 1rem;
-
-    img {
-      height: 4rem;
-      width: 4rem;
-      border-radius: 8px;
-    }
-  }
-
-  &__links {
-    margin-top: 2rem;
-
-    a {
-      padding: 8px 8px 8px 1rem;
-      text-decoration: none;
-      font-size: 2rem;
-      color: #818181;
-      display: block;
-      transition: 0.3s;
-
-      &:hover {
-        color: #f1f1f1;
+        &:hover {
+          color: #f1f1f1;
+        }
       }
     }
   }
