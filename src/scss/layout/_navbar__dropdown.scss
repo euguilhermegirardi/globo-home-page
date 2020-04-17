@@ -137,62 +137,57 @@
   .navbar__g1-states {
     padding: 2rem;
     background-color: var(--color-gray-light-5);
-  }
 
-  .states-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 4rem);
-    grid-row-gap: 1.3rem;
-  }
+    .navbar__states-container {
+      display: grid;
+      grid-template-columns: repeat(5, 4rem);
+      grid-row-gap: 1.3rem;
 
-  .states {
-    perspective: 150rem;
-    -moz-perspective: 150rem; /* Firefox */
-    position: relative;
-    height: 2rem;
-    width: 3rem;
-
-    &:hover .states__side--front {
-      transform: rotateY(-180deg);
-      cursor: pointer;
-    }
-
-    &:hover .states__side--back {
-      transform: rotateY(0deg);
-    }
-
-    &__side {
-      position: absolute;
-      top: 0;
-      left: 0;
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-      transition: all 0.2s;
-
-      img {
-        border-radius: 2px;
-      }
-
-      &--front {
+      .navbar__state {
+        perspective: 150rem;
+        -moz-perspective: 150rem; /* Firefox */
+        position: relative;
         height: 2rem;
         width: 3rem;
-        cursor: pointer;
-      }
 
-      &--back {
-        background-color: white;
-        transform: rotateY(180deg);
-        height: 2rem;
-        width: 3rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 2px;
-        cursor: pointer;
+        &:hover .navbar__state-side--front {
+          transform: rotateY(-180deg);
+          cursor: pointer;
+        }
 
-        p {
-          font-weight: bold;
-          font-size: 1.3rem;
+        &:hover .navbar__state-side--back {
+          transform: rotateY(0deg);
+        }
+
+        .navbar__state-side {
+          position: absolute;
+          top: 0;
+          left: 0;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          transition: all 0.2s;
+
+          .navbar__state-img {
+            border-radius: 2px;
+          }
+        }
+
+        .navbar__state-side--front {
+          height: 2rem;
+          width: 3rem;
+          cursor: pointer;
+        }
+
+        .navbar__state-side--back {
+          background-color: var(--color-gray-light-5);
+          transform: rotateY(180deg);
+          height: 2rem;
+          width: 3rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 2px;
+          cursor: pointer;
         }
       }
     }
@@ -439,4 +434,11 @@
 
 .navbar__link.open + .navbar__dropdown {
   display: flex;
+}
+
+.dropdown-title {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  color: var(--color-gray);
+  margin-bottom: 1.5rem;
 }
