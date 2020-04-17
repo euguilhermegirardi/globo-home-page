@@ -104,372 +104,436 @@
     </nav>
     <!-- MOBILE NAVIGATON ENDS -->
 
-    <!-- NAVBAR -->
+    <!-- _navbar.scss -->
     <nav class="navbar">
       <div class="navbar--left">
         <img class="navbar__logo" src="dist/minified/assets/logos/logo.png" alt="logo" />
 
         <ul class="navbar__menu">
           <!-- G1 DROPDOWN -->
-          <li onmouseleave="closeDropdown()">
-            <div>
-              <a href="#" class="navbar__link" onclick="openDropdown(event)" >
-                <p class="red">g1</p>
-                <svg class="navbar__icon navbar__icon--red">
-                  <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
-                </svg>
-              </a>
-              <ul class="navbar__dropdown container-dropdown">
-                <div class="flex">
+          <li class="navbar__li" onmouseleave="closeDropdown()">
 
-                  <!-- FIRST COLUMN -->
-                  <div class="g1-list" id="myList">
-                    <li class="li active-item" onmouseover="showsOne('link-1');"><a href="#">Top pages</a></li>
-                    <li class="li" onmouseover="showsOne('link-2');"><a href="#">G1</a></li>
-                    <li class="li" onmouseover="showsOne('link-3');"><a href="#">On TV</a></li>
-                    <li class="li" onmouseover="showsOne('link-4');"><a href="#">Magazines and radio</a></li>
-                  </div>
-                  <!-- FIRST COLUMN ENDS -->
+            <a class="navbar__link" href="#" onclick="openDropdown(event)" >
+              <p class="red">g1</p>
+              <svg class="navbar__icon navbar__icon--red">
+                <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
+              </svg>
+            </a>
 
-                  <!-- SECOND COLUMN -->
-                  <div class="g1-links showAndHide" id="link-1">
-                    <ul>
-                      <li class="dropdown-title">top pages</li>
-                      <li><a href="#">G1</a></li>
-                      <li><a href="#">World</a></li>
-                      <li><a href="#">Economy</a></li>
-                      <li><a href="#">Cars</a></li>
-                      <li><a href="#">Newspaper Extra</a></li>
-                      <li><a href="#">Política</a></li>
-                      <li><a href="#">Competitions and Jobs</a></li>
-                      <li><a href="#">Good morning Brazil</a></li>
-                      <li><a href="#">Newspaper O Globo</a></li>
-                      <li><a href="#">On tv</a></li>
-                    </ul>
-                  </div>
+            <!-- _navbar__dropdown.scss -->
+            <ul class="navbar__dropdown">
+              <!-- FIRST COLUMN -->
+              <li class="navbar__g1-list" id="navbar__g1-list">
+                <ul class="navbar__g1-ul">
+                  <li class="navbar__g1-li active-item" onmouseover="showsOne('link-1');">
+                    <a class="navbar__g1-item" href="#">Top pages</a>
+                  </li>
+                  <li class="navbar__g1-li" onmouseover="showsOne('link-2');">
+                    <a class="navbar__g1-item" href="#">G1</a>
+                  </li>
+                  <li class="navbar__g1-li" onmouseover="showsOne('link-3');">
+                    <a class="navbar__g1-item" href="#">On TV</a>
+                  </li>
+                  <li class="navbar__g1-li" onmouseover="showsOne('link-4');">
+                    <a class="navbar__g1-item" href="#">Magazines and radio</a>
+                  </li>
+                </ul>
+              </li>
 
-                  <div class="g1-links none showAndHide" id="link-2">
-                    <ul>
-                      <li class="dropdown-title">g1</li>
-                      <li><a href="#">Agro</a></li>
-                      <li><a href="#">Cars</a></li>
-                      <li><a href="#">Science and Health</a></li>
-                      <li><a href="#">Competitions and Jobs</a></li>
-                      <li><a href="#">Economy</a></li>
-                      <li><a href="#">Education</a></li>
-                      <li><a href="#">Enem 2019</a></li>
-                      <li><a href="#">Fact or Fake</a></li>
-                      <li><a href="#">World</a></li>
-                      <li><a href="#">Nature</a></li>
-                      <li><a href="#">Newsletter</a></li>
-                      <li><a href="#">Look here!</a></li>
-                      <li><a href="#">Podcasts</a></li>
-                      <li><a href="#">Politics</a></li>
-                      <li><a href="#">Pop & Art</a></li>
-                      <li><a href="#">Technology</a></li>
-                      <li><a href="#">Tourism and Travel</a></li>
-                    </ul>
-                  </div>
+              <!-- SECOND COLUMN -->
+              <!-- Top pages-->
+              <li class="navbar__g1-links showAndHide" id="link-1">
+                <ul class="navbar__links-ul">
+                  <li class="dropdown-title">top pages</li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">G1</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">World</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Economy</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Cars</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Newspaper Extra</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Política</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Competitions and Jobs</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Good morning Brazil</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Newspaper O Globo</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">On tv</a>
+                  </li>
+                </ul>
+              </li>
 
-                  <div class="g1-links none showAndHide" id="link-3">
-                    <ul>
-                      <li class="dropdown-title">Tv Shows</li>
-                      <li><a href="#">Altas Horas</a></li>
-                      <li><a href="#">Big Brother Brasil</a></li>
-                      <li><a href="#">Caldeirão do Huck</a></li>
-                      <li><a href="#">Conversa com Bial</a></li>
-                      <li><a href="#">Domingão do Faustão</a></li>
-                      <li><a href="#">É de Casa</a></li>
-                      <li><a href="#">Encontro com Fátima Bernardes</a></li>
-                      <li><a href="#">Escolinha do Professor Raimundo</a></li>
-                      <li><a href="#">Mais Você</a></li>
-                      <li><a href="#">Mestre do Sabor</a></li>
-                      <li><a href="#">Popstar</a></li>
-                      <li><a href="#">Se Joga</a></li>
-                      <li><a href="#">SóTocaTop</a></li>
-                    </ul>
-                  </div>
+              <!-- G1 -->
+              <li class="navbar__g1-links none showAndHide" id="link-2">
+                <ul class="navbar__links-ul">
+                  <li class="dropdown-title">g1</li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Agro</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Cars</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Science and Health</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Competitions and Jobs</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Economy</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Education</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Enem 2019</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Fact or Fake</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">World</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Nature</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Newsletter</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Look here!</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Podcasts</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Politics</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Pop & Art</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Technology</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Tourism and Travel</a>
+                  </li>
+                </ul>
+              </li>
 
-                  <div class="g1-links none showAndHide" id="link-4">
-                    <ul>
-                      <li class="dropdown-title">on tv</li>
-                      <li><a href="#">Auto Esporte</a></li>
-                      <li><a href="#">Welfare</a></li>
-                      <li><a href="#">Good morning Brazil</a></li>
-                      <li><a href="#">Como Sera?</a></li>
-                      <li><a href="#">Fantastico</a></li>
-                      <li><a href="#">Globo Reporter</a></li>
-                      <li><a href="#">Globo Rural</a></li>
-                      <li><a href="#">Globonews</a></li>
-                      <li><a href="#">Hora 1</a></li>
-                      <li><a href="#">Jornal da Globo</a></li>
-                      <li><a href="#">Jornal Hoje</a></li>
-                      <li><a href="#">Jornal Nacional</a></li>
-                      <li><a href="#">Pequenas Empresas</a></li>
-                      <li><a href="#">Profissão Reporter</a></li>
-                    </ul>
-                  </div>
-                  <!-- SECOND COLUMN ENDS -->
+              <!-- On TV -->
+              <li class="navbar__g1-links none showAndHide" id="link-3">
+                <ul class="navbar__links-ul">
+                  <li class="dropdown-title">Tv Shows</li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Altas Horas</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Big Brother Brasil</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Caldeirão do Huck</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Conversa com Bial</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Domingão do Faustão</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">É de Casa</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Encontro com Fátima Bernardes</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Escolinha do Professor Raimundo</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Mais Você</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Mestre do Sabor</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Popstar</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Se Joga</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">SóTocaTop</a>
+                  </li>
+                </ul>
+              </li>
 
-                  <!-- THIRD COLUMN - STATES -->
-                  <div class="g1-states">
-                    <p class="dropdown-title">your state</p>
-                    <div class="states-grid">
+              <!-- Magazines and radio -->
+              <li class="navbar__g1-links none showAndHide" id="link-4">
+                <ul class="navbar__links-ul">
+                  <li class="dropdown-title">on tv</li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Auto Esporte</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Welfare</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Good morning Brazil</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Como Sera?</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Fantastico</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Globo Reporter</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Globo Rural</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Globonews</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Hora 1</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Jornal da Globo</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Jornal Hoje</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Jornal Nacional</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Pequenas Empresas</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Profissão Reporter</a>
+                  </li>
+                </ul>
+              </li>
 
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-acre.png" alt="state-of-acre-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          AC
-                        </div>
-                      </div>
+              <!-- THIRD COLUMN - STATES -->
+              <li class="navbar__g1-states">
+                <p class="dropdown-title">your state</p>
 
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-alagoas.png" alt="state-of-alagoas-flag"/ >
-                        </div>
-                        <div class="states__side states__side--back">
-                          AL
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-amapa.jpg" alt="state-of-amapa-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          AP
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-amazonas.jpg" alt="state-of-amazonas-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          AM
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-bahia.jpg" alt="state-of-bahia-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          BA
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-ceara.png" alt="state-of-ceara-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          CE
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-distrito-federal.jpg" alt="state-of-distrito-federal-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          DF
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-espirito-santo.jpeg" alt="state-of-espirito-santo-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          ES
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-goias.jpg" alt="state-of-goias-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          GO
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-maranhao.png" alt="state-of-maranhao-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          MA
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-minas-gerais.jpg" alt="state-of-minas-gerais-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          MG
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-mato-grosso-do-sul.jpg" alt="state-of-mato-grosso-do-sul-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          MS
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-mato-grosso.png" alt="state-of-mato-grosso-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          MT
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-para.jpg" alt="state-of-para-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          PA
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-paraiba.jpg" alt="state-of-paraiba-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          PB
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-pernambuco.jpg" alt="state-of-pernambuco-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          PE
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-piaui.png" alt="state-of-piaui-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          PI
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-parana.png" alt="state-of-parana-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          PR
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-rio-de-janeiro.jpg" alt="state-of-rio-de-janeiro-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          RJ
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-rio-grande-do-norte.jpg" alt="state-of-rio-grande-do-norte-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          RN
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-rondonia.png" alt="state-of-rondonia-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          RO
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-roraima.png" alt="state-of-roraima-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          RR
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-rio-grande-do-sul.png" alt="state-of-rio-grande-do-sul-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          RS
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-santa-catarina.png" alt="state-of-santa-catarina-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          SC
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-sergipe.png" alt="state-of-sergipe-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          SE
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-sao-paulo.png" alt="state-of-sao-paulo-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          SP
-                        </div>
-                      </div>
-
-                      <div class="states">
-                        <div class="states__side states__side--front">
-                          <img src="dist/minified/assets/nav/states-of-brazil/state-of-tocantins.png" alt="state-of-tocantins-flag" />
-                        </div>
-                        <div class="states__side states__side--back">
-                          TO
-                        </div>
-                      </div>
-
+                <ul class="states-grid">
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-acre.png" alt="state-of-acre-flag" />
                     </div>
+                    <div class="states__side states__side--back">AC</div>
+                  </li>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-alagoas.png" alt="state-of-alagoas-flag"/ >
+                    </div>
+                    <div class="states__side states__side--back">AL</div>
+                  </li>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-amapa.jpg" alt="state-of-amapa-flag" />
+                    </div>
+                    <div class="states__side states__side--back">AP</div>
+                  </li>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-amazonas.jpg" alt="state-of-amazonas-flag" />
+                    </div>
+                    <div class="states__side states__side--back">AM</div>
+                  </li>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-bahia.jpg" alt="state-of-bahia-flag" />
+                    </div>
+                    <div class="states__side states__side--back">BA</div>
+                  </li>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-ceara.png" alt="state-of-ceara-flag" />
+                    </div>
+                    <div class="states__side states__side--back">CE</div>
+                  </li>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-distrito-federal.jpg" alt="state-of-distrito-federal-flag" />
+                    </div>
+                    <div class="states__side states__side--back">DF</div>
+                  </li>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-espirito-santo.jpeg" alt="state-of-espirito-santo-flag" />
+                    </div>
+                    <div class="states__side states__side--back">ES
+                    liiv>
                   </div>
-                  <!-- THIRD COLUMN - STATES ENDS -->
-                </div>
-              </ul>
-            </div>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-goias.jpg" alt="state-of-goias-flag" />
+                    </div>
+                    <div class="states__side states__side--back">GO</div>
+                  </li>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-maranhao.png" alt="state-of-maranhao-flag" />
+                    </div>
+                    <div class="states__side states__side--back">MA</div>
+                  </li>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-minas-gerais.jpg" alt="state-of-minas-gerais-flag" />
+                    </div>
+                    <div class="states__side states__side--back">MG</div>
+                  </li>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-mato-grosso-do-sul.jpg" alt="state-of-mato-grosso-do-sul-flag" />
+                    </div>
+                    <div class="states__side states__side--back">MS</div>
+                  </li>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-mato-grosso.png" alt="state-of-mato-grosso-flag" />
+                    </div>
+                    <div class="states__side states__side--back">MT</div>
+                  </li>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-para.jpg" alt="state-of-para-flag" />
+                    </div>
+                    <div class="states__side states__side--back">PA</div>
+                  </li>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-paraiba.jpg" alt="state-of-paraiba-flag" />
+                    </div>
+                    <div class="states__side states__side--back">PB</div>
+                  </li>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-pernambuco.jpg" alt="state-of-pernambuco-flag" />
+                    </div>
+                    <div class="states__side states__side--back">PE</div>
+                  </li>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-piaui.png" alt="state-of-piaui-flag" />
+                    </div>
+                    <div class="states__side states__side--back">PI</div>
+                  </li>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-parana.png" alt="state-of-parana-flag" />
+                    </div>
+                    <div class="states__side states__side--back">PR</div>
+                  </li>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-rio-de-janeiro.jpg" alt="state-of-rio-de-janeiro-flag" />
+                    </div>
+                    <div class="states__side states__side--back">RJ</div>
+                  </li>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-rio-grande-do-norte.jpg" alt="state-of-rio-grande-do-norte-flag" />
+                    </div>
+                    <div class="states__side states__side--back">RN</div>
+                  </li>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-rondonia.png" alt="state-of-rondonia-flag" />
+                    </div>
+                    <div class="states__side states__side--back">RO</div>
+                  </li>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-roraima.png" alt="state-of-roraima-flag" />
+                    </div>
+                    <div class="states__side states__side--back">RR</div>
+                  </li>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-rio-grande-do-sul.png" alt="state-of-rio-grande-do-sul-flag" />
+                    </div>
+                    <div class="states__side states__side--back">RS</div>
+                  </li>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-santa-catarina.png" alt="state-of-santa-catarina-flag" />
+                    </div>
+                    <div class="states__side states__side--back">SC</div>
+                  </li>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-sergipe.png" alt="state-of-sergipe-flag" />
+                    </div>
+                    <div class="states__side states__side--back">SE</div>
+                  </li>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-sao-paulo.png" alt="state-of-sao-paulo-flag" />
+                    </div>
+                    <div class="states__side states__side--back">SP</div>
+                  </li>
+
+                  <li class="states">
+                    <div class="states__side states__side--front">
+                      <img src="dist/minified/assets/nav/states-of-brazil/state-of-tocantins.png" alt="state-of-tocantins-flag" />
+                    </div>
+                    <div class="states__side states__side--back">TO</div>
+                  </li>
+                </ul>
+              </li>
+              <!-- THIRD COLUMN - STATES ENDS -->
+            </ul>
           </li>
           <!-- G1 DROPDOWN ENDS -->
 
           <!-- GE DROPDOWN -->
-          <li onmouseleave="closeDropdown()">
+          <li class="navbar__li" onmouseleave="closeDropdown()">
             <div>
               <a href="#" class="navbar__link" onclick="openDropdown(event)">
                 <span class="green">ge</span>
@@ -477,7 +541,7 @@
                   <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
                 </svg>
               </a>
-              <ul class="navbar__dropdown container-dropdown">
+              <ul class="navbar__dropdown">
                 <div class="flex">
 
                   <!-- FIRST COLUMN -->
@@ -636,7 +700,7 @@
           <!-- GE DROPDOWN ENDS -->
 
           <!-- GSHOW DROPDOWN -->
-          <li onmouseleave="closeDropdown()">
+          <li class="navbar__li" onmouseleave="closeDropdown()">
             <div>
               <a href="#" class="navbar__link" onclick="openDropdown(event)">
                 <span class="orange">gshow</span>
@@ -863,7 +927,7 @@
           </li>
           <!-- GSHOW DROPDOWN ENDS -->
 
-          <li>
+          <li class="navbar__li">
             <div>
               <a href="#" class="navbar__link">
                 <span class="gray">tech</span>
@@ -872,7 +936,7 @@
           </li>
 
           <!-- VIDEOS -->
-          <li onmouseleave="closeDropdown()">
+          <li class="navbar__li" onmouseleave="closeDropdown()">
             <div>
               <a href="#" class="navbar__link" onclick="openDropdown(event)">
                 <span class="blue">videos</span>

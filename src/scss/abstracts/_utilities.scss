@@ -3,24 +3,7 @@
   border-top: 1px solid #ccc;
 }
 
-// Helper classes.
-.mb-sm {
-  margin-bottom: 2rem;
-}
-
-.mb-md {
-  margin-bottom: 3rem;
-}
-
-.mb-lg {
-  margin-bottom: 4rem;
-}
-
-.mb-hg {
-  margin-bottom: 5rem;
-}
-
-// Color helper classes
+// COLOR HELPER CLASSES
 .red {
   color: var(--color-red);
 }
@@ -45,12 +28,6 @@
   margin-bottom: 1.5rem;
 }
 
-// DISPLAY NONE
 .none {
   display: none;
-}
-
-// DISPLAY FLEX
-.flex {
-  display: flex;
 }

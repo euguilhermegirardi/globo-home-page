@@ -1,6 +1,6 @@
 /* li active item */
-var header = document.getElementById("myList");
-var items = header.getElementsByClassName("li");
+var header = document.getElementById("navbar__g1-list");
+var items = header.getElementsByClassName("navbar__g1-li");
 for (var i = 0; i < items.length; i++) {
   items[i].addEventListener("mouseover", function () {
     var current = document.getElementsByClassName("active-item");
