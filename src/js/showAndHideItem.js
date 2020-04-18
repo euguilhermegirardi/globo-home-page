@@ -13,7 +13,7 @@ function showsOne(item) {
 
 /* SHOW AND HIDE ITEM */
 function teams(item) {
-  $('.showTeams').each(function (index) {
+  $('.navbar__teams-container').each(function (index) {
     if ($(this).attr("id") == item) {
       $(this).show();
     }
