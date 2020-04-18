@@ -22,7 +22,7 @@
   <meta name="twitter:site" content="@website-username" />
   <!-- META TAGS FOR SOCIAL MEDIA ENDS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="dist/minified/main.css?cb=1586887072776" />
+  <link rel="stylesheet" href="dist/minified/main.css?cb=1587226101902" />
   <link rel="shortcut icon" type="image/png" href="src/assets/favicon.ico" />
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <title>globo.com - Absolutely everything about news, sports and entertainment</title>
@@ -112,7 +112,6 @@
         <ul class="navbar__menu">
           <!-- G1 DROPDOWN -->
           <li class="navbar__li" onmouseleave="closeDropdown()">
-
             <a class="navbar__link" href="#" onclick="openDropdown(event)" >
               <p class="red">g1</p>
               <svg class="navbar__icon navbar__icon--red">
@@ -534,168 +533,266 @@
 
           <!-- GE DROPDOWN -->
           <li class="navbar__li" onmouseleave="closeDropdown()">
-            <div>
-              <a href="#" class="navbar__link" onclick="openDropdown(event)">
-                <span class="green">ge</span>
-                <svg class="navbar__icon navbar__icon--green">
-                  <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
-                </svg>
-              </a>
-              <ul class="navbar__dropdown">
-                <div class="flex">
+            <a class="navbar__link" href="#" onclick="openDropdown(event)">
+              <p class="green">ge</p>
+              <svg class="navbar__icon navbar__icon--green">
+                <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
+              </svg>
+            </a>
 
-                  <!-- FIRST COLUMN -->
-                  <div class="ge-list" id="myList2">
-                    <li class="li-2 active-item2" onmouseover="showsOne('link-1');"><a href="#">top pages</a></li>
-                    <li class="li-2" onmouseover="showsOne('link-2');"><a href="#">globoesporte.com</a></li>
-                    <li class="li-2" onmouseover="showsOne('link-3');"><a href="#">Football</a></li>
-                    <li class="li-2" onmouseover="showsOne('link-4');"><a href="#">on tv</a></li>
-                    <li class="li-2" onmouseover="showsOne('link-5');"><a href="#">sportv</a></li>
-                  </div>
-                  <!-- FIRST COLUMN ENDS -->
+            <!-- _navbar__dropdown.scss -->
+            <ul class="navbar__dropdown">
+              <!-- FIRST COLUMN -->
+              <li class="navbar__ge-list" id="navbar__ge-list">
+                <ul class="navbar__ge-ul">
+                  <li class="navbar__ge-li active-item2" onmouseover="showsOne('link-1');">
+                    <a class="navbar__ge-item" href="#">top pages</a>
+                  </li>
+                  <li class="navbar__ge-li" onmouseover="showsOne('link-2');">
+                    <a class="navbar__ge-item" href="#">globoesporte.com</a>
+                  </li>
+                  <li class="navbar__ge-li" onmouseover="showsOne('link-3');">
+                    <a class="navbar__ge-item" href="#">Football</a>
+                  </li>
+                  <li class="navbar__ge-li" onmouseover="showsOne('link-4');">
+                    <a class="navbar__ge-item" href="#">on tv</a>
+                  </li>
+                  <li class="navbar__ge-li" onmouseover="showsOne('link-5');">
+                    <a class="navbar__ge-item" href="#">sportv</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- FIRST COLUMN ENDS -->
 
-                  <!-- SECOND COLUMN -->
-                  <div class="ge-links showAndHide" id="link-1">
-                    <ul>
-                      <li class="dropdown-title">top pages</li>
-                      <li><a href="#">Globo Esporte</a></li>
-                      <li><a href="#">Fórmula 1</a></li>
-                      <li><a href="#">Futebol</a></li>
-                      <li><a href="#">Internacional Football</a></li>
-                      <li><a href="#">Vôlei</a></li>
-                      <li><a href="#">Vai e Vem do Mercado</a></li>
-                      <li><a href="#">Combate</a></li>
-                      <li><a href="#">Brasileirão Série A</a></li>
-                      <li><a href="#">Tennis</a></li>
-                      <li><a href="#">Basketball</a></li>
-                    </ul>
-                  </div>
+              <!-- SECOND COLUMN -->
+              <!-- top pages -->
+              <li class="navbar__ge-links showAndHide" id="link-1">
+                <ul class="navbar__links-ul">
+                  <li class="dropdown-title">top pages</li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Globo Esporte</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Fórmula 1</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Futebol</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Internacional Football</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Vôlei</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Vai e Vem do Mercado</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Combate</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Brasileirão Série A</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Tennis</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Basketball</a>
+                  </li>
+                </ul>
+              </li>
 
-                  <div class="ge-links none showAndHide" id="link-2">
-                    <ul>
-                      <li class="dropdown-title">globoesporte.com</li>
-                      <li><a href="#">Agenda</a></li>
-                      <li><a href="#">Cartola FC</a></li>
-                      <li><a href="#">e-Sports</a></li>
-                      <li><a href="#">Eu atleta</a></li>
-                      <li><a href="#">Futebol</a></li>
-                      <li><a href="#">Futebol internacional</a></li>
-                      <li><a href="#">NBA</a></li>
-                      <li><a href="#">Combate</a></li>
-                      <li><a href="#">Podcasts</a></li>
-                      <li><a href="#">Olimpíadas</a></li>
-                    </ul>
-                  </div>
+              <!-- globoesporte.com -->
+              <li class="navbar__ge-links none showAndHide" id="link-2">
+                <ul class="navbar__links-ul">
+                  <li class="dropdown-title">globoesporte.com</li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Agenda</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Cartola FC</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">e-Sports</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Eu atleta</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Futebol</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Futebol internacional</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">NBA</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Combate</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Podcasts</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Olimpíadas</a>
+                  </li>
+                </ul>
+              </li>
 
-                  <div class="ge-links none showAndHide" id="link-3">
-                    <ul>
-                      <li class="dropdown-title">football</li>
-                      <li><a href="#">Brasileirão Série A</a></li>
-                      <li><a href="#">Brasileirão Série B</a></li>
-                      <li><a href="#">Copa América</a></li>
-                      <li><a href="#">Brazil's Cup</a></li>
-                      <li><a href="#">Women's World Cup</a></li>
-                      <li><a href="#">Copa Sul-Americana</a></li>
-                      <li><a href="#">Libertadores</a></li>
-                      <li><a href="#">Audience in stadiums</a></li>
-                      <li><a href="#">Technicians' turnover</a></li>
-                      <li><a href="#">Mestre do Sabor</a></li>
-                      <li><a href="#">Brazilian Team</a></li>
-                      <li><a href="#">Vai e Vem do Mercado</a></li>
-                    </ul>
-                  </div>
+              <!-- Football -->
+              <li class="navbar__ge-links none showAndHide" id="link-3">
+                <ul class="navbar__links-ul">
+                  <li class="dropdown-title">football</li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Brasileirão Série A</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Brasileirão Série B</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Copa América</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Brazil's Cup</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Women's World Cup</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Copa Sul-Americana</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Libertadores</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Audience in stadiums</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Technicians' turnover</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Mestre do Sabor</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Brazilian Team</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Vai e Vem do Mercado</a>
+                  </li>
+                </ul>
+              </li>
 
-                  <div class="ge-links none showAndHide" id="link-4">
-                    <ul>
-                      <li class="dropdown-title">on tv</li>
-                      <li><a href="#">Combate Programação</a></li>
-                      <li><a href="#">Esporte Espetacular</a></li>
-                      <li><a href="#">Globo Esporte</a></li>
-                      <li><a href="#">Premiere Programação</a></li>
-                      <li><a href="#">Segue o jogo</a></li>
-                      <li><a href="#">Sportv Programação</a></li>
-                    </ul>
-                  </div>
+              <!-- On TV -->
+              <li class="navbar__ge-links none showAndHide" id="link-4">
+                <ul class="navbar__links-ul">
+                  <li class="dropdown-title">on tv</li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Combate Programação</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Esporte Espetacular</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Globo Esporte</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Premiere Programação</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Segue o jogo</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Sportv Programação</a>
+                  </li>
+                </ul>
+              </li>
 
-                  <div class="ge-links none showAndHide" id="link-5">
-                    <ul>
-                      <li class="dropdown-title">sportv</li>
-                      <li><a href="#">Acabou a Brincadeira</a></li>
-                      <li><a href="#">Bem, Amigos!</a></li>
-                      <li><a href="#">Boleiragem</a></li>
-                      <li><a href="#">Fala muito!</a></li>
-                      <li><a href="#">Redação Sportv</a></li>
-                      <li><a href="#">Seleção Sportv</a></li>
-                      <li><a href="#">Tá na Área</a></li>
-                      <li><a href="#">Troca de Passes</a></li>
-                      <li><a href="#">Programação</a></li>
-                    </ul>
-                  </div>
-                  <!-- SECOND COLUMN ENDS -->
+              <!-- SporTV -->
+              <li class="navbar__ge-links none showAndHide" id="link-5">
+                <ul class="navbar__links-ul">
+                  <li class="dropdown-title">sportv</li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Acabou a Brincadeira</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Bem, Amigos!</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Boleiragem</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Fala muito!</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Redação Sportv</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Seleção Sportv</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Tá na Área</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Troca de Passes</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Programação</a></li>
+                </ul>
+              </li>
+              <!-- SECOND COLUMN ENDS -->
 
-                  <!-- THIRD COLUMN - TEAMS -->
-                  <div class="ge-teams">
+              <!-- THIRD COLUMN - TEAMS -->
+              <li class="navbar__ge-teams">
 
-                    <div class="buttons flex" id="myDIV">
-                      <button class="btn active" onclick=teams('teamsA')>SERIE A</button>
-                      <button class="btn" onclick=teams('teamsB')>SERIE B</button>
-                    </div>
-
-                    <div class="showTeams" id="teamsA">
-                      <div class="teams__grid">
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/palmeiras.png" alt="Palmeiras" title="Palmeiras" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/saopaulo.png" alt="Sao-Paulo" title="Sao Paulo" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/goias.png" alt="Goias" title="Goias" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/vasco.png" alt="Vasco" title="Vasco" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/joinville.png" alt="Joinville" title="Joinville" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/atletico-paranaense.png" alt="Atletico-Paranense" title="Atletico-Paranense" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/sport.png" alt="Sport" title="Sport" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/bahia.png" alt="Bahia" title="Bahia" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/gremio.png" alt="Gremio" title="Gremio" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/fluminense.png" alt="Fluminense" title="Fluminense" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/botafogoribeirao.png" alt="Botafogo-Ribeirao" title="Botafogo-Ribeirao" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/internacional.png" alt="Internacional" title="Internacional" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/chapecoense.png" alt="Chapecoense" title="Chapecoense" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/america-mineiro.png" alt="America-Mineiro" title="America-Mineiro" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/flamengo.png" alt="Flamengo" title="Flamengo" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/bragantino.png" alt="Brangantino" title="Brangantino" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/santos.png" alt="Santos" title="Santos" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/redbull.png" alt="Red-Bull" title="Red-Bull" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/riobranco.png" alt="Rio-Branco" title="Rio-Branco" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/atletico-mineiro.png" alt="Atletico-Mineiro" title="Atletico-Mineiro" /></div>
-                      </div>
-                    </div>
-
-                    <div class="showTeams none" id="teamsB">
-                      <div class="teams__grid">
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/corinthians.png" alt="Corinthians" title="Corinthians" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/santos.png" alt="Santos" title="Santos" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/redbull.png" alt="Red-Bull" title="Red-Bull" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/chapecoense.png" alt="Chapecoense" title="Chapecoense" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/internacional.png" alt="Internacional" title="Internacional" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/gremio.png" alt="Gremio" title="Gremio" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/botafogoribeirao.png" alt="Botafogo-Ribeirao" title="Botafogo-Ribeirao" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/sport.png" alt="Sport" title="Sport" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/bahia.png" alt="Bahia" title="Bahia" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/saopaulo.png" alt="Sao-Paulo" title="Sao Paulo" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/goias.png" alt="Goias" title="Goias" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/saopaulo.png" alt="Sao-Paulo" title="Sao Paulo" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/goias.png" alt="Goias" title="Goias" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/vasco.png" alt="Vasco" title="Vasco" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/joinville.png" alt="Joinville" title="Joinville" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/botafogoribeirao.png" alt="Botafogo-Ribeirao" title="Botafogo-Ribeirao" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/internacional.png" alt="Internacional" title="Internacional" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/chapecoense.png" alt="Chapecoense" title="Chapecoense" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/atletico-mineiro.png" alt="Atletico-Mineiro" title="Atletico-Mineiro" /></div>
-                        <div><img src="dist/minified/assets/nav/teams-of-brazil/flamengo.png" alt="Flamengo" title="Flamengo" /></div>
-                      </div>
-                    </div>
-
-                  </div>
-                  <!-- THIRD COLUMN - TEAMS ENDS -->
+                <div class="navbar__btn-container" id="navbar__btn-container">
+                  <button class="navbar__btn active" onclick=teams('teamsA')>SERIE A</button>
+                  <button class="navbar__btn" onclick=teams('teamsB')>SERIE B</button>
                 </div>
-              </ul>
-            </div>
+
+                <div class="showTeams" id="teamsA">
+                  <div class="teams__grid">
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/palmeiras.png" alt="Palmeiras" title="Palmeiras" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/saopaulo.png" alt="Sao-Paulo" title="Sao Paulo" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/goias.png" alt="Goias" title="Goias" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/vasco.png" alt="Vasco" title="Vasco" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/joinville.png" alt="Joinville" title="Joinville" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/atletico-paranaense.png" alt="Atletico-Paranense" title="Atletico-Paranense" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/sport.png" alt="Sport" title="Sport" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/bahia.png" alt="Bahia" title="Bahia" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/gremio.png" alt="Gremio" title="Gremio" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/fluminense.png" alt="Fluminense" title="Fluminense" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/botafogoribeirao.png" alt="Botafogo-Ribeirao" title="Botafogo-Ribeirao" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/internacional.png" alt="Internacional" title="Internacional" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/chapecoense.png" alt="Chapecoense" title="Chapecoense" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/america-mineiro.png" alt="America-Mineiro" title="America-Mineiro" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/flamengo.png" alt="Flamengo" title="Flamengo" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/bragantino.png" alt="Brangantino" title="Brangantino" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/santos.png" alt="Santos" title="Santos" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/redbull.png" alt="Red-Bull" title="Red-Bull" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/riobranco.png" alt="Rio-Branco" title="Rio-Branco" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/atletico-mineiro.png" alt="Atletico-Mineiro" title="Atletico-Mineiro" /></div>
+                  </div>
+                </div>
+
+                <div class="showTeams none" id="teamsB">
+                  <div class="teams__grid">
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/corinthians.png" alt="Corinthians" title="Corinthians" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/santos.png" alt="Santos" title="Santos" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/redbull.png" alt="Red-Bull" title="Red-Bull" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/chapecoense.png" alt="Chapecoense" title="Chapecoense" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/internacional.png" alt="Internacional" title="Internacional" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/gremio.png" alt="Gremio" title="Gremio" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/botafogoribeirao.png" alt="Botafogo-Ribeirao" title="Botafogo-Ribeirao" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/sport.png" alt="Sport" title="Sport" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/bahia.png" alt="Bahia" title="Bahia" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/saopaulo.png" alt="Sao-Paulo" title="Sao Paulo" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/goias.png" alt="Goias" title="Goias" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/saopaulo.png" alt="Sao-Paulo" title="Sao Paulo" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/goias.png" alt="Goias" title="Goias" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/vasco.png" alt="Vasco" title="Vasco" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/joinville.png" alt="Joinville" title="Joinville" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/botafogoribeirao.png" alt="Botafogo-Ribeirao" title="Botafogo-Ribeirao" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/internacional.png" alt="Internacional" title="Internacional" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/chapecoense.png" alt="Chapecoense" title="Chapecoense" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/atletico-mineiro.png" alt="Atletico-Mineiro" title="Atletico-Mineiro" /></div>
+                    <div><img src="dist/minified/assets/nav/teams-of-brazil/flamengo.png" alt="Flamengo" title="Flamengo" /></div>
+                  </div>
+                </div>
+              </li>
+              <!-- THIRD COLUMN - TEAMS ENDS -->
+            </ul>
           </li>
           <!-- GE DROPDOWN ENDS -->
 
@@ -2082,6 +2179,6 @@
   <!-- MAIN CONTAINER GRID ENDS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="dist/minified/all.js?cb=1586887072776"></script>
+  <script src="dist/minified/all.js?cb=1587226101902"></script>
 </body>
 </html>

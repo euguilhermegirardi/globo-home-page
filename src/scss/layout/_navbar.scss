@@ -96,6 +96,26 @@
           position: relative;
 
           .navbar__icon {
+            height: 2rem;
+            width: 2rem;
+            align-self: flex-end;
+
+            &--red {
+              fill: var(--color-red);
+            }
+
+            &--green {
+              fill: var(--color-green);
+            }
+
+            &--orange {
+              fill: var(--color-orange);
+            }
+
+            &--blue {
+              fill: var(--color-blue);
+            }
+
             @include respond(iphoneX) {
               display: none;
             }
@@ -115,28 +135,6 @@
             }
             @include respond(bp-large-medium) {
               display: none;
-            }
-          }
-
-          .navbar__icon {
-            height: 2rem;
-            width: 2rem;
-            align-self: flex-end;
-
-            &--red {
-              fill: var(--color-red);
-            }
-
-            &--green {
-              fill: var(--color-green);
-            }
-
-            &--orange {
-              fill: var(--color-orange);
-            }
-
-            &--blue {
-              fill: var(--color-blue);
             }
           }
         }

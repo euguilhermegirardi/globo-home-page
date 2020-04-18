@@ -195,32 +195,36 @@
   /* G1 DROPDOWN ENDS */
 
   /* GE DROPDOWN */
-  .ge-list {
+  .navbar__ge-list {
     @extend %dropdown;
 
-    .active-item2 {
-      border-left: 5px solid var(--color-green);
-      @extend %active;
-    }
+    .navbar__ge-ul {
+      cursor: pointer;
 
-    li {
-      @extend %li;
-    }
+      .active-item2 {
+        border-left: 5px solid var(--color-green);
+        @extend %active;
+      }
 
-    li:hover {
-      border-left: 5px solid var(--color-green);
-      @extend %active;
-    }
+      .navbar__ge-li {
+        @extend %li;
+      }
 
-    a {
-      margin-left: 1.5rem;
-      color: var(--color-green-text);
-      padding: 5px;
+      .navbar__ge-li:hover {
+        border-left: 5px solid var(--color-green);
+        @extend %active;
+      }
+
+      .navbar__ge-item {
+        margin-left: 1.5rem;
+        color: var(--color-green-text);
+        padding: 5px;
+      }
     }
   }
 
   /* SECOND COLUMN */
-  .ge-links {
+  .navbar__ge-links {
     font-family: var(--font-primary);
     font-size: 1.1rem;
     border-right: 1px solid var(--color-grey-dark-2);
@@ -229,31 +233,35 @@
     padding: 2rem 0rem;
     height: 40rem;
 
-    li:not(:first-child) {
-      margin-bottom: 0.5rem;
-    }
+    .navbar__links-ul {
+      cursor: pointer;
 
-    li:last-child {
-      margin-bottom: 0;
-    }
+      .navbar__links-li:not(:first-child) {
+        margin-bottom: 0.5rem;
+      }
 
-    a {
-      color: var(--color-green-text);
+      .navbar__links-li:last-child {
+        margin-bottom: 0;
+      }
 
-      &:hover {
-        text-decoration: underline var(--color-green-text);
-        filter: brightness(115%);
+      .navbar__links-item {
+        color: var(--color-green-text);
+
+        &:hover {
+          text-decoration: underline var(--color-green-text);
+          filter: brightness(115%);
+        }
       }
     }
   }
 
   /* THIRD COLUMN - TEAMS */
-  .ge-teams {
+  .navbar__ge-teams {
     padding: 2rem;
     background-color: var(--color-gray-light-5);
     width: 21rem;
 
-    .buttons {
+    .navbar__btn-container {
       justify-content: center;
       justify-content: space-around;
       margin-bottom: 1.2rem;
@@ -265,7 +273,7 @@
         color: white;
       }
 
-      button {
+      .navbar__btn {
         cursor: pointer;
         padding: 3px 1.5rem;
 

@@ -11,8 +11,8 @@ for (var i = 0; i < items.length; i++) {
 /* li active item ends */
 
 /* li active item */
-var header2 = document.getElementById("myList2");
-var items2 = header2.getElementsByClassName("li-2");
+var header2 = document.getElementById("navbar__ge-list");
+var items2 = header2.getElementsByClassName("navbar__ge-li");
 for (var i = 0; i < items2.length; i++) {
   items2[i].addEventListener("mouseover", function () {
     var current2 = document.getElementsByClassName("active-item2");
