@@ -23,8 +23,8 @@ for (var i = 0; i < items2.length; i++) {
 /* li active item ends */
 
 /* li active item */
-var header3 = document.getElementById("myList3");
-var items3 = header3.getElementsByClassName("li-3");
+var header3 = document.getElementById("navbar__gshow-list");
+var items3 = header3.getElementsByClassName("navbar__gshow-li");
 for (var i = 0; i < items3.length; i++) {
   items3[i].addEventListener("mouseover", function () {
     var current3 = document.getElementsByClassName("active-item3");

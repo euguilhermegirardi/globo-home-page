@@ -798,229 +798,382 @@
 
           <!-- GSHOW DROPDOWN -->
           <li class="navbar__li" onmouseleave="closeDropdown()">
-            <div>
-              <a href="#" class="navbar__link" onclick="openDropdown(event)">
-                <span class="orange">gshow</span>
-                <svg class="navbar__icon navbar__icon--orange">
-                  <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
-                </svg>
-              </a>
-              <ul class="navbar__dropdown container-dropdown">
-                <div class="flex">
+            <a href="#" class="navbar__link" onclick="openDropdown(event)">
+              <span class="orange">gshow</span>
+              <svg class="navbar__icon navbar__icon--orange">
+                <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
+              </svg>
+            </a>
 
-                  <!-- FIRST COLUMN -->
-                  <div class="gshow-list" id="myList3">
-                    <li class="li-3 active-item3" onmouseover="showsOne('link-1')"><a href="#">top pages</a></li>
-                    <li class="li-3" onmouseover="showsOne('link-2');"><a href="#">gshow</a></li>
-                    <li class="li-3" onmouseover="showsOne('link-3');"><a href="#">tv shows</a></li>
-                    <li class="li-3" onmouseover="showsOne('link-4');"><a href="#">series</a></li>
-                    <li class="li-3" onmouseover="showsOne('link-5');"><a href="#">original series</a></li>
-                    <li class="li-3" onmouseover="showsOne('link-6');"><a href="#">famous</a></li>
-                    <li class="li-3" onmouseover="showsOne('link-7');"><a href="#">moda & estilo</a></li>
-                    <li class="li-3" onmouseover="showsOne('link-8');"><a href="#">welfare & health </a></li>
-                    <li class="li-3" onmouseover="showsOne('link-9');"><a href="#">home e decoration</a></li>
-                    <li class="li-3" onmouseover="showsOne('link-10');"><a href="#">gastronomy</a></li>
-                    <li class="li-3" onmouseover="showsOne('link-11');"><a href="#">on tv</a></li>
-                  </div>
-                  <!-- FIRST COLUMN ENDS -->
+            <ul class="navbar__dropdown">
+              <!-- FIRST COLUMN -->
+              <li class="navbar__gshow-list" id="navbar__gshow-list">
+                <ul class="navbar__gshow-ul">
+                  <li class="navbar__gshow-li active-item3" onmouseover="showsOne('link-1')">
+                    <a class="navbar__gshow-item" href="#">top pages</a>
+                  </li>
+                  <li class="navbar__gshow-li" onmouseover="showsOne('link-2');">
+                    <a class="navbar__gshow-item" href="#">gshow</a>
+                  </li>
+                  <li class="navbar__gshow-li" onmouseover="showsOne('link-3');">
+                    <a class="navbar__gshow-item" href="#">tv shows</a>
+                  </li>
+                  <li class="navbar__gshow-li" onmouseover="showsOne('link-4');">
+                    <a class="navbar__gshow-item" href="#">series</a>
+                  </li>
+                  <li class="navbar__gshow-li" onmouseover="showsOne('link-5');">
+                    <a class="navbar__gshow-item" href="#">original series</a>
+                  </li>
+                  <li class="navbar__gshow-li" onmouseover="showsOne('link-6');">
+                    <a class="navbar__gshow-item" href="#">famous</a>
+                  </li>
+                  <li class="navbar__gshow-li" onmouseover="showsOne('link-7');">
+                    <a class="navbar__gshow-item" href="#">moda & estilo</a>
+                  </li>
+                  <li class="navbar__gshow-li" onmouseover="showsOne('link-8');">
+                    <a class="navbar__gshow-item" href="#">welfare & health </a>
+                  </li>
+                  <li class="navbar__gshow-li" onmouseover="showsOne('link-9');">
+                    <a class="navbar__gshow-item" href="#">home e decoration</a>
+                  </li>
+                  <li class="navbar__gshow-li" onmouseover="showsOne('link-10');">
+                    <a class="navbar__gshow-item" href="#">gastronomy</a>
+                  </li>
+                  <li class="navbar__gshow-li" onmouseover="showsOne('link-11');">
+                    <a class="navbar__gshow-item" href="#">on tv</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- FIRST COLUMN ENDS -->
 
-                  <!-- SECOND COLUMN -->
-                  <div class="gshow-links showAndHide" id="link-1">
-                    <ul>
-                      <li class="dropdown-title">top pages</li>
-                      <li><a href="#">Huck's Cauldron</a></li>
-                      <li><a href="#">Who</a></li>
-                      <li><a href="#">Big Brother Brazil</a></li>
-                      <li><a href="#">Pictures of life</a></li>
-                      <li><a href="#">Gshow</a></li>
-                      <li><a href="#">Altas Horas</a></li>
-                      <li><a href="#">Homies</a></li>
-                      <li><a href="#">Rede Globo</a></li>
-                      <li><a href="#">Patricia Kogut</a></li>
-                      <li><a href="#">Famous</a></li>
-                    </ul>
-                  </div>
+              <!-- SECOND COLUMN -->
+              <!-- top pages -->
+              <li class="navbar__gshow-links showAndHide" id="link-1">
+                <ul class="navbar__links-ul">
+                  <li class="dropdown-title">top pages</li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Huck's Cauldron</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Who</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Big Brother Brazil</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Pictures of life</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Gshow</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Altas Horas</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Homies</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Rede Globo</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Patricia Kogut</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Famous</a>
+                  </li>
+                </ul>
+              </li>
 
-                  <div class="gshow-links none showAndHide" id="link-2">
-                    <ul>
-                      <li class="dropdown-title">gshow</li>
-                      <li><a href="#">Famous</a></li>
-                      <li><a href="#">Horoscope</a></li>
-                      <li><a href="#">Recipes</a></li>
-                    </ul>
-                  </div>
+              <!-- gshow -->
+              <li class="navbar__gshow-links none showAndHide" id="link-2">
+                <ul class="navbar__links-ul">
+                  <li class="dropdown-title">gshow</li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Famous</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Horoscope</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Recipes</a>
+                  </li>
+                </ul>
+              </li>
 
-                  <div class="gshow-links none showAndHide" id="link-3">
-                    <ul>
-                      <li class="dropdown-title">tv shows (Brazil)</li>
-                      <li><a href="#">Altas Horas</a></li>
-                      <li><a href="#">Big Brother Brasil</a></li>
-                      <li><a href="#">Caldeirão do Huck</a></li>
-                      <li><a href="#">Conversa com Bial</a></li>
-                      <li><a href="#">Domingão do Faustão</a></li>
-                      <li><a href="#">É de Casa</a></li>
-                      <li><a href="#">Encontro com Fátima Bernardes</a></li>
-                      <li><a href="#">Escolinha do Professor Raimundo</a></li>
-                      <li><a href="#">Mais Você</a></li>
-                      <li><a href="#">Mestre do Sabor</a></li>
-                      <li><a href="#">Popstar</a></li>
-                      <li><a href="#">Se Joga</a></li>
-                      <li><a href="#">SóTocaTop</a></li>
-                    </ul>
-                  </div>
+              <!-- tv shows -->
+              <li class="navbar__gshow-links none showAndHide" id="link-3">
+                <ul class="navbar__links-ul">
+                  <li class="dropdown-title">tv shows (Brazil)</li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Altas Horas</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Big Brother Brasil</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Caldeirão do Huck</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Conversa com Bial</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Domingão do Faustão</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">É de Casa</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Encontro com Fátima Bernardes</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Escolinha do Professor Raimundo</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Mais Você</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Mestre do Sabor</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Popstar</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Se Joga</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">SóTocaTop</a>
+                  </li>
+                </ul>
+              </li>
 
-                  <div class="gshow-links none showAndHide" id="link-4">
-                    <ul>
-                      <li class="dropdown-title">series (Brazil)</li>
-                      <li><a href="#">Aruanas</a></li>
-                      <li><a href="#">Filhos da pátria</a></li>
-                      <li><a href="#">Ilha de Ferro</a></li>
-                      <li><a href="#">Segunda chamada</a></li>
-                      <li><a href="#">Shippados</a></li>
-                    </ul>
-                  </div>
+              <!-- series (Brazil) -->
+              <li class="navbar__gshow-links none showAndHide" id="link-4">
+                <ul class="navbar__links-ul">
+                  <li class="dropdown-title">series (Brazil)</li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Aruanas</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Filhos da pátria</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Ilha de Ferro</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Segunda chamada</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Shippados</a>
+                  </li>
+                </ul>
+              </li>
 
-                  <div class="gshow-links none showAndHide" id="link-5">
-                    <ul>
-                      <li class="dropdown-title">original series (Brazil)</li>
-                      <li><a href="#">Bichos</a></li>
-                      <li><a href="#">Como fazer</a></li>
-                      <li><a href="#">Deborah Secco apresenta</a></li>
-                      <li><a href="#">Dulce Delight</a></li>
-                      <li><a href="#">Eu Só Quero Amar</a></li>
-                      <li><a href="#">Faça em casa</a></li>
-                      <li><a href="#">Laboratório do som</a></li>
-                      <li><a href="#">Mazzaropi, o Pai de Candinho</a></li>
-                      <li><a href="#">Os desatinados</a></li>
-                      <li><a href="#">Radionovela Herança de Ódio</a></li>
-                      <li><a href="#">Sebastiana Quebra-Galho</a></li>
-                      <li><a href="#">Segundos de Sabedoria</a></li>
-                    </ul>
-                  </div>
+              <!-- original series (Brazil) -->
+              <li class="navbar__gshow-links none showAndHide" id="link-5">
+                <ul class="navbar__links-ul">
+                  <li class="dropdown-title">original series (Brazil)</li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Animals</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Como fazer</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Deborah Secco apresenta</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Dulce Delight</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Eu Só Quero Amar</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Faça em casa</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Laboratório do som</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Mazzaropi, o Pai de Candinho</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Os desatinados</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Radionovela Herança de Ódio</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Sebastiana Quebra-Galho</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Segundos de Sabedoria</a>
+                  </li>
+                </ul>
+              </li>
 
-                  <div class="gshow-links none showAndHide" id="link-6">
-                    <ul>
-                      <li class="dropdown-title">famous</li>
-                      <li><a href="#">patricia kogut</a></li>
-                      <li><a href="#">who</a></li>
-                      <li><a href="#">pictures of life</a></li>
-                    </ul>
-                  </div>
+              <!-- famous -->
+              <li class="navbar__gshow-links none showAndHide" id="link-6">
+                <ul class="navbar__links-ul">
+                  <li class="dropdown-title">famous</li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">patricia kogut</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">who</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">pictures of life</a>
+                  </li>
+                </ul>
+              </li>
 
-                  <div class="gshow-links none showAndHide" id="link-7">
-                    <ul>
-                      <li class="dropdown-title">fashion & style</li>
-                      <li><a href="#">Ela no Globo</a></li>
-                      <li><a href="#">Estilo no Gshow</a></li>
-                      <li><a href="#">Revista Glamour</a></li>
-                      <li><a href="#">Revista GQ Brasil</a></li>
-                      <li><a href="#">Revista Marie Claire</a></li>
-                      <li><a href="#">Moda no GNT</a></li>
-                      <li><a href="#">Revista Vogue</a></li>
-                    </ul>
-                  </div>
+              <!-- fashion & style -->
+              <li class="navbar__gshow-links none showAndHide" id="link-7">
+                <ul class="navbar__links-ul">
+                  <li class="dropdown-title">fashion & style</li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Ela no Globo</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Estilo no Gshow</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Revista Glamour</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Revista GQ Brasil</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Revista Marie Claire</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Moda no GNT</a>
+                  </li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Revista Vogue</a>
+                  </li>
+                </ul>
+              </li>
 
-                  <div class="gshow-links none showAndHide" id="link-8">
-                    <ul>
-                      <li class="dropdown-title">welfare and health (Brazil)</li>
-                      <li><a href="#">Beleza no GNT</a></li>
-                      <li><a href="#">Bem-estar no GNT</a></li>
-                      <li><a href="#">Revista Crescer</a></li>
-                      <li><a href="#">Bem-estar no G1</a></li>
-                      <li><a href="#">Mães no GNT</a></li>
-                      <li><a href="#">Horóscopo no Gshow</a></li>
-                      <li><a href="#">Paternidade na GQ</a></li>
-                    </ul>
-                  </div>
+              <!-- welfare and health -->
+              <li class="navbar__gshow-links none showAndHide" id="link-8">
+                <ul class="navbar__links-ul">
+                  <li class="dropdown-title">welfare and health (Brazil)</li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Beleza no GNT</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Bem-estar no GNT</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Revista Crescer</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Bem-estar no G1</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Mães no GNT</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Horóscopo no Gshow</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Paternidade na GQ</a></li>
+                </ul>
+              </li>
 
-                  <div class="gshow-links none showAndHide" id="link-9">
-                    <ul>
-                      <li class="dropdown-title">home and decoration (Brazil)</li>
-                      <li><a href="#">Revista Casa e Jardim</a></li>
-                      <li><a href="#">Casa no GNT</a></li>
-                      <li><a href="#">Casa Vogue</a></li>
-                      <li><a href="#">Revista do Zap</a></li>
-                    </ul>
-                  </div>
+              <!-- home and decoration (Brazil) -->
+              <li class="navbar__gshow-links none showAndHide" id="link-9">
+                <ul class="navbar__links-ul">
+                  <li class="dropdown-title">home and decoration (Brazil)</li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Revista Casa e Jardim</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Casa no GNT</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Casa Vogue</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Revista do Zap</a></li>
+                </ul>
+              </li>
 
-                  <div class="gshow-links none showAndHide" id="link-10">
-                    <ul>
-                      <li class="dropdown-title">gastronomy</li>
-                      <li><a href="#">Receitas no GNT</a></li>
-                      <li><a href="#">Receitas no Gshow</a></li>
-                      <li><a href="#">Receitas Casa e Jardim</a></li>
-                    </ul>
-                  </div>
+              <!-- gastronomy -->
+              <li class="navbar__gshow-links none showAndHide" id="link-10">
+                <ul class="navbar__links-ul">
+                  <li class="dropdown-title">Gastronomy</li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Receitas no GNT</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Receitas no Gshow</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Receitas Casa e Jardim</a></li>
+                </ul>
+              </li>
 
-                  <div class="gshow-links none showAndHide" id="link-11">
-                    <ul>
-                      <li class="dropdown-title">on tv (Brazil)</li>
-                      <li><a href="#">Rede Globo</a></li>
-                      <li><a href="#">Canal Brasil</a></li>
-                      <li><a href="#">Gloob</a></li>
-                      <li><a href="#">GNT</a></li>
-                      <li><a href="#">Megapix</a></li>
-                      <li><a href="#">Multishow</a></li>
-                      <li><a href="#">Telecine</a></li>
-                      <li><a href="#">Universal Channel</a></li>
-                      <li><a href="#">Viva</a></li>
-                      <li><a href="#">Off</a></li>
-                    </ul>
-                  </div>
-                  <!-- SECOND COLUMN ENDS -->
+              <!-- On TV (Brazil) -->
+              <li class="navbar__gshow-links none showAndHide" id="link-11">
+                <ul class="navbar__links-ul">
+                  <li class="dropdown-title">On TV (Brazil)</li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Rede Globo</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Canal Brasil</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Gloob</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">GNT</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Megapix</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Multishow</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Telecine</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Universal Channel</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Viva</a></li>
+                  <li class="navbar__links-li">
+                    <a class="navbar__links-item" href="#">Off</a></li>
+                </ul>
+              </li>
+              <!-- SECOND COLUMN ENDS -->
 
-                  <!-- THIRD COLUMN -->
-                  <div class="gshow-series">
-                    <li class="dropdown-title">novels (Brazil)</li>
-                    <li>
-                      <a href="#">
-                        <span>
-                          <img src="dist/minified/assets/nav/novels/amor-de-mae.jpeg" alt="amor-de-mae" />
-                        </span>
-                        <span class="name">Amor de Mae</span>
-                      </a>
-                    </li>
+              <!-- THIRD COLUMN -->
+              <li class="navbar__gshow-series">
+                <ul class="navbar__gshow-ul">
+                  <li class="dropdown-title">novels (Brazil)</li>
+                  <li class="navbar__gshow-li">
+                    <a class="navbar__gshow-item" href="#">
+                      <img class="navbar__gshow-img" src="dist/minified/assets/nav/novels/amor-de-mae.jpeg" alt="amor-de-mae" />
+                      <span class="navbar__gshow-name">Amor de Mae</span>
+                    </a>
+                  </li>
 
-                    <li>
-                      <a href="#">
-                        <span>
-                          <img src="dist/minified/assets/nav/novels/bom-sucesso.png" alt="bom-sucesso" />
-                        </span>
-                        <span class="name">Bom Sucesso</span>
-                      </a>
-                    </li>
+                  <li class="navbar__gshow-li">
+                    <a class="navbar__gshow-item" href="#">
+                      <img class="navbar__gshow-img" src="dist/minified/assets/nav/novels/bom-sucesso.png" alt="bom-sucesso" />
+                      <span class="navbar__gshow-name">Bom Sucesso</span>
+                    </a>
+                  </li>
 
-                    <li>
-                      <a href="#">
-                        <span>
-                          <img src="dist/minified/assets/nav/novels/eramos-seis.jpeg" alt="eramos-seis" />
-                        </span>
-                        <span class="name">Éramos Seis</span>
-                      </a>
-                    </li>
+                  <li class="navbar__gshow-li">
+                    <a class="navbar__gshow-item" href="#">
+                      <img class="navbar__gshow-img" src="dist/minified/assets/nav/novels/eramos-seis.jpeg" alt="eramos-seis" />
+                      <span class="navbar__gshow-name">Éramos Seis</span>
+                    </a>
+                  </li>
 
-                    <li>
-                      <a href="#">
-                        <span>
-                          <img src="dist/minified/assets/nav/novels/toda-forma-de-amar.jpg" alt="toda-forma-de-amar" />
-                        </span>
-                        <span class="name">Malhação – Toda Forma de Amar</span>
-                      </a>
-                    </li>
+                  <li class="navbar__gshow-li">
+                    <a class="navbar__gshow-item" href="#">
+                      <img class="navbar__gshow-img" src="dist/minified/assets/nav/novels/toda-forma-de-amar.jpg" alt="toda-forma-de-amar" />
+                      <span class="navbar__gshow-name">Malhação – Toda Forma de Amar</span>
+                    </a>
+                  </li>
 
-                    <li>
-                      <a href="#">
-                        <span>
-                          <img src="dist/minified/assets/nav/novels/avenida-brasil.jpg" alt="avenida-brasil">
-                        </span>
-                        <span class="name">Avenida Brasil</span>
-                      </a>
-                    </li>
-                  </div>
-                  <!-- THIRD COLUMN ENDS -->
-                </div>
-              </ul>
-            </div>
+                  <li class="navbar__gshow-li">
+                    <a class="navbar__gshow-item" href="#">
+                      <img src="dist/minified/assets/nav/novels/avenida-brasil.jpg" alt="avenida-brasil">
+                      <span class="navbar__gshow-name">Avenida Brasil</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!-- THIRD COLUMN ENDS -->
+            </ul>
           </li>
           <!-- GSHOW DROPDOWN ENDS -->
 
