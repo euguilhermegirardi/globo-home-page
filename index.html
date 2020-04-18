@@ -1178,27 +1178,27 @@
           <!-- GSHOW DROPDOWN ENDS -->
 
           <li class="navbar__li">
-            <div>
-              <a href="#" class="navbar__link">
-                <span class="gray">tech</span>
-              </a>
-            </div>
+            <a class="navbar__link" href="#">
+              <span class="gray">tech</span>
+            </a>
           </li>
 
           <!-- VIDEOS -->
           <li class="navbar__li" onmouseleave="closeDropdown()">
-            <div>
-              <a href="#" class="navbar__link" onclick="openDropdown(event)">
-                <span class="blue">videos</span>
-                <svg class="navbar__icon navbar__icon--blue">
-                  <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
-                </svg>
-              </a>
-              <ul class="navbar__dropdown navbar__dropdown--videos">
-                <li><a href="#">globoplay</a></li>
-                <li><a href="#">globosat play</a></li>
-              </ul>
-            </div>
+            <a class="navbar__link" href="#" onclick="openDropdown(event)">
+              <span class="blue">videos</span>
+              <svg class="navbar__icon navbar__icon--blue">
+                <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
+              </svg>
+            </a>
+            <ul class="navbar__dropdown navbar__dropdown--videos">
+              <li class="navbar__videos-li">
+                <a class="navbar__videos-item" href="#">globoplay</a>
+              </li>
+              <li class="navbar__videos-li">
+                <a class="navbar__videos-item" href="#">globosat play</a>
+              </li>
+            </ul>
           </li>
           <!-- VIDEOS ENDS -->
         </ul>
