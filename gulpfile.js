@@ -1,5 +1,4 @@
 var { src, dest, watch, series, parallel } = require('gulp'),
-  gulp = require('gulp'),
   autoprefixer = require('autoprefixer'),
   cssnano = require('cssnano'),
   concat = require('gulp-concat'),
@@ -7,7 +6,7 @@ var { src, dest, watch, series, parallel } = require('gulp'),
   replace = require('gulp-replace'),
   sass = require('gulp-sass'),
   sourcemaps = require('gulp-sourcemaps'),
-  uglify = require('gulp-uglify'),
+  uglify = require('gulp-uglify-es').default,
   imagemin = require('gulp-imagemin'),
   browserSync = require('browser-sync').create();
 
