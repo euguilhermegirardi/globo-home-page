@@ -1,18 +1,3 @@
-/* DROPDOWN - FIRST COLUMN */
-%dropdown {
-  padding: 2rem 0rem;
-  border-right: 1px solid var(--color-grey-dark-2);
-  font-family: var(--font-primary);
-  font-size: 1.5rem;
-  width: 21rem;
-}
-
-/* li OF FIRST COLUMN */
-%li {
-  position: relative;
-  padding: 0.5rem 0;
-}
-
 /* ACTIVE ITEM - li */
 %active {
   border-top: 0.1px solid var(--color-grey-dark-2);
@@ -72,7 +57,7 @@
     // z-index: 9999;
   }
 
-  // MENU - FIRST COLUMN ** NEW **
+  // MENU - FIRST COLUMN
   .navbar__first-column {
     padding: 2rem 0rem;
     border-right: 1px solid var(--color-grey-dark-2);
@@ -138,35 +123,62 @@
     border-left: 5px solid var(--color-orange);
   }
 
-  /* G1 DROPDOWN */
-  /* SECOND COLUMN */
-  .navbar__g1-links {
-    border-right: 1px solid var(--color-grey-dark-2);
-    width: 15rem;
-    height: 40rem;
+  // MENU - SECOND COLUMN
+  .navbar__second-column {
     font-family: var(--font-primary);
     font-size: 1.1rem;
+    border-right: 1px solid var(--color-grey-dark-2);
+    width: 15rem;
     margin-left: 2rem;
     padding: 2rem 0rem;
 
-    .navbar__links-li:not(:first-child) {
+    .navbar__title {
+      font-family: var(--font-primary);
+      font-size: 1.2rem;
+      color: var(--color-gray);
+      margin-bottom: 1.5rem;
+    }
+
+    .navbar__second-column-li:not(:first-child) {
       margin-bottom: 0.5rem;
     }
 
-    .navbar__glinks-li:last-child {
+    .navbar__second-column-li:last-child {
       margin-bottom: 0;
     }
 
-    .navbar__links-item {
+    .navbar__second-column-item {
+      &:hover {
+        filter: brightness(115%);
+      }
+    }
+
+    .navbar__second-column-item--g1 {
       color: var(--color-red-text);
 
       &:hover {
         text-decoration: underline var(--color-red-text);
-        filter: brightness(115%);
+      }
+    }
+
+    .navbar__second-column-item--ge {
+      color: var(--color-green-text);
+
+      &:hover {
+        text-decoration: underline var(--color-green-text);
+      }
+    }
+
+    .navbar__second-column-item--gshow {
+      color: var(--color-orange-text);
+
+      &:hover {
+        text-decoration: underline var(--color-orange-text);
       }
     }
   }
 
+  /* G1 DROPDOWN */
   /* THIRD COLUMN */
   .navbar__g1-states {
     padding: 2rem;
@@ -226,37 +238,8 @@
       }
     }
   }
-  /* G1 DROPDOWN ENDS */
 
   /* GE DROPDOWN */
-  /* SECOND COLUMN */
-  .navbar__ge-links {
-    font-family: var(--font-primary);
-    font-size: 1.1rem;
-    border-right: 1px solid var(--color-grey-dark-2);
-    width: 15rem;
-    margin-left: 2rem;
-    padding: 2rem 0rem;
-    height: 40rem;
-
-    .navbar__links-li:not(:first-child) {
-      margin-bottom: 0.5rem;
-    }
-
-    .navbar__links-li:last-child {
-      margin-bottom: 0;
-    }
-
-    .navbar__links-item {
-      color: var(--color-green-text);
-
-      &:hover {
-        text-decoration: underline var(--color-green-text);
-        filter: brightness(115%);
-      }
-    }
-  }
-
   /* THIRD COLUMN - TEAMS */
   .navbar__ge-teams {
     padding: 2rem;
@@ -306,37 +289,8 @@
       }
     }
   }
-  /* GE DROPDOWN ENDS */
 
   /* GSHOW DROPDDOWN */
-  /* SECOND COLUMN */
-  .navbar__gshow-links {
-    font-family: var(--font-primary);
-    font-size: 1.1rem;
-    border-right: 1px solid var(--color-grey-dark-2);
-    width: 15rem;
-    margin-left: 2rem;
-    padding: 2rem 0rem;
-
-    .navbar__links-li {
-      .navbar__links-item {
-        color: var(--color-orange-text);
-
-        &:hover {
-          text-decoration: underline var(--color-orange-text);
-          filter: brightness(115%);
-        }
-      }
-    }
-    .navbar__links-li:not(:first-child) {
-      margin-bottom: 0.5rem;
-    }
-
-    .navbar__links-li:last-child {
-      margin-bottom: 0;
-    }
-  }
-
   /* THIRD COLUMN */
   .navbar__gshow-series {
     padding: 2rem 0rem;
@@ -371,7 +325,6 @@
       }
     }
   }
-  /* GSHOW DROPDDOWN ENDS */
 }
 
 /* VIDEOS DROPDDOWN */
@@ -428,11 +381,4 @@
 
 .navbar__link.open + .navbar__dropdown {
   display: flex;
-}
-
-.dropdown-title {
-  font-family: var(--font-primary);
-  font-size: 1.2rem;
-  color: var(--color-gray);
-  margin-bottom: 1.5rem;
 }
