@@ -1174,51 +1174,43 @@
         <!-- MENU ENDS -->
       </div>
 
-      <div class="navbar__right">
-
-        <div class="navbar__search">
-          <div class="navbar__menu-item">
-            <a href="#">Sign Up</a>
-          </div>
-
-          <div class="navbar__menu-item">
-            <a href="#">My Account</a>
-          </div>
-
-          <div class="navbar__menu-item navbar__menu-item--dropdown">
-            <a href="#">Email
-              <svg class="navbar__icon--btn-hover">
-                <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
-              </svg>
-            </a>
-            <!-- DROPDOWN MENU EMAIL -->
-            <div class="dropdown-content">
-              <div class="dropdown-content__item">
-                <a href="#">globomail free</a>
-              </div>
-              <div class="dropdown-content__item">
-                <a href="#">globomail pro</a>
-              </div>
-            </div>
-            <!-- DROPDOWN MENU EMAIL ENDS -->
-          </div>
-
-          <div class="navbar__input">
-            <label for="#" class="navbar__label"></label>
-            <input type="text" class="navbar__placeholder" placeholder="find on globo.com" onfocus="this.placeholder = ''" onblur="this.placeholder = 'find on globo.com'" >
-          </div>
-
-          <div class="navbar__icon-login">
-            <a href="#">
-              <svg class="navbar__user-icon">
-                <use xlink:href="dist/minified/assets/sprite.svg#icon-user"></use>
-              </svg>
-            </a>
-          </div>
-
+      <div class="navbar--right">
+        <div class="navbar__menu-item">
+          <a class="navbar__account" href="#">Sign Up</a>
         </div>
-        <!-- SEARCH ENDS -->
+
+        <div class="navbar__menu-item">
+          <a class="navbar__account" href="#">My Account</a>
+        </div>
+
+        <div class="navbar__menu-item navbar__menu-item--dropdown">
+          <a class="navbar__email" href="#">Email
+            <svg class="navbar__dropdown-svg">
+              <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
+            </svg>
+          </a>
+          <!-- EMAIL DROPDOWN -->
+          <div class="navbar__email-dropdown">
+            <div class="navbar__email-item">
+              <a class="navbar__email-a" href="#">globomail free</a>
+            </div>
+            <div class="navbar__email-item">
+              <a class="navbar__email-a" href="#">globomail pro</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar__input">
+          <div class="navbar__svg"></div>
+          <input class="navbar__placeholder" type="text" placeholder="find on globo.com" onfocus="this.placeholder = ''" onblur="this.placeholder = 'find on globo.com'" >
+        </div>
+
+        <svg class="navbar__user-icon">
+          <use xlink:href="dist/minified/assets/sprite.svg#icon-user"></use>
+        </svg>
+
       </div>
+      <!-- SEARCH ENDS -->
     </nav>
     <!-- NAVBAR FLEXBOX ENDS -->
   </div>

@@ -146,6 +146,14 @@
     display: flex;
     align-items: center;
 
+    @include respond(iphoneX) {
+      display: none;
+    }
+
+    @include respond(bp-smallest) {
+      display: none;
+    }
+
     .navbar__menu-item {
       color: var(--color-gray);
       font-family: var(--font-secondary);
@@ -180,7 +188,7 @@
         font-size: 10px;
       }
 
-      a {
+      .navbar__account {
         color: var(--color-gray);
       }
     }
@@ -189,10 +197,79 @@
       position: relative;
       display: inline-block;
 
-      a {
+      .navbar__email {
         display: flex;
         justify-content: center;
         align-items: center;
+        color: var(--color-gray);
+
+        .navbar__dropdown-svg {
+          height: 2rem;
+          width: 2rem;
+          fill: var(--color-gray);
+        }
+      }
+
+      /* EMAIL DROPDOWN */
+      .navbar__email-dropdown {
+        display: none;
+        background-color: #f1f1f1;
+        box-shadow: -1px -3px 16px 5px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: 28px;
+        min-width: 160px;
+        z-index: 99999;
+
+        &::before {
+          content: "";
+          position: absolute;
+          right: 130px;
+          top: -10px;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 10px 10px 10px;
+          border-color: transparent transparent #f1f1f1 transparent;
+          z-index: 9999;
+        }
+
+        .navbar__email-item {
+          position: relative;
+          padding: 12px 16px;
+          display: block;
+
+          &:not(:last-child) {
+            margin-bottom: 1.5px;
+          }
+        }
+
+        .navbar__email-item::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 5px;
+          background-color: var(--color-blue);
+          transform: scaleY(0);
+          transition: transform 0.8s;
+        }
+
+        .navbar__email-item:hover::before {
+          transform: scaleY(1);
+        }
+
+        .navbar__email-a {
+          color: var(--color-gray);
+        }
+
+        .navbar__email-item:hover .navbar__email-a {
+          color: var(--color-blue);
+        }
+      }
+
+      &:hover .navbar__email-dropdown {
+        display: block;
       }
     }
 
@@ -207,6 +284,10 @@
       padding: 7px 0 7px 4rem;
       transition: all 0.3s;
 
+      @include respond(bp-smallest) {
+        display: none;
+      }
+
       .navbar__svg {
         position: absolute;
         left: 1.2rem;
@@ -217,6 +298,10 @@
         width: 1.6rem;
         height: 2rem;
         transition: all 0.3s;
+
+        @include respond(bp-between-largest-large) {
+          background-size: 12px;
+        }
       }
 
       .navbar__placeholder {
@@ -224,6 +309,23 @@
         width: 250px;
         font-size: 1.3rem;
         transition: all 0.2s;
+
+        @include respond(bp-small-smallest) {
+          width: 120px;
+        }
+
+        &:focus {
+          outline: none;
+          width: 280px;
+
+          @include respond(bp-small-smallest) {
+            width: 120px;
+          }
+
+          @include respond(bp-medium-small) {
+            width: 250px;
+          }
+        }
       }
     }
 
@@ -231,227 +333,10 @@
       height: 2.5rem;
       width: 2.5rem;
       margin: 5px;
-    }
-  }
-
-  &__search {
-    display: flex;
-    align-items: center;
-  }
-
-  &__menu-item {
-    color: var(--color-gray);
-    font-family: var(--font-secondary);
-    text-transform: uppercase;
-    font-size: 11px;
-    width: 80px;
-    text-align: center;
-
-    &:not(:first-child) {
-      @include respond(bp-small-smallest) {
-        display: none;
-        width: 0;
-      }
-
-      @include respond(bp-medium-small) {
-        display: none;
-        width: 0;
-      }
-
-      @include respond(bp-large-medium) {
-        display: none;
-        width: 0;
-      }
-
-      @include respond(bp-between-largest-large) {
-        display: none;
-        width: 0;
-      }
-    }
-
-    @include respond(bp-between-largest-large) {
-      font-size: 10px;
-    }
-  }
-
-  &__menu-item a {
-    color: var(--color-gray);
-  }
-
-  &__menu-item--dropdown {
-    position: relative;
-    display: inline-block;
-  }
-
-  &__menu-item--dropdown a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &__icon--btn-hover {
-    height: 2rem;
-    width: 2rem;
-    fill: var(--color-gray);
-  }
-  /* NAVBAR LEFT ENDS */
-
-  /* NAVBAR RIGHT */
-  &__right {
-    display: flex;
-    flex: 0 0 25%;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: 5px;
-
-    @include respond(iphoneX) {
-      display: none;
-    }
-
-    @include respond(bp-smallest) {
-      display: none;
-    }
-  }
-
-  /* EMAIL DROPDOWN */
-  .dropdown-content {
-    display: none;
-    background-color: #f1f1f1;
-    box-shadow: -1px -3px 16px 5px rgba(0, 0, 0, 0.2);
-    position: absolute;
-    top: 28px;
-    min-width: 160px;
-    z-index: 99999;
-
-    &::before {
-      content: "";
-      position: absolute;
-      right: 130px;
-      top: -10px;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 0 10px 10px 10px;
-      border-color: transparent transparent #f1f1f1 transparent;
-      z-index: 9999;
-    }
-
-    &__item {
-      position: relative;
-      padding: 12px 16px;
-      display: block;
-
-      &:not(:last-child) {
-        margin-bottom: 1.5px;
-      }
-    }
-
-    &__item::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 5px;
-      background-color: var(--color-blue);
-      transform: scaleY(0);
-      transition: transform 0.8s;
-    }
-
-    &__item:hover::before {
-      transform: scaleY(1);
-    }
-
-    &__item:hover a {
-      color: var(--color-blue);
-    }
-  }
-
-  &__menu-item--dropdown:hover .dropdown-content {
-    display: block;
-  }
-  /* EMAIL DROPDOWN ENDS */
-
-  &__input {
-    display: flex;
-    height: 40px;
-    border-radius: 3px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    float: left;
-    padding: 7px 0 7px 40px;
-    position: relative;
-    transition: all 0.3s;
-    top: -4px;
-    z-index: 120;
-
-    @include respond(bp-smallest) {
-      display: none;
-    }
-  }
-
-  &__label {
-    position: absolute;
-    background: url("../../../dist/minified/assets/SVG/lupa.svg") no-repeat
-      right 0 top 3px;
-    background-size: 15px;
-    border: 0;
-    width: 16px;
-    left: 12px;
-    top: 9px;
-    height: 20px;
-    transition: all 0.3s;
-
-    @include respond(bp-between-largest-large) {
-      background-size: 12px;
-    }
-  }
-
-  &__placeholder {
-    justify-content: flex-end;
-    font-size: 13px;
-    border: none;
-    padding: 0.4rem 0rem;
-    border-radius: 2px;
-    width: 250px;
-    transition: all 0.2s;
-
-    @include respond(bp-small-smallest) {
-      width: 120px;
-    }
-
-    &:focus {
-      outline: none;
-      width: 280px;
 
       @include respond(bp-small-smallest) {
-        width: 120px;
+        margin: 0 0 6px 8px;
       }
-
-      @include respond(bp-medium-small) {
-        width: 250px;
-      }
-    }
-  }
-
-  &__icon-login {
-    margin: 0 0 6px 15px;
-
-    @include respond(bp-small-smallest) {
-      margin: 0 0 6px 8px;
-    }
-  }
-
-  &__user-icon {
-    height: 2.5rem;
-    width: 2.5rem;
-
-    @include respond(bp-small-smallest) {
-      width: 1.8rem;
-    }
-
-    @include respond(bp-between-largest-large) {
-      width: 2rem;
     }
   }
 }
