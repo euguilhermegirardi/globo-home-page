@@ -39,9 +39,10 @@
   position: absolute;
   top: 7rem;
   background-color: #f1f1f1;
-  border-radius: 3px;
-  box-shadow: -1px -3px 16px 5px rgba(0, 0, 0, 0.2);
-  min-width: 160px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 1rem 1.5rem rgba(0, 0, 0, 0.2);
+  min-width: 16rem;
+  min-height: 42rem;
   z-index: 99999;
 
   &::before {
@@ -125,19 +126,11 @@
 
   // MENU - SECOND COLUMN
   .navbar__second-column {
-    font-family: var(--font-primary);
     font-size: 1.1rem;
     border-right: 1px solid var(--color-grey-dark-2);
     width: 15rem;
     margin-left: 2rem;
     padding: 2rem 0rem;
-
-    .navbar__title {
-      font-family: var(--font-primary);
-      font-size: 1.2rem;
-      color: var(--color-gray);
-      margin-bottom: 1.5rem;
-    }
 
     .navbar__second-column-li:not(:first-child) {
       margin-bottom: 0.5rem;
@@ -178,9 +171,17 @@
     }
   }
 
-  /* G1 DROPDOWN */
+  // Outside to be used in all dropdowns
+  .navbar__title {
+    font-family: var(--font-primary);
+    font-size: 1.2rem;
+    color: var(--color-gray);
+    margin-bottom: 1.5rem;
+  }
+
   /* THIRD COLUMN */
   .navbar__g1-states {
+    border-radius: 5px;
     padding: 2rem;
     background-color: var(--color-gray-light-5);
 
@@ -239,12 +240,10 @@
     }
   }
 
-  /* GE DROPDOWN */
-  /* THIRD COLUMN - TEAMS */
   .navbar__ge-teams {
+    border-radius: 5px;
     padding: 2rem;
     background-color: var(--color-gray-light-5);
-    width: 21rem;
 
     .navbar__btn-container {
       justify-content: center;
@@ -290,13 +289,10 @@
     }
   }
 
-  /* GSHOW DROPDDOWN */
-  /* THIRD COLUMN */
   .navbar__gshow-series {
-    padding: 2rem 0rem;
+    border-radius: 5px;
+    padding: 2rem;
     background-color: var(--color-gray-light-5);
-    padding-left: 2rem;
-    width: 21rem;
 
     .navbar__gshow-li {
       margin-bottom: 1rem;
@@ -330,26 +326,7 @@
 /* VIDEOS DROPDDOWN */
 .navbar__dropdown--videos {
   flex-direction: column;
-  background-color: #f1f1f1;
-  border-radius: 3px;
-  box-shadow: -1px -3px 16px 5px rgba(0, 0, 0, 0.2);
-  position: absolute;
-  top: 7rem;
-  min-width: 160px;
-  z-index: 99999;
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 10px;
-    top: -10px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 10px 10px 10px;
-    border-color: transparent transparent #f1f1f1 transparent;
-    z-index: 9999;
-  }
+  min-height: auto;
 
   .navbar__videos-li {
     position: relative;
