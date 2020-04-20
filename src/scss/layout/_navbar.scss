@@ -142,12 +142,101 @@
     }
   }
 
-  // NAVBAR RIGHT SIDE
+  .navbar--right {
+    display: flex;
+    align-items: center;
+
+    .navbar__menu-item {
+      color: var(--color-gray);
+      font-family: var(--font-secondary);
+      text-transform: uppercase;
+      font-size: 11px;
+      width: 80px;
+      text-align: center;
+
+      &:not(:first-child) {
+        @include respond(bp-small-smallest) {
+          display: none;
+          width: 0;
+        }
+
+        @include respond(bp-medium-small) {
+          display: none;
+          width: 0;
+        }
+
+        @include respond(bp-large-medium) {
+          display: none;
+          width: 0;
+        }
+
+        @include respond(bp-between-largest-large) {
+          display: none;
+          width: 0;
+        }
+      }
+
+      @include respond(bp-between-largest-large) {
+        font-size: 10px;
+      }
+
+      a {
+        color: var(--color-gray);
+      }
+    }
+
+    .navbar__menu-item--dropdown {
+      position: relative;
+      display: inline-block;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .navbar__input {
+      display: flex;
+      align-items: center;
+      position: relative;
+      height: 3.3rem;
+      border-radius: 3px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 7px 0 7px 4rem;
+      transition: all 0.3s;
+
+      .navbar__svg {
+        position: absolute;
+        left: 1.2rem;
+        top: 6px;
+        background: url(../../../dist/minified/assets/SVG/lupa.svg) no-repeat
+          right 0 top 3px;
+        background-size: 1.5rem;
+        width: 1.6rem;
+        height: 2rem;
+        transition: all 0.3s;
+      }
+
+      .navbar__placeholder {
+        border: none;
+        width: 250px;
+        font-size: 1.3rem;
+        transition: all 0.2s;
+      }
+    }
+
+    .navbar__user-icon {
+      height: 2.5rem;
+      width: 2.5rem;
+      margin: 5px;
+    }
+  }
 
   &__search {
     display: flex;
     align-items: center;
-    justify-content: center;
   }
 
   &__menu-item {
