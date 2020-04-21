@@ -22,26 +22,6 @@
   padding-right: 1rem;
   color: var(--color-red-text);
 
-  @include respond(iphoneX) {
-    grid-column: full-start/full-end;
-  }
-
-  @include respond(bp-smallest) {
-    grid-column: full-start/full-end;
-  }
-
-  @include respond(bp-small-smallest) {
-    grid-column: full-start/full-end;
-  }
-
-  @include respond(bp-medium-small) {
-    grid-column: full-start/full-end;
-  }
-
-  @include respond(bp-large-medium) {
-    grid-column: full-start/full-end;
-  }
-
   .left-top__top {
     display: grid;
     grid-template-columns: 1fr;
@@ -296,5 +276,25 @@
     @include respond(bp-between-largest-large) {
       grid-template-columns: repeat(auto-fit, minmax(16rem, auto));
     }
+  }
+
+  @include respond(iphoneX) {
+    grid-column: full-start/full-end;
+  }
+
+  @include respond(bp-smallest) {
+    grid-column: full-start/full-end;
+  }
+
+  @include respond(bp-small-smallest) {
+    grid-column: full-start/full-end;
+  }
+
+  @include respond(bp-medium-small) {
+    grid-column: full-start/full-end;
+  }
+
+  @include respond(bp-large-medium) {
+    grid-column: full-start/full-end;
   }
 }
