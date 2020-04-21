@@ -29,8 +29,7 @@
 </head>
 <body>
   <div class="container">
-
-    <!-- MOBILE NAVIGATON -->
+    <!-- _navbar-mobile.scss -->
     <nav class="navbar-mobile">
       <span class="navbar-mobile__menu--open" >&#9776;</span>
 
@@ -100,9 +99,7 @@
         </div>
         <!-- SUB SIDEBAR ENDS-->
       </div>
-      <!-- MENU MOBILE ENDS -->
     </nav>
-    <!-- MOBILE NAVIGATON ENDS -->
 
     <!-- _navbar.scss -->
     <nav class="navbar">
@@ -1173,7 +1170,6 @@
         </ul>
         <!-- MENU ENDS -->
       </div>
-
       <div class="navbar--right">
         <div class="navbar__menu-item">
           <a class="navbar__account" href="#">Sign Up</a>
@@ -1210,12 +1206,10 @@
         </svg>
 
       </div>
-      <!-- SEARCH ENDS -->
     </nav>
-    <!-- NAVBAR FLEXBOX ENDS -->
   </div>
 
-  <hr class="divider">
+  <div class="divider">
 
   <!-- MAIN CONTAINER GRID -->
   <div class="container">
@@ -1227,71 +1221,64 @@
 
       <!-- LEFT-TOP -->
       <section class="left-top">
-        <div class="left-top--first-box">
-          <h2>Survey: No. of fines imposed by Ibama is the lowest in 15 years</h2>
-          <p>Bolsonaro denies exchange of ministers and praises Weintraub: 'Excellent'</p>
+        <div class="left-top__top">
+          <h1 class="left-top__h1">Survey: No. of fines imposed by Ibama is the lowest in 15 years</h1>
+          <p class="left-top__p">Bolsonaro denies exchange of ministers and praises Weintraub: 'Excellent'</p>
         </div>
-        <div class="left-top--second-box">
-          <div>
-            <p>Follow Flamengo's first training session in Doha</p>
-          </div>
-          <div>
-            <p>Check out the analysis about Al Hilal, Fla's rival</p>
-          </div>
+        <div class="left-top__middle">
+          <p class="left-top__p">Follow Flamengo's first training session in Doha</p>
+          <p class="left-top__p">Check out the analysis about Al Hilal, Fla's rival</p>
         </div>
-
-
-        <hr class="divider">
-
-        <div class="left-top--third-box">
-          <div>
-            <div class="left-top--third-box-boxes">
+        <div class="left-top__bottom">
+          <div class="left-top__boxes">
+            <div class="left-top__img-container">
               <picture>
                 <source media="(max-width: 49.99em)" srcset="dist/minified/assets/section-left-top/small-smallest/amanda-tough-fight.jpg" alt="UFC - Amanda"  title="Amanda fighting in UFC" />
                 <source media="(max-width: 56.24em)" srcset="dist/minified/assets/section-left-top/medium-small/amanda-tough-fight.jpg" alt="UFC - Amanda"  title="Amanda fighting in UFC" />
                 <source media="(max-width: 62.49em)" srcset="dist/minified/assets/section-left-top/large-medium/amanda-tough-fight.jpg" alt="UFC - Amanda"  title="Amanda fighting in UFC" />
                 <source media="(max-width: 71.24em)" srcset="dist/minified/assets/section-left-top/largest-large/amanda-tough-fight.jpg" alt="UFC - Amanda"  title="Amanda fighting in UFC" />
                 <source media="(max-width: 75em)" srcset="dist/minified/assets/section-left-top/largest/amanda-tough-fight.jpg" alt="UFC - Amanda"  title="Amanda fighting in UFC" />
-                <img src="dist/minified/assets/section-left-top/amanda-tough-fight.jpg" alt="UFC - Amanda"  title="Amanda fighting in UFC" />
+                <img class="left-top__img" src="dist/minified/assets/section-left-top/amanda-tough-fight.jpg" alt="UFC - Amanda"  title="Amanda fighting in UFC" />
               </picture>
-              <h4>Amanda wins a tough fight and continues with the belt</h4>
+              <h4 class="left-top__h4">Amanda wins a tough fight and continues with the belt</h4>
             </div>
-            <p>Usman knocks out and keeps the belt</p>
+            <p class="left-top__bottom-p">Usman knocks out and keeps the belt</p>
           </div>
-          <div>
-            <div class="left-top--third-box-boxes">
+
+          <div class="left-top__boxes">
+            <div class="left-top__img-container">
               <picture>
                 <source media="(max-width: 49.99em)" srcset="dist/minified/assets/section-left-top/small-smallest/marlon-moraes-wins-aldo.jpg" alt="UFC - Marlon Moraes" title="Marlon wins Aldo" />
                 <source media="(max-width: 56.24em)" srcset="dist/minified/assets/section-left-top/medium-small/marlon-moraes-wins-aldo.jpg" alt="UFC - Marlon Moraes" title="Marlon wins Aldo" />
                 <source media="(max-width: 62.49em)" srcset="dist/minified/assets/section-left-top/large-medium/marlon-moraes-wins-aldo.jpg" alt="UFC - Marlon Moraes" title="Marlon wins Aldo" />
                 <source media="(max-width: 71.24em)" srcset="dist/minified/assets/section-left-top/largest-large/marlon-moraes-wins-aldo.jpg" alt="UFC - Marlon Moraes" title="Marlon wins Aldo" />
                 <source media="(max-width: 75em)" srcset="dist/minified/assets/section-left-top/largest/marlon-moraes-wins-aldo.jpg" alt="UFC - Marlon Moraes" title="Marlon wins Aldo" />
-                <img src="dist/minified/assets/section-left-top/marlon-moraes-wins-aldo.jpg" alt="UFC - Marlon Moraes" title="Marlon wins Aldo" />
+                <img class="left-top__img" src="dist/minified/assets/section-left-top/marlon-moraes-wins-aldo.jpg" alt="UFC - Marlon Moraes" title="Marlon wins Aldo" />
               </picture>
-              <h4>Marlon Moraes defeats Aldo in split decision</h4>
+              <h4 class="left-top__h4">Marlon Moraes defeats Aldo in split decision</h4>
             </div>
-            <p>Ketlen is knocked out on the preliminary card</p>
+            <p class="left-top__bottom-p">Ketlen is knocked out on the preliminary card</p>
           </div>
-          <div>
-            <div class="left-top--third-box-boxes">
+
+          <div class="left-top__boxes">
+            <div class="left-top__img-container">
               <picture>
                 <source media="(max-width: 49.99em)" srcset="dist/minified/assets/section-left-top/small-smallest/sampaoli-couch.jpg" alt="Sampoli couch" title="Palmerias gives up on Sampaoli" />
                 <source media="(max-width: 56.24em)" srcset="dist/minified/assets/section-left-top/medium-small/sampaoli-couch.jpg" alt="Sampoli couch" title="Palmerias gives up on Sampaoli" />
                 <source media="(max-width: 62.49em)" srcset="dist/minified/assets/section-left-top/large-medium/sampaoli-couch.jpg" alt="Sampoli couch" title="Palmerias gives up on Sampaoli" />
                 <source media="(max-width: 71.24em)" srcset="dist/minified/assets/section-left-top/largest-large/sampaoli-couch.jpg" alt="Sampoli couch" title="Palmerias gives up on Sampaoli" />
                 <source media="(max-width: 75em)" srcset="dist/minified/assets/section-left-top/largest/sampaoli-couch.jpg" alt="Sampoli couch" title="Palmerias gives up on Sampaoli" />
-                <img src="dist/minified/assets/section-left-top/sampaoli-couch.jpg" alt="Sampoli couch" title="Palmerias gives up on Sampaoli" />
+                <img class="left-top__img" src="dist/minified/assets/section-left-top/sampaoli-couch.jpg" alt="Sampoli couch" title="Palmerias gives up on Sampaoli" />
               </picture>
-              <h4>Verdão has no agreement and gives up on Sampaoli</h4>
+              <h4 class="left-top__h4">Verdão has no agreement and gives up on Sampaoli</h4>
             </div>
-            <p>Palmeiras can have Luxa or Spanish</p>
+            <p class="left-top__bottom-p">Palmeiras can have Luxa or Spanish</p>
           </div>
         </div>
       </section>
-      <!-- LEFT-TOP ENDS -->
 
       <!-- RIGHT-TOP -->
-      <section class="right-top">
+      <aside class="right-top">
 
         <div class="right-top--left">
           <div class="right-top--news-left">
@@ -1299,7 +1286,7 @@
               <source media="(max-width: 62.49em)" srcset="dist/minified/assets/aside-right-top/large-medium/camel-racing.jpg" alt="camel-racing" title="Camel racing" />
               <source media="(max-width: 71.24em)" srcset="dist/minified/assets/aside-right-top/largest-large/camel-racing.jpg" alt="camel-racing" title="Camel racing" />
               <source media="(max-width: 75em)" srcset="dist/minified/assets/aside-right-top/largest/camel-racing.jpg" alt="camel-racing" title="Camel racing" />
-              <img src="dist/minified/assets/aside-right-top/camel-racing.jpg" alt="camel-racing" title="Camel racing" />
+              <img class="left-top__img" src="dist/minified/assets/aside-right-top/camel-racing.jpg" alt="camel-racing" title="Camel racing" />
             </picture>
             <h4>In Doha, camel racing puts the World Championship in the background</h4>
           </div>
@@ -1350,7 +1337,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </aside>
       <!-- RIGHT-TOP ENDS -->
 
       <!-- ADVERTISEMENT -->

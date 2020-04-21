@@ -1,5 +1,6 @@
 %before {
   content: "";
+  position: relative;
   width: 5px;
   height: 5px;
   background-color: #909090;
@@ -16,14 +17,10 @@
 
 .left-top {
   grid-column: full-start/col-start 6;
-  padding-right: 1rem;
   display: grid;
   grid-template-columns: auto;
-
-  @include respond(iphone6to8) {
-    grid-column: full-start/full-end;
-    padding-right: 0;
-  }
+  padding-right: 1rem;
+  color: var(--color-red-text);
 
   @include respond(iphoneX) {
     grid-column: full-start/full-end;
@@ -45,14 +42,15 @@
     grid-column: full-start/full-end;
   }
 
-  &--first-box {
+  .left-top__top {
     display: grid;
     grid-template-columns: 1fr;
-    font-size: 3.5rem;
 
-    h2 {
-      @include respond(iphone6to8P) {
-        margin: 2rem;
+    .left-top__h1 {
+      font-size: 5.3rem;
+
+      &:hover {
+        @extend %hover;
       }
 
       @include respond(iphoneX) {
@@ -61,9 +59,17 @@
       }
     }
 
-    p {
-      @include respond(iphone6to8P) {
-        margin-bottom: 2rem;
+    .left-top__p {
+      font-size: 3rem;
+      margin-top: 5px;
+
+      &:hover {
+        @extend %hover;
+      }
+
+      &::before {
+        @extend %before;
+        bottom: 7px;
       }
 
       @include respond(iphoneX) {
@@ -98,35 +104,25 @@
     @include respond(bp-between-largest-large) {
       font-size: 2.5rem;
     }
+  }
 
-    & > * {
-      margin-bottom: 2.5rem;
-      color: var(--color-red-text);
+  .left-top__middle {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+
+    .left-top__p {
+      font-size: 14px;
+      font-weight: bold;
 
       &:hover {
         @extend %hover;
       }
     }
 
-    p::before {
-      content: "";
-      width: 5px;
-      height: 5px;
-      background-color: #909090;
-      display: inline-block;
-      border-radius: 100rem;
-      margin-bottom: 0.5rem;
-      margin-right: 0.8rem;
+    .left-top__p::before {
+      @extend %before;
     }
-  }
-
-  &--second-box {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    color: var(--color-red-text);
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 1rem;
 
     @include respond(iphoneX) {
       display: none;
@@ -151,22 +147,135 @@
       grid-row-gap: 2rem;
       font-size: 1.6rem;
     }
-
-    p:hover {
-      @extend %hover;
-    }
-
-    p::before {
-      @extend %before;
-    }
   }
 
-  &--third-box {
+  .left-top__bottom {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
     grid-column-gap: 5px;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    align-items: center;
+
+    .left-top__boxes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .left-top__img-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .left-top__img {
+          border-radius: 4px;
+          transition: all 1s ease;
+
+          &:hover {
+            filter: brightness(70%);
+          }
+
+          @include respond(iphoneX) {
+            height: 11rem;
+            width: 50%;
+          }
+
+          @include respond(bp-smallest) {
+            height: 8rem;
+          }
+        }
+
+        .left-top__h4 {
+          height: 6rem;
+          text-align: initial;
+          padding: 0 1.4rem;
+          font-size: 1.8rem;
+
+          @include respond(iphoneX) {
+            margin-bottom: 0;
+            align-self: center;
+            margin-left: 1rem;
+            height: 6rem;
+          }
+
+          @include respond(bp-smallest) {
+            text-align: center;
+            font-size: 1rem;
+            margin-bottom: 1.2rem;
+            height: 2rem;
+          }
+
+          @include respond(bp-small-smallest) {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            height: 2.5rem;
+          }
+
+          @include respond(bp-medium-small) {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+          }
+
+          @include respond(bp-large-medium) {
+            margin-bottom: 1rem;
+            padding: 0 1rem;
+            text-align: center;
+          }
+        }
+
+        &:hover {
+          .left-top__img {
+            filter: brightness(70%);
+          }
+
+          .left-top__h4 {
+            @extend %hover;
+          }
+        }
+      }
+
+      .left-top__bottom-p {
+        font-size: 1.4rem;
+        padding: 0 1.4rem;
+        margin-top: 1rem;
+
+        &:hover {
+          @extend %hover;
+        }
+
+        &::before {
+          @extend %before;
+        }
+
+        @include respond(iphoneX) {
+          display: none;
+        }
+
+        @include respond(bp-smallest) {
+          text-align: center;
+          font-size: 0.9rem;
+        }
+
+        @include respond(bp-small-smallest) {
+          text-align: center;
+          font-size: 1.1rem;
+        }
+
+        @include respond(bp-medium-small) {
+          text-align: center;
+          font-size: 1.3rem;
+        }
+
+        @include respond(bp-large-medium) {
+          text-align: center;
+        }
+      }
+
+      @include respond(iphoneX) {
+        display: flex;
+        padding: 1rem;
+      }
+    }
 
     @include respond(iphoneX) {
       display: none;
@@ -186,113 +295,6 @@
 
     @include respond(bp-between-largest-large) {
       grid-template-columns: repeat(auto-fit, minmax(16rem, auto));
-    }
-
-    &-boxes {
-      @include respond(iphoneX) {
-        display: flex;
-        padding: 1rem;
-      }
-    }
-
-    &-boxes:hover {
-      img {
-        filter: brightness(70%);
-      }
-
-      h4 {
-        @extend %hover;
-      }
-    }
-
-    img {
-      border-radius: 4px;
-      transition: all 1s ease;
-
-      @include respond(iphoneX) {
-        height: 11rem;
-        width: 50%;
-      }
-
-      @include respond(bp-smallest) {
-        height: 8rem;
-      }
-    }
-
-    h4 {
-      color: var(--color-red-text);
-      font-size: 18px;
-      margin-bottom: 1.5rem;
-      height: 5rem;
-
-      @include respond(iphoneX) {
-        margin-bottom: 0;
-        align-self: center;
-        margin-left: 1rem;
-        height: 6rem;
-      }
-
-      @include respond(bp-smallest) {
-        text-align: center;
-        font-size: 1rem;
-        margin-bottom: 1.2rem;
-        height: 2rem;
-      }
-
-      @include respond(bp-small-smallest) {
-        text-align: center;
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-        height: 2.5rem;
-      }
-
-      @include respond(bp-medium-small) {
-        text-align: center;
-        font-size: 1.5rem;
-        margin-bottom: 0.8rem;
-      }
-
-      @include respond(bp-large-medium) {
-        margin-bottom: 1rem;
-        padding: 0 1rem;
-        text-align: center;
-      }
-    }
-
-    p {
-      color: var(--color-red-text);
-      font-size: 14px;
-
-      @include respond(iphoneX) {
-        display: none;
-      }
-
-      @include respond(bp-smallest) {
-        text-align: center;
-        font-size: 0.9rem;
-      }
-
-      @include respond(bp-small-smallest) {
-        text-align: center;
-        font-size: 1.1rem;
-      }
-
-      @include respond(bp-medium-small) {
-        text-align: center;
-        font-size: 1.3rem;
-      }
-
-      @include respond(bp-large-medium) {
-        text-align: center;
-      }
-
-      &:hover {
-        @extend %hover;
-      }
-
-      &::before {
-        @extend %before;
-      }
     }
   }
 }

@@ -40,7 +40,7 @@
   &--left {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 1rem;
+    padding: 2rem;
 
     @include respond(bp-smallest) {
       display: flex;
