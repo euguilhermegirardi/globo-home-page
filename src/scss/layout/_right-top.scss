@@ -6,14 +6,16 @@
   border-left: 1px solid #ccc;
 
   .right-top__container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 2rem;
 
     .right-top__img-contaier {
-      grid-column: 1/-1;
-      display: grid;
-      align-content: baseline;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
 
       &:hover {
         .right-top__img {
@@ -183,20 +185,11 @@
   }
 
   .right-top__txt {
-    grid-column: 1/-1;
+    text-align: center;
     margin: 2rem 0;
 
     @include respond(bp-smallest) {
-      text-align: center;
       min-height: 5rem;
-    }
-
-    @include respond(bp-small-smallest) {
-      text-align: center;
-    }
-
-    @include respond(bp-medium-small) {
-      text-align: center;
     }
 
     @include respond(bp-large-medium) {

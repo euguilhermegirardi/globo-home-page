@@ -4,51 +4,20 @@
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-column-gap: 3rem;
 
-  @include respond(iphoneX) {
-    display: none;
-  }
-
-  @include respond(bp-smallest) {
-    display: none;
-  }
-
-  @include respond(bp-small-smallest) {
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-  }
-
-  @include respond(bp-medium-small) {
-    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
-    margin: 1.5rem 0;
-    grid-column-gap: 1.4rem;
-  }
-
-  @include respond(bp-large-medium) {
-    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+  .three-news__container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-  }
 
-  @include respond(bp-between-largest-large) {
-    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
-  }
-
-  &--g1,
-  &--ge,
-  &--gshow {
-    @include respond(bp-large-medium) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    img {
+    .three-news__img {
       border-radius: 4px;
       transition: all 1s ease;
     }
 
-    h4 {
+    .three-news__h4 {
       font-size: 22px;
-      margin-bottom: 1.5rem;
       line-height: 2.8rem;
+      padding: 0 1.1rem;
 
       @include respond(bp-smallest) {
         text-align: center;
@@ -83,26 +52,57 @@
       }
     }
 
-    &:hover {
-      img {
-        filter: brightness(70%);
-      }
-
-      h4 {
-        filter: brightness(140%);
-      }
+    @include respond(bp-large-medium) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 
-  &--g1 h4 {
+  .three-news__container--g1 {
     color: var(--color-red-text);
   }
 
-  &--ge h4 {
+  .three-news__container--ge {
     color: var(--color-green-text);
   }
 
-  &--gshow h4 {
+  .three-news__container--gshow {
     color: var(--color-orange-text);
+  }
+  // &:hover {
+  //   img {
+  //     filter: brightness(70%);
+  //   }
+
+  //   h4 {
+  //     filter: brightness(140%);
+  //   }
+  // }
+  @include respond(iphoneX) {
+    display: none;
+  }
+
+  @include respond(bp-smallest) {
+    display: none;
+  }
+
+  @include respond(bp-small-smallest) {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  }
+
+  @include respond(bp-medium-small) {
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    margin: 1.5rem 0;
+    grid-column-gap: 1.4rem;
+  }
+
+  @include respond(bp-large-medium) {
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    align-items: center;
+  }
+
+  @include respond(bp-between-largest-large) {
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
   }
 }
