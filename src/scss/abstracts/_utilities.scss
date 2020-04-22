@@ -23,3 +23,22 @@
 .none {
   display: none;
 }
+
+// Extend classes
+%before {
+  content: "";
+  position: relative;
+  width: 5px;
+  height: 5px;
+  background-color: #909090;
+  display: inline-block;
+  border-radius: 100rem;
+  margin-bottom: 0.1rem;
+  margin-right: 0.4rem;
+}
+
+%hover {
+  cursor: pointer;
+  filter: brightness(140%);
+  transition: all 1s ease;
+}
