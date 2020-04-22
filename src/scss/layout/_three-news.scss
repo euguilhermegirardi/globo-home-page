@@ -9,47 +9,19 @@
     flex-direction: column;
     align-items: center;
 
+    &:hover {
+      .three-news__img {
+        filter: brightness(70%);
+      }
+
+      .three-news__h4 {
+        @extend %hover;
+      }
+    }
+
     .three-news__img {
       border-radius: 4px;
       transition: all 1s ease;
-    }
-
-    .three-news__h4 {
-      font-size: 22px;
-      line-height: 2.8rem;
-      padding: 0 1.1rem;
-
-      @include respond(bp-smallest) {
-        text-align: center;
-        font-size: 1.2rem;
-        line-height: normal;
-        margin-top: 3px;
-        margin-bottom: 0.5rem;
-      }
-
-      @include respond(bp-small-smallest) {
-        text-align: center;
-        font-size: 1.2rem;
-        line-height: normal;
-        margin-top: 3px;
-        margin-bottom: 0.5rem;
-      }
-
-      @include respond(bp-medium-small) {
-        text-align: center;
-        font-size: 1.5rem;
-        line-height: normal;
-        margin-top: 5px;
-        margin-bottom: 0;
-      }
-
-      @include respond(bp-large-medium) {
-        margin-top: 5px;
-        margin-bottom: 0;
-        font-size: 1.5rem;
-        text-align: center;
-        line-height: 18px;
-      }
     }
 
     @include respond(bp-large-medium) {
@@ -69,6 +41,44 @@
 
   .three-news__container--gshow {
     color: var(--color-orange-text);
+  }
+
+  .three-news__h4 {
+    font-size: 22px;
+    line-height: 2.8rem;
+    padding: 0 1.1rem;
+
+    @include respond(bp-smallest) {
+      text-align: center;
+      font-size: 1.2rem;
+      line-height: normal;
+      margin-top: 3px;
+      margin-bottom: 0.5rem;
+    }
+
+    @include respond(bp-small-smallest) {
+      text-align: center;
+      font-size: 1.2rem;
+      line-height: normal;
+      margin-top: 3px;
+      margin-bottom: 0.5rem;
+    }
+
+    @include respond(bp-medium-small) {
+      text-align: center;
+      font-size: 1.5rem;
+      line-height: normal;
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
+
+    @include respond(bp-large-medium) {
+      margin-top: 5px;
+      margin-bottom: 0;
+      font-size: 1.5rem;
+      text-align: center;
+      line-height: 18px;
+    }
   }
   // &:hover {
   //   img {
