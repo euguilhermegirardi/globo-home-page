@@ -13,22 +13,18 @@
       padding: 1rem 0;
 
       &:hover {
-        img {
+        .six-news__img {
           filter: brightness(70%);
         }
 
-        h4 {
-          filter: brightness(140%);
+        .six-news__h4 {
+          @extend %hover;
         }
       }
 
       &:not(:last-child) {
         border-top: 2px solid #ccc;
         border-bottom: 2px solid #ccc;
-
-        @include respond(iphone6to8P) {
-          border-top: 0;
-        }
 
         @include respond(iphoneX) {
           border-top: 0;
@@ -90,24 +86,14 @@
       }
 
       @include respond(bp-smallest) {
-        display: flex;
         flex-direction: row;
       }
 
       @include respond(bp-small-smallest) {
-        display: flex;
-        flex-direction: column;
         height: 100%;
       }
 
-      @include respond(bp-medium-small) {
-        display: flex;
-        flex-direction: column;
-      }
-
       @include respond(bp-large-medium) {
-        display: flex;
-        flex-direction: column;
         height: 20rem;
       }
     }
