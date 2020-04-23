@@ -4,6 +4,31 @@
   height: 4.7rem;
   margin-bottom: -2.2rem;
 
+  .videos-header__h4 {
+    font-size: 3rem;
+    text-transform: uppercase;
+
+    &::after {
+      content: "";
+      width: 60px;
+      height: 5px;
+      display: block;
+      margin-top: 0.6875rem;
+      position: absolute;
+      background: #f31d1d;
+    }
+
+    @include respond(bp-medium-small) {
+      font-size: 3rem;
+      margin-top: 0rem;
+    }
+
+    @include respond(bp-large-medium) {
+      font-size: 2.5rem;
+      margin-top: 5px;
+    }
+  }
+
   @include respond(iphoneX) {
     margin-bottom: 0.5rem;
   }
@@ -19,30 +44,6 @@
   @include respond(bp-medium-small) {
     margin-bottom: 1rem;
   }
-
-  h4 {
-    font-size: 3rem;
-
-    @include respond(bp-medium-small) {
-      font-size: 3rem;
-      margin-top: 0rem;
-    }
-
-    @include respond(bp-large-medium) {
-      font-size: 2.5rem;
-      margin-top: 5px;
-    }
-  }
-
-  span::after {
-    content: "";
-    width: 60px;
-    height: 5px;
-    display: block;
-    margin-top: 0.6875rem;
-    position: absolute;
-    background: #f31d1d;
-  }
 }
 
 .videos {
@@ -51,75 +52,50 @@
   grid-template-columns: repeat(auto-fit, minmax(42rem, 1fr));
   grid-column-gap: 1.5rem;
 
-  @include respond(bp-smallest) {
-    display: flex;
-    justify-content: center;
-  }
-
-  /* LEFT SIDE */
-  &-left {
+  .videos__left {
     position: relative;
     text-align: center;
-    color: white;
+    color: #fff;
     cursor: pointer;
 
-    @include respond(iphoneX) {
-      display: none;
-    }
-
-    @include respond(bp-smallest) {
-      display: none;
-    }
-
-    @include respond(bp-small-smallest) {
-      display: none;
-    }
-
-    @include respond(bp-medium-small) {
-      display: none;
-    }
-
-    @include respond(bp-large-medium) {
-      display: none;
-    }
-
     &:hover {
-      img {
+      .videos__left-img {
         filter: brightness(60%);
       }
     }
 
-    img {
+    .videos__left-img {
       border-radius: 8px;
       transition: all 1s ease;
     }
 
-    &--container {
+    .videos__text {
       position: absolute;
-      bottom: 20px;
+      bottom: 1rem;
       text-align: initial;
-      left: 1.2rem;
+      left: 4rem;
+      width: 54rem;
 
-      h4 {
+      .videos__container-h4 {
         font-size: 1.8rem;
         margin-bottom: 0.7rem;
       }
 
-      p {
+      .videos__container-p {
         font-size: 2rem;
-        width: 80%;
-      }
+        width: 95%;
 
-      span::before {
-        content: "3 min";
-        position: absolute;
-        right: 35px;
-        bottom: 0;
-        font-size: 1.5rem;
+        &::before {
+          content: "3 min";
+          position: absolute;
+          right: 0px;
+          bottom: 4px;
+          font-size: 1.5rem;
+        }
       }
     }
 
-    &--button {
+    .videos__play {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -131,37 +107,33 @@
       border-width: 37px 0 37px 60px;
       transition: all 1s ease;
     }
-  }
-  /* LEFT SIDE ENDS */
-
-  /* RIGHT SIDE */
-  &-right {
-    display: grid;
-    grid-gap: 1px;
 
     @include respond(iphoneX) {
-      display: flex;
-      flex-direction: column;
+      display: none;
     }
 
     @include respond(bp-smallest) {
-      display: flex;
-      flex-direction: column;
+      display: none;
     }
 
     @include respond(bp-small-smallest) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: none;
     }
 
     @include respond(bp-medium-small) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: none;
     }
 
-    img {
+    @include respond(bp-large-medium) {
+      display: none;
+    }
+  }
+
+  .videos__right {
+    display: grid;
+    grid-gap: 1px;
+
+    .videos__right-img {
       border-radius: 8px;
       transition: all 1s ease;
 
@@ -170,18 +142,18 @@
       }
     }
 
-    &--container {
+    .videos__right-text {
       position: absolute;
       bottom: 10px;
       text-align: initial;
-      left: 1.2rem;
+      left: 2rem;
 
       @include respond(bp-medium-small) {
         left: 2rem;
         bottom: 3rem;
       }
 
-      h4 {
+      .videos__right-h4 {
         font-size: 1.2rem;
         margin-bottom: 0.7rem;
 
@@ -190,37 +162,41 @@
         }
       }
 
-      p {
+      .videos__right-p {
         font-size: 1.5rem;
         width: 80%;
+
+        &::before {
+          content: "3 min";
+          position: absolute;
+          right: 2rem;
+          bottom: 0;
+          font-size: 1.2rem;
+
+          @include respond(bp-medium-small) {
+            display: none;
+          }
+        }
 
         @include respond(bp-medium-small) {
           font-size: 1.8rem;
         }
       }
-
-      span::before {
-        content: "3 min";
-        position: absolute;
-        right: 10px;
-        bottom: 0;
-        font-size: 1.2rem;
-
-        @include respond(bp-medium-small) {
-          display: none;
-        }
-      }
     }
 
-    &--videos1,
-    &--videos3 {
+    .videos__left-column {
       grid-column: 1/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: relative;
-      color: white;
+      color: #fff;
+      cursor: pointer;
 
-      @include respond(iphone6to8P) {
-        width: 95%;
-        margin-left: 3px;
+      &:hover {
+        .videos__right-img {
+          filter: brightness(60%);
+        }
       }
 
       @include respond(iphoneX) {
@@ -239,26 +215,22 @@
 
       @include respond(bp-large-medium) {
         grid-column: 1/4;
-        display: flex;
-        justify-content: center;
-      }
-
-      &:hover {
-        img {
-          filter: brightness(60%);
-        }
       }
     }
 
-    &--videos2,
-    &--videos4 {
+    .videos__right-column {
       grid-column: 4/6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: relative;
-      color: white;
+      color: #fff;
+      cursor: pointer;
 
-      @include respond(iphone6to8P) {
-        width: 95%;
-        margin-left: 3px;
+      &:hover {
+        .videos__right-img {
+          filter: brightness(60%);
+        }
       }
 
       @include respond(iphoneX) {
@@ -267,18 +239,10 @@
 
       @include respond(bp-large-medium) {
         grid-column: 4/7;
-        display: flex;
-        justify-content: center;
-      }
-
-      &:hover {
-        img {
-          filter: brightness(60%);
-        }
       }
     }
 
-    &--button {
+    .videos__right-button {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -296,11 +260,37 @@
       }
     }
 
+    @include respond(iphoneX) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include respond(bp-smallest) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include respond(bp-small-smallest) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include respond(bp-medium-small) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     @include respond(bp-large-medium) {
       top: 2rem;
       position: relative;
       grid-gap: 5px;
     }
   }
-  /* RIGHT SIDE ENDS */
+
+  @include respond(bp-smallest) {
+    display: flex;
+    justify-content: center;
+  }
 }

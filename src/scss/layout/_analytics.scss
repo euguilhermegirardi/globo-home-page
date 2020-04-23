@@ -13,6 +13,11 @@
       padding: 2.5rem 2.5rem;
 
       .analytics__finance {
+        &:hover {
+          @extend %hover;
+          filter: brightness(120%);
+        }
+
         .analytics__h6 {
           color: var(--color-grey-dark-3);
           font-size: 1.2rem;
@@ -173,6 +178,10 @@
     .analytics__schedule-h4 {
       font-size: 1.8rem;
       padding: 0 18rem 2rem 1.5rem;
+
+      &:hover {
+        @extend %hover;
+      }
 
       @include respond(iphoneX) {
         padding: 0 0rem 2rem 1.5rem;
