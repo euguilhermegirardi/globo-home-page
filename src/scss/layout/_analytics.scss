@@ -1,34 +1,149 @@
 .analytics {
   grid-column: full-start/full-end;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  grid-column-gap: 3rem;
+  display: flex;
 
-  @include respond(iphone6to8P) {
-    padding: 2rem;
-  }
-
-  @include respond(iphoneX) {
-    padding: 2rem;
-  }
-
-  @include respond(bp-medium-small) {
-    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-    margin: 5rem 0;
-  }
-
-  @include respond(bp-large-medium) {
-    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
-  }
-
-  @include respond(bp-between-largest-large) {
-    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
-  }
-
-  /* ECONOMICS */
-  .analytics-economics {
+  .analytics__economics {
+    width: 33.33%;
     border: 1px solid var(--color-grey-light-4);
     border-radius: 5px;
+
+    .analytics__currency {
+      display: flex;
+      justify-content: space-between;
+      padding: 2.5rem 2.5rem;
+
+      .analytics__finance {
+        .analytics__h6 {
+          color: var(--color-grey-dark-3);
+          font-size: 1.2rem;
+          border-bottom: 1px solid var(--color-grey-light-4);
+
+          @include respond(bp-large-medium) {
+            font-size: 9px;
+          }
+        }
+
+        .analytics__value {
+          display: flex;
+          justify-content: center;
+          color: var(--color-green-text);
+          padding: 4px;
+
+          .analytics__icon {
+            font-size: 2.5rem;
+
+            @include respond(bp-large-medium) {
+              font-size: 1.5rem;
+            }
+          }
+
+          .analytics__number {
+            font-size: 4rem;
+
+            @include respond(bp-large-medium) {
+              font-size: 3rem;
+            }
+          }
+
+          .analytics__percent {
+            font-size: 1.8rem;
+
+            @include respond(bp-large-medium) {
+              font-size: 1.5rem;
+            }
+          }
+        }
+
+        .analytics__points {
+          font-size: 1.5rem;
+          color: var(--color-grey-dark-1);
+
+          @include respond(bp-large-medium) {
+            font-size: 1.3rem;
+          }
+        }
+
+        @include respond(bp-large-medium) {
+          margin-top: 2px;
+        }
+      }
+
+      .analytics__currencies {
+        display: table;
+        border-collapse: collapse;
+        border-spacing: 1px;
+        margin-top: 2px;
+        color: var(--color-grey-dark-3);
+
+        .analytics__thead {
+          display: table-header-group;
+          vertical-align: middle;
+
+          .analytics__tr {
+            display: table-row;
+            vertical-align: initial;
+
+            .analytics__currencies--left,
+            .analytics__currencies--right {
+              font-size: 1.2rem;
+              border-bottom: 1px solid var(--color-grey-light-4);
+            }
+
+            .analytics__currencies--left {
+              text-align: initial;
+            }
+
+            .analytics__currencies--right {
+              text-align: end;
+            }
+
+            @include respond(bp-large-medium) {
+              font-size: 9px;
+            }
+          }
+        }
+
+        .analytics__tbody {
+          display: table-row-group;
+          vertical-align: middle;
+
+          .analytics__tr {
+            display: table-row;
+            vertical-align: initial;
+
+            .analytics__tr-coin {
+              display: table-cell;
+              font-size: 1.3rem;
+              color: #666;
+              padding: 1rem 1rem 1rem 0;
+
+              @include respond(bp-large-medium) {
+                font-size: 1.1rem;
+              }
+            }
+
+            .analytics__tr-value {
+              display: table-cell;
+              font-size: 1.2rem;
+              color: var(--color-grey-dark-1);
+              padding: 1rem 0 1rem 1rem;
+
+              @include respond(bp-large-medium) {
+                font-size: 1.1rem;
+              }
+            }
+
+            @include respond(bp-large-medium) {
+              font-size: 9px;
+            }
+          }
+        }
+      }
+
+      @include respond(bp-large-medium) {
+        margin-bottom: 2.1rem;
+      }
+    }
 
     @include respond(bp-small-smallest) {
       margin: 5rem 8.5rem;
@@ -37,190 +152,14 @@
     @include respond(bp-medium-small) {
       margin: 0 8rem;
     }
-
-    .analytics-economics--container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      padding: 1.4rem;
-      margin: 1rem;
-      grid-column-gap: 2rem;
-
-      @include respond(bp-large-medium) {
-        margin-bottom: 2.1rem;
-      }
-    }
-
-    .analytics-economics--footer {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      padding: 1rem 2rem;
-      border-top: 1px solid var(--color-grey-light-4);
-      font-size: 12px;
-      color: var(--color-grey-dark-1);
-      text-align: end;
-
-      .datetime-container {
-        @include respond(bp-large-medium) {
-          font-size: 1rem;
-        }
-      }
-
-      @include respond(bp-large-medium) {
-        margin-top: 10px;
-      }
-    }
   }
 
-  .analytics-finance {
-    a {
-      color: var(--color-grey-dark-3);
-    }
-
-    h6 {
-      color: var(--color-grey-dark-3);
-      font-size: 12px;
-      border-bottom: 1px solid var(--color-grey-light-4);
-
-      @include respond(bp-large-medium) {
-        font-size: 9px;
-      }
-    }
-
-    .analytics-finance--value {
-      display: flex;
-      padding: 4px;
-    }
-
-    .analytics-finance--icon,
-    .analytics-finance--number,
-    .analytics-finance--percent {
-      color: var(--color-green-text);
-    }
-
-    .analytics-finance--icon {
-      font-size: 2.5rem;
-
-      @include respond(bp-large-medium) {
-        font-size: 1.5rem;
-      }
-    }
-
-    .analytics-finance--number {
-      font-size: 4rem;
-
-      @include respond(bp-large-medium) {
-        font-size: 3rem;
-      }
-    }
-
-    .analytics-finance--percent {
-      font-size: 18px;
-
-      @include respond(bp-large-medium) {
-        font-size: 1.5rem;
-      }
-    }
-
-    .analytics-finance--points {
-      font-size: 15px;
-      color: var(--color-grey-dark-1);
-
-      @include respond(bp-large-medium) {
-        font-size: 13px;
-      }
-    }
-
-    @include respond(bp-large-medium) {
-      margin-top: 2px;
-    }
-  }
-
-  .analytics-currencies {
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      margin-top: 2px;
-
-      thead,
-      tbody {
-        color: var(--color-grey-dark-3);
-      }
-
-      tbody {
-        font-size: 15px;
-        margin: 5px;
-
-        tr {
-          margin: 5px;
-
-          @include respond(bp-large-medium) {
-            font-size: 9px;
-          }
-        }
-      }
-    }
-
-    .analytics-currencies--left,
-    .analytics-currencies--right {
-      border-bottom: 1px solid var(--color-grey-light-4);
-    }
-
-    .analytics-currencies--left {
-      text-align: initial;
-    }
-
-    .analytics-currencies--right {
-      text-align: end;
-    }
-
-    .analytics-currencies--coin {
-      text-align: initial;
-      color: #666;
-      font-size: 13px;
-
-      @include respond(bp-large-medium) {
-        font-size: 11px;
-      }
-    }
-
-    .analytics-currencies--value {
-      padding: 8px 0;
-      text-align: end;
-      color: var(--color-grey-dark-1);
-      font-weight: 100;
-
-      @include respond(bp-large-medium) {
-        font-size: 11px;
-      }
-    }
-  }
-  /* ECONOMICS ENDS */
-
-  /* SPORTS/ENTERTAINMENT */
-  .analytics-sports {
-    @include respond(iphone6to8P) {
-      margin: 2rem 0;
-    }
-
-    @include respond(iphoneX) {
-      margin: 2rem 0;
-    }
-  }
-
-  .analytics-sports,
-  .analytics-entertainment {
+  .analytics__schedule {
+    width: 33.33%;
     border: 1px solid var(--color-grey-light-4);
     border-radius: 5px;
 
-    @include respond(bp-small-smallest) {
-      display: none;
-    }
-
-    @include respond(bp-medium-small) {
-      display: none;
-    }
-
-    h6 {
+    .analytics__schedule-h6 {
       color: var(--color-grey-dark-3);
       font-size: 12px;
       padding: 2rem 1.5rem;
@@ -231,13 +170,9 @@
       }
     }
 
-    h4 {
+    .analytics__schedule-h4 {
       font-size: 1.8rem;
       padding: 0 18rem 2rem 1.5rem;
-
-      @include respond(iphone6to8P) {
-        padding: 0 0rem 1.8rem 1.4rem;
-      }
 
       @include respond(iphoneX) {
         padding: 0 0rem 2rem 1.5rem;
@@ -259,44 +194,53 @@
       }
     }
 
-    &--container {
-      display: grid;
-      grid-template-columns: 1fr;
-
-      @include respond(bp-large-medium) {
-        margin-bottom: 4.6rem;
-      }
+    @include respond(bp-small-smallest) {
+      display: none;
     }
 
-    &--footer {
-      display: grid;
-      grid-template-columns: 1fr;
-      padding: 1rem 2rem;
-      border-top: 1px solid var(--color-grey-light-4);
-      font-size: 12px;
-      font-weight: 300;
-      text-align: initial;
-
-      a {
-        color: var(--color-grey-dark-1);
-      }
-
-      @include respond(bp-largest) {
-        margin-top: 25px;
-      }
-
-      @include respond(bp-between-largest-large) {
-        margin-top: 35px;
-      }
+    @include respond(bp-medium-small) {
+      display: none;
     }
   }
 
-  .analytics-sports h4 {
+  .analytics__schedule--ge {
+    margin: 0 2rem;
     color: var(--color-green-text);
   }
 
-  .analytics-entertainment h4 {
+  .analytics__schedule--gshow {
     color: var(--color-orange-text);
   }
-  /* SPORTS/ENTERTAINMENT ENDS */
+
+  .analytics__footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 2rem;
+    border-top: 1px solid var(--color-grey-light-4);
+
+    .analytics__span {
+      font-size: 1.2rem;
+      color: var(--color-grey-dark-1);
+    }
+
+    @include respond(bp-large-medium) {
+      margin-top: 10px;
+    }
+  }
+
+  @include respond(iphoneX) {
+    padding: 2rem;
+  }
+
+  @include respond(bp-medium-small) {
+    margin: 5rem 0;
+  }
+
+  @include respond(bp-between-largest-large) {
+    margin-top: 3.5rem;
+  }
+
+  @include respond(bp-largest) {
+    margin-top: 2.5rem;
+  }
 }
