@@ -24,7 +24,7 @@
           border-bottom: 1px solid var(--color-grey-light-4);
 
           @include respond(bp-large-medium) {
-            font-size: 9px;
+            font-size: 1rem;
           }
         }
 
@@ -64,7 +64,7 @@
           color: var(--color-grey-dark-1);
 
           @include respond(bp-large-medium) {
-            font-size: 1.3rem;
+            font-size: 1rem;
           }
         }
 
@@ -96,6 +96,10 @@
 
             .analytics__currencies--left {
               text-align: initial;
+
+              @include respond(bp-large-medium) {
+                font-size: 1rem;
+              }
             }
 
             .analytics__currencies--right {
@@ -103,7 +107,7 @@
             }
 
             @include respond(bp-large-medium) {
-              font-size: 9px;
+              font-size: 1rem;
             }
           }
         }
@@ -146,7 +150,8 @@
       }
 
       @include respond(bp-large-medium) {
-        margin-bottom: 2.1rem;
+        margin-bottom: 0;
+        padding: 2rem;
       }
     }
 
@@ -178,6 +183,7 @@
     .analytics__schedule-h4 {
       font-size: 1.8rem;
       padding: 0 18rem 2rem 1.5rem;
+      margin-bottom: 3.1rem;
 
       &:hover {
         @extend %hover;

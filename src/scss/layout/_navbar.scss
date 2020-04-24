@@ -133,14 +133,6 @@
     display: flex;
     align-items: center;
 
-    @include respond(iphoneX) {
-      display: none;
-    }
-
-    @include respond(bp-smallest) {
-      display: none;
-    }
-
     .navbar__menu-item {
       color: var(--color-gray);
       font-family: var(--font-secondary);
@@ -312,6 +304,10 @@
           @include respond(bp-medium-small) {
             width: 250px;
           }
+
+          @include respond(bp-large-medium) {
+            width: 270px;
+          }
         }
       }
     }
@@ -324,6 +320,14 @@
       @include respond(bp-small-smallest) {
         margin: 0 0 6px 8px;
       }
+    }
+
+    @include respond(iphoneX) {
+      display: none;
+    }
+
+    @include respond(bp-smallest) {
+      display: none;
     }
   }
 

@@ -34,11 +34,6 @@
       &:last-child {
         border-bottom: 2px solid #ccc;
         margin-top: -2px;
-
-        @include respond(bp-smallest) {
-        }
-        border-bottom: none;
-        margin-top: 0;
       }
 
       .six-news__img {
@@ -94,6 +89,7 @@
       }
 
       @include respond(bp-large-medium) {
+        flex-direction: column;
         height: 20rem;
       }
     }

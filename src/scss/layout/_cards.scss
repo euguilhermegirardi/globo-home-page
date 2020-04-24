@@ -33,7 +33,7 @@
   }
 
   @include respond(bp-largest) {
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
   }
 }
 
@@ -87,22 +87,6 @@
   .card__info {
     margin-bottom: 6rem;
     text-transform: uppercase;
-
-    @include respond(bp-smallest) {
-      margin-bottom: 1.6rem;
-    }
-
-    @include respond(bp-small-smallest) {
-      margin-bottom: 1.8rem;
-    }
-
-    @include respond(bp-medium-small) {
-      margin-bottom: 2rem;
-    }
-
-    @include respond(bp-large-medium) {
-      margin-bottom: 2rem;
-    }
 
     .card__info--only,
     .card__info--price {
@@ -162,66 +146,82 @@
       }
     }
 
-    .card__info--btn,
-    &:link,
-    &:visited {
-      font-size: 1.4rem;
-      color: white;
-      background-color: var(--color-blue);
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 1.5rem 4rem;
-      display: inline-block; /* set the button as a block in another line.  */
-      border-radius: 10rem;
-      position: relative; /* To set the after behind the button. */
-      transition: all 0.2s; /* Set the after transition. */
-      //Change for the <button> element
-      border: none;
-      cursor: pointer;
+    @include respond(bp-smallest) {
+      margin-bottom: 1.6rem;
+    }
 
-      @include respond(iphoneX) {
-        padding: 1.5rem 10rem;
+    @include respond(bp-small-smallest) {
+      margin-bottom: 1.8rem;
+    }
+
+    @include respond(bp-medium-small) {
+      margin-bottom: 2rem;
+    }
+
+    @include respond(bp-large-medium) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .card__info--btn,
+  &:link,
+  &:visited {
+    font-size: 1.4rem;
+    color: white;
+    background-color: var(--color-blue);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block; /* set the button as a block in another line.  */
+    border-radius: 10rem;
+    position: relative; /* To set the after behind the button. */
+    transition: all 0.2s; /* Set the after transition. */
+    //Change for the <button> element
+    border: none;
+    cursor: pointer;
+
+    @include respond(iphoneX) {
+      padding: 1.5rem 10rem;
+    }
+
+    @include respond(bp-smallest) {
+      font-size: 0.8rem;
+      padding: 0.8rem 2rem;
+    }
+
+    @include respond(bp-small-smallest) {
+      font-size: 0.8rem;
+      padding: 0.8rem 2rem;
+    }
+
+    @include respond(bp-medium-small) {
+      font-size: 1.1rem;
+      padding: 1.2rem 3rem;
+    }
+
+    @include respond(bp-large-medium) {
+      font-size: 1.2rem;
+    }
+
+    @include respond(bp-between-largest-large) {
+      font-size: 1.2rem;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 1rem 2rem rgba(black, 0.2);
+
+      &::after {
+        transform: scaleX(1.4) scaleY(1.6); /* Increase the element. */
+        opacity: 0; /* Hide the 'transform' after it is executed. */
       }
+    }
 
-      @include respond(bp-smallest) {
-        font-size: 0.8rem;
-        padding: 0.8rem 2rem;
-      }
-
-      @include respond(bp-small-smallest) {
-        font-size: 0.8rem;
-        padding: 0.8rem 2rem;
-      }
-
-      @include respond(bp-medium-small) {
-        font-size: 1.1rem;
-        padding: 1.2rem 3rem;
-      }
-
-      @include respond(bp-large-medium) {
-        font-size: 1.2rem;
-      }
-
-      @include respond(bp-between-largest-large) {
-        font-size: 1.2rem;
-      }
-
-      &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 1rem 2rem rgba(black, 0.2);
-
-        &::after {
-          transform: scaleX(1.4) scaleY(1.6); /* Increase the element. */
-          opacity: 0; /* Hide the 'transform' after it is executed. */
-        }
-      }
-
-      &:active,
-      &:focus {
-        outline: none;
-        transform: translateY(-1px);
-        box-shadow: 0 0.5rem 1rem rgba(black, 0.2);
-      }
+    &:active,
+    &:focus {
+      outline: none;
+      transform: translateY(-1px);
+      box-shadow: 0 0.5rem 1rem rgba(black, 0.2);
     }
   }
 
@@ -243,9 +243,11 @@
 
   @include respond(bp-between-largest-large) {
     height: 26.7rem;
+    margin: 1rem 0;
   }
 
   @include respond(bp-largest) {
-    height: 36rem;
+    height: 31rem;
+    margin: 1rem 0;
   }
 }

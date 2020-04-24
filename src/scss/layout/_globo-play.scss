@@ -11,6 +11,7 @@
     .globoplay-header__p {
       color: var(--color-blue);
       font-size: 3rem;
+      font-weight: bold;
     }
 
     .globoplay-header__h3 {
@@ -27,6 +28,18 @@
 
       @include respond(bp-medium-small) {
         font-size: 1.4rem;
+      }
+    }
+
+    .globoplay-header__button {
+      background-color: var(--color-blue);
+      font-size: 1.5rem;
+      padding: 2rem 3rem;
+      border-radius: 3px;
+      color: var(--color-grey-light-1);
+
+      @include respond(bp-large-medium) {
+        display: none;
       }
     }
 
@@ -51,14 +64,6 @@
     }
   }
 
-  .globoplay-header__button {
-    background-color: var(--color-blue);
-    font-size: 1.5rem;
-    padding: 2rem 3rem;
-    border-radius: 3px;
-    color: var(--color-grey-light-1);
-  }
-
   @include respond(iphoneX) {
     margin: 2.5rem auto 0 auto;
   }
@@ -79,6 +84,14 @@
 .globoplay-btn-sd {
   display: none;
   text-align: center;
+
+  .globoplay-btn {
+    background-color: var(--color-blue);
+    font-size: 1.5rem;
+    padding: 2rem 3rem;
+    border-radius: 3px;
+    color: var(--color-grey-light-1);
+  }
 
   @include respond(iphoneX) {
     display: block;

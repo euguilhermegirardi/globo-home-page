@@ -73,13 +73,9 @@
       }
 
       @include respond(bp-large-medium) {
-        display: flex;
+        flex-direction: initial;
         justify-content: center;
         align-items: center;
-
-        &:nth-child(3) {
-          margin-top: 3rem;
-        }
       }
     }
   }
@@ -178,7 +174,7 @@
     }
 
     @include respond(bp-large-medium) {
-      margin-left: 2rem;
+      margin-left: 1rem;
       margin-bottom: 1.5rem;
       font-size: 16px;
     }
@@ -190,10 +186,6 @@
 
     @include respond(bp-smallest) {
       min-height: 5rem;
-    }
-
-    @include respond(bp-large-medium) {
-      order: 3;
     }
   }
 

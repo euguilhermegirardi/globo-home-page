@@ -153,6 +153,10 @@
         bottom: 3rem;
       }
 
+      @include respond(bp-large-medium) {
+        left: 3rem;
+      }
+
       .videos__right-h4 {
         font-size: 1.2rem;
         margin-bottom: 0.7rem;

@@ -106,8 +106,9 @@
     }
 
     @include respond(bp-large-medium) {
-      grid-template-columns: 1fr;
-      grid-row-gap: 2rem;
+      display: flex;
+      justify-content: space-between;
+      margin: 2rem 0;
       font-size: 1.6rem;
     }
   }
@@ -231,6 +232,7 @@
 
         @include respond(bp-large-medium) {
           text-align: center;
+          margin-top: 0;
         }
       }
 
