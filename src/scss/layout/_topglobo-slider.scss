@@ -1,4 +1,4 @@
-.top-globo-slider {
+.topglobo-slider {
   display: none;
   max-width: 1320px;
   margin: 2rem auto;
@@ -19,17 +19,6 @@
 
   @include respond(bp-medium-small) {
     display: block;
-  }
-
-  &__post-wrapper {
-    width: 85%;
-    margin: 0 auto;
-    overflow: hidden;
-
-    .items {
-      margin: 0 10px;
-      display: inline-block;
-    }
   }
 }
 
