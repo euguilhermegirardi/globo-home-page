@@ -27,7 +27,7 @@
 
       @include respond(bp-medium-small) {
         margin-right: 1rem;
-        height: 3.1rem;
+        height: 6rem;
       }
 
       @include respond(bp-large-medium) {
@@ -70,8 +70,8 @@
         }
 
         @include respond(bp-medium-small) {
-          font-size: 1.5rem;
-          padding: 0 0.5rem;
+          font-size: 2.5rem;
+          padding: 0 2rem;
         }
 
         @include respond(bp-large-medium) {
@@ -143,11 +143,6 @@
 
       &:not(:first-child) {
         @include respond(bp-small-smallest) {
-          display: none;
-          width: 0;
-        }
-
-        @include respond(bp-medium-small) {
           display: none;
           width: 0;
         }
@@ -301,10 +296,6 @@
             width: 120px;
           }
 
-          @include respond(bp-medium-small) {
-            width: 250px;
-          }
-
           @include respond(bp-large-medium) {
             width: 270px;
           }
@@ -329,6 +320,10 @@
     @include respond(bp-smallest) {
       display: none;
     }
+
+    @include respond(bp-medium-small) {
+      display: none;
+    }
   }
 
   @include respond(bp-smallest) {
@@ -338,6 +333,10 @@
 
   @include respond(bp-small-smallest) {
     padding: 1rem;
+  }
+
+  @include respond(bp-medium-small) {
+    justify-content: center;
   }
 
   @include respond(bp-between-largest-large) {

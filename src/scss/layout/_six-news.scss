@@ -88,6 +88,11 @@
         height: 100%;
       }
 
+      @include respond(bp-medium-small) {
+        flex-direction: column;
+        align-items: center;
+      }
+
       @include respond(bp-large-medium) {
         flex-direction: column;
         height: 20rem;

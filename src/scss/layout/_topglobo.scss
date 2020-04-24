@@ -52,99 +52,113 @@
   @include respond(bp-large-medium) {
     grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
   }
+}
 
-  .topglobo__g1 .topglobo__link {
-    color: var(--color-red-text);
+.topglobo__g1 .topglobo__link {
+  color: var(--color-red-text);
+}
+
+.topglobo__ge .topglobo__link {
+  color: var(--color-green-text);
+}
+
+.topglobo__gshow .topglobo__link {
+  color: var(--color-orange-text);
+}
+
+.topglobo__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &:first-child {
+    font-size: 2rem;
+    padding: 2rem 0;
+    min-height: 18rem;
+    align-items: initial;
+
+    @include respond(iphoneX) {
+      font-size: 1.5rem;
+      min-height: 11rem;
+    }
+
+    @include respond(bp-smallest) {
+      font-size: 1.5rem;
+      min-height: 11rem;
+    }
+
+    @include respond(bp-small-smallest) {
+      font-size: 1.5rem;
+      min-height: 11rem;
+    }
+
+    @include respond(bp-medium-small) {
+      min-height: 10rem;
+    }
+
+    @include respond(bp-large-medium) {
+      font-size: 1.5rem;
+      min-height: 14.5rem;
+    }
+
+    @include respond(bp-between-largest-large) {
+      font-size: 1.5rem;
+      min-height: 15rem;
+    }
   }
 
-  .topglobo__ge .topglobo__link {
-    color: var(--color-green-text);
+  &:not(:first-child) {
+    font-size: 1.2rem;
+    padding: 2rem 0;
+    min-height: 8rem;
+    align-items: initial;
+
+    @include respond(iphoneX) {
+      font-size: 1.1rem;
+      min-height: 7rem;
+      padding: 1.5rem 0;
+    }
+
+    @include respond(bp-medium-small) {
+      min-height: 6rem;
+    }
+
+    @include respond(bp-large-medium) {
+      font-size: 1rem;
+    }
   }
 
-  .topglobo__gshow .topglobo__link {
-    color: var(--color-orange-text);
+  .topglobo__h2 {
+    padding-left: 1rem;
   }
 
-  .topglobo__text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .topglobo__link {
     position: relative;
+    margin-left: 2rem;
 
-    &:first-child {
-      font-size: 2rem;
-      padding: 2rem 0;
-      min-height: 18rem;
-      align-items: initial;
-
-      @include respond(iphoneX) {
-        font-size: 1.5rem;
-        min-height: 11rem;
-      }
-
-      @include respond(bp-smallest) {
-        font-size: 1.5rem;
-        min-height: 11rem;
-      }
-
-      @include respond(bp-small-smallest) {
-        font-size: 1.5rem;
-        min-height: 11rem;
-      }
-
-      @include respond(bp-medium-small) {
-        min-height: 10rem;
-      }
-
-      @include respond(bp-large-medium) {
-        font-size: 1.5rem;
-        min-height: 14.5rem;
-      }
-
-      @include respond(bp-between-largest-large) {
-        font-size: 1.5rem;
-        min-height: 15rem;
-      }
+    &:hover {
+      filter: brightness(115%);
     }
+  }
 
-    &:not(:first-child) {
-      font-size: 1.2rem;
-      padding: 2rem 0;
-      min-height: 8rem;
-      align-items: initial;
+  &::before {
+    content: "01";
+    position: absolute;
+    top: 22px;
+    left: 0;
+    color: #666;
+    font-size: 1.8rem;
+    letter-spacing: -1px;
+    opacity: 0.6;
+    font-weight: bold;
+  }
 
-      @include respond(iphoneX) {
-        font-size: 1.1rem;
-        min-height: 7rem;
-        padding: 1.5rem 0;
-      }
-
-      @include respond(bp-medium-small) {
-        min-height: 6rem;
-      }
-
-      @include respond(bp-large-medium) {
-        font-size: 1rem;
-      }
-    }
-
-    .topglobo__h2 {
-      padding-left: 1rem;
-    }
-
-    .topglobo__link {
-      position: relative;
-      margin-left: 2rem;
-
-      &:hover {
-        filter: brightness(115%);
-      }
-    }
-
+  &:nth-child(2) {
     &::before {
-      content: "01";
+      content: "02";
       position: absolute;
-      top: 22px;
+      top: 19px;
       left: 0;
       color: #666;
       font-size: 1.8rem;
@@ -152,60 +166,46 @@
       opacity: 0.6;
       font-weight: bold;
     }
+  }
 
-    &:nth-child(2) {
-      &::before {
-        content: "02";
-        position: absolute;
-        top: 19px;
-        left: 0;
-        color: #666;
-        font-size: 1.8rem;
-        letter-spacing: -1px;
-        opacity: 0.6;
-        font-weight: bold;
-      }
+  &:nth-child(3) {
+    &::before {
+      content: "03";
+      position: absolute;
+      top: 19px;
+      left: 0;
+      color: #666;
+      font-size: 1.8rem;
+      letter-spacing: -1px;
+      opacity: 0.6;
+      font-weight: bold;
     }
+  }
+  &:nth-child(4) {
+    &::before {
+      content: "04";
+      position: absolute;
+      top: 19px;
+      left: 0;
+      color: #666;
+      font-size: 1.8rem;
+      letter-spacing: -1px;
+      opacity: 0.6;
+      font-weight: bold;
+    }
+  }
 
-    &:nth-child(3) {
-      &::before {
-        content: "03";
-        position: absolute;
-        top: 19px;
-        left: 0;
-        color: #666;
-        font-size: 1.8rem;
-        letter-spacing: -1px;
-        opacity: 0.6;
-        font-weight: bold;
-      }
-    }
-    &:nth-child(4) {
-      &::before {
-        content: "04";
-        position: absolute;
-        top: 19px;
-        left: 0;
-        color: #666;
-        font-size: 1.8rem;
-        letter-spacing: -1px;
-        opacity: 0.6;
-        font-weight: bold;
-      }
-    }
-
-    &:last-child {
-      &::before {
-        content: "05";
-        position: absolute;
-        top: 19px;
-        left: 0;
-        color: #666;
-        font-size: 1.8rem;
-        letter-spacing: -1px;
-        opacity: 0.6;
-        font-weight: bold;
-      }
+  &:last-child {
+    &::before {
+      content: "05";
+      position: absolute;
+      top: 19px;
+      left: 0;
+      color: #666;
+      font-size: 1.8rem;
+      letter-spacing: -1px;
+      opacity: 0.6;
+      font-weight: bold;
     }
   }
 }

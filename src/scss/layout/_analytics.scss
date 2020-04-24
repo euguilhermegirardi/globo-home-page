@@ -160,7 +160,8 @@
     }
 
     @include respond(bp-medium-small) {
-      margin: 0 8rem;
+      width: 60%;
+      margin: 0 auto;
     }
   }
 

@@ -213,8 +213,7 @@
       }
 
       @include respond(bp-medium-small) {
-        margin-right: 2rem;
-        margin-bottom: 2rem;
+        margin-right: 5px;
       }
 
       @include respond(bp-large-medium) {

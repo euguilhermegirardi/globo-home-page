@@ -147,6 +147,10 @@
       margin-left: 1.8rem;
     }
 
+    @include respond(bp-medium-small) {
+      display: none;
+    }
+
     @include respond(bp-large-medium) {
       font-size: 12px;
       margin-left: 2rem;
@@ -186,6 +190,10 @@
 
     @include respond(bp-smallest) {
       min-height: 5rem;
+    }
+
+    @include respond(bp-medium-small) {
+      display: none;
     }
   }
 

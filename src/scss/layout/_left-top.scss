@@ -98,11 +98,13 @@
     @include respond(bp-small-smallest) {
       text-align: center;
       font-size: 1.3rem;
+      margin: 2rem 1rem;
     }
 
     @include respond(bp-medium-small) {
       text-align: center;
       font-size: 1.3rem;
+      margin: 2rem 1rem;
     }
 
     @include respond(bp-large-medium) {
@@ -226,8 +228,7 @@
         }
 
         @include respond(bp-medium-small) {
-          text-align: center;
-          font-size: 1.3rem;
+          display: none;
         }
 
         @include respond(bp-large-medium) {
