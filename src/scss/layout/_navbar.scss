@@ -3,19 +3,6 @@
   justify-content: space-between;
   padding: 2.5rem;
 
-  @include respond(bp-smallest) {
-    padding: 1rem;
-    justify-content: center;
-  }
-
-  @include respond(bp-small-smallest) {
-    padding: 1rem;
-  }
-
-  @include respond(bp-between-largest-large) {
-    padding: 1rem 0;
-  }
-
   .navbar--left {
     display: flex;
 
@@ -338,5 +325,18 @@
         margin: 0 0 6px 8px;
       }
     }
+  }
+
+  @include respond(bp-smallest) {
+    padding: 1rem;
+    justify-content: center;
+  }
+
+  @include respond(bp-small-smallest) {
+    padding: 1rem;
+  }
+
+  @include respond(bp-between-largest-large) {
+    padding: 1rem 0;
   }
 }

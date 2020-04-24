@@ -1,43 +1,34 @@
-footer {
+.footer {
   display: flex;
   justify-content: space-around;
   padding: 1.5rem 0;
   background-color: var(--color-strong-blue);
-
-  @include respond(bp-smallest) {
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem 2px;
-  }
-
-  @include respond(bp-small-smallest) {
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem 1rem;
-  }
-
-  @include respond(bp-medium-small) {
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem 1rem;
-  }
-
-  @include respond(bp-large-medium) {
-    padding: 1rem;
-  }
 
   .footer__left {
     display: flex;
     align-items: center;
     font-family: Helvetica, sans-serif;
 
-    @include respond(iphone6to8P) {
-      display: flex;
-      flex-direction: column;
+    .footer__h2 {
+      color: #fff;
+
+      @include respond(iphoneX) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .footer__p {
+      color: var(--color-blue-text);
+      font-size: 1.2rem;
+      padding-left: 1.8rem;
+      font-weight: normal;
+
+      @include respond(bp-smallest) {
+        font-size: 1.3rem;
+      }
     }
 
     @include respond(iphoneX) {
-      display: flex;
       flex-direction: column;
     }
 
@@ -63,45 +54,12 @@ footer {
     @include respond(bp-between-largest-large) {
       font-size: 1.2rem;
     }
-
-    h2 {
-      color: white;
-      cursor: pointer;
-
-      @include respond(iphone6to8P) {
-        margin-bottom: 1.5rem;
-        font-size: 2.3rem;
-      }
-
-      @include respond(iphoneX) {
-        margin-bottom: 1.5rem;
-      }
-    }
-
-    p {
-      color: var(--color-blue-text);
-      font-size: 1.2rem;
-      padding-left: 1.8rem;
-      font-weight: normal;
-
-      @include respond(bp-smallest) {
-        font-size: 1.3rem;
-      }
-    }
   }
 
   .footer__right {
     align-self: center;
 
-    @include respond(iphone6to8P) {
-      display: none;
-    }
-
-    @include respond(iphoneX) {
-      display: none;
-    }
-
-    a {
+    .footer__link {
       border-left: 0;
       color: #fff;
       font-size: 14px;
@@ -127,5 +85,31 @@ footer {
         }
       }
     }
+
+    @include respond(iphoneX) {
+      display: none;
+    }
+  }
+
+  @include respond(bp-smallest) {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 2px;
+  }
+
+  @include respond(bp-small-smallest) {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+  }
+
+  @include respond(bp-medium-small) {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+  }
+
+  @include respond(bp-large-medium) {
+    padding: 1rem;
   }
 }
