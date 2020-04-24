@@ -1211,13 +1211,12 @@
 
   <div class="divider">
 
-  <!-- MAIN CONTAINER GRID -->
   <div class="container">
+    <!-- _grid-container.scss -->
     <div class="grid-container">
 
       <!-- ADVERTISEMENT -->
       <section class="advertisement"></section>
-      <!-- ADVERTISEMENT ENDS -->
 
       <!-- _left-top.scss -->
       <section class="left-top">
@@ -1335,11 +1334,9 @@
           <p class="right-top__p">Raia dedicates to Jorge Fernando</p>
         </div>
       </aside>
-      <!-- RIGHT-TOP ENDS -->
 
       <!-- ADVERTISEMENT -->
       <section class="advertisement"></section>
-      <!-- ADVERTISEMENT ENDS -->
 
       <!-- 3 NEWS -->
       <section class="three-news">
@@ -1379,7 +1376,6 @@
           <h4 class="three-news__h4">Giovanna Ewbank announces she is pregnant: 'Now there are five of us'</h4>
         </div>
       </section>
-      <!-- 3 NEWS ENDS -->
 
       <!-- 6 NEWS -->
       <section class="six-news">
@@ -1692,7 +1688,6 @@
         </div>
 
       </section>
-      <!-- ANALYTICS ENDS -->
 
       <!-- VIDEOS -->
       <section class="videos-header">
@@ -1781,24 +1776,168 @@
         </div>
       </section>
 
-      <!-- GLOBO PLAY -->
-      <div class="globo-play">
-        <div class="globo-play__header">
-          <div>
-            <h2>
-              <p class="globo-play__header--link">globoplay</p>
-            </h2>
-            <h3>Try it free for 7 days and discover new content</h3>
-          </div>
-          <a href="#" class="globo-play__header--button">Watch 7 days free</a>
+    </div>
+
+    <!-- _globo-play.scss -->
+    <div class="globoplay-header">
+      <div class="globoplay-header--left">
+        <p class="globoplay-header__p">globoplay</p>
+        <h3 class="globoplay-header__h3">Try it free for 7 days and discover new content</h3>
+      </div>
+      <a href="#" class="globoplay-header__button">Watch 7 days free</a>
+    </div>
+
+    <!-- _cards.scss -->
+    <div class="cards">
+
+      <div class="card">
+        <div class="card__side card__side--front">
+          <picture>
+            <source media="(max-width: 56.24em)"srcset="dist/minified/assets/cards/medium-small/o-auto-da-compadecida.jpeg" />
+            <source media="(max-width: 62.49em)"srcset="dist/minified/assets/cards/large-medium/o-auto-da-compadecida.jpeg" />
+            <source media="(max-width: 71.24em)"srcset="dist/minified/assets/cards/largest-large/o-auto-da-compadecida.jpeg" />
+            <source media="(max-width: 75em)"srcset="dist/minified/assets/cards/largest/o-auto-da-compadecida.jpeg" />
+            <img class="card__img" src="dist/minified/assets/cards/o-auto-da-compadecida.jpeg" alt="o-auto-da-compadecida" />
+          </picture>
         </div>
+        <div class="card__side card__side--back">
+          <picture>
+            <source media="(max-width: 56.24em)"srcset="dist/minified/assets/cards/medium-small/o-auto-da-compadecida.jpeg" />
+            <source media="(max-width: 62.49em)"srcset="dist/minified/assets/cards/large-medium/o-auto-da-compadecida.jpeg" />
+            <source media="(max-width: 71.24em)"srcset="dist/minified/assets/cards/largest-large/o-auto-da-compadecida.jpeg" />
+            <source media="(max-width: 75em)"srcset="dist/minified/assets/cards/largest/o-auto-da-compadecida.jpeg" />
+            <img class="card__img" src="dist/minified/assets/cards/o-auto-da-compadecida.jpeg" alt="o-auto-da-compadecida" />
+          </picture>
+          <div class="card__cta">
+            <div class="card__info">
+              <p class="card__info--only">Only</p>
+              <p class="card__info--price">€8</p>
+            </div>
+            <a class="card__info--btn">buy now!</a>
+          </div>
         </div>
       </div>
-      <!-- GLOBO PLAY ENDS -->
-    </div>
-     <!-- GRID ENDS -->
 
-     <!-- CARDS SLIDER - MOBILE -->
+      <div class="card">
+        <div class="card__side card__side--front">
+          <picture>
+            <source media="(max-width: 56.24em)"srcset="dist/minified/assets/cards/medium-small/amor-de-mae.jpg" alt="amor-de-mae" />
+            <source media="(max-width: 62.49em)"srcset="dist/minified/assets/cards/large-medium/amor-de-mae.jpg" alt="amor-de-mae" />
+            <source media="(max-width: 71.24em)"srcset="dist/minified/assets/cards/largest-large/amor-de-mae.jpg" alt="amor-de-mae" />
+            <source media="(max-width: 75em)"srcset="dist/minified/assets/cards/largest/amor-de-mae.jpg" alt="amor-de-mae" />
+            <img class="card__img" src="dist/minified/assets/cards/amor-de-mae.jpg" alt="amor-de-mae" />
+          </picture>
+        </div>
+        <div class="card__side card__side--back">
+          <picture>
+            <source media="(max-width: 56.24em)"srcset="dist/minified/assets/cards/medium-small/amor-de-mae.jpg" alt="amor-de-mae" />
+            <source media="(max-width: 62.49em)"srcset="dist/minified/assets/cards/large-medium/amor-de-mae.jpg" alt="amor-de-mae" />
+            <source media="(max-width: 71.24em)"srcset="dist/minified/assets/cards/largest-large/amor-de-mae.jpg" alt="amor-de-mae" />
+            <source media="(max-width: 75em)"srcset="dist/minified/assets/cards/largest/amor-de-mae.jpg" alt="amor-de-mae" />
+            <img class="card__img" src="dist/minified/assets/cards/amor-de-mae.jpg" alt="amor-de-mae" />
+          </picture>
+          <div class="card__cta">
+            <div class="card__info">
+              <p class="card__info--only">Only</p>
+              <p class="card__info--price">€12</p>
+            </div>
+            <a class="card__info--btn">buy now!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__side card__side--front">
+          <picture>
+            <source media="(max-width: 56.24em)" srcset="dist/minified/assets/cards/medium-small/robertocarlos.jpg" alt="roberto-carlos-show"/>
+            <source media="(max-width: 62.49em)" srcset="dist/minified/assets/cards/large-medium/robertocarlos.jpg" alt="roberto-carlos-show"/>
+            <source media="(max-width: 71.24em)" srcset="dist/minified/assets/cards/largest-large/robertocarlos.jpg" alt="roberto-carlos-show"/>
+            <source media="(max-width: 75em)" srcset="dist/minified/assets/cards/largest/robertocarlos.jpg" alt="roberto-carlos-show"/>
+            <img class="card__img" src="dist/minified/assets/cards/robertocarlos.jpg" alt="roberto-carlos-show" />
+          </picture>
+        </div>
+        <div class="card__side card__side--back">
+          <picture>
+            <source media="(max-width: 56.24em)" srcset="dist/minified/assets/cards/medium-small/robertocarlos.jpg" alt="roberto-carlos-show"/>
+            <source media="(max-width: 62.49em)" srcset="dist/minified/assets/cards/large-medium/robertocarlos.jpg" alt="roberto-carlos-show"/>
+            <source media="(max-width: 71.24em)" srcset="dist/minified/assets/cards/largest-large/robertocarlos.jpg" alt="roberto-carlos-show"/>
+            <source media="(max-width: 75em)" srcset="dist/minified/assets/cards/largest/robertocarlos.jpg" alt="roberto-carlos-show"/>
+            <img class="card__img" src="dist/minified/assets/cards/robertocarlos.jpg" alt="roberto-carlos-show" />
+          </picture>
+          <div class="card__cta">
+            <div class="card__info">
+              <p class="card__info--only">Only</p>
+              <p class="card__info--price">€9</p>
+            </div>
+            <a class="card__info--btn">buy now!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__side card__side--front">
+          <picture>
+            <source media="(max-width: 56.24em)" srcset="dist/minified/assets/cards/medium-small/hebe-the-film.jpg" alt="hebe-the-film" />
+            <source media="(max-width: 62.49em)" srcset="dist/minified/assets/cards/large-medium/hebe-the-film.jpg" alt="hebe-the-film" />
+            <source media="(max-width: 71.24em)" srcset="dist/minified/assets/cards/largest-large/hebe-the-film.jpg" alt="hebe-the-film" />
+            <source media="(max-width: 75em)" srcset="dist/minified/assets/cards/largest/hebe-the-film.jpg" alt="hebe-the-film" />
+            <img class="card__img" src="dist/minified/assets/cards/hebe-the-film.jpg" alt="hebe-the-film" />
+          </picture>
+        </div>
+        <div class="card__side card__side--back">
+          <picture>
+            <source media="(max-width: 56.24em)" srcset="dist/minified/assets/cards/medium-small/hebe-the-film.jpg" alt="hebe-the-film" />
+            <source media="(max-width: 62.49em)" srcset="dist/minified/assets/cards/large-medium/hebe-the-film.jpg" alt="hebe-the-film" />
+            <source media="(max-width: 71.24em)" srcset="dist/minified/assets/cards/largest-large/hebe-the-film.jpg" alt="hebe-the-film" />
+            <source media="(max-width: 75em)" srcset="dist/minified/assets/cards/largest/hebe-the-film.jpg" alt="hebe-the-film" />
+            <img class="card__img" src="dist/minified/assets/cards/hebe-the-film.jpg" alt="hebe-the-film" />
+          </picture>
+          <div class="card__cta">
+            <div class="card__info">
+              <p class="card__info--only">Only</p>
+              <p class="card__info--price">€7.50</p>
+            </div>
+            <a class="card__info--btn">buy now!</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__side card__side--front">
+          <picture>
+            <source media="(max-width: 56.24em)" srcset="dist/minified/assets/cards/medium-small/mya-go-original.jpg" alt="mya-go-original-globoplay" />
+            <source media="(max-width: 62.49em)" srcset="dist/minified/assets/cards/large-medium/mya-go-original.jpg" alt="mya-go-original-globoplay" />
+            <source media="(max-width: 71.24em)" srcset="dist/minified/assets/cards/largest-large/mya-go-original.jpg" alt="mya-go-original-globoplay" />
+            <source media="(max-width: 75em)" srcset="dist/minified/assets/cards/largest/mya-go-original.jpg" alt="mya-go-original-globoplay" />
+            <img src="dist/minified/assets/cards/mya-go-original.jpg" alt="mya-go-original-globoplay" />
+          </picture>
+
+        </div>
+        <div class="card__side card__side--back">
+          <picture>
+            <source media="(max-width: 56.24em)" srcset="dist/minified/assets/cards/medium-small/mya-go-original.jpg" alt="mya-go-original-globoplay" />
+            <source media="(max-width: 62.49em)" srcset="dist/minified/assets/cards/large-medium/mya-go-original.jpg" alt="mya-go-original-globoplay" />
+            <source media="(max-width: 71.24em)" srcset="dist/minified/assets/cards/largest-large/mya-go-original.jpg" alt="mya-go-original-globoplay" />
+            <source media="(max-width: 75em)" srcset="dist/minified/assets/cards/largest/mya-go-original.jpg" alt="mya-go-original-globoplay" />
+            <img src="dist/minified/assets/cards/mya-go-original.jpg" alt="mya-go-original-globoplay" />
+          </picture>
+          <div class="card__cta">
+            <div class="card__info">
+              <p class="card__info--only">Only</p>
+              <p class="card__info--price">€15</p>
+            </div>
+            <a class="card__info--btn">buy now!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- _globo-play.scss -->
+    <div class="container globoplay-btn-sd">
+      <a href="#" class="globo-play__header--button">Watch 7 days free</a>
+    </div>
+
+     <!-- _cards-slider.scss -->
     <section class="cards-slider">
 
       <div class="carousel cards-slider__post-wrapper">
@@ -1841,159 +1980,8 @@
       </div>
 
     </section>
-     <!-- CARDS SLIDER - MOBILE ENDS -->
 
-     <!-- CARDS -->
-    <div class="cards">
-
-      <div class="card">
-        <div class="card__side card__side--front">
-          <picture>
-            <source media="(max-width: 56.24em)"srcset="dist/minified/assets/cards/medium-small/o-auto-da-compadecida.jpeg" />
-            <source media="(max-width: 62.49em)"srcset="dist/minified/assets/cards/large-medium/o-auto-da-compadecida.jpeg" />
-            <source media="(max-width: 71.24em)"srcset="dist/minified/assets/cards/largest-large/o-auto-da-compadecida.jpeg" />
-            <source media="(max-width: 75em)"srcset="dist/minified/assets/cards/largest/o-auto-da-compadecida.jpeg" />
-            <img src="dist/minified/assets/cards/o-auto-da-compadecida.jpeg" alt="o-auto-da-compadecida" />
-          </picture>
-        </div>
-        <div class="card__side card__side--back">
-          <picture>
-            <source media="(max-width: 56.24em)"srcset="dist/minified/assets/cards/medium-small/o-auto-da-compadecida.jpeg" />
-            <source media="(max-width: 62.49em)"srcset="dist/minified/assets/cards/large-medium/o-auto-da-compadecida.jpeg" />
-            <source media="(max-width: 71.24em)"srcset="dist/minified/assets/cards/largest-large/o-auto-da-compadecida.jpeg" />
-            <source media="(max-width: 75em)"srcset="dist/minified/assets/cards/largest/o-auto-da-compadecida.jpeg" />
-            <img src="dist/minified/assets/cards/o-auto-da-compadecida.jpeg" alt="o-auto-da-compadecida" />
-          </picture>
-          <div class="card__cta">
-            <div class="card__info">
-              <p class="card__info--only">Only</p>
-              <p class="card__info--price">€8</p>
-            </div>
-            <a class="card__info--btn">buy now!</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card__side card__side--front">
-          <picture>
-            <source media="(max-width: 56.24em)"srcset="dist/minified/assets/cards/medium-small/amor-de-mae.jpg" alt="amor-de-mae" />
-            <source media="(max-width: 62.49em)"srcset="dist/minified/assets/cards/large-medium/amor-de-mae.jpg" alt="amor-de-mae" />
-            <source media="(max-width: 71.24em)"srcset="dist/minified/assets/cards/largest-large/amor-de-mae.jpg" alt="amor-de-mae" />
-            <source media="(max-width: 75em)"srcset="dist/minified/assets/cards/largest/amor-de-mae.jpg" alt="amor-de-mae" />
-            <img src="dist/minified/assets/cards/amor-de-mae.jpg" alt="amor-de-mae" />
-          </picture>
-        </div>
-        <div class="card__side card__side--back">
-          <picture>
-            <source media="(max-width: 56.24em)"srcset="dist/minified/assets/cards/medium-small/amor-de-mae.jpg" alt="amor-de-mae" />
-            <source media="(max-width: 62.49em)"srcset="dist/minified/assets/cards/large-medium/amor-de-mae.jpg" alt="amor-de-mae" />
-            <source media="(max-width: 71.24em)"srcset="dist/minified/assets/cards/largest-large/amor-de-mae.jpg" alt="amor-de-mae" />
-            <source media="(max-width: 75em)"srcset="dist/minified/assets/cards/largest/amor-de-mae.jpg" alt="amor-de-mae" />
-            <img src="dist/minified/assets/cards/amor-de-mae.jpg" alt="amor-de-mae" />
-          </picture>
-          <div class="card__cta">
-            <div class="card__info">
-              <p class="card__info--only">Only</p>
-              <p class="card__info--price">€12</p>
-            </div>
-            <a class="card__info--btn">buy now!</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card__side card__side--front">
-          <picture>
-            <source media="(max-width: 56.24em)" srcset="dist/minified/assets/cards/medium-small/robertocarlos.jpg" alt="roberto-carlos-show"/>
-            <source media="(max-width: 62.49em)" srcset="dist/minified/assets/cards/large-medium/robertocarlos.jpg" alt="roberto-carlos-show"/>
-            <source media="(max-width: 71.24em)" srcset="dist/minified/assets/cards/largest-large/robertocarlos.jpg" alt="roberto-carlos-show"/>
-            <source media="(max-width: 75em)" srcset="dist/minified/assets/cards/largest/robertocarlos.jpg" alt="roberto-carlos-show"/>
-            <img src="dist/minified/assets/cards/robertocarlos.jpg" alt="roberto-carlos-show" />
-          </picture>
-        </div>
-        <div class="card__side card__side--back">
-          <picture>
-            <source media="(max-width: 56.24em)" srcset="dist/minified/assets/cards/medium-small/robertocarlos.jpg" alt="roberto-carlos-show"/>
-            <source media="(max-width: 62.49em)" srcset="dist/minified/assets/cards/large-medium/robertocarlos.jpg" alt="roberto-carlos-show"/>
-            <source media="(max-width: 71.24em)" srcset="dist/minified/assets/cards/largest-large/robertocarlos.jpg" alt="roberto-carlos-show"/>
-            <source media="(max-width: 75em)" srcset="dist/minified/assets/cards/largest/robertocarlos.jpg" alt="roberto-carlos-show"/>
-            <img src="dist/minified/assets/cards/robertocarlos.jpg" alt="roberto-carlos-show" />
-          </picture>
-          <div class="card__cta">
-            <div class="card__info">
-              <p class="card__info--only">Only</p>
-              <p class="card__info--price">€9</p>
-            </div>
-            <a class="card__info--btn">buy now!</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card__side card__side--front">
-          <picture>
-            <source media="(max-width: 56.24em)" srcset="dist/minified/assets/cards/medium-small/hebe-the-film.jpg" alt="hebe-the-film" />
-            <source media="(max-width: 62.49em)" srcset="dist/minified/assets/cards/large-medium/hebe-the-film.jpg" alt="hebe-the-film" />
-            <source media="(max-width: 71.24em)" srcset="dist/minified/assets/cards/largest-large/hebe-the-film.jpg" alt="hebe-the-film" />
-            <source media="(max-width: 75em)" srcset="dist/minified/assets/cards/largest/hebe-the-film.jpg" alt="hebe-the-film" />
-            <img src="dist/minified/assets/cards/hebe-the-film.jpg" alt="hebe-the-film" />
-          </picture>
-        </div>
-        <div class="card__side card__side--back">
-          <picture>
-            <source media="(max-width: 56.24em)" srcset="dist/minified/assets/cards/medium-small/hebe-the-film.jpg" alt="hebe-the-film" />
-            <source media="(max-width: 62.49em)" srcset="dist/minified/assets/cards/large-medium/hebe-the-film.jpg" alt="hebe-the-film" />
-            <source media="(max-width: 71.24em)" srcset="dist/minified/assets/cards/largest-large/hebe-the-film.jpg" alt="hebe-the-film" />
-            <source media="(max-width: 75em)" srcset="dist/minified/assets/cards/largest/hebe-the-film.jpg" alt="hebe-the-film" />
-            <img src="dist/minified/assets/cards/hebe-the-film.jpg" alt="hebe-the-film" />
-          </picture>
-          <div class="card__cta">
-            <div class="card__info">
-              <p class="card__info--only">Only</p>
-              <p class="card__info--price">€7.50</p>
-            </div>
-            <a class="card__info--btn">buy now!</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card__side card__side--front">
-          <picture>
-            <source media="(max-width: 56.24em)" srcset="dist/minified/assets/cards/medium-small/mya-go-original.jpg" alt="mya-go-original-globoplay" />
-            <source media="(max-width: 62.49em)" srcset="dist/minified/assets/cards/large-medium/mya-go-original.jpg" alt="mya-go-original-globoplay" />
-            <source media="(max-width: 71.24em)" srcset="dist/minified/assets/cards/largest-large/mya-go-original.jpg" alt="mya-go-original-globoplay" />
-            <source media="(max-width: 75em)" srcset="dist/minified/assets/cards/largest/mya-go-original.jpg" alt="mya-go-original-globoplay" />
-            <img src="dist/minified/assets/cards/mya-go-original.jpg" alt="mya-go-original-globoplay" />
-          </picture>
-
-        </div>
-        <div class="card__side card__side--back">
-          <picture>
-            <source media="(max-width: 56.24em)" srcset="dist/minified/assets/cards/medium-small/mya-go-original.jpg" alt="mya-go-original-globoplay" />
-            <source media="(max-width: 62.49em)" srcset="dist/minified/assets/cards/large-medium/mya-go-original.jpg" alt="mya-go-original-globoplay" />
-            <source media="(max-width: 71.24em)" srcset="dist/minified/assets/cards/largest-large/mya-go-original.jpg" alt="mya-go-original-globoplay" />
-            <source media="(max-width: 75em)" srcset="dist/minified/assets/cards/largest/mya-go-original.jpg" alt="mya-go-original-globoplay" />
-            <img src="dist/minified/assets/cards/mya-go-original.jpg" alt="mya-go-original-globoplay" />
-          </picture>
-          <div class="card__cta">
-            <div class="card__info">
-              <p class="card__info--only">Only</p>
-              <p class="card__info--price">€15</p>
-            </div>
-            <a class="card__info--btn">buy now!</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container globo-btn">
-      <a href="#" class="globo-play__header--button">Watch 7 days free</a>
-    </div>
-    <!-- CARDS ENDS -->
-
-    <!-- SLIDER -->
+    <!-- _slider.scss -->
     <section class="slider">
       <div class="post-slider">
 
@@ -2001,21 +1989,20 @@
         <i class="fa fa-arrow-right next"></i>
 
         <div class="carousel post-wrapper">
-          <div class="post"><img src="dist/minified/assets/slider/bis.png" alt="bis" /></div>
-          <div class="post"><img src="dist/minified/assets/slider/gloob.png" alt="gloob" /></div>
-          <div class="post"><img src="dist/minified/assets/slider/gnt.png" alt="gnt" /></div>
-          <div class="post"><img src="dist/minified/assets/slider/mais.png" alt="mais" /></div>
-          <div class="post"><img src="dist/minified/assets/slider/multishow.png" alt="multishow" /></div>
-          <div class="post"><img src="dist/minified/assets/slider/off.png" alt="off" /></div>
-          <div class="post"><img src="dist/minified/assets/slider/telecine.png" alt="telecine" /></div>
-          <div class="post"><img src="dist/minified/assets/slider/viva.png" alt="viva" /></div>
+          <div class="post"><img class="post__img" src="dist/minified/assets/slider/bis.png" alt="bis" /></div>
+          <div class="post"><img class="post__img" src="dist/minified/assets/slider/gloob.png" alt="gloob" /></div>
+          <div class="post"><img class="post__img" src="dist/minified/assets/slider/gnt.png" alt="gnt" /></div>
+          <div class="post"><img class="post__img" src="dist/minified/assets/slider/mais.png" alt="mais" /></div>
+          <div class="post"><img class="post__img" src="dist/minified/assets/slider/multishow.png" alt="multishow" /></div>
+          <div class="post"><img class="post__img" src="dist/minified/assets/slider/off.png" alt="off" /></div>
+          <div class="post"><img class="post__img" src="dist/minified/assets/slider/telecine.png" alt="telecine" /></div>
+          <div class="post"><img class="post__img" src="dist/minified/assets/slider/viva.png" alt="viva" /></div>
         </div>
 
       </div>
     </section>
-    <!-- SLIDER ENDS -->
 
-    <!-- TOP GLOBO SLIDER - MEDIUM-SMALL DEVICES -->
+    <!-- TOP GLOBO SLIDER - SMALL DEVICES -->
     <section class="top-globo-slider">
 
       <div class="carousel top-globo-slider__post-wrapper">
@@ -2107,9 +2094,9 @@
       </div>
 
     </section>
-    <!-- TOP GLOBO SLIDER - MEDIUM-SMALL DEVICES ENDS -->
+  </div>
 
-    <!-- TOP GLOBO -->
+  <!-- TOP GLOBO -->
     <section class="container__top-globo">
 
       <div class="title">
@@ -2206,25 +2193,21 @@
       </div>
 
     </section>
-    <!-- TOP GLOBO ENDS -->
 
-    <!-- FOOTER -->
-    <footer>
-      <div class="footer__left">
-        <h2>globo.com</h2>
-        <p>© Copyright 2000-2020 Globo Comunication e Participations S.A.</p>
-      </div>
-      <div class="footer__right">
-        <a href="#">Security and privacy policy</a>
-        <a href="#">All sites</a>
-        <a href="#">Advertise with us</a>
-        <a href="#">My account</a>
-      </div>
-    </footer>
-    <!-- FOOTER ENDS -->
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer__left">
+      <h2>globo.com</h2>
+      <p>© Copyright 2000-2020 Globo Comunication e Participations S.A.</p>
+    </div>
+    <div class="footer__right">
+      <a href="#">Security and privacy policy</a>
+      <a href="#">All sites</a>
+      <a href="#">Advertise with us</a>
+      <a href="#">My account</a>
+    </div>
+  </footer>
 
-  </div>
-  <!-- MAIN CONTAINER GRID ENDS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="dist/minified/all.js?cb=1587560438461"></script>

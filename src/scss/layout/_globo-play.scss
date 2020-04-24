@@ -1,103 +1,82 @@
-.globo-play {
+.globoplay-header {
   grid-column: full-start/full-end;
-  display: grid;
-  margin: 2.5rem 0 1.2rem 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem 0 1.2rem 0;
 
-  @include respond(iphone6to8P) {
-    margin: 2.5rem auto 0 auto;
+  .globoplay-header--left {
+    display: flex;
+    align-items: center;
+
+    .globoplay-header__p {
+      color: var(--color-blue);
+      font-size: 3rem;
+    }
+
+    .globoplay-header__h3 {
+      font-size: 1.5rem;
+      margin-left: 3.5rem;
+
+      @include respond(iphoneX) {
+        font-size: 1.6rem;
+      }
+
+      @include respond(bp-small-smallest) {
+        font-size: 1.3rem;
+      }
+
+      @include respond(bp-medium-small) {
+        font-size: 1.4rem;
+      }
+    }
+
+    @include respond(iphoneX) {
+      display: none;
+    }
+
+    @include respond(bp-smallest) {
+      display: none;
+    }
+
+    @include respond(bp-small-smallest) {
+      display: none;
+    }
+
+    @include respond(bp-medium-small) {
+      display: none;
+    }
+
+    @include respond(bp-large-medium) {
+      display: none;
+    }
+  }
+
+  .globoplay-header__button {
+    background-color: var(--color-blue);
+    font-size: 1.5rem;
+    padding: 2rem 3rem;
+    border-radius: 3px;
+    color: var(--color-grey-light-1);
   }
 
   @include respond(iphoneX) {
     margin: 2.5rem auto 0 auto;
   }
 
+  @include respond(bp-small-smallest) {
+    margin: 2rem auto 0 auto;
+  }
+
+  @include respond(bp-medium-small) {
+    margin: 2rem auto 0 auto;
+  }
+
   @include respond(bp-large-medium) {
     margin-top: 6rem;
   }
-
-  &__header {
-    display: flex;
-    justify-content: space-between;
-
-    @include respond(bp-small-smallest) {
-      margin: 2rem auto 0 auto;
-    }
-
-    @include respond(bp-medium-small) {
-      margin: 2rem auto 0 auto;
-    }
-
-    a {
-      @include respond(iphoneX) {
-        display: none;
-      }
-
-      @include respond(bp-smallest) {
-        display: none;
-      }
-
-      @include respond(bp-small-smallest) {
-        display: none;
-      }
-
-      @include respond(bp-medium-small) {
-        display: none;
-      }
-
-      @include respond(bp-large-medium) {
-        display: none;
-      }
-    }
-
-    & > div {
-      display: flex;
-      align-items: center;
-
-      @include respond(iphoneX) {
-        display: flex;
-        flex-direction: column;
-      }
-
-      h2 {
-        @include respond(iphoneX) {
-          margin-bottom: 1.5rem;
-        }
-      }
-
-      h3 {
-        font-size: 1.5rem;
-        margin-left: 3.5rem;
-
-        @include respond(iphoneX) {
-          font-size: 1.6rem;
-        }
-
-        @include respond(bp-small-smallest) {
-          font-size: 1.3rem;
-        }
-
-        @include respond(bp-medium-small) {
-          font-size: 1.4rem;
-        }
-      }
-    }
-
-    &--link {
-      color: var(--color-blue);
-      font-size: 3rem;
-    }
-
-    &--button {
-      background-color: var(--color-blue);
-      font-size: 1.5rem;
-      padding: 2rem 3rem;
-      border-radius: 3px;
-      color: var(--color-grey-light-1);
-    }
-  }
 }
 
-.globo-btn {
+.globoplay-btn-sd {
   display: none;
   text-align: center;
 

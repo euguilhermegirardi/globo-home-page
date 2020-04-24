@@ -43,30 +43,6 @@
   position: relative;
   height: 32.8rem;
 
-  @include respond(bp-smallest) {
-    height: 22em;
-  }
-
-  @include respond(bp-small-smallest) {
-    height: 22rem;
-  }
-
-  @include respond(bp-medium-small) {
-    height: 15.6rem;
-  }
-
-  @include respond(bp-large-medium) {
-    height: 23.8rem;
-  }
-
-  @include respond(bp-between-largest-large) {
-    height: 26.7rem;
-  }
-
-  @include respond(bp-largest) {
-    height: 36rem;
-  }
-
   .card__side {
     position: absolute;
     top: 0;
@@ -75,7 +51,7 @@
     backface-visibility: hidden;
     transition: all 0.8s;
 
-    img {
+    .card__img {
       border-radius: 3px;
     }
   }
@@ -83,18 +59,18 @@
   .card__side--back {
     transform: rotateY(180deg);
 
-    img {
+    .card__img {
       opacity: 0.1;
       border-radius: 3px;
     }
   }
 
-  &:hover &__side--front {
+  &:hover .card__side--front {
     transform: rotateY(-180deg);
     cursor: pointer;
   }
 
-  &:hover &__side--back {
+  &:hover .card__side--back {
     transform: rotateY(0deg);
   }
 
@@ -128,12 +104,12 @@
       margin-bottom: 2rem;
     }
 
-    &--only,
-    &--price {
+    .card__info--only,
+    .card__info--price {
       color: var(--color-blue);
     }
 
-    &--only {
+    .card__info--only {
       font-size: 3rem;
       margin-bottom: 1rem;
 
@@ -162,7 +138,7 @@
       }
     }
 
-    &--price {
+    .card__info--price {
       font-size: 4.5rem;
 
       @include respond(bp-smallest) {
@@ -186,7 +162,7 @@
       }
     }
 
-    &--btn,
+    .card__info--btn,
     &:link,
     &:visited {
       font-size: 1.4rem;
@@ -247,5 +223,29 @@
         box-shadow: 0 0.5rem 1rem rgba(black, 0.2);
       }
     }
+  }
+
+  @include respond(bp-smallest) {
+    height: 22em;
+  }
+
+  @include respond(bp-small-smallest) {
+    height: 22rem;
+  }
+
+  @include respond(bp-medium-small) {
+    height: 15.6rem;
+  }
+
+  @include respond(bp-large-medium) {
+    height: 23.8rem;
+  }
+
+  @include respond(bp-between-largest-large) {
+    height: 26.7rem;
+  }
+
+  @include respond(bp-largest) {
+    height: 36rem;
   }
 }
