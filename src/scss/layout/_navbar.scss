@@ -324,6 +324,10 @@
     }
   }
 
+  @include respond(iphoneX) {
+    display: none;
+  }
+
   @include respond(bp-smallest) {
     padding: 1rem;
     justify-content: center;

@@ -25,10 +25,6 @@
       &:not(:last-child) {
         border-top: 2px solid #ccc;
         border-bottom: 2px solid #ccc;
-
-        @include respond(iphoneX) {
-          border-top: 0;
-        }
       }
 
       &:last-child {
@@ -58,6 +54,11 @@
         font-size: 1.5rem;
         margin-left: 1rem;
 
+        @include respond(iphoneX) {
+          align-self: center;
+          font-size: 1.5rem;
+        }
+
         @include respond(bp-smallest) {
           text-align: center;
           font-size: 1.7rem;
@@ -82,6 +83,13 @@
         @include respond(bp-between-largest-large) {
           font-size: 1.4rem;
         }
+      }
+
+      @include respond(iphoneX) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        // border-top: 2px solid #ccc;
       }
 
       @include respond(bp-smallest) {

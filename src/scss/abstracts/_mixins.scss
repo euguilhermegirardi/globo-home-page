@@ -1,68 +1,46 @@
 /* MEDIA QUERIES */
 @mixin respond($breakpoint) {
-  /* MOBILE MEDIA QUERIES */
-  // @if $breakpoint == iphone6to8P {
-  //   @media only screen and (min-width: 25.875em) and (min-height: 46em) and (-webkit-device-pixel-ratio: 3) {
-  //     @content; // 414px and 736px / 16px (default browsers)
-  //   }
-  // }
-
-  // @if $breakpoint == iphoneX {
-  //   @media only screen and (min-width: 23.4375em) and (min-height: 50.75em) and (-webkit-device-pixel-ratio: 3) {
-  //     @content; // 375px and 812px / 16px (default browsers)
-  //   }
-  // }
-
+  /* MOBILES */
   @if $breakpoint == iphoneX {
-    @media only screen and (max-width: 400px) and (-webkit-device-pixel-ratio: 3) {
+    @media only screen and (max-width: 479.99px) and (min-width: 320px) {
       @content;
     }
   }
-  /* MOBILE MEDIA QUERIES ENDS */
-
-  /*IPAD MEDIA QUERIES */
-  // @if $breakpoint == ipad-pro {
-  //   @media only screen and (min-width: 1024px) and (min-height: 1366px) {
-  //     @content; // 1024px to 1366px / 16px (default browsers)
-  //   }
-  // }
-  /*IPAD MEDIA QUERIES ENDS */
 
   /* DESKTOP MEDIA QUERIES */
   @if $breakpoint == bp-smallest {
-    @media only screen and (max-width: 37.49em) and (min-width: 25em) {
-      @content; // 600px and 400px / 16px (default browsers)
+    @media only screen and (max-width: 511.99px) and (min-width: 480px) {
+      @content;
     }
   }
 
   @if $breakpoint == bp-small-smallest {
-    @media only screen and (max-width: 49.99em) and (min-width: 37.5em) {
-      @content; // 800px and 600px / 16px (default browsers)
+    @media only screen and (max-width: 799.99px) and (min-width: 512px) {
+      @content;
     }
   }
 
   @if $breakpoint == bp-medium-small {
-    @media only screen and (max-width: 56.24em) and (min-width: 50em) {
-      @content; // 900px and 800px / 16px (default browsers)
+    @media only screen and (max-width: 899.99px) and (min-width: 800px) {
+      @content;
     }
   }
 
   @if $breakpoint == bp-large-medium {
-    @media only screen and (max-width: 62.49em) and (min-width: 56.25em) {
-      @content; // 999px and 900px / 16px (default browsers)
+    @media only screen and (max-width: 999.99px) and (min-width: 900px) {
+      @content;
     }
   }
 
   @if $breakpoint == bp-between-largest-large {
-    @media only screen and (max-width: 71.24em) and (min-width: 62.5em) {
-      @content; // 1140px and 1000 / 16px (default browsers)
+    @media only screen and (max-width: 1139.99px) and (min-width: 1000px) {
+      @content;
     }
   }
 
   @if $breakpoint == bp-largest {
-    @media only screen and (max-width: 75em) and (min-width: 71.25em) {
-      @content; // 1200px and 1140px / 16px (default browsers)
+    @media only screen and (max-width: 1200px) and (min-width: 1140px) {
+      @content;
     }
   }
-  /* DESKTOP MEDIA QUERIES ENDS */
 }

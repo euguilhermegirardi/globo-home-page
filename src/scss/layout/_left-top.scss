@@ -51,7 +51,10 @@
     }
 
     @include respond(iphoneX) {
-      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      margin-top: 1rem;
+      text-align: center;
     }
 
     @include respond(bp-smallest) {
@@ -274,7 +277,8 @@
   }
 
   @include respond(iphoneX) {
-    grid-column: full-start/full-end;
+    display: flex;
+    padding: 0;
   }
 
   @include respond(bp-smallest) {

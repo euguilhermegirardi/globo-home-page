@@ -1,9 +1,12 @@
 .navbar-mobile {
-  margin: 0 auto;
   display: none;
 
   @include respond(iphoneX) {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    height: 5rem;
   }
 
   .navbar-mobile__menu--open {
@@ -12,9 +15,10 @@
     @include respond(iphoneX) {
       display: block;
       position: absolute;
-      top: 2.1rem;
+      top: 1.2rem;
       left: 2rem;
       font-size: 2rem;
+      cursor: pointer;
       color: var(--color-blue);
     }
   }
@@ -24,7 +28,8 @@
 
     @include respond(iphoneX) {
       display: block;
-      margin: 0 8rem 0 10rem;
+      margin-left: 7.5rem;
+      height: 2.5rem;
     }
   }
 

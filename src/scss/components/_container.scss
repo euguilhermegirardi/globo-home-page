@@ -4,7 +4,7 @@
   padding: 0 3rem;
 
   @include respond(iphoneX) {
-    padding: 0 2px;
+    padding: 0 1rem;
   }
 
   @include respond(bp-smallest) {
