@@ -207,9 +207,12 @@
         margin-left: 1rem;
       }
 
+      @include respond(bp-smallest) {
+        margin-bottom: 5px;
+      }
+
       @include respond(bp-small-smallest) {
-        margin-right: 1rem;
-        margin-bottom: 1rem;
+        margin-right: 5px;
       }
 
       @include respond(bp-medium-small) {
@@ -238,6 +241,10 @@
 
       @include respond(iphoneX) {
         margin-left: 1rem;
+      }
+
+      @include respond(bp-smallest) {
+        margin-bottom: 5px;
       }
 
       @include respond(bp-large-medium) {

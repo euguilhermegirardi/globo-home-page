@@ -206,7 +206,7 @@
   }
 
   @include respond(bp-small-smallest) {
-    grid-column: full-start/full-end;
+    display: none;
   }
 
   @include respond(bp-medium-small) {

@@ -34,6 +34,10 @@
       &:last-child {
         border-bottom: 2px solid #ccc;
         margin-top: -2px;
+
+        @include respond(bp-smallest) {
+          border-bottom: none;
+        }
       }
 
       .six-news__img {
@@ -85,7 +89,8 @@
       }
 
       @include respond(bp-small-smallest) {
-        height: 100%;
+        justify-content: center;
+        flex-direction: column;
       }
 
       @include respond(bp-medium-small) {
@@ -109,22 +114,6 @@
 
     .six-news__card--gshow {
       color: var(--color-orange-text);
-    }
-
-    @include respond(bp-smallest) {
-      margin: 0;
-
-      &:not(:last-child) {
-        margin: 0 2.5rem 0 0;
-      }
-    }
-
-    @include respond(bp-small-smallest) {
-      width: 33.333%;
-
-      &:not(:last-child) {
-        margin: 0 2.8rem 0 0;
-      }
     }
 
     @include respond(bp-medium-small) {

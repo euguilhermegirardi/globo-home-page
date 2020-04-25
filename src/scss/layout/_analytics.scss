@@ -1,6 +1,7 @@
 .analytics {
   grid-column: full-start/full-end;
   display: flex;
+  justify-content: center;
 
   .analytics__economics {
     width: 33.33%;
@@ -10,7 +11,7 @@
     .analytics__currency {
       display: flex;
       justify-content: space-between;
-      padding: 2.5rem 2.5rem;
+      padding: 4rem 2.5rem;
 
       .analytics__finance {
         &:hover {
@@ -155,8 +156,13 @@
       }
     }
 
+    @include respond(bp-smallest) {
+      width: 90%;
+    }
+
     @include respond(bp-small-smallest) {
-      margin: 5rem 8.5rem;
+      margin: 3rem 0;
+      width: 70%;
     }
 
     @include respond(bp-medium-small) {
@@ -194,6 +200,11 @@
         padding: 0 0rem 2rem 1.5rem;
       }
 
+      @include respond(bp-smallest) {
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+      }
+
       @include respond(bp-largest) {
         padding: 0 0rem 2rem 1.5rem;
         font-size: 1.4rem;
@@ -222,10 +233,20 @@
   .analytics__schedule--ge {
     margin: 0 2rem;
     color: var(--color-green-text);
+
+    @include respond(bp-smallest) {
+      width: 90%;
+      margin: 1.5rem 0;
+    }
   }
 
   .analytics__schedule--gshow {
     color: var(--color-orange-text);
+
+    @include respond(bp-smallest) {
+      width: 90%;
+      margin-bottom: 2rem;
+    }
   }
 
   .analytics__footer {
@@ -246,6 +267,11 @@
 
   @include respond(iphoneX) {
     padding: 2rem;
+  }
+
+  @include respond(bp-smallest) {
+    flex-direction: column;
+    align-items: center;
   }
 
   @include respond(bp-medium-small) {

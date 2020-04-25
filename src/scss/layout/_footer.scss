@@ -94,7 +94,7 @@
   @include respond(bp-smallest) {
     display: flex;
     flex-direction: column;
-    padding: 1.5rem 2px;
+    padding: 1.5rem 1rem;
   }
 
   @include respond(bp-small-smallest) {

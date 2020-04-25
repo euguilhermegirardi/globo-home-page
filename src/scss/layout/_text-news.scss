@@ -13,6 +13,8 @@
     }
 
     @include respond(bp-smallest) {
+      width: 100%;
+      font-size: 1.6rem;
       text-align: center;
       margin: 1rem 0;
     }

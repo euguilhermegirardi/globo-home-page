@@ -20,6 +20,11 @@
         margin-bottom: 1rem;
         font-size: 2rem;
       }
+
+      @include respond(bp-smallest) {
+        font-size: 3rem;
+        margin-top: 1.2rem;
+      }
     }
 
     .left-top__p {
@@ -37,6 +42,10 @@
 
       @include respond(iphoneX) {
         margin-bottom: 0;
+        font-size: 2rem;
+      }
+
+      @include respond(bp-smallest) {
         font-size: 2rem;
       }
     }

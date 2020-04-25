@@ -58,6 +58,7 @@
 
   .card__side--back {
     transform: rotateY(180deg);
+    cursor: pointer;
 
     .card__img {
       opacity: 0.1;
@@ -103,8 +104,7 @@
       }
 
       @include respond(bp-small-smallest) {
-        font-size: 1.3rem;
-        margin-bottom: 0.3rem;
+        font-size: 2.5rem;
       }
 
       @include respond(bp-medium-small) {
@@ -130,7 +130,7 @@
       }
 
       @include respond(bp-small-smallest) {
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
 
       @include respond(bp-medium-small) {
@@ -190,7 +190,7 @@
     }
 
     @include respond(bp-small-smallest) {
-      font-size: 0.8rem;
+      font-size: 1.2rem;
       padding: 0.8rem 2rem;
     }
 

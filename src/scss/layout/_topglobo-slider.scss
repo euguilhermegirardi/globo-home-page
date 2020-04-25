@@ -11,10 +11,12 @@
 
   @include respond(bp-smallest) {
     display: block;
+    padding: 0 5px;
   }
 
   @include respond(bp-small-smallest) {
     display: block;
+    padding: 1.5rem;
   }
 
   @include respond(bp-medium-small) {
