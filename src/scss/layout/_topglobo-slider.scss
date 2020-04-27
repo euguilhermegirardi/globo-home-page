@@ -1,8 +1,18 @@
 .topglobo-slider {
   display: none;
-  max-width: 1320px;
   margin: 2rem auto;
   background-color: var(--color-gray-light-5);
+
+  .topglobo-carousel {
+    width: 85%;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .topglobo__items {
+      margin: 0 auto;
+      display: inline-block;
+    }
+  }
 
   @include respond(iphoneX) {
     display: block;

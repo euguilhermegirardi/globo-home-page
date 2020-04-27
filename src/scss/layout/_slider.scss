@@ -49,10 +49,6 @@
     margin: 0 auto;
     overflow: hidden;
 
-    @include respond(iphone6to8P) {
-      width: 95%;
-    }
-
     @include respond(iphoneX) {
       width: 95%;
     }

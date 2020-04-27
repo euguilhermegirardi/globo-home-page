@@ -3,10 +3,6 @@
   margin: 0 auto;
   padding: 0 3rem;
 
-  @include respond(iphoneX) {
-    padding: 0 1rem;
-  }
-
   @include respond(bp-smallest) {
     padding: 0 0.5rem;
   }

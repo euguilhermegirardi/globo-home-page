@@ -3,20 +3,15 @@
   max-width: 1320px;
   margin: 0 auto;
 
-  .cards-slider__post-wrapper {
+  .cards-carousel {
     width: 85%;
     margin: 0 auto;
     overflow: hidden;
 
-    .slick-slider {
-      touch-action: auto;
-      -ms-touch-action: auto;
+    .cards-slider__items {
+      margin: 0 10px;
+      display: inline-block;
     }
-  }
-
-  .cards-slider__items {
-    margin: 0 10px;
-    display: inline-block;
   }
 
   @include respond(iphoneX) {

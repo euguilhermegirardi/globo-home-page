@@ -21,10 +21,11 @@
   <meta property="fb:app_id" content="your_app_id" />
   <meta name="twitter:site" content="@website-username" />
   <!-- META TAGS FOR SOCIAL MEDIA ENDS -->
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="dist/minified/main.css?cb=1587837569364" />
+  <link rel="stylesheet" href="dist/minified/main.css?cb=1587995723531" />
   <link rel="shortcut icon" type="image/png" href="src/assets/favicon.ico" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
   <title>globo.com - Absolutely everything about news, sports and entertainment</title>
 </head>
 <body>
@@ -1962,7 +1963,7 @@
      <!-- _cards-slider.scss -->
     <section class="cards-slider">
 
-      <div class="carousel cards-slider__post-wrapper">
+      <div class="cards-carousel">
 
         <div class="cards-slider__items">
           <picture>
@@ -2007,7 +2008,7 @@
     <section class="slider">
       <div class="post-slider">
 
-        <i class="fa fa-arrow-left prev"></i>
+        <i id="test" class="fa fa-arrow-left prev"></i>
         <i class="fa fa-arrow-right next"></i>
 
         <div class="carousel post-wrapper">
@@ -2027,8 +2028,10 @@
 
   <!-- _topglobo-slider.scss -->
     <section class="topglobo-slider">
-      <div class="carousel top-globo-slider__post-wrapper">
-        <div class="topglobo__g1 items">
+
+      <div class="topglobo-carousel">
+
+        <div class="topglobo__g1 topglobo__items">
           <div class="topglobo__text">
             <a class="topglobo__link" href="#">
               <h2 class="topglobo__h2">"The body of the actress Isis Valverde's father is buried in Aiuruoca, Minas Gerais"</h2>
@@ -2055,7 +2058,8 @@
             </a>
           </div>
         </div>
-        <div class="topglobo__ge items">
+
+        <div class="topglobo__ge topglobo__items">
           <div class="topglobo__text">
             <a class="topglobo__link" href="#">
             <h2 class="topglobo__h2">"Desportivo Brasil striker takes disconcerting dribble; video"</h2>
@@ -2082,7 +2086,8 @@
             </a>
           </div>
         </div>
-        <div class="topglobo__gshow items">
+
+        <div class="topglobo__gshow topglobo__items">
           <div class="topglobo__text">
             <a class="topglobo__link" href="#">
               <h2 class="topglobo__h2">"The body of the actress Isis Valverde's father is buried in Aiuruoca, Minas Gerais"</h2>
@@ -2221,8 +2226,11 @@
     </div>
   </footer>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="dist/minified/all.js?cb=1587837569364"></script>
+  <script type="text/javascript" src="src/js/jquery-3.5.0.min.js"></script>
+  <script src="dist/minified/all.js?cb=1587995723531"></script>
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="src/js/slick/slick.min.js"></script>
 </body>
 </html>
