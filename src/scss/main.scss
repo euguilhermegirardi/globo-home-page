@@ -5,23 +5,26 @@
 @import "base/base";
 
 @import "components/container";
+@import "components/footer";
 @import "components/grid-container";
+@import "components/topglobo";
+
+@import "layout/globoplay/cards";
+@import "layout/globoplay/globo-play";
+
+@import "layout/mobile-and-small-devices/cards-slider";
+@import "layout/mobile-and-small-devices/globoplay-btn-sd";
+@import "layout/mobile-and-small-devices/navbar-mobile";
+@import "layout/mobile-and-small-devices/topglobo-slider";
 
 @import "layout/advertisement";
 @import "layout/analytics";
-@import "layout/cards-slider";
-@import "layout/cards";
-@import "layout/footer";
-@import "layout/globo-play";
 @import "layout/left-top";
 @import "layout/navbar__dropdown";
-@import "layout/navbar-mobile";
 @import "layout/navbar";
 @import "layout/right-top";
 @import "layout/six-news";
 @import "layout/slider";
 @import "layout/text-news";
 @import "layout/three-news";
-@import "layout/topglobo-slider";
-@import "layout/topglobo";
 @import "layout/videos";
