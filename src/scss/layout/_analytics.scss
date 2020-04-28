@@ -53,6 +53,10 @@
             @include respond(bp-large-medium) {
               font-size: 3rem;
             }
+
+            @include respond(bp-between-largest-large) {
+              font-size: 3rem;
+            }
           }
 
           .analytics__percent {
@@ -64,6 +68,10 @@
           }
 
           @include respond(iphoneX) {
+            justify-content: center;
+          }
+
+          @include respond(bp-between-largest-large) {
             justify-content: flex-start;
           }
         }
@@ -72,6 +80,11 @@
           font-size: 1.5rem;
           color: var(--color-grey-dark-1);
 
+          @include respond(iphoneX) {
+            display: flex;
+            justify-content: center;
+          }
+
           @include respond(bp-large-medium) {
             font-size: 1rem;
           }
@@ -79,6 +92,10 @@
 
         @include respond(bp-large-medium) {
           margin-top: 2px;
+        }
+
+        @include respond(bp-between-largest-large) {
+          font-size: 1.3rem;
         }
       }
 
@@ -101,6 +118,10 @@
             .analytics__currencies--right {
               font-size: 1.2rem;
               border-bottom: 1px solid var(--color-grey-light-4);
+
+              @include respond(bp-between-largest-large) {
+                font-size: 1.1rem;
+              }
             }
 
             .analytics__currencies--left {
@@ -138,6 +159,10 @@
               @include respond(bp-large-medium) {
                 font-size: 1.1rem;
               }
+
+              @include respond(bp-between-largest-large) {
+                font-size: 1.1rem;
+              }
             }
 
             .analytics__tr-value {
@@ -146,7 +171,15 @@
               color: var(--color-grey-dark-1);
               padding: 1rem 0 1rem 1rem;
 
+              @include respond(iphoneX) {
+                text-align: end;
+              }
+
               @include respond(bp-large-medium) {
+                font-size: 1.1rem;
+              }
+
+              @include respond(bp-between-largest-large) {
                 font-size: 1.1rem;
               }
             }
@@ -156,11 +189,24 @@
             }
           }
         }
+
+        @include respond(iphoneX) {
+          margin-top: 2rem;
+        }
+      }
+
+      @include respond(iphoneX) {
+        flex-direction: column;
+        padding: 1rem;
       }
 
       @include respond(bp-large-medium) {
         margin-bottom: 0;
         padding: 2rem;
+      }
+
+      @include respond(bp-between-largest-large) {
+        padding: 2.6rem 1.3rem;
       }
     }
 
@@ -190,8 +236,13 @@
 
     .analytics__schedule-h6 {
       color: var(--color-grey-dark-3);
-      font-size: 12px;
+      font-size: 1.2rem;
       padding: 2rem 1.5rem;
+
+      @include respond(iphoneX) {
+        padding: 5px;
+        padding-top: 1rem;
+      }
 
       @include respond(bp-large-medium) {
         padding: 2rem 1.5rem 0 1.5rem;
@@ -209,7 +260,8 @@
       }
 
       @include respond(iphoneX) {
-        padding: 0 0rem 2rem 1.5rem;
+        padding: 1.2rem;
+        margin-bottom: 0;
       }
 
       @include respond(bp-smallest) {
@@ -289,7 +341,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
+    margin: 2rem 0;
   }
 
   @include respond(bp-smallest) {

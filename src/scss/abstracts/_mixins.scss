@@ -34,7 +34,7 @@
 
   @if $breakpoint == bp-between-largest-large {
     @media only screen and (max-width: 1139.99px) and (min-width: 1000px) {
-      @content;
+      @content; //245px
     }
   }
 

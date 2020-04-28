@@ -31,23 +31,35 @@
       }
     }
 
-    .globoplay-header__button {
-      background-color: var(--color-blue);
-      font-size: 1.5rem;
-      padding: 2rem 3rem;
-      border-radius: 3px;
-      color: var(--color-grey-light-1);
-
-      @include respond(bp-large-medium) {
-        display: none;
-      }
-    }
-
     @include respond(iphoneX) {
       display: none;
     }
 
     @include respond(bp-smallest) {
+      display: none;
+    }
+
+    @include respond(bp-small-smallest) {
+      display: none;
+    }
+
+    @include respond(bp-medium-small) {
+      display: none;
+    }
+
+    @include respond(bp-large-medium) {
+      display: none;
+    }
+  }
+
+  .globoplay-header__button {
+    background-color: var(--color-blue);
+    font-size: 1.5rem;
+    padding: 2rem 3rem;
+    border-radius: 3px;
+    color: var(--color-grey-light-1);
+
+    @include respond(iphoneX) {
       display: none;
     }
 

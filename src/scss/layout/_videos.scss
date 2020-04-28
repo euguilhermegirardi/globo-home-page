@@ -44,6 +44,11 @@
   @include respond(bp-medium-small) {
     margin-bottom: 1rem;
   }
+
+  @include respond(bp-between-largest-large) {
+    height: 4.6rem;
+    margin-bottom: 0px;
+  }
 }
 
 .videos {
@@ -127,6 +132,10 @@
     @include respond(bp-large-medium) {
       display: none;
     }
+
+    @include respond(bp-between-largest-large) {
+      display: none;
+    }
   }
 
   .videos__right {
@@ -138,7 +147,19 @@
       transition: all 1s ease;
 
       @include respond(iphoneX) {
-        width: 85%;
+        border-radius: 0px;
+      }
+
+      @include respond(bp-medium-small) {
+        border-radius: 0px;
+      }
+
+      @include respond(bp-large-medium) {
+        border-radius: 0px;
+      }
+
+      @include respond(bp-between-largest-large) {
+        border-radius: 0px;
       }
     }
 
@@ -160,10 +181,6 @@
       .videos__right-h4 {
         font-size: 1.2rem;
         margin-bottom: 0.7rem;
-
-        @include respond(bp-medium-small) {
-          font-size: 2.5rem;
-        }
       }
 
       .videos__right-p {
@@ -180,10 +197,6 @@
           @include respond(bp-medium-small) {
             display: none;
           }
-        }
-
-        @include respond(bp-medium-small) {
-          font-size: 1.8rem;
         }
       }
     }
@@ -203,10 +216,6 @@
         }
       }
 
-      @include respond(iphoneX) {
-        margin-left: 1rem;
-      }
-
       @include respond(bp-smallest) {
         margin-bottom: 5px;
       }
@@ -220,7 +229,11 @@
       }
 
       @include respond(bp-large-medium) {
-        grid-column: 1/4;
+        margin-right: 2px;
+      }
+
+      @include respond(bp-between-largest-large) {
+        margin-right: 2px;
       }
     }
 
@@ -239,16 +252,8 @@
         }
       }
 
-      @include respond(iphoneX) {
-        margin-left: 1rem;
-      }
-
       @include respond(bp-smallest) {
         margin-bottom: 5px;
-      }
-
-      @include respond(bp-large-medium) {
-        grid-column: 4/7;
       }
     }
 
@@ -293,14 +298,43 @@
     }
 
     @include respond(bp-large-medium) {
-      top: 2rem;
-      position: relative;
-      grid-gap: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      top: 0px;
     }
+
+    @include respond(bp-between-largest-large) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      top: 0px;
+    }
+  }
+
+  @include respond(iphoneX) {
+    display: flex;
+    justify-content: center;
   }
 
   @include respond(bp-smallest) {
     display: flex;
     justify-content: center;
+  }
+
+  @include respond(bp-large-medium) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include respond(bp-between-largest-large) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 }
