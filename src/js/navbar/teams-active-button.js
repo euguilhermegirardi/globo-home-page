@@ -1,9 +1,14 @@
-var header = document.getElementById("navbar__btn-container");
-var btns = header.getElementsByClassName("navbar__btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function () {
-    var current = document.getElementsByClassName(" active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
+let btns = document.querySelectorAll('.navbar__btn');
+
+const handleClick = (e) => {
+  e.preventDefault();
+
+  btns.forEach(element => {
+    element.classList.remove('btn-active');
   });
-}
+  e.currentTarget.classList.add('btn-active');
+};
+
+btns.forEach(element => {
+  element.addEventListener('click', handleClick)
+});
