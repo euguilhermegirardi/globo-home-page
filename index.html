@@ -23,7 +23,7 @@
   <!-- META TAGS FOR SOCIAL MEDIA ENDS -->
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="dist/minified/main.css?cb=1588066300169" />
+  <link rel="stylesheet" href="dist/minified/main.css?cb=1588153012848" />
   <link rel="shortcut icon" type="image/png" href="src/assets/favicon.ico" />
 
   <title>globo.com - Absolutely everything about news, sports and entertainment</title>
@@ -109,8 +109,8 @@
 
         <ul class="navbar__menu">
           <!-- G1 DROPDOWN -->
-          <li class="navbar__li" onmouseleave="closeDropdown()">
-            <a class="navbar__link" href="#" onclick="openDropdown(event)" >
+          <li class="navbar__li" data-target-id="dropdown-1">
+            <a class="navbar__link" href="#">
               <p class="red">g1</p>
               <svg class="navbar__icon navbar__icon--red">
                 <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
@@ -118,7 +118,7 @@
             </a>
 
             <!-- _navbar__dropdown.scss -->
-            <div class="navbar__dropdown">
+            <div class="navbar__dropdown" id="dropdown-1">
               <!-- FIRST COLUMN -->
               <ul class="navbar__first-column navbar__first-column--g1">
                 <li class="navbar__first-column-li navbar__first-column-li--g1 active-item" onmouseover="showsOne('link-1');">
@@ -519,8 +519,8 @@
           </li>
 
           <!-- GE DROPDOWN -->
-          <li class="navbar__li" onmouseleave="closeDropdown()">
-            <a class="navbar__link" href="#" onclick="openDropdown(event)">
+          <li class="navbar__li" data-target-id="dropdown-2">
+            <a class="navbar__link" href="#">
               <p class="green">ge</p>
               <svg class="navbar__icon navbar__icon--green">
                 <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
@@ -528,7 +528,7 @@
             </a>
 
             <!-- _navbar__dropdown.scss -->
-            <div class="navbar__dropdown">
+            <div class="navbar__dropdown none" id="dropdown-2">
               <!-- FIRST COLUMN -->
               <ul class="navbar__first-column navbar__first-column--ge" id="navbar__first-column">
                 <li class="navbar__first-column-li navbar__first-column-li--ge active-item" onmouseover="showsOne('link-1');">
@@ -770,16 +770,16 @@
           </li>
 
           <!-- GSHOW DROPDOWN -->
-          <li class="navbar__li" onmouseleave="closeDropdown()">
-            <a href="#" class="navbar__link" onclick="openDropdown(event)">
+          <li class="navbar__li" data-target-id="dropdown-3">
+            <a href="#" class="navbar__link">
               <span class="orange">gshow</span>
               <svg class="navbar__icon navbar__icon--orange">
                 <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
               </svg>
             </a>
 
-              <!-- _navbar__dropdown.scss -->
-            <div class="navbar__dropdown">
+            <!-- _navbar__dropdown.scss -->
+            <div class="navbar__dropdown" id="dropdown-3">
               <!-- FIRST COLUMN -->
               <ul class="navbar__first-column navbar__first-column--gshow" id="navbar__first-column">
                 <li class="navbar__first-column-li navbar__first-column-li--gshow active-item" onmouseover="showsOne('link-1')">
@@ -1151,14 +1151,15 @@
           </li>
 
           <!-- VIDEOS DROPDOWN -->
-          <li class="navbar__li" onmouseleave="closeDropdown()">
-            <a class="navbar__link" href="#" onclick="openDropdown(event)">
+          <li class="navbar__li" data-target-id="dropdown-4">
+            <a class="navbar__link" href="#">
               <span class="blue">videos</span>
               <svg class="navbar__icon navbar__icon--blue">
                 <use xlink:href="dist/minified/assets/sprite.svg#icon-chevron-small-down"></use>
               </svg>
             </a>
-            <ul class="navbar__dropdown navbar__dropdown--videos">
+
+            <ul class="navbar__dropdown navbar__dropdown--videos" id="dropdown-4">
               <li class="navbar__videos-li">
                 <a class="navbar__videos-item" href="#">globoplay</a>
               </li>
@@ -1171,6 +1172,7 @@
         </ul>
         <!-- MENU ENDS -->
       </div>
+
       <div class="navbar--right">
         <div class="navbar__menu-item">
           <a class="navbar__account" href="#">Sign Up</a>
@@ -2231,7 +2233,7 @@
   </footer>
 
   <script type="text/javascript" src="src/js/jquery-3.5.0.min.js"></script>
-  <script src="dist/minified/all.js?cb=1588066300169"></script>
+  <script src="dist/minified/all.js?cb=1588153012848"></script>
 
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

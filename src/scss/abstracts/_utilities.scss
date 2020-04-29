@@ -41,3 +41,38 @@
   filter: brightness(140%);
   transition: all 1s ease;
 }
+
+%active {
+  border-top: 0.1px solid var(--color-grey-dark-2);
+  border-bottom: 0.1px solid var(--color-grey-dark-2);
+  border-right: none;
+  background-color: var(--color-gray-light-5);
+
+  a {
+    padding-left: -5px;
+    filter: brightness(115%);
+  }
+
+  &:after,
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 100%;
+    border-style: solid;
+  }
+
+  /* this border color controlls the outside, thin border */
+  &:before {
+    top: 0;
+    border-color: transparent transparent transparent var(--color-grey-dark-2);
+    border-width: 15px;
+  }
+
+  /* this border color controlls the color of the triangle (what looks like the fill of the triangle) */
+  &:after {
+    top: 1.4px;
+    border-color: transparent transparent transparent var(--color-gray-light-5);
+    border-width: 14px;
+  }
+}
