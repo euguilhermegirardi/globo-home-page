@@ -38,7 +38,8 @@ setViewportWidth();
 logWidth();
 
 // On resize events, recalculate and log
-window.addEventListener('resize', function () {
+window.addEventListener('resize', function (e) {
+  e.preventDefault();
 	setViewportWidth();
 	logWidth();
 }, false);

@@ -6,25 +6,29 @@ var subMenu = document.querySelector('.navbar-mobile__subSidebar');
 var closeSubMenu = document.querySelector('.navbar-mobile__subSidebar--close');
 
 if(icon) {
-  icon.addEventListener('click', () => {
-    menu.style.width = '250px';
+  icon.addEventListener('click', (e) => {
+    e.preventDefault();
+    menu.style.width = '25rem';
   });
 }
 
 if(close) {
-  close.addEventListener('click', () => {
+  close.addEventListener('click', (e) => {
+    e.preventDefault();
     menu.style.width = '0'
   });
 }
 
 if(link) {
-  link.addEventListener('click', () => {
-    subMenu.style.width = "250px";
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    subMenu.style.width = "25rem";
   });
 }
 
 if(closeSubMenu) {
-  closeSubMenu.addEventListener('click', () => {
+  closeSubMenu.addEventListener('click', (e) => {
+    e.preventDefault();
     subMenu.style.width = "0";
   });
 }
