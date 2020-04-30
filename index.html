@@ -121,23 +121,23 @@
             <div class="navbar__dropdown" id="dropdown-1">
               <!-- FIRST COLUMN -->
               <ul class="navbar__first-column navbar__first-column--g1">
-                <li class="navbar__first-column-li navbar__first-column-li--g1 active-item" onmouseover="showsOne('link-1');">
+                <li class="navbar__first-column-li navbar__first-column-li--g1 active-item" data-target-id="link-1">
                   <a class="navbar__first-column-item navbar__first-column-item--g1" href="#">Top pages</a>
                 </li>
-                <li class="navbar__first-column-li navbar__first-column-li--g1" onmouseover="showsOne('link-2');">
+                <li class="navbar__first-column-li navbar__first-column-li--g1" data-target-id="link-2">
                   <a class="navbar__first-column-item navbar__first-column-item--g1" href="#">G1</a>
                 </li>
-                <li class="navbar__first-column-li navbar__first-column-li--g1" onmouseover="showsOne('link-3');">
+                <li class="navbar__first-column-li navbar__first-column-li--g1" data-target-id="link-3">
                   <a class="navbar__first-column-item navbar__first-column-item--g1" href="#">On TV</a>
                 </li>
-                <li class="navbar__first-column-li navbar__first-column-li--g1" onmouseover="showsOne('link-4');">
+                <li class="navbar__first-column-li navbar__first-column-li--g1" data-target-id="link-4">
                   <a class="navbar__first-column-item navbar__first-column-item--g1" href="#">Magazines and radio</a>
                 </li>
               </ul>
 
               <!-- SECOND COLUMN -->
               <!-- Top pages-->
-              <ul class="navbar__second-column showAndHide" id="link-1">
+              <ul class="navbar__second-column" id="link-1">
                 <li class="navbar__title">top pages</li>
                 <li class="navbar__second-column-li">
                   <a class="navbar__second-column-item navbar__second-column-item--g1" href="#">G1</a>
@@ -172,7 +172,7 @@
               </ul>
 
               <!-- G1 -->
-              <ul class="navbar__second-column none showAndHide" id="link-2">
+              <ul class="navbar__second-column none" id="link-2">
                 <li class="navbar__title">g1</li>
                 <li class="navbar__second-column-li">
                   <a class="navbar__second-column-item navbar__second-column-item--g1" href="#">Agro</a>
@@ -228,7 +228,7 @@
               </ul>
 
               <!-- On TV -->
-              <ul class="navbar__second-column none showAndHide" id="link-3">
+              <ul class="navbar__second-column none" id="link-3">
                 <li class="navbar__title">Tv Shows</li>
                 <li class="navbar__second-column-li">
                   <a class="navbar__second-column-item navbar__second-column-item--g1" href="#">Altas Horas</a>
@@ -272,7 +272,7 @@
               </ul>
 
               <!-- Magazines and radio -->
-              <ul class="navbar__second-column none showAndHide" id="link-4">
+              <ul class="navbar__second-column none" id="link-4">
                 <li class="navbar__title">on tv</li>
                 <li class="navbar__second-column-li">
                   <a class="navbar__second-column-item navbar__second-column-item--g1" href="#">Auto Esporte</a>
@@ -317,7 +317,6 @@
                   <a class="navbar__second-column-item navbar__second-column-item--g1" href="#">Profissão Reporter</a>
                 </li>
               </ul>
-              <!-- SECOND COLUMN ENDS -->
 
               <!-- THIRD COLUMN - STATES -->
               <div class="navbar__g1-states">
@@ -531,19 +530,19 @@
             <div class="navbar__dropdown none" id="dropdown-2">
               <!-- FIRST COLUMN -->
               <ul class="navbar__first-column navbar__first-column--ge" id="navbar__first-column">
-                <li class="navbar__first-column-li navbar__first-column-li--ge active-item" onmouseover="showsOne('link-1');">
+                <li class="navbar__first-column-li navbar__first-column-li--ge active-item" data-target-id="link-5">
                   <a class="navbar__first-column-item navbar__first-column-item--ge" href="#">top pages</a>
                 </li>
-                <li class="navbar__first-column-li navbar__first-column-li--ge" onmouseover="showsOne('link-2');">
+                <li class="navbar__first-column-li navbar__first-column-li--ge" data-target-id="link-6">
                   <a class="navbar__first-column-item navbar__first-column-item--ge" href="#">globoesporte.com</a>
                 </li>
-                <li class="navbar__first-column-li navbar__first-column-li--ge" onmouseover="showsOne('link-3');">
+                <li class="navbar__first-column-li navbar__first-column-li--ge" data-target-id="link-7">
                   <a class="navbar__first-column-item navbar__first-column-item--ge" href="#">Football</a>
                 </li>
-                <li class="navbar__first-column-li navbar__first-column-li--ge" onmouseover="showsOne('link-4');">
+                <li class="navbar__first-column-li navbar__first-column-li--ge" data-target-id="link-8">
                   <a class="navbar__first-column-item navbar__first-column-item--ge" href="#">on tv</a>
                 </li>
-                <li class="navbar__first-column-li navbar__first-column-li--ge" onmouseover="showsOne('link-5');">
+                <li class="navbar__first-column-li navbar__first-column-li--ge" data-target-id="link-9">
                   <a class="navbar__first-column-item navbar__first-column-item--ge" href="#">sportv</a>
                 </li>
               </ul>
@@ -551,7 +550,7 @@
 
               <!-- SECOND COLUMN -->
               <!-- top pages -->
-              <ul class="navbar__second-column showAndHide" id="link-1">
+              <ul class="navbar__second-column" id="link-5">
                 <li class="navbar__title">top pages</li>
                 <li class="navbar__second-column-li">
                   <a class="navbar__second-column-item navbar__second-column-item--ge" href="#">Globo Esporte</a>
@@ -586,7 +585,7 @@
               </ul>
 
               <!-- globoesporte.com -->
-              <ul class="navbar__second-column none showAndHide" id="link-2">
+              <ul class="navbar__second-column none" id="link-6">
                 <li class="navbar__title">globoesporte.com</li>
                 <li class="navbar__second-column-li">
                   <a class="navbar__second-column-item navbar__second-column-item--ge" href="#">Agenda</a>
@@ -621,7 +620,7 @@
               </ul>
 
               <!-- Football -->
-              <ul class="navbar__second-column none showAndHide" id="link-3">
+              <ul class="navbar__second-column none" id="link-7">
                 <li class="navbar__title">football</li>
                 <li class="navbar__second-column-li">
                   <a class="navbar__second-column-item navbar__second-column-item--ge" href="#">Brasileirão Série A</a>
@@ -662,7 +661,7 @@
               </ul>
 
               <!-- On TV -->
-              <ul class="navbar__second-column none showAndHide" id="link-4">
+              <ul class="navbar__second-column none" id="link-8">
                 <li class="navbar__title">on tv</li>
                 <li class="navbar__second-column-li">
                   <a class="navbar__second-column-item navbar__second-column-item--ge" href="#">Combate Programação</a>
@@ -685,7 +684,7 @@
               </ul>
 
               <!-- SporTV -->
-              <ul class="navbar__second-column none showAndHide" id="link-5">
+              <ul class="navbar__second-column none" id="link-9">
                 <li class="navbar__title">sportv</li>
                 <li class="navbar__second-column-li">
                   <a class="navbar__second-column-item navbar__second-column-item--ge" href="#">Acabou a Brincadeira</a></li>
@@ -711,8 +710,8 @@
               <!-- THIRD COLUMN - TEAMS -->
               <div class="navbar__ge-teams">
                 <div class="navbar__btn-container" id="navbar__btn-container">
-                  <button class="navbar__btn btn-active" onclick=teams('teamsA')>SERIE A</button>
-                  <button class="navbar__btn" onclick=teams('teamsB')>SERIE B</button>
+                  <button class="navbar__btn btn-active" data-target-id="teamsA">SERIE A</button>
+                  <button class="navbar__btn" data-target-id="teamsB">SERIE B</button>
                 </div>
 
                 <div class="navbar__teams-container" id="teamsA">
@@ -782,37 +781,37 @@
             <div class="navbar__dropdown" id="dropdown-3">
               <!-- FIRST COLUMN -->
               <ul class="navbar__first-column navbar__first-column--gshow" id="navbar__first-column">
-                <li class="navbar__first-column-li navbar__first-column-li--gshow active-item" onmouseover="showsOne('link-1')">
+                <li class="navbar__first-column-li navbar__first-column-li--gshow active-item" data-target-id="link-10">
                   <a class="navbar__first-column-item navbar__first-column-item--gshow" href="#">top pages</a>
                 </li>
-                <li class="navbar__first-column-li navbar__first-column-li--gshow" onmouseover="showsOne('link-2');">
+                <li class="navbar__first-column-li navbar__first-column-li--gshow" data-target-id="link-11">
                   <a class="navbar__first-column-item navbar__first-column-item--gshow" href="#">gshow</a>
                 </li>
-                <li class="navbar__first-column-li navbar__first-column-li--gshow" onmouseover="showsOne('link-3');">
+                <li class="navbar__first-column-li navbar__first-column-li--gshow" data-target-id="link-12">
                   <a class="navbar__first-column-item navbar__first-column-item--gshow" href="#">tv shows</a>
                 </li>
-                <li class="navbar__first-column-li navbar__first-column-li--gshow" onmouseover="showsOne('link-4');">
+                <li class="navbar__first-column-li navbar__first-column-li--gshow" data-target-id="link-13">
                   <a class="navbar__first-column-item navbar__first-column-item--gshow" href="#">series</a>
                 </li>
-                <li class="navbar__first-column-li navbar__first-column-li--gshow" onmouseover="showsOne('link-5');">
+                <li class="navbar__first-column-li navbar__first-column-li--gshow" data-target-id="link-14">
                   <a class="navbar__first-column-item navbar__first-column-item--gshow" href="#">original series</a>
                 </li>
-                <li class="navbar__first-column-li navbar__first-column-li--gshow" onmouseover="showsOne('link-6');">
+                <li class="navbar__first-column-li navbar__first-column-li--gshow" data-target-id="link-15">
                   <a class="navbar__first-column-item navbar__first-column-item--gshow" href="#">famous</a>
                 </li>
-                <li class="navbar__first-column-li navbar__first-column-li--gshow" onmouseover="showsOne('link-7');">
+                <li class="navbar__first-column-li navbar__first-column-li--gshow" data-target-id="link-16">
                   <a class="navbar__first-column-item navbar__first-column-item--gshow" href="#">moda & estilo</a>
                 </li>
-                <li class="navbar__first-column-li navbar__first-column-li--gshow" onmouseover="showsOne('link-8');">
+                <li class="navbar__first-column-li navbar__first-column-li--gshow" data-target-id="link-17">
                   <a class="navbar__first-column-item navbar__first-column-item--gshow" href="#">welfare & health </a>
                 </li>
-                <li class="navbar__first-column-li navbar__first-column-li--gshow" onmouseover="showsOne('link-9');">
+                <li class="navbar__first-column-li navbar__first-column-li--gshow" data-target-id="link-18">
                   <a class="navbar__first-column-item navbar__first-column-item--gshow" href="#">home e decoration</a>
                 </li>
-                <li class="navbar__first-column-li navbar__first-column-li--gshow" onmouseover="showsOne('link-10');">
+                <li class="navbar__first-column-li navbar__first-column-li--gshow" data-target-id="link-19">
                   <a class="navbar__first-column-item navbar__first-column-item--gshow" href="#">gastronomy</a>
                 </li>
-                <li class="navbar__first-column-li navbar__first-column-li--gshow" onmouseover="showsOne('link-11');">
+                <li class="navbar__first-column-li navbar__first-column-li--gshow" data-target-id="link-20">
                   <a class="navbar__first-column-item navbar__first-column-item--gshow" href="#">on tv</a>
                 </li>
               </ul>
@@ -820,7 +819,7 @@
 
               <!-- SECOND COLUMN -->
               <!-- top pages -->
-              <ul class="navbar__second-column showAndHide" id="link-1">
+              <ul class="navbar__second-column" id="link-10">
                 <li class="navbar__title">top pages</li>
                 <li class="navbar__second-column-li">
                   <a class="navbar__second-column-item navbar__second-column-item--gshow" href="#">Huck's Cauldron</a>
@@ -855,7 +854,7 @@
               </ul>
 
               <!-- gshow -->
-              <ul class="navbar__second-column none showAndHide" id="link-2">
+              <ul class="navbar__second-column none" id="link-11">
                 <li class="navbar__title">gshow</li>
                 <li class="navbar__second-column-li">
                   <a class="navbar__second-column-item navbar__second-column-item--gshow" href="#">Famous</a>
@@ -869,7 +868,7 @@
               </ul>
 
               <!-- tv shows -->
-              <ul class="navbar__second-column none showAndHide" id="link-3">
+              <ul class="navbar__second-column none" id="link-12">
                 <li class="navbar__title">tv shows (Brazil)</li>
                 <li class="navbar__second-column-li">
                   <a class="navbar__second-column-item navbar__second-column-item--gshow" href="#">Altas Horas</a>
@@ -913,7 +912,7 @@
               </ul>
 
               <!-- series (Brazil) -->
-              <ul class="navbar__second-column none showAndHide" id="link-4">
+              <ul class="navbar__second-column none" id="link-13">
                 <li class="navbar__title">series (Brazil)</li>
                 <li class="navbar__second-column-li">
                   <a class="navbar__second-column-item navbar__second-column-item--gshow" href="#">Aruanas</a>
@@ -933,7 +932,7 @@
               </ul>
 
               <!-- original series (Brazil) -->
-              <ul class="navbar__second-column none showAndHide" id="link-5">
+              <ul class="navbar__second-column none" id="link-14">
                 <li class="navbar__title">original series (Brazil)</li>
                 <li class="navbar__second-column-li">
                   <a class="navbar__second-column-item navbar__second-column-item--gshow" href="#">Animals</a>
@@ -974,7 +973,7 @@
               </ul>
 
               <!-- famous -->
-              <ul class="navbar__second-column none showAndHide" id="link-6">
+              <ul class="navbar__second-column none" id="link-15">
                 <li class="navbar__title">famous</li>
                 <li class="navbar__second-column-li">
                   <a class="navbar__second-column-item navbar__second-column-item--gshow" href="#">patricia kogut</a>
@@ -988,7 +987,7 @@
               </ul>
 
               <!-- fashion & style -->
-              <ul class="navbar__second-column none showAndHide" id="link-7">
+              <ul class="navbar__second-column none" id="link-16">
                 <li class="navbar__title">fashion & style</li>
                 <li class="navbar__second-column-li">
                   <a class="navbar__second-column-item navbar__second-column-item--gshow" href="#">Ela no Globo</a>
@@ -1014,7 +1013,7 @@
               </ul>
 
               <!-- welfare and health -->
-              <ul class="navbar__second-column none showAndHide" id="link-8">
+              <ul class="navbar__second-column none" id="link-17">
                 <li class="navbar__title">welfare and health (Brazil)</li>
                 <li class="navbar__second-column-li">
                   <a class="navbar__second-column-item navbar__second-column-item--gshow" href="#">Beleza no GNT</a></li>
@@ -1033,7 +1032,7 @@
               </ul>
 
               <!-- home and decoration (Brazil) -->
-              <ul class="navbar__second-column none showAndHide" id="link-9">
+              <ul class="navbar__second-column none" id="link-18">
                 <li class="navbar__title">home and decoration (Brazil)</li>
                 <li class="navbar__second-column-li">
                   <a class="navbar__second-column-item navbar__second-column-item--gshow" href="#">Revista Casa e Jardim</a>
@@ -1050,7 +1049,7 @@
               </ul>
 
               <!-- gastronomy -->
-              <ul class="navbar__second-column none showAndHide" id="link-10">
+              <ul class="navbar__second-column none" id="link-19">
                 <li class="navbar__title">Gastronomy</li>
                 <li class="navbar__second-column-li">
                   <a class="navbar__second-column-item navbar__second-column-item--gshow" href="#">Receitas no GNT</a>
@@ -1064,7 +1063,7 @@
               </ul>
 
               <!-- On TV (Brazil) -->
-              <ul class="navbar__second-column none showAndHide" id="link-11">
+              <ul class="navbar__second-column none" id="link-20">
                 <ul class="navbar__links-ul">
                   <li class="navbar__title">On TV (Brazil)</li>
                   <li class="navbar__second-column-li">
