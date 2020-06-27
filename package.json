@@ -11,7 +11,10 @@
     "private": true
   },
   "scripts": {
-    "start": "react-scripts start"
+    "start": "gulp server",
+    "build": "gulp build",
+    "lint": "eslint .",
+    "test": "node test.js --env=jsdom"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.3",
