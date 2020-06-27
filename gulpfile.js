@@ -1,4 +1,4 @@
-var { src, dest, watch, series, parallel } = require('gulp'),
+var { src, dest, watch, series, parallel, gulp } = require('gulp'),
   autoprefixer = require('autoprefixer'),
   cssnano = require('cssnano'),
   concat = require('gulp-concat'),
