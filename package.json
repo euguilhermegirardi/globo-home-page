@@ -2,13 +2,16 @@
   "name": "globo",
   "version": "1.0.0",
   "description": "Just a Home Page",
-  "main": "gulpfile.js",
+  "main": "index.html",
   "author": "Guilherme Girardi",
   "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git://github.com/euguilhermegirardi/Globo-Home-Page.git",
     "private": true
+  },
+  "scripts": {
+    "start": "react-scripts start"
   },
   "devDependencies": {
     "autoprefixer": "^9.7.3",
@@ -25,6 +28,9 @@
     "gulp-uglify-es": "^2.0.0"
   },
   "dependencies": {
+    "gulp-connect": "^5.7.0",
+    "gulp-netlify": "^1.1.0",
+    "gulp-open": "^3.0.1",
     "node-sass": "^4.13.0"
   }
 }
