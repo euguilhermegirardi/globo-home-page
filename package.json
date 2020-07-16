@@ -28,7 +28,7 @@
     "gulp-uglify-es": "^2.0.0"
   },
   "dependencies": {
-    "gulp-open": "^3.0.1",
-    "node-sass": "^4.13.0"
+    "node-sass": "^4.13.0",
+    "tiny-slider": "^2.9.2"
   }
 }

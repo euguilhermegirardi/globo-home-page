@@ -1,13 +1,21 @@
-$(document).ready(function () {
-
-  $('.carousel').slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    nextArrow: $('.next'),
-    prevArrow: $('.prev'),
-    variableWidth: true,
+function slider() {
+  tns({
+     controls: true,
+     container: ".slider",
+     slideBy: "page",
+     items: 6,
+     mouseDrag: true,
+     swipeAngle: false,
+     speed: 400,
+     preventScrollOnTouch: "force",
+     gutter: 30,
+     autoWidth: true,
+     responsive: {
+      200: {
+         controlsText: ['<', '>'],
+      }
+   }
   });
+}
 
-});
-
+slider();

@@ -1,4 +1,4 @@
-var { src, dest, watch, series, parallel, gulp } = require('gulp'),
+var { src, dest, watch, series, parallel } = require('gulp'),
   autoprefixer = require('autoprefixer'),
   cssnano = require('cssnano'),
   concat = require('gulp-concat'),
@@ -59,18 +59,6 @@ function watchTask() {
   watch([files.scssPath, files.jsPath, files.imgPath],
     parallel(scssTask, jsTask, imgTask));
 }
-
-// Development server with browsersync
-// function runServer() {
-//   browserSync.init({
-//     server: {
-//       baseDir: "./dist"
-//     }
-//   });
-//   gulp.watch(jsPath);
-//   gulp.watch(scssPath);
-//   gulp.watch(imgPath);
-// }
 
 // Default task
 exports.default = series(

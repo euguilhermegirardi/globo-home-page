@@ -1,20 +1,8 @@
 .slider {
-  max-width: 1320px;
-  margin: 10rem auto;
-
-  .slick-slider {
-    touch-action: auto;
-    -ms-touch-action: auto;
-  }
-
-  .slick-arrow {
-    @include respond(iphoneX) {
-      display: none;
-    }
-  }
+  margin: 5rem auto;
 
   @include respond(iphoneX) {
-    margin: 5rem auto;
+    margin-top: 1rem;
   }
 
   @include respond(bp-smallest) {
@@ -41,67 +29,68 @@
   }
 }
 
-.post-slider {
+// TINY SLIDER CONFIG
+#tns1-ow {
+  height: 100%;
+}
+
+.tns-nav {
+  display: none;
+}
+
+#tns1-mw {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.tns-controls {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+[data-controls="prev"] {
+  background-color: inherit;
+  border: none;
+  outline: none;
   position: relative;
+  left: 0rem;
+  top: 9rem;
+  z-index: 10000;
+  font-size: 5rem;
+}
 
-  .post-wrapper {
-    width: 85%;
-    margin: 0 auto;
-    overflow: hidden;
+[data-controls="next"] {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  position: relative;
+  right: 0;
+  top: 9rem;
+  z-index: 10000;
+  font-size: 5rem;
+}
 
-    @include respond(iphoneX) {
-      width: 95%;
-    }
-
-    .post {
-      margin: 0 10px;
-      display: inline-block;
-
-      .post__img {
-        @include respond(iphoneX) {
-          height: 4.8rem;
-        }
-      }
-    }
+[data-controls="prev"],
+[data-controls="next"] {
+  @include respond(bp-large-medium) {
+    top: 6rem;
   }
 
-  .prev {
-    font-size: 2rem;
-    position: absolute;
-    top: 25%;
-    left: 65px;
-    cursor: pointer;
-
-    @include respond(bp-smallest) {
-      left: 10px;
-    }
-
-    @include respond(bp-small-smallest) {
-      left: 0;
-    }
-
-    @include respond(bp-medium-small) {
-      left: 15px;
-    }
+  @include respond(bp-medium-small) {
+    top: 12rem;
   }
 
-  .next {
-    font-size: 2rem;
-    position: absolute;
-    top: 25%;
-    right: 65px;
-    cursor: pointer;
+  @include respond(bp-small-smallest) {
+    top: 12rem;
+  }
 
-    @include respond(bp-smallest) {
-      right: 1px;
-    }
+  @include respond(bp-smallest) {
+    top: 12rem;
+  }
 
-    @include respond(bp-small-smallest) {
-      right: 0;
-    }
-
-    @include respond(bp-medium-small) {
-      right: 15px;
-    }
+  @include respond(iphoneX) {
+    font-size: 3rem;
+    top: 4.6rem;
   }
 }
