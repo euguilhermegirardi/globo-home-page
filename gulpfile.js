@@ -10,16 +10,6 @@ var { src, dest, watch, series, parallel, gulp } = require('gulp'),
   imagemin = require('gulp-imagemin'),
   browserSync = require('browser-sync').create();
 
-  // var netlify = require('gulp-netlify')
-
-  // gulp.task('deploy', function () {
-  //   gulp.src('./**/*')
-  //     .pipe(netlify({
-  //       site_id: NETLIFY_SITE_ID,
-  //       access_token: '180e59f7c9113a9130cd1afcc20fbcaa61f795ece93cf116bd4fb86222fb95eb'
-  //     }))
-  // })
-
 // File path variables
 const files = {
   scssPath: 'src/scss/**/*.scss',
@@ -55,13 +45,13 @@ function imgTask() {
     .pipe(browserSync.stream());
 }
 
-// Cachebusting TextTrackList
+// Cache Busting TextTrackList
 const cbString = new Date().getTime();
 
-function cachBustTask() {
+function catchBustTask() {
   return src(['index.html'])
     .pipe(replace(/cb=\d+/g, 'cb=' + cbString))
-    .pipe(dest('.'));
+    .pipe(dest('dist/minified/'));
 }
 
 //Watch task
@@ -71,21 +61,20 @@ function watchTask() {
 }
 
 // Development server with browsersync
-function runServer() {
-  browserSync.init({
-    server: {
-      baseDir: "./dist"
-    }
-  });
-  gulp.watch(jsPath);
-  gulp.watch(scssPath);
-  gulp.watch(imgPath);
-}
+// function runServer() {
+//   browserSync.init({
+//     server: {
+//       baseDir: "./dist"
+//     }
+//   });
+//   gulp.watch(jsPath);
+//   gulp.watch(scssPath);
+//   gulp.watch(imgPath);
+// }
 
 // Default task
 exports.default = series(
   parallel(scssTask, jsTask, imgTask),
-  cachBustTask,
-  watchTask,
-  runServer
+  catchBustTask,
+  watchTask
 )

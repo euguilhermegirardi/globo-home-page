@@ -28,8 +28,6 @@
     "gulp-uglify-es": "^2.0.0"
   },
   "dependencies": {
-    "gulp-connect": "^5.7.0",
-    "gulp-netlify": "^1.1.0",
     "gulp-open": "^3.0.1",
     "node-sass": "^4.13.0"
   }
