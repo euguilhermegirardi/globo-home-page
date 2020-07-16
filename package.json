@@ -10,9 +10,6 @@
     "url": "git://github.com/euguilhermegirardi/Globo-Home-Page.git",
     "private": true
   },
-  "scripts": {
-    "start": "react-scripts start"
-  },
   "devDependencies": {
     "autoprefixer": "^9.7.3",
     "browser-sync": "^2.26.7",
