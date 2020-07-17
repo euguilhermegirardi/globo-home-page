@@ -55,7 +55,7 @@ In this project I only used pure CSS and VanillaJS with the latest recommendatio
 
 - Clone the repo
 
-      git clone https://github.com/euguilhermegirardi/the-irish-sun.git
+      git clone https://github.com/euguilhermegirardi/globo-home-page.git
 
 3. Install NPM packages
 
