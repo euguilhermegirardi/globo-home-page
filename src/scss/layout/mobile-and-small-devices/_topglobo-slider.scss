@@ -6,6 +6,10 @@
     outline: none;
     padding: 0 2rem;
     margin-left: 6rem;
+
+    @include respond(iphoneX) {
+      margin-left: 0rem;
+    }
   }
 
   @include respond(bp-medium-small) {

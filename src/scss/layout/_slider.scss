@@ -36,6 +36,13 @@
 }
 
 // TINY SLIDER CONFIG
+#tns2-ow {
+  @include respond(iphoneX) {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+
 #tns1-ow {
   height: 100%;
 }
@@ -64,6 +71,10 @@
   top: 9rem;
   z-index: 10000;
   font-size: 5rem;
+
+  @include respond(iphoneX) {
+    left: -3rem;
+  }
 }
 
 [data-controls="next"] {
@@ -75,6 +86,10 @@
   top: 9rem;
   z-index: 10000;
   font-size: 5rem;
+
+  @include respond(iphoneX) {
+    right: -3rem;
+  }
 }
 
 [data-controls="prev"],

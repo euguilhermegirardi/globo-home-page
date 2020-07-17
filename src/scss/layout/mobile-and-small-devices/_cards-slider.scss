@@ -16,6 +16,7 @@
 
 #tns1-ow {
   display: none;
+  margin-top: 5rem;
 
   @include respond(iphoneX) {
     display: block;
