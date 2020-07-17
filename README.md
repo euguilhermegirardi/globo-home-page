@@ -15,6 +15,10 @@ In this project I only used pure CSS and VanillaJS with the latest recommendatio
 
 ![home-page](.github/home.png)
 
+**Menu**
+
+![Menu](.github/menu.png)
+
 **Home Page**
 
 ![home-page](.github/home2.png)
@@ -26,10 +30,6 @@ In this project I only used pure CSS and VanillaJS with the latest recommendatio
 **Home Page**
 
 ![home-page](.github/home4.png)
-
-**Menu**
-
-![Menu](.github/menu.png)
 
 **Responsive**
 
