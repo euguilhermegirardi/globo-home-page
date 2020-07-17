@@ -29,10 +29,10 @@
   }
 
   @include respond(bp-large-medium) {
-    grid-template-rows: repeat(11, min-content) 4.5rem 37rem;
+    grid-template-rows: repeat(10, min-content);
   }
 
   @include respond(bp-between-largest-large) {
-    grid-template-rows: repeat(11, min-content) 4.5rem 52rem;
+    grid-template-rows: repeat(10, min-content);
   }
 }

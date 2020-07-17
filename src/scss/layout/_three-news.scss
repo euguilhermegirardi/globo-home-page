@@ -1,7 +1,7 @@
 .three-news {
   grid-column: full-start/full-end;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   grid-column-gap: 3rem;
 
   .three-news__container {
@@ -80,15 +80,7 @@
       line-height: 18px;
     }
   }
-  // &:hover {
-  //   img {
-  //     filter: brightness(70%);
-  //   }
 
-  //   h4 {
-  //     filter: brightness(140%);
-  //   }
-  // }
   @include respond(iphoneX) {
     display: none;
   }
@@ -98,21 +90,21 @@
   }
 
   @include respond(bp-small-smallest) {
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
   }
 
   @include respond(bp-medium-small) {
-    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     margin: 1.5rem 0;
     grid-column-gap: 1.4rem;
   }
 
   @include respond(bp-large-medium) {
-    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     align-items: center;
   }
 
   @include respond(bp-between-largest-large) {
-    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
   }
 }

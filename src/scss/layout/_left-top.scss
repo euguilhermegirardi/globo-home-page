@@ -272,7 +272,7 @@
     }
 
     @include respond(bp-between-largest-large) {
-      grid-template-columns: repeat(auto-fit, minmax(16rem, auto));
+      grid-template-columns: repeat(auto-fit, minmax(20rem, auto));
     }
   }
 

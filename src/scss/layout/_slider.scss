@@ -1,5 +1,6 @@
 .slider {
   margin: 5rem auto;
+  outline: none;
 
   @include respond(iphoneX) {
     margin-top: 1rem;
