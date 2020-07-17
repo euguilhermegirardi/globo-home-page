@@ -27,6 +27,12 @@
   @include respond(bp-between-largest-large) {
     margin: 3rem;
   }
+
+  .slider__item {
+    .slider__img {
+      cursor: pointer;
+    }
+  }
 }
 
 // TINY SLIDER CONFIG

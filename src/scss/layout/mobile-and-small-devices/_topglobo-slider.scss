@@ -1,63 +1,75 @@
+// .topglobo-slider {
+//   display: none;
+//   margin: 2rem auto;
+//   background-color: var(--color-gray-light-5);
+
+//   .topglobo-carousel {
+//     width: 85%;
+//     margin: 0 auto;
+//     overflow: hidden;
+
+//     .topglobo__items {
+//       margin: 0 auto;
+//       display: inline-block;
+//     }
+//   }
+
+//   @include respond(iphoneX) {
+//     display: block;
+//     margin: 2rem auto;
+//   }
+
+//   @include respond(bp-smallest) {
+//     display: block;
+//     padding: 0 5px;
+//   }
+
+//   @include respond(bp-small-smallest) {
+//     display: block;
+//     padding: 1.5rem;
+//   }
+
+//   @include respond(bp-medium-small) {
+//     display: block;
+//   }
+// }
+
+// .slick-dots {
+//   display: flex;
+//   justify-content: center;
+//   margin: 0;
+//   padding: 1rem 0;
+//   list-style-type: none;
+
+//   li {
+//     margin: 0 1rem;
+//   }
+
+//   button {
+//     display: block;
+//     width: 1.2rem;
+//     height: 1.2rem;
+//     padding: 0;
+//     border: none;
+//     border-radius: 100%;
+//     background-color: var(--color-grey-light-4);
+//     text-indent: -9999px;
+//     outline: none;
+//   }
+
+//   li.slick-active button {
+//     background-color: var(--color-grey-dark-4);
+//   }
+// }
+
 .topglobo-slider {
-  display: none;
-  margin: 2rem auto;
-  background-color: var(--color-gray-light-5);
-
-  .topglobo-carousel {
-    width: 85%;
-    margin: 0 auto;
-    overflow: hidden;
-
-    .topglobo__items {
-      margin: 0 auto;
-      display: inline-block;
-    }
-  }
-
-  @include respond(iphoneX) {
-    display: block;
-    margin: 2rem auto;
-  }
-
-  @include respond(bp-smallest) {
-    display: block;
-    padding: 0 5px;
-  }
-
-  @include respond(bp-small-smallest) {
-    display: block;
-    padding: 1.5rem;
-  }
-
-  @include respond(bp-medium-small) {
-    display: block;
+  .slider__item {
+    outline: none;
   }
 }
 
-.slick-dots {
+#tns2-iw {
   display: flex;
   justify-content: center;
-  margin: 0;
-  padding: 1rem 0;
-  list-style-type: none;
-
-  li {
-    margin: 0 1rem;
-  }
-
-  button {
-    display: block;
-    width: 1.2rem;
-    height: 1.2rem;
-    padding: 0;
-    border: none;
-    border-radius: 100%;
-    background-color: var(--color-grey-light-4);
-    text-indent: -9999px;
-    outline: none;
-  }
-
-  li.slick-active button {
-    background-color: var(--color-grey-dark-4);
-  }
+  align-items: center;
 }
