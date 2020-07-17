@@ -14,7 +14,7 @@ function slider() {
       200: {
          controlsText: ['<', '>'],
       }
-   }
+    }
   });
 }
 

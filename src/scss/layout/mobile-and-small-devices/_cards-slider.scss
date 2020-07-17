@@ -3,17 +3,6 @@
   max-width: 1320px;
   margin: 0 auto;
 
-  .cards-carousel {
-    width: 85%;
-    margin: 0 auto;
-    overflow: hidden;
-
-    .cards-slider__items {
-      margin: 0 10px;
-      display: inline-block;
-    }
-  }
-
   @include respond(iphoneX) {
     display: block;
     margin: 2rem auto;
@@ -22,5 +11,17 @@
   @include respond(bp-smallest) {
     display: block;
     margin-top: 3rem;
+  }
+}
+
+#tns1-ow {
+  display: none;
+
+  @include respond(iphoneX) {
+    display: block;
+  }
+
+  @include respond(bp-smallest) {
+    display: block;
   }
 }
